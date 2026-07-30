@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grammars, classes, and inheritance</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=e325a382">
+<script src="/theme/langs.js?v=e325a382"></script>
+<script src="/theme/boot.js?v=e325a382"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"regexes/grammar-inheritance","n":1126,"k":"section","pv":"regexes/tokens-and-rules/exercises/spaced-assignment/solution","nx":"regexes/grammar-inheritance/grammars-are-classes","tr":["regexes"],"L":{"en":{"t":"Grammars, classes, and inheritance","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">A grammar is really a kind of class, and its tokens are really methods.<\/span> <span class=\"sg\" data-s=\"1\">That is not just an analogy — it means grammars can use the object-oriented tools you already know: one grammar can <strong>inherit<\/strong> from another and override individual tokens.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">This section shows that relationship, and introduces <em>proto tokens<\/em>, the grammar way of writing an alternation across several named variants.<\/span><\/p>"]]},"de":{"t":"Grammatiken, Klassen und Vererbung","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Eine Grammatik ist in Wahrheit eine Art Klasse, und ihre Tokens sind in Wahrheit Methoden.<\/span> <span class=\"sg\" data-s=\"1\">Das ist kein bloßer Vergleich — es bedeutet, dass Grammatiken die objektorientierten Werkzeuge nutzen können, die Sie schon kennen: Eine Grammatik kann von einer anderen <strong>erben<\/strong> und einzelne Tokens überschreiben.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Dieser Abschnitt zeigt diese Beziehung und führt <em>Prototokens<\/em> ein, die grammatikeigene Art, eine Alternation über mehrere benannte Spielarten zu schreiben.<\/span><\/p>"]]},"nl":{"t":"Grammatica's, klassen en overerving","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Een grammatica is eigenlijk een soort klasse, en haar tokens zijn eigenlijk methoden.<\/span> <span class=\"sg\" data-s=\"1\">Dat is niet slechts een vergelijking — het betekent dat grammatica's de objectgeoriënteerde gereedschappen kunnen gebruiken die je al kent: de ene grammatica kan van de andere <strong>erven<\/strong> en afzonderlijke tokens overschrijven.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Deze sectie toont die verhouding en introduceert <em>prototokens<\/em>, de manier waarop een grammatica een alternatie over meerdere benoemde varianten schrijft.<\/span><\/p>"]]},"es":{"t":"Gramáticas, clases y herencia","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Una gramática es en realidad una clase de clase, y sus tokens son en realidad métodos.<\/span> <span class=\"sg\" data-s=\"1\">No es solo una analogía: significa que las gramáticas pueden usar las herramientas orientadas a objetos que ya conoces, una gramática puede <strong>heredar<\/strong> de otra y sobrescribir tokens sueltos.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Esta sección muestra esa relación e introduce los <em>proto tokens<\/em>, la manera que tiene una gramática de escribir una alternativa entre varias variantes con nombre.<\/span><\/p>"]]},"it":{"t":"Grammatiche, classi ed ereditarietà","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Una grammatica è in realtà un genere di classe, e i suoi token sono in realtà metodi.<\/span> <span class=\"sg\" data-s=\"1\">Non è solo un'analogia: significa che le grammatiche possono usare gli strumenti a oggetti che già conosci — una grammatica può <strong>ereditare<\/strong> da un'altra e sovrascriverne singoli token.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Questa sezione mostra quella relazione e introduce i <em>proto token<\/em>, il modo in cui una grammatica scrive un'alternativa fra più varianti con nome.<\/span><\/p>"]]},"ru":{"t":"Грамматики, классы и наследование","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Грамматика на самом деле является разновидностью класса, а её токены — методами.<\/span> <span class=\"sg\" data-s=\"1\">И это не просто аналогия: она означает, что грамматики могут пользоваться уже знакомыми вам объектными средствами.<\/span> <span class=\"sg\" data-s=\"2\">Одна грамматика может <strong>наследовать<\/strong> от другой и переопределять отдельные токены.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">В этом разделе показано это родство и вводятся <em>proto-токены<\/em> — принятый в грамматиках способ записать альтернативу из нескольких именованных вариантов.<\/span><\/p>"]]},"uk":{"t":"Граматики, класи та успадкування","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Граматика насправді є різновидом класу, а її токени насправді є методами.<\/span> <span class=\"sg\" data-s=\"1\">Це не просто аналогія — це означає, що граматики можуть користуватися вже знайомими вам об'єктноорієнтованими засобами: одна граматика може <strong>успадковувати<\/strong> іншу й перевизначати окремі токени.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Цей розділ показує цей зв'язок і знайомить із <em>прототокенами<\/em> — граматичним способом записати альтернативу з кількох іменованих варіантів.<\/span><\/p>"]]},"bg":{"t":"Граматики, класове и наследяване","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Граматиката всъщност е вид клас, а токените ѝ всъщност са методи.<\/span> <span class=\"sg\" data-s=\"1\">Това не е просто аналогия — то означава, че граматиките могат да използват обектно-ориентираните средства, които вече познавате: една граматика може да <strong>наследява<\/strong> друга и да предефинира отделни токени.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Този раздел показва тази връзка и въвежда <em>прототокените<\/em> — граматичният начин да се запише алтернатива между няколко именувани варианта.<\/span><\/p>"]]}}}</script>
+<script src="/theme/reader.js?v=e325a382"></script>
+</body>
+</html>

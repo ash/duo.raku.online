@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Standard streams</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=e325a382">
+<script src="/theme/langs.js?v=e325a382"></script>
+<script src="/theme/boot.js?v=e325a382"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"oop/standard-streams/quiz","n":866,"k":"quiz","pv":"oop/standard-streams/exercises/print-without-newline/solution","nx":"oop/files","tr":["oop","oop/standard-streams"],"L":{"en":{"t":"Quiz — Standard streams","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Which standard stream does the <code>note<\/code> routine write to?<\/span><\/p>"],["quiz",4,"<ul class=\"quiz\"><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"0\">standard output<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"1\">standard error<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"2\">standard input<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">a file on disk<\/span><\/li><\/ul>"]]},"de":{"t":"Quiz — Standardströme","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">In welchen Standardstrom schreibt die Routine <code>note<\/code>?<\/span><\/p>"],["quiz",4,"<ul class=\"quiz\"><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"0\">Standardausgabe<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"1\">Standardfehlerausgabe<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"2\">Standardeingabe<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">eine Datei auf der Platte<\/span><\/li><\/ul>"]]},"nl":{"t":"Quiz — Standaardstromen","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Naar welke standaardstroom schrijft de routine <code>note<\/code>?<\/span><\/p>"],["quiz",4,"<ul class=\"quiz\"><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"0\">standaarduitvoer<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"1\">standaardfout<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"2\">standaardinvoer<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">een bestand op schijf<\/span><\/li><\/ul>"]]},"es":{"t":"Quiz — Flujos estándar","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">¿En qué flujo estándar escribe la rutina <code>note<\/code>?<\/span><\/p>"],["quiz",4,"<ul class=\"quiz\"><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"0\">la salida estándar<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"1\">el error estándar<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"2\">la entrada estándar<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">un archivo en disco<\/span><\/li><\/ul>"]]},"it":{"t":"Quiz — Flussi standard","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Su quale flusso standard scrive la routine <code>note<\/code>?<\/span><\/p>"],["quiz",4,"<ul class=\"quiz\"><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"0\">l'output standard<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"1\">l'errore standard<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"2\">l'input standard<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">un file su disco<\/span><\/li><\/ul>"]]},"lv":{"t":"Viktorīna — Standarta plūsmas","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Kurā standarta plūsmā raksta rutīna <code>note<\/code>?<\/span><\/p>"],["quiz",4,"<ul class=\"quiz\"><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"0\">standarta izvadē<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"1\">standarta kļūdu plūsmā<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"2\">standarta ievadē<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">failā uz diska<\/span><\/li><\/ul>"]]},"ru":{"t":"Тест — Стандартные потоки","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">В какой стандартный поток пишет процедура <code>note<\/code>?<\/span><\/p>"],["quiz",4,"<ul class=\"quiz\"><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"0\">стандартный вывод<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"1\">стандартный поток ошибок<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"2\">стандартный ввод<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">файл на диске<\/span><\/li><\/ul>"]]},"uk":{"t":"Тест — Стандартні потоки","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">До якого стандартного потоку пише підпрограма <code>note<\/code>?<\/span><\/p>"],["quiz",4,"<ul class=\"quiz\"><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"0\">стандартного виводу<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"1\">стандартного потоку помилок<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"2\">стандартного введення<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">файлу на диску<\/span><\/li><\/ul>"]]},"bg":{"t":"Тест — Стандартни потоци","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">В кой стандартен поток пише процедурата <code>note<\/code>?<\/span><\/p>"],["quiz",4,"<ul class=\"quiz\"><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"0\">стандартния изход<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"1\">стандартната грешка<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"2\">стандартния вход<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">файл на диска<\/span><\/li><\/ul>"]]}}}</script>
+<script src="/theme/reader.js?v=e325a382"></script>
+</body>
+</html>

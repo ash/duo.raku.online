@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lookaround assertions</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=e325a382">
+<script src="/theme/langs.js?v=e325a382"></script>
+<script src="/theme/boot.js?v=e325a382"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"regexes/assertions","n":1050,"k":"section","pv":"regexes/anchors/exercises/whole-word/solution","nx":"regexes/assertions/lookahead","tr":["regexes"],"L":{"en":{"t":"Lookaround assertions","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Sometimes you want to match something only because of what comes <strong>next to<\/strong> it, without making that neighbour part of the match.<\/span> <span class=\"sg\" data-s=\"1\">A <em>lookaround assertion<\/em> checks the text ahead of or behind the current position but does not consume it.<\/span><\/p>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">There are two directions — <em>lookahead<\/em> (what follows) and <em>lookbehind<\/em> (what precedes) — and each comes in a positive and a negative form.<\/span> <span class=\"sg\" data-s=\"1\">Like anchors, assertions match a position, not characters.<\/span><\/p>"]]},"de":{"t":"Lookaround-Zusicherungen","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Manchmal wollen Sie etwas nur wegen dessen treffen, was <strong>daneben<\/strong> steht, ohne diesen Nachbarn zum Teil des Treffers zu machen.<\/span> <span class=\"sg\" data-s=\"1\">Eine <em>Lookaround-Zusicherung<\/em> prüft den Text vor oder hinter der aktuellen Position, verbraucht ihn aber nicht.<\/span><\/p>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Es gibt zwei Richtungen — <em>Lookahead<\/em> (was folgt) und <em>Lookbehind<\/em> (was vorausgeht) —, und jede kommt in einer bejahenden und einer verneinenden Form.<\/span> <span class=\"sg\" data-s=\"1\">Wie Anker trifft eine Zusicherung eine Position und keine Zeichen.<\/span><\/p>"]]},"nl":{"t":"Lookaround-assertions","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Soms wil je iets alleen matchen vanwege wat er <strong>naast<\/strong> staat, zonder die buur onderdeel van de match te maken.<\/span> <span class=\"sg\" data-s=\"1\">Een <em>lookaround-assertion<\/em> controleert de tekst vóór of na de huidige positie maar verbruikt haar niet.<\/span><\/p>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Er zijn twee richtingen — <em>lookahead<\/em> (wat volgt) en <em>lookbehind<\/em> (wat voorafgaat) — en elk komt in een positieve en een negatieve vorm.<\/span> <span class=\"sg\" data-s=\"1\">Net als ankers matcht een assertion een positie, geen tekens.<\/span><\/p>"]]},"es":{"t":"Aserciones de contexto","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">A veces quieres emparejar algo solo por lo que hay <strong>junto a<\/strong> ello, sin que ese vecino forme parte de la coincidencia.<\/span> <span class=\"sg\" data-s=\"1\">Una <em>aserción de contorno<\/em> comprueba el texto que va delante o detrás de la posición actual, pero no lo consume.<\/span><\/p>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Hay dos direcciones — <em>lookahead<\/em> (lo que sigue) y <em>lookbehind<\/em> (lo que precede) — y cada una tiene una forma positiva y otra negativa.<\/span> <span class=\"sg\" data-s=\"1\">Como las anclas, las aserciones emparejan una posición, no caracteres.<\/span><\/p>"]]},"it":{"t":"Asserzioni di contesto","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">A volte vuoi riconoscere qualcosa solo per via di ciò che gli sta <strong>accanto<\/strong>, senza rendere quel vicino parte della corrispondenza.<\/span> <span class=\"sg\" data-s=\"1\">Un'<em>asserzione di contorno<\/em> controlla il testo davanti o dietro alla posizione corrente ma non lo consuma.<\/span><\/p>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Ci sono due direzioni — <em>lookahead<\/em> (ciò che segue) e <em>lookbehind<\/em> (ciò che precede) — e ciascuna esiste in forma positiva e negativa.<\/span> <span class=\"sg\" data-s=\"1\">Come le ancore, le asserzioni riconoscono una posizione, non dei caratteri.<\/span><\/p>"]]},"ru":{"t":"Утверждения просмотра","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Иногда нужно сопоставить что-то только из-за того, что стоит <strong>рядом<\/strong>, не делая этого соседа частью совпадения. <em>Утверждение просмотра<\/em> проверяет текст впереди или позади текущей позиции, но не поглощает его.<\/span><\/p>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Направлений два — <em>просмотр вперёд<\/em> (что следует дальше) и <em>просмотр назад<\/em> (что стоит перед), — и каждое бывает положительным и отрицательным.<\/span> <span class=\"sg\" data-s=\"1\">Как и якоря, утверждения сопоставляют позицию, а не символы.<\/span><\/p>"]]},"uk":{"t":"Твердження огляду","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Інколи ви хочете зіставити щось лише через те, що стоїть <strong>поруч<\/strong> із ним, не роблячи цього сусіда частиною збігу. <em>Твердження огляду<\/em> перевіряє текст попереду або позаду поточної позиції, але не споживає його.<\/span><\/p>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Напрямків є два — <em>огляд уперед<\/em> (що йде далі) та <em>огляд назад<\/em> (що передує), — і кожен має стверджувальну й заперечну форму.<\/span> <span class=\"sg\" data-s=\"1\">Як і якорі, твердження зіставляються з позицією, а не з символами.<\/span><\/p>"]]},"bg":{"t":"Твърдения за околността","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Понякога искате да съпоставите нещо само заради онова, което стои <strong>до<\/strong> него, без този съсед да става част от съвпадението. <em>Твърдението за околността<\/em> проверява текста напред или назад от текущата позиция, но не го поглъща.<\/span><\/p>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Посоките са две — <em>поглед напред<\/em> (какво следва) и <em>поглед назад<\/em> (какво предхожда), — и всяка от тях има положителна и отрицателна форма.<\/span> <span class=\"sg\" data-s=\"1\">Както и котвите, твърденията съпоставят позиция, а не знаци.<\/span><\/p>"]]}}}</script>
+<script src="/theme/reader.js?v=e325a382"></script>
+</body>
+</html>

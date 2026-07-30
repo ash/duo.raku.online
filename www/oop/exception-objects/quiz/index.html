@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Exception objects</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=e325a382">
+<script src="/theme/langs.js?v=e325a382"></script>
+<script src="/theme/boot.js?v=e325a382"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"oop/exception-objects/quiz","n":949,"k":"quiz","pv":"oop/exception-objects/exercises/error-prefix/solution","nx":"oop/failures","tr":["oop","oop/exception-objects"],"L":{"en":{"t":"Quiz — Exception objects","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">What type of exception object does <code>die 'oops'<\/code> create?<\/span><\/p>"],["quiz",4,"<ul class=\"quiz\"><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"0\">Exception<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"1\">X::AdHoc<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"2\">Failure<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">Error<\/span><\/li><\/ul>"]]},"de":{"t":"Quiz — Ausnahmeobjekte","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Welche Art von Ausnahmeobjekt erzeugt <code>die 'oops'<\/code>?<\/span><\/p>"],["quiz",4,"<ul class=\"quiz\"><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"0\">Exception<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"1\">X::AdHoc<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"2\">Failure<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">Error<\/span><\/li><\/ul>"]]},"nl":{"t":"Quiz — Exceptieobjecten","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Wat voor exceptieobject maakt <code>die 'oops'<\/code>?<\/span><\/p>"],["quiz",4,"<ul class=\"quiz\"><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"0\">Exception<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"1\">X::AdHoc<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"2\">Failure<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">Error<\/span><\/li><\/ul>"]]},"es":{"t":"Quiz — Objetos de excepción","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">¿Qué tipo de objeto de excepción crea <code>die 'oops'<\/code>?<\/span><\/p>"],["quiz",4,"<ul class=\"quiz\"><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"0\">Exception<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"1\">X::AdHoc<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"2\">Failure<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">Error<\/span><\/li><\/ul>"]]},"it":{"t":"Quiz — Oggetti eccezione","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Che tipo di oggetto eccezione crea <code>die 'oops'<\/code>?<\/span><\/p>"],["quiz",4,"<ul class=\"quiz\"><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"0\">Exception<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"1\">X::AdHoc<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"2\">Failure<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">Error<\/span><\/li><\/ul>"]]},"lv":{"t":"Viktorīna — Izņēmumu objekti","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Kāda tipa izņēmuma objektu rada <code>die 'oops'<\/code>?<\/span><\/p>"],["quiz",4,"<ul class=\"quiz\"><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"0\">Exception<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"1\">X::AdHoc<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"2\">Failure<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">Error<\/span><\/li><\/ul>"]]},"ru":{"t":"Тест — Объекты исключений","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Объект исключения какого типа создаёт <code>die 'oops'<\/code>?<\/span><\/p>"],["quiz",4,"<ul class=\"quiz\"><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"0\">Exception<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"1\">X::AdHoc<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"2\">Failure<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">Error<\/span><\/li><\/ul>"]]},"uk":{"t":"Тест — Об'єкти винятків","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Об'єкт винятку якого типу створює <code>die 'oops'<\/code>?<\/span><\/p>"],["quiz",4,"<ul class=\"quiz\"><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"0\">Exception<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"1\">X::AdHoc<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"2\">Failure<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">Error<\/span><\/li><\/ul>"]]},"bg":{"t":"Тест — Обекти на изключенията","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Какъв тип обект на изключение създава <code>die 'oops'<\/code>?<\/span><\/p>"],["quiz",4,"<ul class=\"quiz\"><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"0\">Exception<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"1\">X::AdHoc<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"2\">Failure<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">Error<\/span><\/li><\/ul>"]]}}}</script>
+<script src="/theme/reader.js?v=e325a382"></script>
+</body>
+</html>

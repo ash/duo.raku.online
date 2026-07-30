@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Channels</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=e325a382">
+<script src="/theme/langs.js?v=e325a382"></script>
+<script src="/theme/boot.js?v=e325a382"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"paradigms/channels","n":1301,"k":"section","pv":"paradigms/promises/exercises/kept-or-broken/solution","nx":"paradigms/channels/send-and-receive","tr":["paradigms"],"L":{"en":{"t":"Channels","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">A <em>channel<\/em> is a thread-safe queue: one part of a program puts values in, another takes them out, and Raku handles all the locking for you.<\/span> <span class=\"sg\" data-s=\"1\">Channels are the standard way to pass a stream of values safely between concurrent tasks — a producer and a consumer.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">This section shows how to send and receive values through a channel, and how closing a channel signals that no more values are coming.<\/span><\/p>"]]},"de":{"t":"Kanäle","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Ein <em>Kanal<\/em> ist eine threadsichere Warteschlange: Ein Teil eines Programms legt Werte hinein, ein anderer nimmt sie heraus, und Raku übernimmt für Sie das gesamte Sperren.<\/span> <span class=\"sg\" data-s=\"1\">Kanäle sind der übliche Weg, einen Strom von Werten sicher zwischen nebenläufigen Aufgaben weiterzureichen — einem Erzeuger und einem Verbraucher.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Dieser Abschnitt zeigt, wie man Werte über einen Kanal sendet und empfängt und wie das Schließen eines Kanals meldet, dass keine Werte mehr kommen.<\/span><\/p>"]]},"nl":{"t":"Kanalen","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Een <em>kanaal<\/em> is een threadveilige wachtrij: het ene deel van een programma zet er waarden in, het andere haalt ze eruit, en Raku regelt alle vergrendeling voor je.<\/span> <span class=\"sg\" data-s=\"1\">Kanalen zijn de standaardmanier om een stroom waarden veilig tussen gelijktijdige taken door te geven — een producent en een consument.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Deze sectie laat zien hoe je waarden via een kanaal verstuurt en ontvangt, en hoe een kanaal sluiten signaleert dat er geen waarden meer komen.<\/span><\/p>"]]},"es":{"t":"Canales","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Un <em>canal<\/em> es una cola segura para hilos: una parte del programa mete valores, otra los saca, y Raku se encarga por ti de todos los bloqueos.<\/span> <span class=\"sg\" data-s=\"1\">Los canales son la manera estándar de pasar con seguridad un flujo de valores entre tareas concurrentes: un productor y un consumidor.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Esta sección muestra cómo enviar y recibir valores a través de un canal, y cómo cerrar un canal señala que no llegarán más valores.<\/span><\/p>"]]},"it":{"t":"Channel","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Un <em>channel<\/em> è una coda sicura fra thread: una parte del programma vi mette dentro dei valori, un'altra li prende, e Raku si occupa di tutto il lucchettaggio al posto tuo.<\/span> <span class=\"sg\" data-s=\"1\">I channel sono il modo standard di passare in sicurezza un flusso di valori fra compiti concorrenti — un produttore e un consumatore.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Questa sezione mostra come inviare e ricevere valori attraverso un channel e come la chiusura di un channel segnali che non arriveranno altri valori.<\/span><\/p>"]]},"ru":{"t":"Каналы","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\"><em>Канал<\/em> — это потокобезопасная очередь: одна часть программы кладёт в неё значения, другая забирает, а всю блокировку Raku берёт на себя.<\/span> <span class=\"sg\" data-s=\"1\">Каналы — стандартный способ безопасно передавать поток значений между конкурентными задачами: производителем и потребителем.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">В этом разделе показано, как отправлять и получать значения через канал и как закрытие канала сообщает, что значений больше не будет.<\/span><\/p>"]]},"uk":{"t":"Канали","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\"><em>Канал<\/em> — це потокобезпечна черга: одна частина програми кладе значення всередину, інша їх забирає, а Raku бере на себе все блокування.<\/span> <span class=\"sg\" data-s=\"1\">Канали є стандартним способом безпечно передавати потік значень між конкурентними задачами — виробником та споживачем.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Цей розділ показує, як надсилати й отримувати значення через канал і як закриття каналу сигналізує, що більше значень не буде.<\/span><\/p>"]]},"bg":{"t":"Канали","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\"><em>Каналът<\/em> е безопасна за нишки опашка: една част от програмата слага стойности вътре, друга ги взема, а Raku се грижи за цялото заключване вместо вас.<\/span> <span class=\"sg\" data-s=\"1\">Каналите са стандартният начин безопасно да се предава поток от стойности между паралелни задачи — производител и потребител.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Този раздел показва как се изпращат и получават стойности през канал и как затварянето на канала сигнализира, че повече стойности няма да дойдат.<\/span><\/p>"]]}}}</script>
+<script src="/theme/reader.js?v=e325a382"></script>
+</body>
+</html>

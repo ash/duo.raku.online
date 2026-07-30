@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your words · Raku Course Duo</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=e325a382">
+<script src="/theme/langs.js?v=e325a382"></script>
+<script src="/theme/boot.js?v=e325a382"></script>
+</head>
+<body data-page="words">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs"><strong>Your words</strong></nav>
+  <div class="bar-tools">
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main class="words">
+  <div class="words-head">
+    <div class="words-count" id="words-count"></div>
+    <div class="words-acts">
+      <button class="btn" id="drill-btn">Practise</button>
+      <button class="btn" id="export-btn">Export for Anki</button>
+      <button class="btn btn-quiet" id="clear-btn">Clear…</button>
+    </div>
+  </div>
+  <div id="word-list" class="word-list"></div>
+  <div class="drill" id="drill" hidden></div>
+</main>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{}</script>
+<script src="/theme/reader.js?v=e325a382"></script>
+</body>
+</html>

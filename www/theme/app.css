@@ -1,0 +1,555 @@
+/* app.css — the whole visual system for duo.raku.online.
+   One stylesheet, no build step, no framework. */
+
+:root {
+  --bg: #fbfaf7;
+  --bg-sunk: #f3f1eb;
+  --panel: #ffffff;
+  --ink: #23201c;
+  --ink-soft: #5d574e;
+  --ink-faint: #8b8377;
+  --rule: #e2ddd2;
+  --rule-soft: #eeeae1;
+  --accent: #9c4221;
+  --accent-soft: #f6e9e1;
+  --target-tint: #fdf6ec;
+  --hi: #ffeaa7;
+  --hi-strong: #ffd76e;
+  --ok: #2f6f4f;
+  --code-bg: #f4f2ec;
+  --shadow: 0 6px 24px rgba(35, 32, 28, .10);
+  --radius: 10px;
+  --prose: 1.02rem;
+  --measure: 38rem;
+}
+
+:root[data-theme-active="dark"] {
+  --bg: #16181c;
+  --bg-sunk: #1d2026;
+  --panel: #1f2229;
+  --ink: #e5e3de;
+  --ink-soft: #a8a49c;
+  --ink-faint: #7c7871;
+  --rule: #31353d;
+  --rule-soft: #262a31;
+  --accent: #e08b5f;
+  --accent-soft: #2c2118;
+  --target-tint: #1b1e24;
+  --hi: #4a4126;
+  --hi-strong: #6b5b2b;
+  --ok: #6bbf92;
+  --code-bg: #14161a;
+  --shadow: 0 6px 24px rgba(0, 0, 0, .4);
+}
+
+* { box-sizing: border-box; }
+
+/* A `display` in a class rule outranks the browser's rule for [hidden], and
+   most things here are grid or flex. Say it once, loudly. */
+[hidden] { display: none !important; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  padding-top: 3.25rem;
+}
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-style: solid; }
+
+/* ---------------------------------------------------------------- the bar */
+
+.bar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 40;
+  height: 3.25rem;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: 0 .9rem;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(1.6) blur(10px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.bar-home {
+  font-size: 1.15rem;
+  text-decoration: none;
+  color: var(--ink-soft);
+  flex: none;
+}
+.bar-home:hover { color: var(--accent); }
+.bar-home.is-here { color: var(--accent); }
+
+.crumbs {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: .82rem;
+  color: var(--ink-faint);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.crumbs a { color: var(--ink-soft); text-decoration: none; }
+.crumbs a:hover { color: var(--accent); text-decoration: underline; }
+.crumbs .sep { opacity: .5; padding: 0 .35rem; }
+
+.bar-tools { display: flex; align-items: center; gap: .35rem; flex: none; }
+
+.tool {
+  border: 1px solid transparent;
+  background: none;
+  color: var(--ink-soft);
+  font: inherit;
+  font-size: .95rem;
+  line-height: 1;
+  padding: .4rem .5rem;
+  border-radius: 7px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.tool:hover { background: var(--bg-sunk); color: var(--ink); }
+.tool.is-on { background: var(--accent-soft); color: var(--accent); border-color: var(--rule); }
+
+/* --------------------------------------------------------- language pair */
+
+.pair { display: flex; align-items: center; gap: .3rem; }
+
+.pair select {
+  font: inherit;
+  font-size: .82rem;
+  padding: .28rem 1.3rem .28rem .45rem;
+  border: 1px solid var(--rule);
+  border-radius: 7px;
+  background: var(--panel) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23888' stroke-width='1.5'/></svg>") no-repeat right .4rem center;
+  background-size: .55rem;
+  color: var(--ink);
+  appearance: none;
+  cursor: pointer;
+}
+.pair select.is-target { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.pair .swap {
+  border: none; background: none; cursor: pointer;
+  color: var(--ink-faint); font-size: .95rem; padding: .2rem .1rem;
+}
+.pair .swap:hover { color: var(--accent); }
+
+.pair-big { justify-content: center; gap: .5rem; margin: 1.6rem 0 .6rem; }
+.pair-big select { font-size: 1.05rem; padding: .6rem 2rem .6rem .8rem; max-width: none; background-size: .7rem; }
+.pair-big .swap { font-size: 1.3rem; }
+
+/* ------------------------------------------------------------ the reader */
+
+.reader {
+  max-width: 82rem;
+  margin: 0 auto;
+  padding: 1.6rem 1.2rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2.4rem;
+  row-gap: .2rem;
+  align-items: start;
+}
+
+.pr { display: contents; }
+
+.cell {
+  min-width: 0;
+  padding: .35rem .55rem;
+  border-radius: 8px;
+  position: relative;
+}
+.cell-target { background: var(--target-tint); }
+
+/* A cell with nothing in it still holds its place in the grid — otherwise the
+   rows below would slide up out of alignment — but it must not look like an
+   empty box someone forgot to fill. */
+.cell.is-empty { background: none; padding: 0; }
+
+/* An example that is identical in both languages is one example, not two. */
+.pr.same-code .cell-base { grid-column: 1 / -1; }
+.pr.same-code .cell-target { display: none; }
+
+.cell > :first-child { margin-top: 0; }
+.cell > :last-child { margin-bottom: 0; }
+
+.cell p, .cell li, .cell blockquote, .cell td {
+  font-size: var(--prose);
+  line-height: 1.7;
+}
+.cell p { margin: .5rem 0; }
+.cell h2, .cell h3, .cell h4 {
+  margin: .4rem 0 .3rem;
+  font-size: 1.12rem;
+  line-height: 1.35;
+  letter-spacing: -.01em;
+}
+.cell blockquote {
+  margin: .5rem 0;
+  padding-left: .9rem;
+  border-left: 3px solid var(--rule);
+  color: var(--ink-soft);
+}
+.cell ul, .cell ol { margin: .5rem 0; padding-left: 1.3rem; }
+.cell li { margin: .2rem 0; }
+.cell table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+.cell td { border-bottom: 1px solid var(--rule-soft); padding: .3rem .5rem; vertical-align: top; }
+
+/* Quizzes are here to be read, not answered — the course itself does the
+   answering. The right options are marked so the page still teaches. */
+.cell ul.quiz { list-style: none; padding-left: 0; }
+.cell .quiz-opt { position: relative; padding-left: 1.35rem; margin: .25rem 0; }
+.cell .quiz-opt::before {
+  content: "○";
+  position: absolute; left: 0; top: 0;
+  color: var(--ink-faint);
+  font-size: .85em;
+}
+.cell .quiz-opt.is-right::before { content: "●"; color: var(--ok); }
+.cell .quiz-note {
+  display: block;
+  font-size: .88em;
+  color: var(--ink-soft);
+  margin-top: .1rem;
+}
+
+.cell code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .88em;
+  background: var(--code-bg);
+  padding: .1em .3em;
+  border-radius: 4px;
+}
+.cell pre {
+  margin: .5rem 0;
+  padding: .7rem .85rem;
+  background: var(--code-bg);
+  border: 1px solid var(--rule-soft);
+  border-radius: 8px;
+  overflow-x: auto;
+}
+.cell pre code { background: none; padding: 0; font-size: .84rem; line-height: 1.55; }
+
+/* The page title, spanning both columns, in both languages. */
+.page-head { grid-column: 1 / -1; margin: 0 0 1.1rem; }
+.page-head h1 {
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+}
+.page-head .h-target { color: var(--accent); }
+.page-head .h-sep { color: var(--ink-faint); font-weight: 400; padding: 0 .5rem; }
+.page-head .srcs { margin-top: .45rem; font-size: .78rem; color: var(--ink-faint); }
+.page-head .srcs .off { color: var(--ink-faint); opacity: .5; }
+.page-head .kicker {
+  display: block;
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--ink-faint);
+  margin-bottom: .35rem;
+}
+
+/* --------------------------------------------------- alignment machinery */
+
+.sg { border-radius: 3px; transition: background-color .12s; }
+.sg.hi { background: var(--hi); }
+.pr.hi .cell { box-shadow: inset 2px 0 0 var(--accent); }
+.sg.spoken { background: var(--hi-strong); }
+
+/* A block whose two languages disagree on how many sentences they have: pair
+   the paragraph, not the sentence, and say so rather than mis-highlighting. */
+.pr.no-sync .cell-target::after {
+  content: "≠";
+  position: absolute;
+  top: .3rem; right: .35rem;
+  font-size: .7rem;
+  color: var(--ink-faint);
+  opacity: .5;
+}
+
+.cell-target .sg { cursor: text; }
+
+.blk-tools {
+  position: absolute;
+  top: .1rem; right: .2rem;
+  display: flex; gap: .1rem;
+  opacity: 0;
+  transition: opacity .12s;
+}
+.cell:hover .blk-tools, .blk-tools:focus-within { opacity: 1; }
+.blk-tools button {
+  border: none; background: var(--panel); color: var(--ink-faint);
+  border: 1px solid var(--rule); border-radius: 5px;
+  font-size: .7rem; line-height: 1; padding: .2rem .3rem; cursor: pointer;
+}
+.blk-tools button:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ------------------------------------------------------- reading  modes */
+
+/* One column: the target on top, the base underneath and out of the way. */
+:root[data-mode="target"] .reader,
+:root[data-mode="base"] .reader { grid-template-columns: minmax(0, var(--measure)); justify-content: center; }
+:root[data-mode="target"] .pr,
+:root[data-mode="base"] .pr { display: flex; flex-direction: column; gap: .15rem; }
+
+:root[data-mode="target"] .cell-base,
+:root[data-mode="base"] .cell-target { order: 2; }
+:root[data-mode="target"] .cell-target,
+:root[data-mode="base"] .cell-base { order: 1; }
+
+/* The hidden half stays in the DOM — it is one click from being needed. */
+:root[data-mode="target"] .pr:not(.shown) .cell-base,
+:root[data-mode="base"] .pr:not(.shown) .cell-target {
+  height: .55rem;
+  overflow: hidden;
+  padding: 0;
+  background: repeating-linear-gradient(-45deg, var(--rule-soft) 0 5px, transparent 5px 10px);
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: .8;
+}
+:root[data-mode="target"] .pr:not(.shown) .cell-base > *,
+:root[data-mode="base"] .pr:not(.shown) .cell-target > * { display: none; }
+
+:root[data-mode="target"] .pr.shown .cell-base,
+:root[data-mode="base"] .pr.shown .cell-target {
+  border-left: 2px solid var(--rule);
+  border-radius: 0 8px 8px 0;
+  color: var(--ink-soft);
+}
+
+:root[data-code="hide"] .cell pre { display: none; }
+:root[data-code="hide"] .pr.only-code { display: none; }
+
+/* ------------------------------------------------------------- the pager */
+
+.pager {
+  max-width: 82rem;
+  margin: 0 auto;
+  padding: 1rem 1.2rem 4rem;
+  display: flex;
+  gap: .8rem;
+  align-items: stretch;
+  border-top: 1px solid var(--rule-soft);
+}
+.pager a {
+  flex: 1 1 0;
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: .7rem .9rem;
+  background: var(--panel);
+  display: block;
+}
+.pager a:hover { border-color: var(--accent); }
+.pager .dir { display: block; font-size: .7rem; text-transform: uppercase; letter-spacing: .09em; color: var(--ink-faint); }
+.pager .t-base { display: block; font-size: .92rem; }
+.pager .t-target { display: block; font-size: .92rem; color: var(--accent); }
+.pager .to-next { text-align: right; }
+
+/* -------------------------------------------------- the drawer and panel */
+
+.drawer, .panel {
+  position: fixed;
+  top: 3.25rem;
+  bottom: 0;
+  width: min(30rem, 92vw);
+  background: var(--panel);
+  border-left: 1px solid var(--rule);
+  box-shadow: var(--shadow);
+  overflow-y: auto;
+  z-index: 45;
+  padding: 1rem 1.1rem 3rem;
+}
+.drawer { right: 0; }
+
+/* The word panel is a bottom sheet, not a side panel: it must never cover the
+   column you are reading. */
+.panel {
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  top: auto;
+  bottom: 0;
+  width: min(78rem, 96vw);
+  height: min(46vh, 26rem);
+  border: 1px solid var(--rule);
+  border-bottom: none;
+  border-radius: var(--radius) var(--radius) 0 0;
+  padding: 1rem 1.4rem 1.4rem;
+}
+.panel[hidden], .drawer[hidden] { display: none; }
+
+/* Two columns of examples when there is room for them. */
+@media (min-width: 60rem) {
+  .panel { column-count: 2; column-gap: 2.4rem; }
+  .panel .wp-head, .panel .wp-acts, .panel .wp-sent { column-span: all; }
+}
+
+.drawer h2, .panel h2 { margin: 0 0 .6rem; font-size: 1rem; }
+.drawer .close, .panel .close {
+  position: absolute; top: .5rem; right: .7rem;
+  border: none; background: none; color: var(--ink-faint);
+  font-size: 1.1rem; cursor: pointer;
+}
+
+.toc-part { margin: 0 0 1.1rem; }
+.toc-part > a { display: block; font-weight: 650; text-decoration: none; color: var(--ink); padding: .2rem 0; }
+.toc-group { font-size: .72rem; text-transform: uppercase; letter-spacing: .09em; color: var(--ink-faint); margin: .6rem 0 .15rem; }
+.toc-list { list-style: none; margin: 0; padding: 0 0 0 .2rem; }
+.toc-list a {
+  display: block;
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-size: .88rem;
+  padding: .14rem .3rem;
+  border-radius: 5px;
+  border-left: 2px solid transparent;
+}
+.toc-list a:hover { background: var(--bg-sunk); color: var(--ink); }
+.toc-list a.is-here { border-left-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+.toc-list a.is-read::after { content: " ✓"; color: var(--ok); font-size: .8em; }
+.toc-list .t2 { padding-left: 1rem; }
+.toc-list .t3 { padding-left: 2rem; font-size: .84rem; }
+.toc-list .lang2 { color: var(--ink-faint); font-size: .92em; }
+
+/* ------------------------------------------------------- the word  panel */
+
+.wp-head { display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; margin-bottom: .2rem; }
+.wp-word { font-size: 1.5rem; font-weight: 650; letter-spacing: -.01em; }
+.wp-meta { font-size: .78rem; color: var(--ink-faint); }
+.wp-acts { display: flex; gap: .4rem; margin: .6rem 0 .9rem; flex-wrap: wrap; }
+
+.btn {
+  font: inherit; font-size: .84rem;
+  border: 1px solid var(--rule);
+  background: var(--panel);
+  color: var(--ink);
+  padding: .35rem .7rem;
+  border-radius: 7px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn.is-on { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn-quiet { color: var(--ink-faint); }
+
+.wp-sent { border-left: 3px solid var(--accent); padding: .1rem 0 .1rem .7rem; margin: .5rem 0 .9rem; }
+.wp-sent .t { display: block; }
+.wp-sent .b { display: block; color: var(--ink-soft); font-size: .93em; margin-top: .15rem; }
+.wp-sent mark { background: var(--hi); color: inherit; border-radius: 3px; padding: 0 .1em; }
+
+.wp-more { font-size: .72rem; text-transform: uppercase; letter-spacing: .09em; color: var(--ink-faint); margin: 1rem 0 .3rem; }
+.wp-ex { border-top: 1px solid var(--rule-soft); padding: .5rem 0; font-size: .93rem; }
+.wp-ex .t { display: block; }
+.wp-ex .b { display: block; color: var(--ink-soft); font-size: .92em; }
+.wp-ex .src { font-size: .74rem; }
+.wp-ex mark { background: var(--hi); color: inherit; border-radius: 3px; padding: 0 .1em; }
+
+/* --------------------------------------------------------- the home page */
+
+.home { max-width: 54rem; margin: 0 auto; padding: 2rem 1.2rem 5rem; }
+.hero h1 { font-size: 2.1rem; line-height: 1.12; letter-spacing: -.025em; margin: .2rem 0 .5rem; }
+.lede { font-size: 1.05rem; color: var(--ink-soft); max-width: 34rem; }
+.resume { margin: .3rem 0 0; font-size: .9rem; }
+
+.how { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: .9rem; margin: 2.2rem 0; }
+.how div { border: 1px solid var(--rule); border-radius: var(--radius); padding: .8rem .9rem; background: var(--panel); }
+.how h3 { margin: 0 0 .25rem; font-size: .92rem; }
+.how p { margin: 0; font-size: .85rem; color: var(--ink-soft); }
+.how kbd {
+  font: inherit; font-size: .78em;
+  border: 1px solid var(--rule); border-bottom-width: 2px;
+  border-radius: 4px; padding: 0 .3em; background: var(--bg-sunk);
+}
+
+.contents h2 { font-size: 1.1rem; margin: 2rem 0 .6rem; }
+.home-toc { columns: 2 18rem; column-gap: 2rem; }
+.home-toc .toc-part { break-inside: avoid; }
+
+/* -------------------------------------------------------- the words page */
+
+.words { max-width: 54rem; margin: 0 auto; padding: 1.6rem 1.2rem 5rem; }
+.words-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.words-count { font-size: .88rem; color: var(--ink-soft); }
+.words-acts { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+.word-list { display: grid; gap: .5rem; }
+.wcard {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: .6rem .8rem;
+  background: var(--panel);
+}
+.wcard .top { display: flex; align-items: baseline; gap: .5rem; }
+.wcard .w { font-weight: 650; font-size: 1.05rem; }
+.wcard .lg { font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-faint); }
+.wcard .box { margin-left: auto; font-size: .72rem; color: var(--ink-faint); }
+.wcard .s { font-size: .9rem; margin-top: .2rem; }
+.wcard .s .b { display: block; color: var(--ink-soft); font-size: .93em; }
+.wcard mark { background: var(--hi); color: inherit; border-radius: 3px; }
+.wcard .drop { border: none; background: none; color: var(--ink-faint); cursor: pointer; font-size: .95rem; }
+.wcard .drop:hover { color: var(--accent); }
+
+.drill { border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.4rem; background: var(--panel); text-align: center; }
+.drill .prompt { font-size: 1.2rem; line-height: 1.6; margin: .5rem 0 1rem; }
+.drill .prompt .gap { display: inline-block; min-width: 4rem; border-bottom: 2px solid var(--accent); }
+.drill .answer { font-size: 1.4rem; font-weight: 650; color: var(--accent); margin: .4rem 0; }
+.drill .hint { color: var(--ink-soft); font-size: .95rem; }
+.drill .acts { display: flex; gap: .5rem; justify-content: center; margin-top: 1rem; flex-wrap: wrap; }
+.drill .progress { font-size: .78rem; color: var(--ink-faint); }
+
+/* ------------------------------------------------------------- the toast */
+
+.toasts { position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%); z-index: 60; display: grid; gap: .4rem; }
+.toast {
+  background: var(--ink); color: var(--bg);
+  padding: .45rem .9rem; border-radius: 999px;
+  font-size: .85rem; box-shadow: var(--shadow);
+  animation: pop .2s ease-out;
+}
+@keyframes pop { from { opacity: 0; transform: translateY(6px); } }
+
+/* ------------------------------------------------------------- the  help */
+
+.help { position: fixed; inset: 0; z-index: 70; background: rgba(0,0,0,.45); display: grid; place-items: center; padding: 1rem; }
+.help[hidden] { display: none; }
+.help-box { background: var(--panel); border-radius: var(--radius); padding: 1.3rem 1.5rem; max-width: 30rem; width: 100%; box-shadow: var(--shadow); }
+.help-box h2 { margin: 0 0 .7rem; font-size: 1.05rem; }
+.help-box dl { display: grid; grid-template-columns: auto 1fr; gap: .3rem .9rem; margin: 0; font-size: .88rem; }
+.help-box dt { text-align: right; }
+.help-box kbd {
+  font: inherit; font-size: .82em;
+  border: 1px solid var(--rule); border-bottom-width: 2px;
+  border-radius: 4px; padding: 0 .35em; background: var(--bg-sunk);
+}
+.help-box dd { margin: 0; color: var(--ink-soft); }
+
+/* ------------------------------------------------------------ small nav */
+
+@media (max-width: 860px) {
+  body { padding-top: 6rem; }
+  .bar { height: auto; flex-wrap: wrap; padding: .4rem .7rem; row-gap: .35rem; }
+  .crumbs { order: 3; flex-basis: 100%; }
+  .reader { grid-template-columns: minmax(0, 1fr); row-gap: .1rem; }
+  .pr { display: flex; flex-direction: column; gap: .1rem; }
+  .cell-base { order: 2; }
+  .cell-target { order: 1; }
+  .home-toc { columns: 1; }
+  .drawer, .panel { top: auto; height: 78vh; width: 100vw; border-radius: var(--radius) var(--radius) 0 0; }
+}
+
+@media print {
+  .bar, .pager, .drawer, .panel, .toasts, .blk-tools { display: none; }
+  body { padding-top: 0; }
+}

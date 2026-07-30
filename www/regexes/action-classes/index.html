@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Action classes</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=e325a382">
+<script src="/theme/langs.js?v=e325a382"></script>
+<script src="/theme/boot.js?v=e325a382"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"regexes/action-classes","n":1150,"k":"section","pv":"regexes/make-and-made/exercises/reverse-the-words/solution","nx":"regexes/action-classes/writing-actions","tr":["regexes"],"L":{"en":{"t":"Action classes","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Inline <code>{ make … }<\/code> blocks work, but they clutter a grammar with logic and make it harder to read.<\/span> <span class=\"sg\" data-s=\"1\">The tidy solution is an <em>action class<\/em>: a separate class whose methods are named after the grammar’s tokens and supply the <code>make<\/code> for each one.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">This section shows how to write an action class, how to hand it to <code>.parse<\/code>, and when to prefer it over inline actions.<\/span><\/p>"]]},"de":{"t":"Aktionsklassen","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Inline stehende <code>{ make … }<\/code>-Blöcke funktionieren, aber sie überfrachten eine Grammatik mit Logik und machen sie schwerer lesbar.<\/span> <span class=\"sg\" data-s=\"1\">Die ordentliche Lösung ist eine <em>Aktionsklasse<\/em>: eine eigene Klasse, deren Methoden nach den Tokens der Grammatik benannt sind und das <code>make<\/code> für jedes davon liefern.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Dieser Abschnitt zeigt, wie Sie eine Aktionsklasse schreiben, wie Sie sie <code>.parse<\/code> übergeben und wann Sie sie inline stehenden Aktionen vorziehen.<\/span><\/p>"]]},"nl":{"t":"Actieklassen","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Inline blokken met <code>{ make … }<\/code> werken, maar ze vervuilen een grammatica met logica en maken haar minder leesbaar.<\/span> <span class=\"sg\" data-s=\"1\">De nette oplossing is een <em>actieklasse<\/em>: een aparte klasse waarvan de methoden naar de tokens van de grammatica genoemd zijn en de <code>make<\/code> voor elk daarvan leveren.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Deze sectie laat zien hoe je een actieklasse schrijft, hoe je haar aan <code>.parse<\/code> meegeeft, en wanneer je haar boven inline acties verkiest.<\/span><\/p>"]]},"es":{"t":"Clases de acción","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Los bloques <code>{ make … }<\/code> en línea funcionan, pero llenan de lógica una gramática y la hacen más difícil de leer.<\/span> <span class=\"sg\" data-s=\"1\">La solución ordenada es una <em>clase de acciones<\/em>: una clase aparte cuyos métodos llevan el nombre de los tokens de la gramática y aportan el <code>make<\/code> de cada uno.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Esta sección muestra cómo escribir una clase de acciones, cómo entregársela a <code>.parse<\/code> y cuándo preferirla a las acciones en línea.<\/span><\/p>"]]},"it":{"t":"Classi di azione","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">I blocchi <code>{ make … }<\/code> in linea funzionano, ma ingombrano una grammatica di logica e la rendono più difficile da leggere.<\/span> <span class=\"sg\" data-s=\"1\">La soluzione ordinata è una <em>classe di azioni<\/em>: una classe separata i cui metodi portano il nome dei token della grammatica e forniscono il <code>make<\/code> per ciascuno.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Questa sezione mostra come scrivere una classe di azioni, come consegnarla a <code>.parse<\/code> e quando preferirla alle azioni in linea.<\/span><\/p>"]]},"ru":{"t":"Классы действий","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Встроенные блоки <code>{ make … }<\/code> работают, но захламляют грамматику логикой и делают её труднее для чтения.<\/span> <span class=\"sg\" data-s=\"1\">Аккуратное решение — <em>класс действий<\/em>: отдельный класс, методы которого названы по токенам грамматики и выполняют <code>make<\/code> для каждого из них.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">В этом разделе показано, как написать класс действий, как передать его в <code>.parse<\/code> и когда его стоит предпочесть встроенным действиям.<\/span><\/p>"]]},"uk":{"t":"Класи дій","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Вбудовані блоки <code>{ make … }<\/code> працюють, але захаращують граматику логікою й ускладнюють її читання.<\/span> <span class=\"sg\" data-s=\"1\">Охайне розв'язання — <em>клас дій<\/em>: окремий клас, чиї методи названо за токенами граматики й які виконують <code>make<\/code> для кожного з них.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Цей розділ показує, як написати клас дій, як передати його в <code>.parse<\/code> і коли віддати йому перевагу перед вбудованими діями.<\/span><\/p>"]]},"bg":{"t":"Класове за действия","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Вградените блокове <code>{ make … }<\/code> работят, но затрупват граматиката с логика и я правят по-трудна за четене.<\/span> <span class=\"sg\" data-s=\"1\">Подреденото решение е <em>клас за действия<\/em>: отделен клас, чиито методи са именувани по токените на граматиката и осигуряват <code>make<\/code> за всеки от тях.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Този раздел показва как се пише клас за действия, как се подава на <code>.parse<\/code> и кога да го предпочетете пред вградените действия.<\/span><\/p>"]]}}}</script>
+<script src="/theme/reader.js?v=e325a382"></script>
+</body>
+</html>

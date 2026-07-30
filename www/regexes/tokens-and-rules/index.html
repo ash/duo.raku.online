@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tokens and rules</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=e325a382">
+<script src="/theme/langs.js?v=e325a382"></script>
+<script src="/theme/boot.js?v=e325a382"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"regexes/tokens-and-rules","n":1114,"k":"section","pv":"regexes/creating-grammars/exercises/parse-a-time/solution","nx":"regexes/tokens-and-rules/three-kinds","tr":["regexes"],"L":{"en":{"t":"Tokens and rules","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Inside a grammar you have been writing <code>token<\/code>.<\/span> <span class=\"sg\" data-s=\"1\">There are actually three keywords for declaring a named pattern — <code>regex<\/code>, <code>token<\/code>, and <code>rule<\/code> — and they differ in two small but important ways: whether they backtrack, and whether spaces in the pattern are significant.<\/span><\/p>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Knowing which to choose makes grammars both faster and easier to read.<\/span> <span class=\"sg\" data-s=\"1\">This section explains all three.<\/span><\/p>"]]},"de":{"t":"Tokens und Rules","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Innerhalb einer Grammatik haben Sie bisher <code>token<\/code> geschrieben.<\/span> <span class=\"sg\" data-s=\"1\">Tatsächlich gibt es drei Schlüsselwörter, um ein benanntes Muster zu deklarieren — <code>regex<\/code>, <code>token<\/code> und <code>rule<\/code> —, und sie unterscheiden sich in zwei kleinen, aber wichtigen Punkten: ob sie zurückweichen und ob Leerzeichen im Muster bedeutsam sind.<\/span><\/p>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Zu wissen, welches man wählt, macht Grammatiken zugleich schneller und lesbarer.<\/span> <span class=\"sg\" data-s=\"1\">Dieser Abschnitt erklärt alle drei.<\/span><\/p>"]]},"nl":{"t":"Tokens en rules","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Binnen een grammatica heb je tot nu toe <code>token<\/code> geschreven.<\/span> <span class=\"sg\" data-s=\"1\">Er zijn eigenlijk drie sleutelwoorden om een benoemd patroon te declareren — <code>regex<\/code>, <code>token<\/code> en <code>rule<\/code> — en ze verschillen op twee kleine maar belangrijke punten: of ze terugkrabbelen, en of spaties in het patroon betekenisvol zijn.<\/span><\/p>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Weten welke je kiest maakt grammatica's zowel sneller als leesbaarder.<\/span> <span class=\"sg\" data-s=\"1\">Deze sectie legt alle drie uit.<\/span><\/p>"]]},"es":{"t":"Tokens y reglas","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Dentro de una gramática has venido escribiendo <code>token<\/code>.<\/span> <span class=\"sg\" data-s=\"1\">En realidad hay tres palabras clave para declarar un patrón con nombre — <code>regex<\/code>, <code>token<\/code> y <code>rule<\/code> — y se diferencian en dos aspectos pequeños pero importantes: si retroceden y si los espacios del patrón son significativos.<\/span><\/p>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Saber cuál elegir hace las gramáticas a la vez más rápidas y más fáciles de leer.<\/span> <span class=\"sg\" data-s=\"1\">Esta sección explica las tres.<\/span><\/p>"]]},"it":{"t":"Token e regole","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Dentro una grammatica hai scritto finora <code>token<\/code>.<\/span> <span class=\"sg\" data-s=\"1\">In realtà ci sono tre parole chiave per dichiarare uno schema con nome — <code>regex<\/code>, <code>token<\/code> e <code>rule<\/code> — e differiscono in due modi piccoli ma importanti: se tornano sui propri passi e se gli spazi nello schema sono significativi.<\/span><\/p>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Sapere quale scegliere rende le grammatiche insieme più veloci e più facili da leggere.<\/span> <span class=\"sg\" data-s=\"1\">Questa sezione spiega tutte e tre.<\/span><\/p>"]]},"ru":{"t":"Токены и правила","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Внутри грамматики вы до сих пор писали <code>token<\/code>.<\/span> <span class=\"sg\" data-s=\"1\">На самом деле ключевых слов для объявления именованного шаблона три — <code>regex<\/code>, <code>token<\/code> и <code>rule<\/code>, — и различаются они двумя небольшими, но важными вещами: возвращаются ли они назад и значимы ли пробелы в шаблоне.<\/span><\/p>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Понимание того, какое из них выбрать, делает грамматики и быстрее, и понятнее.<\/span> <span class=\"sg\" data-s=\"1\">В этом разделе разбираются все три.<\/span><\/p>"]]},"uk":{"t":"Токени та правила","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Усередині граматики ви досі писали <code>token<\/code>.<\/span> <span class=\"sg\" data-s=\"1\">Насправді для оголошення іменованого шаблону є три ключові слова — <code>regex<\/code>, <code>token<\/code> та <code>rule<\/code>, — і різняться вони двома невеликими, але важливими рисами: чи відкочуються вони назад і чи є значущими пробіли в шаблоні.<\/span><\/p>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Знання того, що коли вибрати, робить граматики і швидшими, і зрозумілішими.<\/span> <span class=\"sg\" data-s=\"1\">Цей розділ пояснює всі три.<\/span><\/p>"]]},"bg":{"t":"Токени и правила","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Вътре в граматиката досега пишехте <code>token<\/code>.<\/span> <span class=\"sg\" data-s=\"1\">Всъщност за деклариране на именуван шаблон има три ключови думи — <code>regex<\/code>, <code>token<\/code> и <code>rule<\/code>, — и те се различават по две малки, но важни неща: дали се връщат назад и дали интервалите в шаблона са значещи.<\/span><\/p>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Знанието коя да изберете прави граматиките и по-бързи, и по-лесни за четене.<\/span> <span class=\"sg\" data-s=\"1\">Този раздел обяснява и трите.<\/span><\/p>"]]}}}</script>
+<script src="/theme/reader.js?v=e325a382"></script>
+</body>
+</html>
