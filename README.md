@@ -1,6 +1,6 @@
 # duo.raku.online
 
-A bilingual reader for
+**[duo.raku.online](https://duo.raku.online)** — a bilingual reader for
 [The Complete Course of the Raku Programming Language](https://course.raku.org).
 Two languages side by side, paragraph opposite paragraph, so the course can be
 used to read a language rather than only to learn Raku.
@@ -30,6 +30,8 @@ block, so a stale translation degrades instead of misleading.
 | **Read aloud** | The page, a paragraph or a single word, in the target language, through the browser's own speech synthesis. Nothing is sent anywhere. |
 | **Vocabulary** | Save words while reading; `/words/` lists them with the sentence they came from, drills them as cloze cards on Leitner boxes, and exports Anki-ready TSV. |
 | **Progress** | Pages you have finished are ticked in the contents; the home page offers to continue where you stopped. |
+
+A page to try it on: [`for` loops, English opposite German](https://duo.raku.online/essentials/loops/for/).
 
 Everything a reader accumulates — the pair, the mode, the theme, saved words,
 progress — lives in `localStorage`. There is no account and no server.
@@ -85,10 +87,10 @@ not make it into the HTML.
 
 ## Deploying
 
-GitHub Pages from `main`; `.github/workflows/pages.yml` uploads `www/`
-verbatim. There is no build step in CI — the generator needs the course
-checkout, which lives outside this repository — which is why `www/` is
-committed.
+Live at **[duo.raku.online](https://duo.raku.online)**, GitHub Pages from
+`main`. `.github/workflows/pages.yml` uploads `www/` verbatim. There is no build
+step in CI — the generator needs the course checkout, which lives outside this
+repository — which is why `www/` is committed.
 
 ```sh
 ./build.sh
@@ -96,8 +98,13 @@ git add -A && git commit -m "…"
 git push origin main
 ```
 
-`www/CNAME` carries `duo.raku.online`; point the DNS at GitHub Pages and enable
-Pages for the repository.
+That is the whole deployment; the push is the deploy.
+
+The custom domain is set on the repository (`duo.raku.online`, HTTPS enforced),
+and `duo.raku.online` is a CNAME to `ash.github.io`. Note that every URL the
+site emits is root-absolute — `/theme/…`, `/data/…`, `/essentials/…` — so it
+works at a domain root and *not* under `ash.github.io/duo.raku.online/`. If the
+custom domain is ever removed, the site breaks.
 
 ## Rebuilding after the course changes
 
