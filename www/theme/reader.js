@@ -775,7 +775,12 @@ function toggleDrawer() {
   buildToc(host, true);
 }
 
-function buildToc(host, showSecond) {
+// maxDepth caps how far down the tree to draw. The drawer wants everything —
+// it is how you get to a particular quiz. The front page wants an overview, so
+// it stops at the sections: 169 rows that fit in three columns instead of 1008
+// that fit in nothing.
+function buildToc(host, showSecond, maxDepth) {
+  var limit = maxDepth == null ? Infinity : maxDepth;
   Promise.all([tree(), titles(S.base), titles(S.target).catch(function () { return {}; })])
     .then(function (r) {
       var t = r[0], tb = r[1], tt = r[2], read = readPages();
@@ -786,10 +791,16 @@ function buildToc(host, showSecond) {
         a.href = '/' + part.u + '/';
         sec.appendChild(a);
         (part.c || []).forEach(function (group) {
-          if (group.g) sec.appendChild(el('div', 'toc-group', group.g));
+          // Label and list travel together, so a column break cannot leave a
+          // heading stranded at the foot of one column.
+          var box = el('div', 'toc-grp');
+          if (group.g) box.appendChild(el('div', 'toc-group', group.g));
           var ul = el('ul', 'toc-list');
-          (group.c || []).forEach(function (node) { tocNode(ul, node, 1, tb, tt, read, showSecond); });
-          sec.appendChild(ul);
+          (group.c || []).forEach(function (node) {
+            tocNode(ul, node, 1, tb, tt, read, showSecond, limit);
+          });
+          box.appendChild(ul);
+          sec.appendChild(box);
         });
         host.appendChild(sec);
       });
@@ -799,11 +810,18 @@ function buildToc(host, showSecond) {
     .catch(function () { host.textContent = 'Could not load the contents.'; });
 }
 
-function tocNode(ul, node, depth, tb, tt, read, showSecond) {
+function tocNode(ul, node, depth, tb, tt, read, showSecond, limit) {
   var li = el('li');
   var a = el('a', depth > 1 ? 't' + depth : '');
   a.href = '/' + node.u + '/';
   a.appendChild(elh('span', '', tb[node.u] || node.u));
+
+  var kids = node.c || [];
+  // At the cut-off, say how much is folded away rather than dropping it
+  // silently — a section with 40 pages under it should not look like a leaf.
+  if (kids.length && depth >= limit) {
+    a.appendChild(el('span', 'n', ' ' + countLeaves(node)));
+  }
   if (showSecond && tt[node.u] && tt[node.u] !== tb[node.u]) {
     a.appendChild(el('span', 'lang2', ' · ' + tt[node.u]));
   }
@@ -811,7 +829,14 @@ function tocNode(ul, node, depth, tb, tt, read, showSecond) {
   if (read[node.u]) a.classList.add('is-read');
   li.appendChild(a);
   ul.appendChild(li);
-  (node.c || []).forEach(function (k) { tocNode(ul, k, depth + 1, tb, tt, read, showSecond); });
+  if (depth >= limit) return;
+  kids.forEach(function (k) { tocNode(ul, k, depth + 1, tb, tt, read, showSecond, limit); });
+}
+
+function countLeaves(node) {
+  var n = 0;
+  (node.c || []).forEach(function (k) { n += 1 + countLeaves(k); });
+  return n;
 }
 
 // ------------------------------------------------------------- the modes
@@ -985,7 +1010,7 @@ if (PAGEKIND === 'reader') {
 
 function paintHomeToc() {
   var host = document.getElementById('home-toc');
-  if (host) buildToc(host, false);
+  if (host) buildToc(host, true, 1);
   var res = document.getElementById('resume');
   var last = js(LAST_KEY, null);
   if (res && last && last.u) {

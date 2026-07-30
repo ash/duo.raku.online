@@ -1021,6 +1021,9 @@ constant HOME-BODY = q:to/BODY/;
   <section class="how" id="how"></section>
   <section class="contents">
     <h2>The course</h2>
+    <p class="note">Five parts and their sections. Every topic, quiz, exercise
+      and solution underneath is in the contents drawer — press <kbd>c</kbd> on
+      any page.</p>
     <div id="home-toc" class="home-toc">Loading…</div>
   </section>
 </main>

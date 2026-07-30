@@ -5,7 +5,7 @@ window.DUO = {
     { id: "nl", name: "Nederlands", en: "Dutch", speech: "nl-NL", dir: "nl", pages: 1530, words: 6515 },
     { id: "es", name: "Español", en: "Spanish", speech: "es-ES", dir: "es", pages: 1530, words: 6735 },
     { id: "it", name: "Italiano", en: "Italian", speech: "it-IT", dir: "it", pages: 1530, words: 7079 },
-    { id: "lv", name: "Latviešu", en: "Latvian", speech: "lv-LV", dir: "lv", pages: 997, words: 7850 },
+    { id: "lv", name: "Latviešu", en: "Latvian", speech: "lv-LV", dir: "lv", pages: 1163, words: 8453 },
     { id: "ru", name: "Русский", en: "Russian", speech: "ru-RU", dir: "ru", pages: 1530, words: 10683 },
     { id: "uk", name: "Українська", en: "Ukrainian", speech: "uk-UA", dir: "uk", pages: 1530, words: 10199 },
     { id: "bg", name: "Български", en: "Bulgarian", speech: "bg-BG", dir: "bg", pages: 1530, words: 8610 },
@@ -13,7 +13,7 @@ window.DUO = {
     { id: "la", name: "Latina", en: "Latin", speech: "la", dir: "la", pages: 696, words: 6560 }
   ],
   defaultPair: { base: "en", target: "de" },
-  version: "6af96fb9",
+  version: "40453341",
   pages: 1530,
   courseBase: "https://course.raku.org"
 };
