@@ -335,8 +335,42 @@ function render() {
     reader.appendChild(pr);
   }
 
+  if (!n) renderChildren();
   paintPager();
   rememberPlace();
+}
+
+// Part landing pages and exercise indexes carry no prose of their own — on the
+// course proper their body is a generated table of contents. Rather than show
+// a title over nothing, list what is underneath, in both languages.
+function renderChildren() {
+  var host = el('div', 'children');
+  host.appendChild(el('div', 'wp-more', 'What is in here'));
+  var ul = el('ul', 'toc-list');
+  host.appendChild(ul);
+  reader.appendChild(host);
+
+  Promise.all([tree(), titles(S.base), titles(S.target).catch(function () { return {}; })])
+    .then(function (r) {
+      var seq = r[0].seq, tb = r[1], tt = r[2], read = readPages();
+      var prefix = PAGE.u + '/';
+      var found = 0;
+      seq.forEach(function (u) {
+        if (u.indexOf(prefix) !== 0) return;
+        if (u.slice(prefix.length).indexOf('/') >= 0) return;     // grandchildren
+        found++;
+        var li = el('li');
+        var a = el('a');
+        a.href = '/' + u + '/';
+        a.appendChild(elh('span', '', tb[u] || u));
+        if (tt[u] && tt[u] !== tb[u]) a.appendChild(elh('span', 'lang2', ' · ' + tt[u]));
+        if (read[u]) a.classList.add('is-read');
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+      if (!found) host.remove();
+    })
+    .catch(function () { host.remove(); });
 }
 
 function cell(which, block, i) {

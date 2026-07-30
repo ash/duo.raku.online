@@ -13,7 +13,7 @@ window.DUO = {
     { id: "la", name: "Latina", en: "Latin", speech: "la", dir: "la", pages: 696, words: 6560 }
   ],
   defaultPair: { base: "en", target: "de" },
-  version: "e325a382",
+  version: "6af96fb9",
   pages: 1530,
   courseBase: "https://course.raku.org"
 };
