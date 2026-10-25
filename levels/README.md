@@ -6,7 +6,8 @@ at about C1; it stays the third choice in the reader, as *Original*.
 
 So far the levels cover Essentials from [the beginning](https://duo.raku.online/a2/essentials/what-is-raku/)
 through control flow (with [loops](https://duo.raku.online/a2/essentials/loops/)), coercion, typed variables,
-positionals and [associatives](https://duo.raku.online/a2/essentials/associatives/), in all eleven languages. A page is English-only at the levels where its translation does not
+positionals, [associatives](https://duo.raku.online/a2/essentials/associatives/) and [functions](https://duo.raku.online/a2/essentials/functions/), in all eleven
+languages. A page is English-only at the levels where its translation does not
 line up with the English, or is listed in [`skip.txt`](skip.txt).
 
 ## Layout

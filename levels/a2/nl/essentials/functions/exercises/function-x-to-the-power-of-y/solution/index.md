@@ -1,0 +1,43 @@
+---
+title: 'Solution: Functie om _xʸ_ te berekenen'
+---
+
+{% include menu.html %}
+
+Gebruik in dit programma de operator `**`. Die berekent de macht.
+
+## Code
+
+Hier is de oplossing:
+
+```raku
+sub f($x, $y) { $x ** $y }
+
+say f(5, 3);
+say f(2, 10);
+say f(-4, 5);
+```
+
+🦋 Vind het programma in het bestand [function-x-to-the-power-of-y.raku](https://github.com/ash/raku-course/blob/master/exercises/essentials/functions/function-x-to-the-power-of-y.raku).
+
+## Output
+
+Voer het programma uit. Controleer of de antwoorden goed zijn:
+
+```console
+$ raku exercises/functions/function-x-to-the-power-of-y.raku
+125
+1024
+-1024
+```
+
+## Opmerking
+
+De functie werkt ook met negatieve machten. Bijvoorbeeld:
+
+```raku
+say f(5, -1);  # 0.2
+say f(10, -2); # 0.01
+```
+
+{% include nav.html %}

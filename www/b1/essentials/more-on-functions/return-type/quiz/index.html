@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Return type of functions · B1</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=f73576e1">
+<script src="/theme/langs.js?v=f73576e1"></script>
+<script src="/theme/boot.js?v=f73576e1"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <nav class="level" id="level" hidden></nav>
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"essentials/more-on-functions/return-type/quiz","n":303,"k":"quiz","pv":"essentials/more-on-functions/return-type","nx":"essentials/more-on-functions/multi-functions","tr":["essentials","essentials/more-on-functions","essentials/more-on-functions/return-type"],"lv":"b1","lvs":["a2","b1"],"pvl":["a2","b1"],"nxl":["a2","b1"],"L":{"en":{"t":"Quiz — Return type of functions","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">A function returns the number of seconds in a given number of whole minutes:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>sub seconds(Int $minutes) returns Int {\n    $minutes * 60\n}<\/code><\/pre>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Mark the assignments that will work.<\/span><\/p>"],["quiz",6,"<ul class=\"quiz\"><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"0\">my $a = seconds(3);<span class=\"quiz-note\">Assigning to an untyped variable works.<\/span><\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"1\">my Rat $b = seconds(4);<span class=\"quiz-note\">An <code>Int<\/code> value cannot be assigned to a <code>Rat<\/code> typed variable.<\/span><\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"2\">my Int $c = seconds(5);<\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"3\">my Num $d = seconds(6);<\/span><\/li><li class=\"quiz-opt is-right\"><span class=\"sg\" data-s=\"4\">my Str $e = seconds(7).Str;<span class=\"quiz-note\">Explicit type conversion helps.<\/span><\/span><\/li><li class=\"quiz-opt\"><span class=\"sg\" data-s=\"5\">my Str $f = seconds(8);<\/span><\/li><\/ul>"]]}}}</script>
+<script src="/theme/reader.js?v=f73576e1"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>More on functions · B1</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=f73576e1">
+<script src="/theme/langs.js?v=f73576e1"></script>
+<script src="/theme/boot.js?v=f73576e1"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <nav class="level" id="level" hidden></nav>
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"essentials/more-on-functions","n":298,"k":"section","pv":"essentials/functions/quiz","nx":"essentials/more-on-functions/mind-the-space","tr":["essentials"],"lv":"b1","lvs":["a2","b1"],"pvl":["a2","b1"],"nxl":["a2","b1"],"L":{"en":{"t":"More on functions","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">This section continues our talk about functions in Raku.<\/span> <span class=\"sg\" data-s=\"1\">Here, we will learn about some of their exciting features.<\/span> <span class=\"sg\" data-s=\"2\">The course has more about functions later.<\/span> <span class=\"sg\" data-s=\"3\">But for now, look at the following topics.<\/span><\/p>"]]},"de":{"t":"Mehr über Funktionen","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Dieser Abschnitt setzt unser Gespräch über Funktionen in Raku fort.<\/span> <span class=\"sg\" data-s=\"1\">Hier lernen wir einige ihrer spannenden Eigenschaften kennen.<\/span> <span class=\"sg\" data-s=\"2\">Später bringt der Kurs noch mehr über Funktionen.<\/span> <span class=\"sg\" data-s=\"3\">Aber sehen Sie sich jetzt erst einmal die folgenden Themen an.<\/span><\/p>"]]},"nl":{"t":"Meer over functies","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Deze sectie gaat verder met ons verhaal over functies in Raku.<\/span> <span class=\"sg\" data-s=\"1\">Hier leren we over een paar van hun spannende eigenschappen.<\/span> <span class=\"sg\" data-s=\"2\">Later in de cursus komt er meer over functies.<\/span> <span class=\"sg\" data-s=\"3\">Maar kijk voor nu naar de volgende onderwerpen.<\/span><\/p>"]]},"es":{"t":"Más sobre funciones","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Esta sección continúa nuestra charla sobre funciones en Raku.<\/span> <span class=\"sg\" data-s=\"1\">Aquí vamos a aprender algunas de sus características interesantes.<\/span> <span class=\"sg\" data-s=\"2\">Más adelante, el curso tiene más material sobre funciones.<\/span> <span class=\"sg\" data-s=\"3\">Pero por ahora, mira los siguientes temas.<\/span><\/p>"]]},"it":{"t":"Più sulle funzioni","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Questa sezione continua il nostro discorso sulle funzioni in Raku.<\/span> <span class=\"sg\" data-s=\"1\">Qui impareremo alcune delle loro caratteristiche più interessanti.<\/span> <span class=\"sg\" data-s=\"2\">Più avanti, il corso dice ancora altro sulle funzioni.<\/span> <span class=\"sg\" data-s=\"3\">Ma per ora, guarda i seguenti argomenti.<\/span><\/p>"]]},"lv":{"t":"Vairāk par funkcijām","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Šī sadaļa turpina mūsu sarunu par funkcijām Raku valodā.<\/span> <span class=\"sg\" data-s=\"1\">Šeit mēs uzzināsim par dažām to aizraujošajām īpašībām.<\/span> <span class=\"sg\" data-s=\"2\">Vēlāk kursā ir vairāk par funkcijām.<\/span> <span class=\"sg\" data-s=\"3\">Bet pagaidām apskatiet šādas tēmas.<\/span><\/p>"]]},"ru":{"t":"Больше о функциях","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Этот раздел продолжает наш разговор о функциях в Raku.<\/span> <span class=\"sg\" data-s=\"1\">Здесь мы узнаем о некоторых их интересных возможностях.<\/span> <span class=\"sg\" data-s=\"2\">Дальше в курсе о функциях будет больше.<\/span> <span class=\"sg\" data-s=\"3\">Но пока посмотрите на следующие темы.<\/span><\/p>"]]},"uk":{"t":"Більше про функції","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Цей розділ продовжує нашу розмову про функції в Raku.<\/span> <span class=\"sg\" data-s=\"1\">Тут ми дізнаємося про деякі їхні захопливі можливості.<\/span> <span class=\"sg\" data-s=\"2\">Далі в курсі буде ще більше про функції.<\/span> <span class=\"sg\" data-s=\"3\">Але зараз розгляньте такі теми.<\/span><\/p>"]]},"bg":{"t":"Повече за функциите","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Този раздел продължава нашия разговор за функциите в Raku.<\/span> <span class=\"sg\" data-s=\"1\">Тук ще научим за някои от техните вълнуващи възможности.<\/span> <span class=\"sg\" data-s=\"2\">По-нататък в курса има още за функциите.<\/span> <span class=\"sg\" data-s=\"3\">Но засега разгледайте следните теми.<\/span><\/p>"]]},"eo":{"t":"Pli pri funkcioj","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Ĉi tiu sekcio daŭrigas nian paroladon pri funkcioj en Raku.<\/span> <span class=\"sg\" data-s=\"1\">Ĉi tie ni lernos pri kelkaj el iliaj ekscitaj trajtoj.<\/span> <span class=\"sg\" data-s=\"2\">La kurso havas pli pri funkcioj poste.<\/span> <span class=\"sg\" data-s=\"3\">Sed por nun, rigardu la jenajn temojn.<\/span><\/p>"]]},"la":{"t":"Plus de functionibus","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Haec sectio sermonem nostrum de functionibus in Raku continuat.<\/span> <span class=\"sg\" data-s=\"1\">Hic de aliquibus earum notis iucundis discemus.<\/span> <span class=\"sg\" data-s=\"2\">Cursus postea plura de functionibus habet.<\/span> <span class=\"sg\" data-s=\"3\">Sed nunc argumenta sequentia inspice.<\/span><\/p>"]]}}}</script>
+<script src="/theme/reader.js?v=f73576e1"></script>
+</body>
+</html>

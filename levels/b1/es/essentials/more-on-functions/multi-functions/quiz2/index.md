@@ -1,0 +1,52 @@
+---
+title: Quiz 2 — Multi-funciones con parámetros tipados
+---
+
+{% include menu.html %}
+
+¿Qué formas de crear una multi-función son correctas?
+
+## 1
+
+```raku
+multi sub func(Int $a, Int $b) {. . .}
+multi sub func(Int $a, Num $b) {. . .}
+```
+
+{:.quiz-select}
+correcto | Estas definiciones son&nbsp; (: correctas, incorrectas :) | Los tipos de parámetros difieren.
+
+## 2
+
+```raku
+multi sub func(Int $a, Int $b) {. . .}
+multi sub func(Int $a, Int $b, Int $c) {. . .}
+```
+
+{:.quiz-select}
+correcto | Estas definiciones son&nbsp; (: correctas, incorrectas :) | El número de parámetros difiere.
+
+## 3
+
+```raku
+multi sub func($a) {. . .}
+multi sub func(Int $a, Int $b) {. . .}
+multi sub func(Int $a, Int $b, Int $c) {. . .}
+```
+
+{:.quiz-select}
+correcto | Estas definiciones son&nbsp; (: correctas, incorrectas :) | Una variante con parámetro solo posicional está bien.
+
+## 4
+
+```raku
+multi sub func($a) {. . .}
+multi sub func(Int $a) {. . .}
+```
+
+{:.quiz-select}
+correcto | Estas definiciones son&nbsp; (: correctas, incorrectas :) | La primera variante captura todo excepto `Int`.
+
+{% include quiz.html %}
+
+{% include nav.html %}
