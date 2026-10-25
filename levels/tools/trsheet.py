@@ -17,12 +17,15 @@
 # that page has no LANG at the levels.
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import LEVELS, load, prose, urls, enc
+from common import LEVELS, load, prose, urls, enc, skipped
 
 lang, course, levels, sections = sys.argv[1:5]
 X = lang.upper()
 todo = 0
 for url in urls(os.path.join(levels, 'a2'), sections):
+    if skipped(levels, url, lang):
+        print(f'# !! {url}: the {X} translation is of an older page (levels/skip.txt); skipped\n')
+        continue
     en = load(os.path.join(course, url, 'index.md'))[1]
     path = os.path.join(course, lang, url, 'index.md')
     if not os.path.exists(path):

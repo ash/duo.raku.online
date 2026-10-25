@@ -5,12 +5,18 @@
 # a block left as TODO or missing, and says so per block.
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import LEVELS, load, save, prose, urls, read_spec
+from common import LEVELS, load, save, prose, urls, read_spec, skipped
 
 lang, course, levels, sections, spec_path = sys.argv[1:6]
 spec, _ = read_spec(spec_path)
 problems, written = [], 0
 for url in urls(os.path.join(levels, 'a2'), sections):
+    if skipped(levels, url, lang):
+        for l in LEVELS:          # one written before the page was listed goes
+            old = os.path.join(levels, l, lang, url, 'index.md')
+            if os.path.exists(old):
+                os.remove(old)
+        continue
     en = load(os.path.join(course, url, 'index.md'))[1]
     path = os.path.join(course, lang, url, 'index.md')
     if not os.path.exists(path):

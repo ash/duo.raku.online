@@ -76,14 +76,20 @@ one or more sections, comma-separated.
    `python3 levels/tools/measure.py C levels essentials/compilers --long 11`
    shows how they compare with the yardstick above and lists the long
    sentences.
-2. **Each translation.** `python3 levels/tools/trsheet.py de C levels essentials/compilers > S/de.spec`
+2. **Stale translations.** `python3 levels/tools/stale.py C essentials/compilers`
+   lists pages whose translation was made from an older English page (its
+   code or examples differ). A level translated from today's English would not
+   match such a page's code, so after reading what it found, list the real
+   ones in [`skip.txt`](skip.txt); those pages then have no level in those
+   languages.
+3. **Each translation.** `python3 levels/tools/trsheet.py de C levels essentials/compilers > S/de.spec`
    lists the blocks whose English changed, with the original English and
    German beside each; replace every `TODO: <English>` with the German. Then
    `python3 levels/tools/apply.py de C levels essentials/compilers S/de.spec`
    writes the German pages. A page whose German original does not line up
    with the English block for block is skipped and has no German at the
    levels.
-3. **Check** as below until it is clean.
+4. **Check** as below until it is clean.
 
 ## Checks
 

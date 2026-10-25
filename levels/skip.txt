@@ -1,0 +1,15 @@
+# Pages whose translation was made from an older version of the English page.
+# Their code and examples no longer match the English, so a level translated
+# from today's English would describe code the translated page does not show.
+# These pages have no level in the listed languages (* for all) until the
+# course's translation catches up; then delete the line and run trsheet.py
+# and apply.py for the page again.
+#
+# Found by comparing the numbers and line counts of each page's code and
+# output blocks with the English.
+
+essentials/strings/exercises/hello-concatenation *
+essentials/strings/exercises/hello-interpolation *
+essentials/strings/exercises/hello-interpolation/solution *
+essentials/strings/exercises/name-length *
+essentials/strings/exercises/name-length/solution *

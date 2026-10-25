@@ -57,6 +57,18 @@ def rewritable(block):
     return not re.fullmatch(r'#+ (\S+|\* \* \*)', p)
 
 
+def skipped(levels, url, lang):
+    """Whether levels/skip.txt keeps this page out of LANG at the levels."""
+    path = os.path.join(levels, 'skip.txt')
+    if not os.path.exists(path):
+        return False
+    for line in open(path, encoding='utf-8'):
+        f = line.split('#')[0].split()
+        if f and f[0] == url and ('*' in f[1:] or lang in f[1:]):
+            return True
+    return False
+
+
 def urls(root, sections):
     """Every page under root/<section> for the comma-separated sections."""
     out = []
