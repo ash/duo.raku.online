@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Associative data types · B1</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=f73576e1">
+<script src="/theme/langs.js?v=f73576e1"></script>
+<script src="/theme/boot.js?v=f73576e1"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <nav class="level" id="level" hidden></nav>
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"essentials/associatives","n":245,"k":"section","pv":"essentials/positionals/exercises/spell-a-number/solution","nx":"essentials/associatives/pairs","tr":["essentials"],"lv":"b1","lvs":["a2","b1"],"pvl":["a2","b1"],"nxl":["a2","b1"],"L":{"en":{"t":"Associative data types","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Associative data types are aggregate types, which means they keep more than one element.<\/span> <span class=\"sg\" data-s=\"1\">You can get each element by its name.<\/span> <span class=\"sg\" data-s=\"2\">Two such types in Raku are pairs and hashes.<\/span> <span class=\"sg\" data-s=\"3\">This part of the course covers their basics.<\/span><\/p>"]]},"de":{"t":"Assoziative Datentypen","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Assoziative Datentypen sind aggregierte Typen, das heißt, sie enthalten mehr als ein Element.<\/span> <span class=\"sg\" data-s=\"1\">Sie können jedes Element über seinen Namen bekommen.<\/span> <span class=\"sg\" data-s=\"2\">Zwei solche Typen in Raku sind Paare und Hashes.<\/span> <span class=\"sg\" data-s=\"3\">Dieser Teil des Kurses behandelt ihre Grundlagen.<\/span><\/p>"]]},"nl":{"t":"Associatieve datentypen","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Associatieve gegevenstypen zijn samengestelde typen, wat betekent dat ze meer dan één element bevatten.<\/span> <span class=\"sg\" data-s=\"1\">Je kunt elk element via zijn naam krijgen.<\/span> <span class=\"sg\" data-s=\"2\">Twee van zulke typen in Raku zijn paren en hashes.<\/span> <span class=\"sg\" data-s=\"3\">Dit deel van de cursus behandelt de basis ervan.<\/span><\/p>"]]},"es":{"t":"Tipos de datos asociativos","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Los tipos de datos asociativos son tipos agregados, lo que significa que guardan más de un elemento.<\/span> <span class=\"sg\" data-s=\"1\">Puedes obtener cada elemento por su nombre.<\/span> <span class=\"sg\" data-s=\"2\">Dos de estos tipos en Raku son los pares y los hashes.<\/span> <span class=\"sg\" data-s=\"3\">Esta parte del curso explica lo básico sobre ellos.<\/span><\/p>"]]},"it":{"t":"Tipi di dati associativi","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">I tipi di dati associativi sono tipi aggregati, cioè contengono più di un elemento.<\/span> <span class=\"sg\" data-s=\"1\">Puoi prendere ogni elemento con il suo nome.<\/span> <span class=\"sg\" data-s=\"2\">In Raku, due tipi di questo genere sono le coppie e gli hash.<\/span> <span class=\"sg\" data-s=\"3\">Questa parte del corso ne presenta le basi.<\/span><\/p>"]]},"lv":{"t":"Asociatīvie datu tipi","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Asociatīvie datu tipi ir agregātu tipi, un tas nozīmē, ka tie glabā vairāk nekā vienu elementu.<\/span> <span class=\"sg\" data-s=\"1\">Jūs varat iegūt katru elementu pēc tā nosaukuma.<\/span> <span class=\"sg\" data-s=\"2\">Divi šādi tipi Raku valodā ir pāri un heši.<\/span> <span class=\"sg\" data-s=\"3\">Šī kursa daļa stāsta par to pamatiem.<\/span><\/p>"]]},"ru":{"t":"Ассоциативные типы данных","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Ассоциативные типы данных — это агрегированные типы, то есть они хранят больше одного элемента.<\/span> <span class=\"sg\" data-s=\"1\">Каждый элемент можно получить по его имени.<\/span> <span class=\"sg\" data-s=\"2\">Два таких типа в Raku — это пары и хэши.<\/span> <span class=\"sg\" data-s=\"3\">Эта часть курса рассказывает об их основах.<\/span><\/p>"]]},"uk":{"t":"Асоціативні типи даних","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Асоціативні типи даних — це агрегатні типи, тобто вони зберігають більше одного елемента.<\/span> <span class=\"sg\" data-s=\"1\">Ви можете отримати кожен елемент за його ім'ям.<\/span> <span class=\"sg\" data-s=\"2\">Два такі типи в Raku — це пари та хеші.<\/span> <span class=\"sg\" data-s=\"3\">Ця частина курсу розповідає про їхні основи.<\/span><\/p>"]]},"bg":{"t":"Асоциативни типове данни","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Асоциативните типове данни са агрегатни типове, което означава, че съдържат повече от един елемент.<\/span> <span class=\"sg\" data-s=\"1\">Можете да вземете всеки елемент по неговото име.<\/span> <span class=\"sg\" data-s=\"2\">Два такива типа в Raku са двойките и хешовете.<\/span> <span class=\"sg\" data-s=\"3\">Тази част от курса разглежда техните основи.<\/span><\/p>"]]},"eo":{"t":"Asociaj datentipoj","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Asociativaj datumtipoj estas agregitaj tipoj, kio signifas, ke ili tenas pli ol unu elementon.<\/span> <span class=\"sg\" data-s=\"1\">Vi povas preni ĉiun elementon per ĝia nomo.<\/span> <span class=\"sg\" data-s=\"2\">Du tiaj tipoj en Raku estas paroj kaj haketoj.<\/span> <span class=\"sg\" data-s=\"3\">Ĉi tiu parto de la kurso klarigas iliajn bazojn.<\/span><\/p>"]]},"la":{"t":"Associativa data genera","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Typi data associativi sunt typi aggregati, id est plus quam unum elementum continent.<\/span> <span class=\"sg\" data-s=\"1\">Quodque elementum per nomen eius accipere potes.<\/span> <span class=\"sg\" data-s=\"2\">Duo tales typi in Raku sunt paria et hashes.<\/span> <span class=\"sg\" data-s=\"3\">Haec pars cursus fundamenta eorum tractat.<\/span><\/p>"]]}}}</script>
+<script src="/theme/reader.js?v=f73576e1"></script>
+</body>
+</html>

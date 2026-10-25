@@ -1,0 +1,18 @@
+---
+title: Kvizo 1 — Haketmapoj
+---
+
+{% include menu.html %}
+
+Korektu la erarojn en ĉi tiu programo. Uzu la plej mallongan manieron skribi ĝin.
+
+{:.quiz-code .fill}
+% @ = => => = => = => =| mia ␣datumoj ␣␣ Jan ␣␣ 1045, Feb ␣␣ 2034, Mar ␣␣ 1987;
+
+{:.quiz-code .fill}
+< { > } | diru %datumoj␣Jan␣; | Ambaŭ `{'Jan'}` kaj `<Jan>` estas ĝustaj, sed la lasta estas pli mallonga.
+< { > } | diru %datumoj␣Feb␣;
+
+{% include quiz.html %}
+
+{% include nav.html %}
