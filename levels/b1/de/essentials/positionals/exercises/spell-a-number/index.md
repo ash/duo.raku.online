@@ -1,0 +1,22 @@
+---
+title: Eine Zahl schreiben
+---
+
+{% include menu.html %}
+
+## Problem
+
+Schreiben Sie ein Programm, das eine positive ganze Zahl von der Kommandozeile nimmt. Es soll die Zahl in englischen Wörtern ausschreiben. Lösen Sie das Problem für Zahlen unter 100.
+
+## Beispiel
+
+```console
+$ raku spell-a-number.raku 34
+thirty-four
+```
+
+## Lösung
+
+✅ [Siehe die Lösung](solution)
+
+{% include nav.html %}

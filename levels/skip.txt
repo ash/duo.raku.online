@@ -14,3 +14,5 @@ essentials/strings/exercises/hello-interpolation/solution *
 essentials/strings/exercises/name-length *
 essentials/strings/exercises/name-length/solution *
 essentials/more-on-functions/return-type/quiz *
+essentials/built-in-functions-for-printing/exercises/compare-say-and-put *
+essentials/built-in-functions-for-printing/exercises/compare-say-and-put/solution *

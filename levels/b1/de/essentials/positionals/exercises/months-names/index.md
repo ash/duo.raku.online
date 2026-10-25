@@ -1,0 +1,24 @@
+---
+title: Monatsnamen
+---
+
+{% include menu.html %}
+
+## Problem
+
+Schreiben Sie ein Programm, das eine ganze Zahl von 1 bis 12 in einen Monatsnamen umwandelt. Es liest die Zahl von der Kommandozeile. Das Ergebnis wird in der Konsole ausgegeben.
+
+## Beispiel
+
+Hier ist ein Beispiel für die Ausführung des Programms:
+
+```console
+$ raku months-names.raku 5
+Mai
+```
+
+## Lösung
+
+✅ [Siehe die Lösung](solution)
+
+{% include nav.html %}

@@ -1,0 +1,34 @@
+---
+title: 'Решение: Количество аргументов командной строки'
+---
+
+{% include menu.html %}
+
+Мы снова берём количество аргументов из `@*ARGS.elems`. Но на этот раз мы не просто выводим его. С ним нужно сделать что-то ещё. Сохраните количество в переменной. Потом выберите нужное слово с помощью тернарного оператора:
+
+## Код
+
+```raku
+my $n = @*ARGS.elems;
+my $word = $n == 1 ?? 'argument' !! 'arguments';
+say "You passed $n $word.";
+```
+
+🦋 Исходный код можно найти в файле [number-of-command-line-arguments.raku](https://github.com/ash/raku-course/blob/master/exercises/essentials/positionals/number-of-command-line-arguments.raku).
+
+## Вывод
+
+Проверьте три интересных случая: нет аргументов, один аргумент и много аргументов. Только во втором случае нужна форма единственного числа, `argument`.
+
+```console
+$ raku exercises/positionals/number-of-command-line-arguments.raku
+You passed 0 arguments.
+
+$ raku exercises/positionals/number-of-command-line-arguments.raku solo
+You passed 1 argument.
+
+$ raku exercises/positionals/number-of-command-line-arguments.raku one 2 three 4 five 6 seven
+You passed 7 arguments.
+```
+
+{% include nav.html %}

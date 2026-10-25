@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solution of ‘True and False integers’ · A2</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=f73576e1">
+<script src="/theme/langs.js?v=f73576e1"></script>
+<script src="/theme/boot.js?v=f73576e1"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <nav class="level" id="level" hidden></nav>
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"essentials/coercion/exercises/true-false-numbers/solution","n":188,"k":"solution","pv":"essentials/coercion/exercises/true-false-numbers","nx":"essentials/coercion/exercises/true-false-strings","tr":["essentials","essentials/coercion"],"lv":"a2","lvs":["a2","b1"],"pvl":["a2","b1"],"nxl":["a2","b1"],"L":{"en":{"t":"Solution of ‘True and False integers’","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Here is the fastest way to find the answer.<\/span> <span class=\"sg\" data-s=\"1\">Take a few different numbers.<\/span> <span class=\"sg\" data-s=\"2\">Use the <code>?<\/code> operator on all of them at once.<\/span> <span class=\"sg\" data-s=\"3\">Then compare the results:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>for -2, -0.5, -1/3, 0, 1/3, 0.5, 2 -&gt; $n {\n    say \"$n -&gt; {?$n}\";\n}<\/code><\/pre>"],["p",3,"<p><span class=\"sg\" data-s=\"0\">The output shows the pattern.<\/span> <span class=\"sg\" data-s=\"1\">All values print <code>True<\/code>.<\/span> <span class=\"sg\" data-s=\"2\">Only the value in the middle does not:<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">-2 -&gt; True     -0.5 -&gt; True     -0.333333 -&gt; True     0 -&gt; False     0.333333 -&gt; True     0.5 -&gt; True     2 -&gt; True<\/span><\/p>"],["p",7,"<p><span class=\"sg\" data-s=\"0\">So the sign and the size of a number do not matter.<\/span> <span class=\"sg\" data-s=\"1\">Only zero is <code>False<\/code>.<\/span> <span class=\"sg\" data-s=\"2\">Here is the next question.<\/span> <span class=\"sg\" data-s=\"3\">Is this true for every type of number?<\/span> <span class=\"sg\" data-s=\"4\">There are three zeros to check.<\/span> <span class=\"sg\" data-s=\"5\"><code>0<\/code> is an <code>Int<\/code>, and <code>0.0<\/code> is a <code>Rat<\/code>.<\/span> <span class=\"sg\" data-s=\"6\">And <code>0e0<\/code> is a <code>Num<\/code>:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my Int $int-zero = 0;\nsay ?$int-zero; # False\n\nmy Rat $rat-zero = 0.0;\nsay ?$rat-zero; # False\n\nmy Num $num-zero = 0e0;\nsay ?$num-zero; # False<\/code><\/pre>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Of course, a minus before the number changes nothing:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $int = 0;\nsay ?(-$int); # False<\/code><\/pre>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">🦋 You can find the full program with the above example in the file <a href=\"https://github.com/ash/raku-course/blob/master/exercises/essentials/coercion/true-false-numbers.raku\" target=\"_blank\" rel=\"noopener\">true-false-numbers.raku<\/a>.<\/span><\/p>"]]},"eo":{"t":"Solvo: Veraj kaj falsaj nombroj","b":[["p",4,"<p><span class=\"sg\" data-s=\"0\">Jen la plej rapida maniero trovi la respondon.<\/span> <span class=\"sg\" data-s=\"1\">Prenu kelkajn malsamajn nombrojn.<\/span> <span class=\"sg\" data-s=\"2\">Uzu la operatoron <code>?<\/code> sur ĉiuj samtempe.<\/span> <span class=\"sg\" data-s=\"3\">Poste komparu la rezultojn:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>for -2, -0.5, -1/3, 0, 1/3, 0.5, 2 -&gt; $n {\n    say \"$n -&gt; {?$n}\";\n}<\/code><\/pre>"],["p",3,"<p><span class=\"sg\" data-s=\"0\">La eligo montras la ŝablonon.<\/span> <span class=\"sg\" data-s=\"1\">Ĉiuj valoroj presas <code>True<\/code>.<\/span> <span class=\"sg\" data-s=\"2\">Nur la valoro en la mezo ne faras tion:<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">-2 -&gt; True     -0.5 -&gt; True     -0.333333 -&gt; True     0 -&gt; False     0.333333 -&gt; True     0.5 -&gt; True     2 -&gt; True<\/span><\/p>"],["p",7,"<p><span class=\"sg\" data-s=\"0\">Do la signo kaj la grandeco de nombro ne gravas.<\/span> <span class=\"sg\" data-s=\"1\">Nur nulo estas <code>False<\/code>.<\/span> <span class=\"sg\" data-s=\"2\">Jen la sekva demando.<\/span> <span class=\"sg\" data-s=\"3\">Ĉu tio validas por ĉiu tipo de nombro?<\/span> <span class=\"sg\" data-s=\"4\">Estas tri nuloj por kontroli.<\/span> <span class=\"sg\" data-s=\"5\"><code>0<\/code> estas <code>Int<\/code>, kaj <code>0.0<\/code> estas <code>Rat<\/code>.<\/span> <span class=\"sg\" data-s=\"6\">Kaj <code>0e0<\/code> estas <code>Num<\/code>:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my Int $int-zero = 0;\nsay ?$int-zero; # False\n\nmy Rat $rat-zero = 0.0;\nsay ?$rat-zero; # False\n\nmy Num $num-zero = 0e0;\nsay ?$num-zero; # False<\/code><\/pre>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Kompreneble, minuso antaŭ la nombro ŝanĝas nenion:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $int = 0;\nsay ?(-$int); # False<\/code><\/pre>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">🦋 Vi povas trovi la plenan programon kun la supra ekzemplo en la dosiero <a href=\"https://github.com/ash/raku-course/blob/master/exercises/essentials/coercion/true-false-numbers.raku\" target=\"_blank\" rel=\"noopener\">true-false-numbers.raku<\/a>.<\/span><\/p>"]]}}}</script>
+<script src="/theme/reader.js?v=f73576e1"></script>
+</body>
+</html>

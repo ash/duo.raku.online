@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Using ‘of’ · A2</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=f73576e1">
+<script src="/theme/langs.js?v=f73576e1"></script>
+<script src="/theme/boot.js?v=f73576e1"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <nav class="level" id="level" hidden></nav>
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"essentials/typed-variables/using-of","n":197,"k":"topic","pv":"essentials/typed-variables/type-constraints/quiz","nx":"essentials/typed-variables/coercion","tr":["essentials","essentials/typed-variables"],"lv":"a2","lvs":["a2","b1"],"pvl":["a2","b1"],"nxl":["a2","b1"],"L":{"en":{"t":"Using ‘of’","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">There is another way to limit the type of a scalar container.<\/span> <span class=\"sg\" data-s=\"1\">Here is how you write it:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $var of Int;\nmy $str of Str = 'Hello';<\/code><\/pre>"]]},"de":{"t":"Verwendung von <code>of<\/code>","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Es gibt noch einen Weg, den Typ eines skalaren Containers einzuschränken.<\/span> <span class=\"sg\" data-s=\"1\">So schreiben Sie das:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $var of Int;\nmy $str of Str = 'Hallo';<\/code><\/pre>"]]},"nl":{"t":"Gebruik van <code>of<\/code>","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Er is nog een manier om het type van een scalaire container te beperken.<\/span> <span class=\"sg\" data-s=\"1\">Zo schrijf je het:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $var of Int;\nmy $str of Str = 'Hallo';<\/code><\/pre>"]]},"es":{"t":"Uso de <code>of<\/code>","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Hay otra forma de limitar el tipo de un contenedor escalar.<\/span> <span class=\"sg\" data-s=\"1\">Así se escribe:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $var of Int;\nmy $str of Str = 'Hello';<\/code><\/pre>"]]},"it":{"t":"Uso di <code>of<\/code>","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">C'è un altro modo per limitare il tipo di un contenitore scalare.<\/span> <span class=\"sg\" data-s=\"1\">Ecco come si scrive:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $var of Int;\nmy $str of Str = 'Hello';<\/code><\/pre>"]]},"lv":{"t":"Izmantojot <code>of<\/code>","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Ir vēl viens veids, kā ierobežot skalāra konteinera tipu.<\/span> <span class=\"sg\" data-s=\"1\">Lūk, kā to raksta:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $var of Int;\nmy $str of Str = 'Hello';<\/code><\/pre>"]]},"ru":{"t":"Использование <code>of<\/code>","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Есть ещё один способ ограничить тип скалярного контейнера.<\/span> <span class=\"sg\" data-s=\"1\">Вот как его записать:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $var of Int;\nmy $str of Str = 'Hello';<\/code><\/pre>"]]},"uk":{"t":"Використання <code>of<\/code>","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Є ще один спосіб обмежити тип скалярного контейнера.<\/span> <span class=\"sg\" data-s=\"1\">Ось як його записати:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $var of Int;\nmy $str of Str = 'Hello';<\/code><\/pre>"]]},"bg":{"t":"Използване на <code>of<\/code>","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Има и друг начин да ограничите типа на скаларен контейнер.<\/span> <span class=\"sg\" data-s=\"1\">Ето как се пише:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $var of Int;\nmy $str of Str = 'Hello';<\/code><\/pre>"]]},"eo":{"t":"Uzante <code>of<\/code>","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Estas alia maniero limigi la tipon de skalara ujo.<\/span> <span class=\"sg\" data-s=\"1\">Jen kiel vi skribas ĝin:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $var of Int;\nmy $str of Str = 'Hello';<\/code><\/pre>"]]},"la":{"t":"Utendo <code>of<\/code>","b":[["p",2,"<p><span class=\"sg\" data-s=\"0\">Est alius modus genus continentis scalaris limitandi.<\/span> <span class=\"sg\" data-s=\"1\">Sic eum scribis:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $var of Int;\nmy $str of Str = 'Hello';<\/code><\/pre>"]]}}}</script>
+<script src="/theme/reader.js?v=f73576e1"></script>
+</body>
+</html>
