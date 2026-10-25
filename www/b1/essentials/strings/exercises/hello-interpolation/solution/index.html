@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solution to ’Hello, Interpolation!‘ · B1</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=f73576e1">
+<script src="/theme/langs.js?v=f73576e1"></script>
+<script src="/theme/boot.js?v=f73576e1"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <nav class="level" id="level" hidden></nav>
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"essentials/strings/exercises/hello-interpolation/solution","n":69,"k":"solution","pv":"essentials/strings/exercises/hello-interpolation","nx":"essentials/strings/exercises/purchase-table","tr":["essentials","essentials/strings"],"lv":"b1","lvs":["a2","b1"],"pvl":["a2","b1"],"nxl":["a2","b1"],"L":{"en":{"t":"Solution to ’Hello, Interpolation!‘","b":[["h",1,"<h3><span class=\"sg\" data-s=\"0\">Code<\/span><\/h3>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Here is one possible solution:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $name = prompt 'What is your name? ';\nsay \"Hello, $name! Your name has {$name.chars} letters.\";<\/code><\/pre>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">🦋 You can find the source code in the file <a href=\"https://github.com/ash/raku-course/blob/master/exercises/advanced/strings/hello-interpolation.raku\" target=\"_blank\" rel=\"noopener\">hello-interpolation.raku<\/a>.<\/span><\/p>"],["h",1,"<h3><span class=\"sg\" data-s=\"0\">Output<\/span><\/h3>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Run the program, and it will wait for your input.<\/span> <span class=\"sg\" data-s=\"1\">When you type the name and press Enter, the program continues and prints the greeting:<\/span><\/p>"],["code",0,"<pre class=\"lang-console\"><code>$ raku exercises/strings/hello-interpolation.raku\nWhat is your name? Raku\nHello, Raku! Your name has 4 letters.<\/code><\/pre>"],["h",1,"<h3><span class=\"sg\" data-s=\"0\">Comments<\/span><\/h3>"],["p",6,"<p><span class=\"sg\" data-s=\"0\">Note that this time, the string is in double quotes.<\/span> <span class=\"sg\" data-s=\"1\">In double quotes, the variable <code>$name<\/code> is interpolated, so its value goes into the string.<\/span> <span class=\"sg\" data-s=\"2\">But interpolation can do more than insert a variable.<\/span> <span class=\"sg\" data-s=\"3\">Anything in curly braces, like <code>{$name.chars}<\/code>, is treated as code: Raku runs it and inserts the result.<\/span> <span class=\"sg\" data-s=\"4\">Here, we use the <code>chars<\/code> method again.<\/span> <span class=\"sg\" data-s=\"5\">It counts the letters of the name right inside the greeting.<\/span><\/p>"]]}}}</script>
+<script src="/theme/reader.js?v=f73576e1"></script>
+</body>
+</html>

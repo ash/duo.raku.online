@@ -1,0 +1,14 @@
+---
+title: Конвенционални файлови разширения
+---
+
+{% include menu.html %}
+
+Тези файлови разширения са [препоръчани](https://github.com/Raku/problem-solving/blob/master/solutions/language/Path-to-Raku.md#extensions) за файлове на Raku:
+
+* `.raku` за програмни файлове
+* `.rakumod` за модули
+* `.rakutest` и `.t` за тестове
+* `.rakudoc` за документация във формат POD6
+
+{% include nav.html %}

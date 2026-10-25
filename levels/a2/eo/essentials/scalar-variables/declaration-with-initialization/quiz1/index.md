@@ -1,0 +1,16 @@
+---
+title: 'Kvizo 1: Deklarado kun inicialigo'
+---
+
+{% include menu.html %}
+
+Plenigu la mankantajn partojn de la programo. Ĝi deklaras la variablojn. Ĝi ankaŭ donas al ili iliajn unuajn valorojn.
+
+{:.quiz-code}
+= | my $radius ␣ 6378; # km
+my | ␣␣ $population = 8; # miliardoj
+my $ = | ␣␣ ␣age ␣ 4.5; # miliardoj da jaroj
+
+{% include quiz.html %}
+
+{% include nav.html %}

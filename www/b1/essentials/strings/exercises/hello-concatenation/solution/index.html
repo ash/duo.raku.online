@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solution to ’Hello, Concatenation!‘ · B1</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=f73576e1">
+<script src="/theme/langs.js?v=f73576e1"></script>
+<script src="/theme/boot.js?v=f73576e1"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <nav class="level" id="level" hidden></nav>
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"essentials/strings/exercises/hello-concatenation/solution","n":67,"k":"solution","pv":"essentials/strings/exercises/hello-concatenation","nx":"essentials/strings/exercises/hello-interpolation","tr":["essentials","essentials/strings"],"lv":"b1","lvs":["a2","b1"],"pvl":["a2","b1"],"nxl":["a2","b1"],"L":{"en":{"t":"Solution to ’Hello, Concatenation!‘","b":[["h",1,"<h3><span class=\"sg\" data-s=\"0\">Code<\/span><\/h3>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Here is one possible solution:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $name = prompt 'What is your name? ';\nmy $city = prompt 'Where are you from? ';\nsay 'Hello, ' ~ $name ~ ' from ' ~ $city ~ '!';<\/code><\/pre>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">🦋 You can find the source code in the file <a href=\"https://github.com/ash/raku-course/blob/master/exercises/advanced/strings/hello-concatenation.raku\" target=\"_blank\" rel=\"noopener\">hello-concatenation.raku<\/a>.<\/span><\/p>"],["h",1,"<h3><span class=\"sg\" data-s=\"0\">Output<\/span><\/h3>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Run the program, and it will wait twice for you to type something.<\/span> <span class=\"sg\" data-s=\"1\">When you have answered both prompts, it prints the greeting:<\/span><\/p>"],["code",0,"<pre class=\"lang-console\"><code>$ raku exercises/strings/hello-concatenation.raku\nWhat is your name? John\nWhere are you from? Berlin\nHello, John from Berlin!<\/code><\/pre>"],["h",1,"<h3><span class=\"sg\" data-s=\"0\">Comments<\/span><\/h3>"],["p",5,"<p><span class=\"sg\" data-s=\"0\">This time, the greeting is made of five pieces, which the <code>~<\/code> operator joins together.<\/span> <span class=\"sg\" data-s=\"1\">Three of them are literal strings: <code>'Hello, '<\/code>, <code>' from '<\/code> and <code>'!'<\/code>.<\/span> <span class=\"sg\" data-s=\"2\">The other two are the variables between them.<\/span> <span class=\"sg\" data-s=\"3\">First, they are all concatenated into one string.<\/span> <span class=\"sg\" data-s=\"4\">Only then is this string passed to <code>say<\/code>.<\/span><\/p>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Compare this program with <a href=\"/essentials/scalar-variables/exercises/greet-a-person/solution/\">the earlier version<\/a>.<\/span> <span class=\"sg\" data-s=\"1\">There, we passed several strings, separated by commas, to the <code>say<\/code> routine:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>say 'Hello, ', $name, '!';<\/code><\/pre>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">In that version, <code>say<\/code> received several separate arguments and printed them one after the other.<\/span> <span class=\"sg\" data-s=\"1\">Here, we build one finished string ourselves.<\/span><\/p>"]]}}}</script>
+<script src="/theme/reader.js?v=f73576e1"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comments in Raku · A2</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=f73576e1">
+<script src="/theme/langs.js?v=f73576e1"></script>
+<script src="/theme/boot.js?v=f73576e1"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <nav class="level" id="level" hidden></nav>
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"essentials/comments","n":26,"k":"section","pv":"essentials/simple-input-output/prompt","nx":"essentials/comments/single-line","tr":["essentials"],"lv":"a2","lvs":["a2","b1"],"pvl":["a2","b1"],"nxl":["a2","b1"],"L":{"en":{"t":"Comments in Raku","b":[["p",5,"<p><span class=\"sg\" data-s=\"0\">Comments are parts of a program for human readers.<\/span> <span class=\"sg\" data-s=\"1\">The compiler mostly skips comments.<\/span> <span class=\"sg\" data-s=\"2\">There are some rare cases.<\/span> <span class=\"sg\" data-s=\"3\">For example, a comment can be part of an error message.<\/span> <span class=\"sg\" data-s=\"4\">But we do not look at this now.<\/span><\/p>"]]},"de":{"t":"Kommentare","b":[["p",5,"<p><span class=\"sg\" data-s=\"0\">Kommentare sind Teile eines Programms für menschliche Leser.<\/span> <span class=\"sg\" data-s=\"1\">Der Compiler überspringt Kommentare meistens.<\/span> <span class=\"sg\" data-s=\"2\">Es gibt einige seltene Fälle.<\/span> <span class=\"sg\" data-s=\"3\">Zum Beispiel kann ein Kommentar Teil einer Fehlermeldung sein.<\/span> <span class=\"sg\" data-s=\"4\">Aber das sehen wir uns jetzt nicht an.<\/span><\/p>"]]},"nl":{"t":"Opmerkingen","b":[["p",5,"<p><span class=\"sg\" data-s=\"0\">Opmerkingen zijn delen van een programma voor menselijke lezers.<\/span> <span class=\"sg\" data-s=\"1\">De compiler slaat opmerkingen meestal over.<\/span> <span class=\"sg\" data-s=\"2\">Er zijn een paar zeldzame gevallen.<\/span> <span class=\"sg\" data-s=\"3\">Een opmerking kan bijvoorbeeld deel zijn van een foutmelding.<\/span> <span class=\"sg\" data-s=\"4\">Maar daar kijken we nu niet naar.<\/span><\/p>"]]},"es":{"t":"Comentarios","b":[["p",5,"<p><span class=\"sg\" data-s=\"0\">Los comentarios son partes de un programa para lectores humanos.<\/span> <span class=\"sg\" data-s=\"1\">El compilador casi siempre ignora los comentarios.<\/span> <span class=\"sg\" data-s=\"2\">Hay algunos casos raros.<\/span> <span class=\"sg\" data-s=\"3\">Por ejemplo, un comentario puede ser parte de un mensaje de error.<\/span> <span class=\"sg\" data-s=\"4\">Pero ahora no vemos esto.<\/span><\/p>"]]},"it":{"t":"Commenti","b":[["p",5,"<p><span class=\"sg\" data-s=\"0\">I commenti sono parti del programma per le persone che lo leggono.<\/span> <span class=\"sg\" data-s=\"1\">Il compilatore di solito salta i commenti.<\/span> <span class=\"sg\" data-s=\"2\">Ci sono alcuni casi rari.<\/span> <span class=\"sg\" data-s=\"3\">Per esempio, un commento può far parte di un messaggio di errore.<\/span> <span class=\"sg\" data-s=\"4\">Ma ora non guardiamo questo caso.<\/span><\/p>"]]},"lv":{"t":"Komentāri","b":[["p",5,"<p><span class=\"sg\" data-s=\"0\">Komentāri ir programmas daļas, ko lasa cilvēki.<\/span> <span class=\"sg\" data-s=\"1\">Kompilators komentārus lielākoties izlaiž.<\/span> <span class=\"sg\" data-s=\"2\">Ir daži reti gadījumi.<\/span> <span class=\"sg\" data-s=\"3\">Piemēram, komentārs var būt daļa no kļūdas ziņojuma.<\/span> <span class=\"sg\" data-s=\"4\">Bet tagad mēs to neskatām.<\/span><\/p>"]]},"ru":{"t":"Комментарии","b":[["p",5,"<p><span class=\"sg\" data-s=\"0\">Комментарии — это части программы для людей.<\/span> <span class=\"sg\" data-s=\"1\">Компилятор обычно пропускает комментарии.<\/span> <span class=\"sg\" data-s=\"2\">Есть несколько редких случаев.<\/span> <span class=\"sg\" data-s=\"3\">Например, комментарий может быть частью сообщения об ошибке.<\/span> <span class=\"sg\" data-s=\"4\">Но сейчас мы об этом не говорим.<\/span><\/p>"]]},"uk":{"t":"Коментарі","b":[["p",5,"<p><span class=\"sg\" data-s=\"0\">Коментарі — це частини програми для людей, які її читають.<\/span> <span class=\"sg\" data-s=\"1\">Компілятор здебільшого пропускає коментарі.<\/span> <span class=\"sg\" data-s=\"2\">Є кілька рідкісних випадків.<\/span> <span class=\"sg\" data-s=\"3\">Наприклад, коментар може бути частиною повідомлення про помилку.<\/span> <span class=\"sg\" data-s=\"4\">Але зараз ми про це не говоримо.<\/span><\/p>"]]},"bg":{"t":"Коментари","b":[["p",5,"<p><span class=\"sg\" data-s=\"0\">Коментарите са части от програмата за хората, които я четат.<\/span> <span class=\"sg\" data-s=\"1\">Компилаторът обикновено пропуска коментарите.<\/span> <span class=\"sg\" data-s=\"2\">Има някои редки случаи.<\/span> <span class=\"sg\" data-s=\"3\">Например коментарът може да е част от съобщение за грешка.<\/span> <span class=\"sg\" data-s=\"4\">Но сега няма да говорим за това.<\/span><\/p>"]]},"eo":{"t":"Komentoj","b":[["p",5,"<p><span class=\"sg\" data-s=\"0\">Komentoj estas partoj de programo por homaj legantoj.<\/span> <span class=\"sg\" data-s=\"1\">La kompililo plejparte preterlasas komentojn.<\/span> <span class=\"sg\" data-s=\"2\">Estas kelkaj raraj kazoj.<\/span> <span class=\"sg\" data-s=\"3\">Ekzemple, komento povas esti parto de erarmesaĝo.<\/span> <span class=\"sg\" data-s=\"4\">Sed ni ne rigardas tion nun.<\/span><\/p>"]]},"la":{"t":"Commentarii","b":[["p",5,"<p><span class=\"sg\" data-s=\"0\">Commentarii sunt partes programmatis pro lectoribus humanis.<\/span> <span class=\"sg\" data-s=\"1\">Compilator commentarios plerumque praeterit.<\/span> <span class=\"sg\" data-s=\"2\">Sunt quidam casus rari.<\/span> <span class=\"sg\" data-s=\"3\">Exempli gratia, commentarius pars nuntii erroris esse potest.<\/span> <span class=\"sg\" data-s=\"4\">Sed hoc nunc non spectamus.<\/span><\/p>"]]}}}</script>
+<script src="/theme/reader.js?v=f73576e1"></script>
+</body>
+</html>

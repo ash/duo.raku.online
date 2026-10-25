@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Using online services to run Raku · A2</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=f73576e1">
+<script src="/theme/langs.js?v=f73576e1"></script>
+<script src="/theme/boot.js?v=f73576e1"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <nav class="level" id="level" hidden></nav>
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"essentials/running-programs/using-online-services","n":19,"k":"topic","pv":"essentials/running-programs/using-docker","nx":"essentials/running-programs/exercises","tr":["essentials","essentials/running-programs"],"lv":"a2","lvs":["a2","b1"],"pvl":["a2","b1"],"nxl":["a2","b1"],"L":{"en":{"t":"Using online services to run Raku","b":[["p",5,"<p><span class=\"sg\" data-s=\"0\">There is not much to say about online services.<\/span> <span class=\"sg\" data-s=\"1\">Paste your program into an online editor.<\/span> <span class=\"sg\" data-s=\"2\">Then press the <code>Run<\/code> button.<\/span> <span class=\"sg\" data-s=\"3\">You see the output of the program in a separate area.<\/span> <span class=\"sg\" data-s=\"4\">If there are errors, you see them too.<\/span><\/p>"],["p",4,"<p><span class=\"sg\" data-s=\"0\">These services can often send data to your program.<\/span> <span class=\"sg\" data-s=\"1\">The data comes from a separate text area.<\/span> <span class=\"sg\" data-s=\"2\">It goes to the input stream of the program, STDIN.<\/span> <span class=\"sg\" data-s=\"3\">Sometimes, the output also comes in two parts: <code>STDOUT<\/code> and <code>STDERR<\/code>.<\/span><\/p>"],["h",1,"<h3><span class=\"sg\" data-s=\"0\">The built-in Raku Playground<\/span><\/h3>"],["p",9,"<p><span class=\"sg\" data-s=\"0\">This course has its own &lt;a href=\"https://raku.online/play\" target=\"_blank\" rel=\"noopener noreferrer\"&gt;&lt;strong&gt;Raku Playground&lt;/strong&gt;&lt;/a&gt;.<\/span> <span class=\"sg\" data-s=\"1\">There, Raku runs right in your browser.<\/span> <span class=\"sg\" data-s=\"2\">You do not need to install anything.<\/span> <span class=\"sg\" data-s=\"3\">You do not need to sign up.<\/span> <span class=\"sg\" data-s=\"4\">Type a program and press run.<\/span> <span class=\"sg\" data-s=\"5\">You see the output at once.<\/span> <span class=\"sg\" data-s=\"6\">It is the fastest way to try code while you read.<\/span> <span class=\"sg\" data-s=\"7\">Try the examples of the course there.<\/span> <span class=\"sg\" data-s=\"8\">Try your own experiments too.<\/span><\/p>"],["p",12,"<p><span class=\"sg\" data-s=\"0\">Remember that the playground has some limits.<\/span> <span class=\"sg\" data-s=\"1\">This comes from the way it works.<\/span> <span class=\"sg\" data-s=\"2\">It runs a young compiler.<\/span> <span class=\"sg\" data-s=\"3\">This compiler is still in development.<\/span> <span class=\"sg\" data-s=\"4\">Everything runs inside your browser.<\/span> <span class=\"sg\" data-s=\"5\">There is no server behind it.<\/span> <span class=\"sg\" data-s=\"6\">So some language features may not work yet.<\/span> <span class=\"sg\" data-s=\"7\">Also, the playground cannot reach the outside world.<\/span> <span class=\"sg\" data-s=\"8\">It cannot read or write files or use the network.<\/span> <span class=\"sg\" data-s=\"9\">It cannot run other programs or install modules.<\/span> <span class=\"sg\" data-s=\"10\">For these things, use a compiler on your own computer.<\/span> <span class=\"sg\" data-s=\"11\">Or use one of the services below.<\/span><\/p>"],["h",1,"<h3><span class=\"sg\" data-s=\"0\">External links<\/span><\/h3>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Here are some other services that run Raku:<\/span><\/p>"],["list",4,"<ul><li><span class=\"sg\" data-s=\"0\"><a href=\"https://glot.io/new/raku\" target=\"_blank\" rel=\"noopener\">glot.io<\/a><\/span><\/li><li><span class=\"sg\" data-s=\"1\"><a href=\"https://tio.run/#perl6\" target=\"_blank\" rel=\"noopener\">TIO<\/a><\/span><\/li><li><span class=\"sg\" data-s=\"2\"><a href=\"https://repl.it/new/raku\" target=\"_blank\" rel=\"noopener\">Repl.it<\/a> (log in first)<\/span><\/li><li><span class=\"sg\" data-s=\"3\"><a href=\"https://fco.github.io/Raku-Playground/\" target=\"_blank\" rel=\"noopener\">Raku Playground<\/a> (runs your code on a server)<\/span><\/li><\/ul>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">You can also read <a href=\"https://www.reddit.com/r/rakulang/comments/kj63dq/glotio_now_supports_raku/ggxow6n/\" target=\"_blank\" rel=\"noopener\">the discussion on Reddit<\/a>.<\/span> <span class=\"sg\" data-s=\"1\">It has more links and comments about different online services.<\/span><\/p>"]]}}}</script>
+<script src="/theme/reader.js?v=f73576e1"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+---
+title: 'Solvo: Saluton, mi!'
+---
+
+{% include menu.html %}
+
+Jen la solvo al la problemo '[Hello, me!](../)'.
+
+## Kodo
+
+```raku
+say 'Hello, Andrew!';
+```
+
+🦋 Vi povas trovi la plenan kodon en la dosiero [hello-me.raku](https://github.com/ash/raku-course/blob/master/exercises/essentials/running-programs/hello-me.raku).
+
+## Eligo
+
+Por vidi la eligon, rulu la programon, kiel montrite sube:
+
+```console
+$ raku exercises/running-programs/hello-me.raku 
+Hello, Andrew!
+```
+
+## Diskuto
+
+Ne estas dubo, ke vi sukcesis skribi ĉi tiun programon. Sed memoru: ofte estas pli ol unu maniero fari ĝin.
+
+{% include nav.html %}

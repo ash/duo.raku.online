@@ -1,0 +1,31 @@
+---
+title: 'Solutio: Responsio ad vitam, Universum et omnia'
+---
+
+{% include menu.html %}
+
+Hic est una solutio possibilis muneris.
+
+## Codex
+
+```raku
+my $answer = 42;
+say $answer;
+```
+
+🦋 Fontem codicem invenire potes in fasciculo [answer.raku](https://github.com/ash/raku-course/blob/master/exercises/essentials/scalar-variables/answer.raku).
+
+## Exitus
+
+Currite programma et videte quid imprimat:
+
+```console
+$ raku exercises/scalar-variables/answer.raku 
+42
+```
+
+## Commentarii
+
+Una ex condicionibus huius muneris erat variabiles adhibere. `42` est unus valor, itaque variabilis scalaris bona electio pro eo est.
+
+{% include nav.html%}
