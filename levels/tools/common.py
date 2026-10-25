@@ -68,8 +68,10 @@ def urls(root, sections):
     return sorted(set(out))
 
 
-def enc(s): return s.replace('\n', '\\n')
-def dec(s): return s.replace('\\n', '\n')
+# A spec keeps a block on one line: a line break is written \n, and a
+# backslash that is really there (as in "\n" quoted in the course) is \\.
+def enc(s): return s.replace('\\', '\\\\').replace('\n', '\\n')
+def dec(s): return re.sub(r'\\([\\n])', lambda m: '\n' if m.group(1) == 'n' else '\\', s)
 
 
 def read_spec(path, keep=('a2', 'b1')):
