@@ -1,0 +1,51 @@
+---
+title: Quiz — Standaardwaarden
+---
+
+{% include menu.html %}
+
+Bekijk dit programma eens.
+
+```raku
+sub MAIN($a = 'abc', $b = 'def') {
+    say $a;
+    say $b;
+}
+```
+
+## 1
+
+Wat print het programma als je het zo uitvoert?
+
+```console
+$ raku t.raku
+```
+
+{:.quiz-code .nocode}
+abc def | Voer de uitvoerwaarden in: ␣␣␣ en ␣␣␣
+
+## 2
+
+Nu voer je hetzelfde programma op deze manier uit:
+
+```console
+$ raku t.raku xyz
+```
+
+{:.quiz-code .nocode}
+xyz def | Voer de uitvoerwaarden in: ␣␣␣ en ␣␣␣
+
+## 3
+
+Tenslotte, dit commando:
+
+```console
+$ raku t.raku xyz 123
+```
+
+{:.quiz-code .nocode}
+xyz 123 | Voer de uitvoerwaarden in: ␣␣␣ en ␣␣␣
+
+{% include quiz.html %}
+
+{% include nav.html %}

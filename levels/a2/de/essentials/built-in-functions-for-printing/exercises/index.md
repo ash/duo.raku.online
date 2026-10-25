@@ -1,0 +1,6 @@
+---
+title: 'Exercises: Eingebaute Funktionen zum Drucken'
+---
+
+{% include menu.html %}
+{% include nav.html %}

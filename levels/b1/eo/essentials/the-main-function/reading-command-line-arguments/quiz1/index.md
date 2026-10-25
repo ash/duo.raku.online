@@ -1,0 +1,39 @@
+---
+title: Kvizo — Legante komando-linio argumentojn
+---
+
+{% include menu.html %}
+
+Jen la programo:
+
+```raku
+sub MAIN($a) {
+    say $a;
+}
+```
+
+## 1
+
+Kion la programo presas, se vi rulas ĝin tiel?
+
+```console
+$ raku t.raku 123
+```
+
+{:.quiz-code .nocode}
+123 | Enigu la atenditan eliron: ␣␣␣␣␣␣␣
+
+## 2
+
+Kion ĝi presas nun?
+
+```console
+$ raku t.raku "123 456"
+```
+
+{:.quiz-code .nocode}
+123␣456 | Enigu la atenditan eliron: ␣␣␣␣␣␣␣
+
+{% include quiz.html %}
+
+{% include nav.html %}

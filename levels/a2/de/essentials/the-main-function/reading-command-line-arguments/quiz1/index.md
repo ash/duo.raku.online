@@ -1,0 +1,39 @@
+---
+title: Quiz — Lesen der Befehlszeilenargumente
+---
+
+{% include menu.html %}
+
+Hier ist das Programm:
+
+```raku
+sub MAIN($a) {
+    say $a;
+}
+```
+
+## 1
+
+Sie führen das Programm so aus. Was gibt es aus?
+
+```console
+$ raku t.raku 123
+```
+
+{:.quiz-code .nocode}
+123 | Geben Sie die erwartete Ausgabe ein: ␣␣␣␣␣␣␣
+
+## 2
+
+Was gibt es jetzt aus?
+
+```console
+$ raku t.raku "123 456"
+```
+
+{:.quiz-code .nocode}
+123␣456 | Geben Sie die erwartete Ausgabe ein: ␣␣␣␣␣␣␣
+
+{% include quiz.html %}
+
+{% include nav.html %}

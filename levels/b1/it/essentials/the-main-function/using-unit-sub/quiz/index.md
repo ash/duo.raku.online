@@ -1,0 +1,47 @@
+---
+title: Quiz* — Uso della definizione a livello di unità
+---
+
+{% include menu.html %}
+
+## 1
+
+Scegli un dichiaratore in modo che il programma sia corretto.
+
+{:.quiz-select}
+unit | (: my, multi, unit :) `sub MAIN(Str $name);`
+. | `say "Hello, $name!";`
+
+## 2
+
+Decidi se il programma è corretto.
+
+```raku
+unit sub MAIN(Str $name) {
+    say "Hello, $name!";
+}
+```
+
+{:.quiz-select}
+valid | Questo programma è&nbsp; (: valido, non valido :) | Nonostante la presenza di `unit`, puoi ancora aggiungere parentesi graffe, ma è superfluo.
+
+## 3
+
+Questo programma è corretto?
+
+```raku
+unit multi sub MAIN() {
+    say 'Hello, everyone!';
+}
+
+unit multi sub MAIN($name) {
+    say "Hello, $name!";
+}
+```
+
+{:.quiz-select}
+invalid | Questo programma è&nbsp; (: valido, non valido :) | Errore: `Cannot use 'unit' with individual multi candidates.`
+
+{% include quiz.html %}
+
+{% include nav.html %}

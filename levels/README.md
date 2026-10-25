@@ -4,11 +4,12 @@ Graded rewrites of the course at two CEFR levels, **A2** and **B1**, for
 reading a language you do not know well yet. The original course text sits
 at about C1; it stays the third choice in the reader, as *Original*.
 
-So far the levels cover Essentials from [the beginning](https://duo.raku.online/a2/essentials/what-is-raku/)
-through control flow (with [loops](https://duo.raku.online/a2/essentials/loops/)), coercion, typed variables,
-positionals, [associatives](https://duo.raku.online/a2/essentials/associatives/) and [functions](https://duo.raku.online/a2/essentials/functions/), in all eleven
-languages. A page is English-only at the levels where its translation does not
-line up with the English, or is listed in [`skip.txt`](skip.txt).
+So far the levels cover all of Essentials, from
+[the beginning](https://duo.raku.online/a2/essentials/what-is-raku/) to
+[the `MAIN` function](https://duo.raku.online/a2/essentials/the-main-function/),
+in all eleven languages. A page is English-only at the levels where its
+translation does not line up with the English, or is listed in
+[`skip.txt`](skip.txt).
 
 ## Layout
 

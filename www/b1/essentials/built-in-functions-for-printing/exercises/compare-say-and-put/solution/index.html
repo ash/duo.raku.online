@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solution: Compare and · B1</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=f73576e1">
+<script src="/theme/langs.js?v=f73576e1"></script>
+<script src="/theme/boot.js?v=f73576e1"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <nav class="level" id="level" hidden></nav>
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"essentials/built-in-functions-for-printing/exercises/compare-say-and-put/solution","n":318,"k":"solution","pv":"essentials/built-in-functions-for-printing/exercises/compare-say-and-put","nx":"essentials/built-in-functions-for-printing/exercises/print-the-warning","tr":["essentials","essentials/built-in-functions-for-printing"],"lv":"b1","lvs":["a2","b1"],"pvl":["a2","b1"],"nxl":["a2","b1"],"L":{"en":{"t":"Solution: Compare <code>say<\/code> and <code>put<\/code>","b":[["h",1,"<h3><span class=\"sg\" data-s=\"0\">Code<\/span><\/h3>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Here is one possible solution:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my Int $i = 256;\nsay $i;\nput $i;\n\nmy Rat $r = 1/8;\nsay $r;\nput $r;\n\nmy Num $n = 6.022e23;\nsay $n;\nput $n;\n\nmy Str $s = 'camelia';\nsay $s;\nput $s;\n\nmy @a = &lt;red green blue&gt;;\n# say @a.WHAT;\nsay @a;\nput @a;\n\nmy List $l = (10, 20, 30);\n# say $l.WHAT;\nsay $l;\nput $l;\n\nmy Range $range = 1..5;\nsay $range;\nput $range;\n\nmy %h = x =&gt; 10, y =&gt; 20;\nsay %h;\nput %h;<\/code><\/pre>"],["p",3,"<p><span class=\"sg\" data-s=\"0\">To be more sure, you can also print the type of each variable.<\/span> <span class=\"sg\" data-s=\"1\">The code shows this for arrays and lists.<\/span> <span class=\"sg\" data-s=\"2\">This way, you can check that the variable has the type you wanted.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">🦋 Find the program in the file <a href=\"https://github.com/ash/raku-course/blob/master/exercises/essentials/built-in-functions-for-printing/compare-say-and-put.raku\" target=\"_blank\" rel=\"noopener\">compare-say-and-put.raku<\/a>.<\/span><\/p>"],["h",1,"<h3><span class=\"sg\" data-s=\"0\">Output<\/span><\/h3>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Below is the output of the program above.<\/span><\/p>"],["code",0,"<pre class=\"lang-console\"><code>$ raku exercises/built-in-functions-for-printing/compare-say-and-put.raku\n256\n256\n0.125\n0.125\n6.022e+23\n6.022e+23\ncamelia\ncamelia\n[red green blue]\nred green blue\n(10 20 30)\n10 20 30\n1..5\n1 2 3 4 5\n{x =&gt; 10, y =&gt; 20}\nx\t10\ny\t20<\/code><\/pre>"],["h",1,"<h3><span class=\"sg\" data-s=\"0\">Comments<\/span><\/h3>"],["p",7,"<p><span class=\"sg\" data-s=\"0\">Look at the output of the program.<\/span> <span class=\"sg\" data-s=\"1\">Clearly, there is no difference for simple data types, such as numbers and strings.<\/span> <span class=\"sg\" data-s=\"2\">For types that hold several values, <code>say<\/code> gives a bit more ‘noisy’ output than <code>put<\/code>.<\/span> <span class=\"sg\" data-s=\"3\">On the other hand, <code>put<\/code> prints a hash as a table.<\/span> <span class=\"sg\" data-s=\"4\"><code>say<\/code> prints it on a single line.<\/span> <span class=\"sg\" data-s=\"5\">The <code>Range<\/code> is especially interesting.<\/span> <span class=\"sg\" data-s=\"6\"><code>say<\/code> keeps the short form <code>1..5<\/code>, while <code>put<\/code> turns it into separate values: <code>1 2 3 4 5<\/code>.<\/span><\/p>"],["p",3,"<p><span class=\"sg\" data-s=\"0\">Why does the output look different?<\/span> <span class=\"sg\" data-s=\"1\">It depends on how the <code>Str<\/code> and <code>gist<\/code> methods work for each type.<\/span> <span class=\"sg\" data-s=\"2\">We will talk more about this later in the course.<\/span><\/p>"]]}}}</script>
+<script src="/theme/reader.js?v=f73576e1"></script>
+</body>
+</html>

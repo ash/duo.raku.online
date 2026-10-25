@@ -1,0 +1,47 @@
+---
+title: Quiz* — Uso de la definición con alcance de unidad
+---
+
+{% include menu.html %}
+
+## 1
+
+Elige uno de los declaradores. ¿Cuál hace correcto el programa?
+
+{:.quiz-select}
+unit | (: my, multi, unit :) `sub MAIN(Str $name);`
+. | `say "Hello, $name!";`
+
+## 2
+
+¿El programa es correcto o incorrecto?
+
+```raku
+unit sub MAIN(Str $name) {
+    say "Hello, $name!";
+}
+```
+
+{:.quiz-select}
+valid | Este programa es&nbsp; (: válido, inválido :) | A pesar de la presencia de `unit`, aún puedes agregar llaves, pero eso es muy redundante.
+
+## 3
+
+¿Es correcto este programa?
+
+```raku
+unit multi sub MAIN() {
+    say 'Hello, everyone!';
+}
+
+unit multi sub MAIN($name) {
+    say "Hello, $name!";
+}
+```
+
+{:.quiz-select}
+invalid | Este programa es&nbsp; (: válido, inválido :) | Error: `No se puede usar 'unit' con candidatos multi individuales.`
+
+{% include quiz.html %}
+
+{% include nav.html %}
