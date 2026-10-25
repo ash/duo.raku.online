@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boolean type in Raku · B1</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=f73576e1">
+<script src="/theme/langs.js?v=f73576e1"></script>
+<script src="/theme/boot.js?v=f73576e1"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <nav class="level" id="level" hidden></nav>
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"essentials/booleans","n":98,"k":"section","pv":"essentials/numbers/exercises/sum1-100/solution","nx":"essentials/booleans/operations","tr":["essentials"],"lv":"b1","lvs":["a2","b1"],"pvl":["a2","b1"],"nxl":["a2","b1"],"L":{"en":{"t":"Boolean type in Raku","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Raku has a built-in type for Boolean values, which is called <code>Bool<\/code>.<\/span> <span class=\"sg\" data-s=\"1\">In fact, it is an enumeration, a type with a fixed list of values.<\/span> <span class=\"sg\" data-s=\"2\">It has only two values: <code>True<\/code> and <code>False<\/code>.<\/span><\/p>"]]},"de":{"t":"Boolescher Typ","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Raku hat einen eingebauten Typ für Boolesche Werte, der <code>Bool<\/code> heißt.<\/span> <span class=\"sg\" data-s=\"1\">Eigentlich ist er eine Enumeration, also ein Typ mit einer festen Liste von Werten.<\/span> <span class=\"sg\" data-s=\"2\">Er hat nur zwei Werte: <code>True<\/code> und <code>False<\/code>.<\/span><\/p>"]]},"nl":{"t":"Boolean type","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Raku heeft een ingebouwd type voor Booleaanse waarden, dat <code>Bool<\/code> heet.<\/span> <span class=\"sg\" data-s=\"1\">Eigenlijk is het een enumeratie, een type met een vaste lijst van waarden.<\/span> <span class=\"sg\" data-s=\"2\">Het heeft maar twee waarden: <code>True<\/code> en <code>False<\/code>.<\/span><\/p>"]]},"es":{"t":"Tipo booleano","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Raku tiene un tipo incorporado para valores Booleanos, que se llama <code>Bool<\/code>.<\/span> <span class=\"sg\" data-s=\"1\">En realidad, es una enumeración, un tipo con una lista fija de valores.<\/span> <span class=\"sg\" data-s=\"2\">Tiene solo dos valores: <code>True<\/code> y <code>False<\/code>.<\/span><\/p>"]]},"it":{"t":"Tipo booleano","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Raku ha un tipo integrato per i valori booleani, che si chiama <code>Bool<\/code>.<\/span> <span class=\"sg\" data-s=\"1\">In realtà, è un'enumerazione, cioè un tipo con una lista fissa di valori.<\/span> <span class=\"sg\" data-s=\"2\">Ha solo due valori: <code>True<\/code> e <code>False<\/code>.<\/span><\/p>"]]},"lv":{"t":"Loģiskais tips","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Raku valodā ir iebūvēts tips Būla vērtībām, ko sauc par <code>Bool<\/code>.<\/span> <span class=\"sg\" data-s=\"1\">Patiesībā tas ir uzskaitījums — tips ar fiksētu vērtību sarakstu.<\/span> <span class=\"sg\" data-s=\"2\">Tam ir tikai divas vērtības: <code>True<\/code> un <code>False<\/code>.<\/span><\/p>"]]},"ru":{"t":"Булев тип","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">В Raku есть встроенный тип для логических значений, который называется <code>Bool<\/code>.<\/span> <span class=\"sg\" data-s=\"1\">На самом деле это перечисление, то есть тип с фиксированным списком значений.<\/span> <span class=\"sg\" data-s=\"2\">У него только два значения: <code>True<\/code> и <code>False<\/code>.<\/span><\/p>"]]},"uk":{"t":"Логічний тип","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">У Raku є вбудований тип для булевих значень, який називається <code>Bool<\/code>.<\/span> <span class=\"sg\" data-s=\"1\">Насправді це перелік, тобто тип із фіксованим списком значень.<\/span> <span class=\"sg\" data-s=\"2\">Він має лише два значення: <code>True<\/code> та <code>False<\/code>.<\/span><\/p>"]]},"bg":{"t":"Булев тип","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Raku има вграден тип за булеви стойности, който се нарича <code>Bool<\/code>.<\/span> <span class=\"sg\" data-s=\"1\">Всъщност той е изброяване, тоест тип с фиксиран списък от стойности.<\/span> <span class=\"sg\" data-s=\"2\">Той има само две стойности: <code>True<\/code> и <code>False<\/code>.<\/span><\/p>"]]},"eo":{"t":"Boolea tipo","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Raku havas enkonstruitan tipon por Booleaj valoroj, kiu nomiĝas <code>Bool<\/code>.<\/span> <span class=\"sg\" data-s=\"1\">Fakte, ĝi estas enumero, tio estas tipo kun fiksita listo de valoroj.<\/span> <span class=\"sg\" data-s=\"2\">Ĝi havas nur du valorojn: <code>True<\/code> kaj <code>False<\/code>.<\/span><\/p>"]]},"la":{"t":"Booleana typus","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Raku typum inbuildatum pro valoribus Booleanis habet, qui <code>Bool<\/code> nominatur.<\/span> <span class=\"sg\" data-s=\"1\">Revera est enumeratio, id est typus cum certo indice valorum.<\/span> <span class=\"sg\" data-s=\"2\">Solum duos valores habet: <code>True<\/code> et <code>False<\/code>.<\/span><\/p>"]]}}}</script>
+<script src="/theme/reader.js?v=f73576e1"></script>
+</body>
+</html>

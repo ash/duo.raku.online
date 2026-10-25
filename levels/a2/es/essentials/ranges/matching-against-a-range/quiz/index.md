@@ -1,0 +1,31 @@
+---
+title: Quiz — Comparar con un rango
+---
+
+{% include menu.html %}
+
+Aquí hay algunas coincidencias con un rango. Intenta encontrar las respuestas correctas.
+
+## 1
+
+{:.quiz-select}
+Verdadero | `10 ~~ 0..20` es&nbsp; (: Verdadero, Falso :)
+Verdadero | `10 ~~ ^20` es&nbsp; (: Verdadero, Falso :)
+Verdadero | `0 ~~ ^10` es&nbsp; (: Verdadero, Falso :)
+Falso | `10 ~~ 10^..15` es&nbsp; (: Verdadero, Falso :)
+Verdadero | `11 ~~ 10..15` es&nbsp; (: Verdadero, Falso :)
+Verdadero | `14 ~~ 10^..15` es&nbsp; (: Verdadero, Falso :)
+Falso | `15 ~~ 10^..^15` es&nbsp; (: Verdadero, Falso :)
+
+## 2
+
+Esta parte es un poco más difícil. ¿Qué pasa si comparas un rango con otro rango?
+
+{:.quiz-select}
+Verdadero | `2..3 ~~ 1..5 ` es&nbsp; (: Verdadero, Falso :)
+Falso | `1..2 ~~ 5..6 ` es&nbsp; (: Verdadero, Falso :)
+Falso | `1..5 ~~ 3..7 ` es&nbsp; (: Verdadero, Falso :)
+
+{% include quiz.html %}
+
+{% include nav.html %}
