@@ -24,7 +24,7 @@ for url, edits in spec.items():
         if isinstance(key, int):
             if key >= len(blocks):
                 sys.exit(f'{url}: no block {key}')
-            if 'or' in texts and texts['or'] != prose(blocks[key])[0]:
+            if 'or' in texts and texts['or'] != prose(blocks[key])[0].strip():
                 sys.exit(f'{url}: block {key} is not what OR: says; remake the worksheet')
             where[key] = texts
         else:
