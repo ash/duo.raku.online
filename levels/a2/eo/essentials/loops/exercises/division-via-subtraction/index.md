@@ -6,7 +6,7 @@ title: Divido per subtraho
 
 ## Problemo
 
-Skribu programon, kiu dividas tutajn nombrojn per subtraho. La nombroj estas fiksaj en la programo:
+Skribu programon, kiu dividas unu tutan nombron per alia. Ĝi devas uzi subtrahon. La nombroj jam estas en la kodo:
 
 ```raku
 my $a = 175;

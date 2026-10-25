@@ -8,7 +8,7 @@ Das Programm verwendet zwei Schleifen und zwei Bereiche.
 
 ## Code
 
-Hier ist eine der möglichen Lösungen:
+Hier ist eine mögliche Lösung:
 
 ```raku
 my $size = prompt 'Geben Sie die Größe ein: ';
@@ -23,7 +23,7 @@ for 1..$size -> $n {
 
 ## Ausgabe
 
-Führen Sie das Programm aus und geben Sie die Größe der Struktur ein:
+Führen Sie das Programm aus und geben Sie die Größe der Form ein:
 
 ```console
 $ raku exercises/loops/digital-stairs.raku
@@ -39,12 +39,12 @@ Geben Sie die Größe ein: 7
 
 ## Kommentar
 
-Beachten Sie, wie die aktuelle Ziffer gedruckt wird:
+Beachten Sie, wie das Programm die aktuelle Ziffer ausgibt:
 
 ```raku
 .print for 1..$n;
 ```
 
-Wie `say` kann auch die Routine `print` als Methode aufgerufen werden. Hier wird sie auf der [Themenvariablen](/de/essentials/loops/topic) `$_` aufgerufen.
+Wie `say` kann auch `print` als Methode aufgerufen werden. Hier wird die Methode auf der [Themenvariablen](/de/essentials/loops/topic) `$_` aufgerufen.
 
 {% include nav.html %}

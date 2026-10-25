@@ -14,7 +14,7 @@ for 1..5 -> $n {
 }
 ```
 
-You can leave out the variable `$n`. Then Raku uses the variable `$_` instead. The program does the same as this one:
+You do not have to write `$n`. Without it, Raku uses the variable `$_`. Raku makes this variable for you. So this program does the same thing:
 
 ```raku
 for 1..5 {
@@ -22,7 +22,7 @@ for 1..5 {
 }
 ```
 
-You [already know](/essentials/hello-world/) that you can use `say` as a method:
+You [already know](/essentials/hello-world/) that `say` can also be a method:
 
 ```raku
 for 1..5 {
@@ -30,7 +30,7 @@ for 1..5 {
 }
 ```
 
-When you call a method on `$_`, you do not need to write the variable. So the loop can be even shorter:
+A method call on `$_` does not need the name `$_`. So the loop can be even shorter:
 
 ```raku
 for 1..5 {

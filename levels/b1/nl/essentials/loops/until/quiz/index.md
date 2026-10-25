@@ -21,7 +21,7 @@ say $n;
 
 ## 2
 
-Hoe kun je dit programma de lus precies vijf keer laten uitvoeren?
+Hoe kun je de lus in dit programma precies vijf keer laten draaien?
 
 {:.quiz-code .fill}
 . | my $n = 1;

@@ -21,7 +21,7 @@ say $n;
 
 ## 2
 
-Come puoi fare in modo che questo programma esegua il ciclo esattamente cinque volte?
+Come puoi far girare il ciclo di questo programma esattamente cinque volte?
 
 {:.quiz-code .fill}
 . | my $n = 1;

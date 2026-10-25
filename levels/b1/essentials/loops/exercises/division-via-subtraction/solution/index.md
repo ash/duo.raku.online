@@ -4,11 +4,11 @@ title: 'Solution: Division via subtraction'
 
 {% include menu.html %}
 
-Division is repeated subtraction. The program has a `while` loop that subtracts `$b` from `$a` and repeats this while the current value of `$a` is not less than `$b`. The variable `$n` counts the iterations, and it is also the result we need.
+Division is just subtraction done many times. The program has a `while` loop that subtracts `$b` from `$a`. It repeats this while `$a` is still not less than `$b`. The variable `$n` counts the rounds of the loop. This count is also the result.
 
 ## Code
 
-Here is the full program:
+Here is the complete program:
 
 ```raku
 my $a = 175;
@@ -34,7 +34,7 @@ $ raku exercises/loops/division-via-subtraction.raku
 7
 ```
 
-Then try, for example, changing `$b` to `20`, and check that the result is correct:
+Then try other values. For example, set `$b` to `20` and check that the result is correct:
 
 ```console
 $ raku exercises/loops/division-via-subtraction.raku

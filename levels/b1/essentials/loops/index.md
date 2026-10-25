@@ -4,8 +4,8 @@ title: Loops
 
 {% include menu.html %}
 
-Loops let you repeat the same action several times. In this section, we will look at some of the Raku constructs that help you build loops. There will be more in the second part of the course.
+A loop repeats the same action several times. This section gives a short overview of some ways to make loops in Raku. There are more in the second part of the course, so keep reading.
 
-For now, let us look at the following topics.
+For now, we will look at these topics.
 
 {% include nav.html %}

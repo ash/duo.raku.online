@@ -4,17 +4,17 @@ title: Postfix vorm van `for`
 
 {% include menu.html %}
 
-Je kent al andere statementmodificatoren: [`if` en `else`](/nl/essentials/conditional-checks/modifiers) en [`while` en `until`](/nl/essentials/loops/modifiers). Dat is goed nieuws, omdat het ontwerp van Raku heel consistent is.
+Je kent al andere statementmodificatoren: [`if` en `else`](/nl/essentials/conditional-checks/modifiers) en [`while` en `until`](/nl/essentials/loops/modifiers). Dit is goed nieuws. In Raku werken vergelijkbare dingen op een vergelijkbare manier.
 
-Als de inhoud van de lus kort is, kun je `for` erachter schrijven:
+Bij een korte lusinhoud kan `for` erachter staan:
 
 ```raku
 .say for 1..7;
 ```
 
-Reeksen zien er heel natuurlijk uit met deze vorm van `for`.
+Reeksen zien er heel natuurlijk uit met `for` aan het eind.
 
-Dit programma doet hetzelfde als een gewonere lus:
+Dit programma doet hetzelfde als een gewone lus:
 
 ```raku
 for 1..7 -> $n {
@@ -22,7 +22,7 @@ for 1..7 -> $n {
 }
 ```
 
-Of met de standaard lusvariabele doet het hetzelfde als dit:
+Of het doet hetzelfde als deze lus met `$_`:
 
 ```raku
 for 1..7 {

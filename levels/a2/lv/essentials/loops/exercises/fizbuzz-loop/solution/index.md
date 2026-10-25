@@ -4,7 +4,7 @@ title: 'Risinājums: FizzBuzz ciklā'
 
 {% include menu.html %}
 
-Šoreiz programma pārbauda dalāmību ciklā. Tā neizdrukā vārdus uzreiz. Vispirms tā savāc tos atsevišķā mainīgajā. Vēlāk tā ievieto šo mainīgo virknē.
+Šoreiz programma pārbauda katru skaitli ciklā. Tā neizdrukā vārdus uzreiz. Vispirms tā savāc tos atsevišķā mainīgajā. Tad tā ieliek šo mainīgo virknē.
 
 ## Kods
 
@@ -29,6 +29,6 @@ $ raku exercises/loops/fizbuzz-loop.raku
 
 ## Komentārs
 
-Ļoti rūpīgam programmētājam šis risinājums var nepatikt. Tas izdrukā atstarpi pēc kola pat skaitļiem bez Fizz vai Buzz. Mainiet programmu un novērsiet šo problēmu.
+Šim risinājumam ir viena maza problēma. Tas vienmēr izdrukā atstarpi pēc kola. Tas tā dara pat bez Fizz vai Buzz. Ļoti rūpīgam programmētājam tas nepatīk. Mainiet programmu un izlabojiet to.
 
 {% include nav.html %}

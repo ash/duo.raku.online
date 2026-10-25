@@ -4,7 +4,7 @@ title: 'Solution: FizzBuzz in a loop'
 
 {% include menu.html %}
 
-This time, the divisibility check happens in a loop. Instead of printing the words directly, the program first collects them in a separate variable and later interpolates it into a string.
+This time, the program checks divisibility inside a loop. It does not print the words straight away. Instead, it first collects them in a separate variable. Later, it inserts this variable into a string.
 
 ## Code
 
@@ -29,6 +29,6 @@ $ raku exercises/loops/fizbuzz-loop.raku
 
 ## Comment
 
-A very strict problem solver may find this solution not perfect, because it prints a space after the colon even for numbers that got no Fizz or Buzz. Change the program to avoid this problem.
+A very careful programmer may not like this solution. It always prints a space after the colon, even with no Fizz or Buzz. Change the program to fix this.
 
 {% include nav.html %}

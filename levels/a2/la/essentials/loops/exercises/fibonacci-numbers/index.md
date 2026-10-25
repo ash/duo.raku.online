@@ -6,11 +6,11 @@ title: Fibonacci numeri
 
 ## Problema
 
-Scribe programma quod primos 20 numeros Fibonacci imprimit.
+Scribe programma. Primos 20 numeros Fibonacci imprimit.
 
 ## Exemplum
 
-Cum programma curris, primos numeros Fibonacci imprimit:
+Programma primos numeros Fibonacci imprimit:
 
 ```console
 $ raku fibonacci-numbers.raku

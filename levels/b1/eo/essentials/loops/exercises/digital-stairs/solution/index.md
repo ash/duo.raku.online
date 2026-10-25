@@ -8,7 +8,7 @@ La programo uzas du buklojn kaj du intervalojn.
 
 ## Kodo
 
-Jen unu el la eblaj solvoj:
+Jen unu ebla solvo:
 
 ```raku
 my $size = prompt 'Enigu la grandecon: ';
@@ -23,7 +23,7 @@ for 1..$size -> $n {
 
 ## Eligo
 
-Rulu la programon kaj enigu la grandecon de la strukturo:
+Rulu la programon kaj enigu la grandecon de la formo:
 
 ```console
 $ raku exercises/loops/digital-stairs.raku
@@ -39,12 +39,12 @@ Enigu la grandecon: 7
 
 ## Komento
 
-Notu kiel la nuna cifero estas presita:
+Notu, kiel la programo presas la nunan ciferon:
 
 ```raku
 .print for 1..$n;
 ```
 
-Kiel ĉe `say`, la rutino `print` povas esti vokata kiel metodo. Ĉi tie, ĝi estas vokata sur la [temvariablo](/eo/essentials/loops/topic) `$_`.
+Kiel `say`, ankaŭ `print` povas esti vokata kiel metodo. Ĉi tie, ĝi estas vokata sur la [temvariablo](/eo/essentials/loops/topic) `$_`.
 
 {% include nav.html %}

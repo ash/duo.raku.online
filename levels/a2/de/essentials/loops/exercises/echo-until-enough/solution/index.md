@@ -4,11 +4,11 @@ title: 'Solution: Echo bis genug'
 
 {% include menu.html %}
 
-Dieses Programm braucht eine Schleife, die stoppt, wenn der Benutzer ein besonderes Wort eingibt.
+Dieses Programm braucht eine Schleife. Die Schleife stoppt, wenn der Benutzer ein besonderes Wort eingibt.
 
 ## Code
 
-Du kannst die Aufgabe auf mehrere ähnliche Arten lösen, mit `while`, `until` oder `repeat`. Hier ist eine davon.
+Du kannst die Aufgabe mit `while`, `until` oder `repeat` lösen. Diese Wege sind sehr ähnlich. Hier ist einer davon.
 
 ```raku
 my $word;
@@ -24,7 +24,7 @@ say 'OK, fertig.';
 
 ## Ausgabe
 
-Führe das Programm aus und gib ein paar verschiedene Wörter ein. Dann beende die Schleife.
+Führe das Programm aus. Gib ein paar verschiedene Wörter ein. Beende dann die Schleife.
 
 ```console
 $ raku exercises/loops/echo-until-enough.raku
@@ -43,6 +43,6 @@ OK, fertig.
 
 ## Kommentar
 
-Beachte, dass du die Variable `$word` _vor_ der Schleife deklarierst. Der `while`-Test steht außerhalb des Schleifenkörpers. Wenn du die Variable in der Schleife definierst, kann der Test sie nicht sehen.
+Beachte: Du erstellst die Variable `$word` _vor_ der Schleife. Der `while`-Test steht nicht im Körper der Schleife. Also kann der Test keine Variable aus der Schleife sehen.
 
 {% include nav.html %}

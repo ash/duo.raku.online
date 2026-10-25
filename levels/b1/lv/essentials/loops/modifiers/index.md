@@ -4,9 +4,9 @@ title: '`while` un `until` kā izteiksmes modifikatori'
 
 {% include menu.html %}
 
-Gan `while`, gan `until` var izmantot kā teikuma modifikatorus, [tāpat](/lv/essentials/conditional-checks/modifiers) kā `if` un `unless`.
+Jūs varat izmantot `while` un `until` arī kā teikuma modifikatorus, tas ir, aiz teikuma. Tas darbojas [tāpat](/lv/essentials/conditional-checks/modifiers) kā ar `if` un `unless`.
 
-Apskatiet piemēru, kas imitē dalīšanu pēc moduļa, tas ir, atlikuma atrašanu:
+Šeit ir piemērs, kas darbojas kā dalīšana pēc moduļa, tas ir, tas atrod atlikumu:
 
 ```raku
 my $x = 10;
@@ -14,13 +14,13 @@ $x -= 3 while $x > 2;
 say $x; # 1
 ```
 
-Šeit `-=` ir operators, kas veic atņemšanu un piešķiršanu kopā. Šajā gadījumā `$x -= 3` ir tas pats, kas `$x = $x - 3`.
+Šeit `-=` ir operators, kas atņem un piešķir vienā solī. Tātad `$x -= 3` nozīmē to pašu, ko `$x = $x - 3`.
 
-`while` modifikators atkārto teikumu `$x -= 3`, kamēr nosacījums `$x > 2` paliek `True`. Tiklīdz nosacījums kļūst `False`, cilpa apstājas.
+`while` modifikators atkārto `$x -= 3`, kamēr nosacījums `$x > 2` ir `True`. Kad tas kļūst `False`, cilpa apstājas.
 
-Pamaniet, ka, ja nosacījums jau no sākuma ir `False`, teikums neizpildās nemaz.
+Ievērojiet: ja nosacījums jau no sākuma ir `False`, teikums nekad neizpildās.
 
-To pašu programmu var uzrakstīt ar `until`. Lai to izdarītu, jums ir jāapgriež nosacījums:
+Tā pati programma var izmantot `until`, bet tad nosacījums ir jāapgriež:
 
 ```raku
 my $x = 10;

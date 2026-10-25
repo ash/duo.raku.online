@@ -4,9 +4,9 @@ title: until
 
 {% include menu.html %}
 
-The `until` loop is the opposite of `while`. It runs the block of code until the condition becomes `True`. In other words, it runs while the condition is `False`.
+An `until` loop is the opposite of a `while` loop. It runs the block of code until the condition is `True`. So it runs while the condition is `False`.
 
-Here is the [program from the previous page](../while) again. Now it uses `until` and a new condition:
+Here is the [program from the last page](../while) again. Now it has `until` and a new condition:
 
 ```raku
 my $x = 0;
@@ -17,7 +17,7 @@ until $x > 10 {
 say "$x is bigger than 10.";
 ```
 
-Run the program and look at the output:
+Run the program and see what it prints:
 
 ```console
 $ raku t.raku 
@@ -34,7 +34,7 @@ You entered 20.
 
 ## `until` vs. `while`
 
-Compare these two lines. They do the same thing with `while` and `until`:
+These two programs do the same thing. One has `while`, and one has `until`:
 
 ```raku
 while $x <= 10 { . . . }
@@ -42,6 +42,6 @@ while $x <= 10 { . . . }
 until $x > 10 { . . . }
 ```
 
-The two conditions are opposites of each other. So `while` and `until` work as a pair, just like `if` and `unless`.
+Look at the two conditions. One is the opposite of the other. `while` and `until` are a pair, like `if` and `unless`.
 
 {% include nav.html %}

@@ -21,7 +21,7 @@ say $f;
 
 ## Uitvoer
 
-Voer het programma een paar keer uit en probeer verschillende waarden van `$n`.
+Voer het programma een paar keer uit met verschillende waarden van `$n`.
 
 ```console
 $ raku exercises/loops/factorial.raku
@@ -30,9 +30,9 @@ $ raku exercises/loops/factorial.raku
 
 ## Opmerkingen
 
-Dit programma gebruikt de operator `*=`, een korte vorm voor vermenigvuldiging met toewijzing: `$x *= $y` is hetzelfde als `$x = $x * $y`.
+Dit programma gebruikt de operator `*=`, die in één stap vermenigvuldigt en toewijst: `$x *= $y` betekent hetzelfde als `$x = $x * $y`.
 
-Je kunt ook een ‘volledige’ lus gebruiken in plaats van de postfix-vorm:
+In plaats van de postfix-vorm kun je ook een ‘volledige’ lus gebruiken:
 
 ```raku
 my $n = 8;
@@ -47,8 +47,8 @@ say $f;
 
 ## Meer over dit onderwerp
 
-We zullen meerdere keren op deze taak terugkomen. In dit deel van de cursus zullen we de taak ook recursief oplossen.
+We komen nog een paar keer terug op deze taak. Later in dit deel van de cursus lossen we de taak ook op met recursie.
 
-In het tweede deel van de cursus leren we de zogenaamde reductie-operators kennen, die de oplossing heel eenvoudig maken. We zien ook hoe je je eigen operator `!` definieert, zodat je `$n!` kunt schrijven om een faculteit te berekenen. Ten slotte zien we nog een interessante oplossing wanneer we het over de `where`-clausule hebben.
+In het tweede deel van de cursus leren we de reductie-operators kennen. Ze maken de oplossing heel eenvoudig. We maken ook onze eigen operator `!`, zodat `$n!` een faculteit geeft. Ten slotte is er nog een interessante oplossing wanneer we het over de `where`-clausule hebben.
 
 {% include nav.html %}

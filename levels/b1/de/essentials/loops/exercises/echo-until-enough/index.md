@@ -6,11 +6,11 @@ title: Echo bis genug
 
 ## Problem
 
-Schreiben Sie ein Programm, das Sie immer wieder nach einem Wort fragt und dieses Wort im Terminal ausgibt. Wenn das Wort `genug` ist, gibt das Programm eine Abschlussnachricht aus und beendet sich.
+Schreiben Sie ein Programm, das immer wieder nach einem Wort fragt. Es gibt jedes Wort im Terminal aus. Wenn das Wort `genug` ist, gibt das Programm eine letzte Nachricht aus und hört auf.
 
 ## Beispiel
 
-Das Programm kann endlos laufen, aber hier zeigen wir nur ein paar Iterationen.
+Das Programm kann endlos laufen, aber hier zeigen wir nur ein paar Runden.
 ```console
 $ raku echo-until-enough.raku
 Ihr Wort: Sprache

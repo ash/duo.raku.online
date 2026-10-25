@@ -6,7 +6,7 @@ title: Fibonacci numeri
 
 ## Problema
 
-Crea programmatum quod primos viginti numeros Fibonacci imprimit.
+Scribe programma quod primos 20 numeros Fibonacci imprimit.
 
 ## Exemplum
 

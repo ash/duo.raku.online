@@ -4,8 +4,8 @@ title: Cicli
 
 {% include menu.html %}
 
-I cicli ti permettono di ripetere la stessa azione più volte. In questa sezione vedremo alcuni dei costrutti di Raku che ti aiutano a costruire i cicli. Ce ne saranno altri nella seconda parte del corso.
+Un ciclo ripete la stessa azione più volte. Questa sezione presenta in breve alcuni modi per creare cicli in Raku. Ce ne sono altri nella seconda parte del corso, quindi continua a leggere.
 
-Per ora, vediamo i seguenti argomenti.
+Per ora, vedremo questi argomenti.
 
 {% include nav.html %}

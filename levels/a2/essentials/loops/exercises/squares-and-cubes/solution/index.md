@@ -6,7 +6,7 @@ title: 'Solution: Squares and cubes in a loop'
 
 ## Code
 
-Here is the code of the solution. The `for` loop uses a range from `-5` to `5`.
+Here is the code. The `for` loop uses a range from `-5` to `5`.
 
 ```raku
 for -5 .. 5 -> $n {

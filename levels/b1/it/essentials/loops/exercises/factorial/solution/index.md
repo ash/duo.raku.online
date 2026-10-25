@@ -4,7 +4,7 @@ title: 'Solution: Fattoriale'
 
 {% include menu.html %}
 
-Il fattoriale di `N` è il prodotto di tutti i numeri interi da 1 fino a `N` incluso. Per esempio, il fattoriale di 4 è 1 * 2 * 3 * 4 = 24.
+Il fattoriale di `N` è il prodotto di tutti i numeri interi da 1 a `N`. Per esempio, il fattoriale di 4 è 1 * 2 * 3 * 4 = 24.
 
 ## Codice
 
@@ -21,7 +21,7 @@ say $f;
 
 ## Output
 
-Esegui il programma alcune volte e prova diversi valori di `$n`.
+Esegui il programma alcune volte con valori diversi di `$n`.
 
 ```console
 $ raku exercises/loops/factorial.raku
@@ -30,9 +30,9 @@ $ raku exercises/loops/factorial.raku
 
 ## Commenti
 
-Questo programma usa l'operatore `*=`, una forma breve per la moltiplicazione con assegnazione: `$x *= $y` è uguale a `$x = $x * $y`.
+Questo programma usa l'operatore `*=`, che moltiplica e assegna in un solo passo: `$x *= $y` significa la stessa cosa di `$x = $x * $y`.
 
-Puoi anche usare un ciclo ‘completo’ invece della forma postfissa:
+Invece della forma postfissa, puoi anche usare un ciclo ‘completo’:
 
 ```raku
 my $n = 8;
@@ -47,8 +47,8 @@ say $f;
 
 ## Più su questo argomento
 
-Torneremo su questo compito diverse volte. In questa parte del corso, lo risolveremo anche in modo ricorsivo.
+Torneremo su questo compito diverse volte. Più avanti in questa parte del corso, lo risolveremo anche con la ricorsione.
 
-Nella seconda parte del corso, impareremo a conoscere i cosiddetti operatori di riduzione, che rendono la soluzione molto semplice. Vedremo anche come definire un tuo operatore `!`, così potrai scrivere `$n!` per calcolare un fattoriale. Infine, vedremo un'altra soluzione interessante quando parleremo della clausola `where`.
+Nella seconda parte del corso impareremo gli operatori di riduzione. Questi operatori rendono la soluzione molto semplice. Creeremo anche un nostro operatore `!`, così `$n!` darà il fattoriale. Infine, ci sarà un'altra soluzione interessante quando parleremo della clausola `where`.
 
 {% include nav.html %}

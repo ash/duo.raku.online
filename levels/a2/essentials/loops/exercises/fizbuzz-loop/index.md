@@ -6,11 +6,11 @@ title: 'Exercise: FizzBuzz in a loop'
 
 ## Problem
 
-Take the program from the [exercise ‘FizzBuzz’](/essentials/conditional-checks/exercises/fizz-buzz) and change it. It must print the result for all whole numbers from 1 to 50. Each number is on its own line, followed by `Fizz` and/or `Buzz`.
+Take the program from the [exercise ‘FizzBuzz’](/essentials/conditional-checks/exercises/fizz-buzz) and change it. Now it must work for all whole numbers from 1 to 50. Each number is on its own line. After the number, it prints `Fizz` and/or `Buzz`.
 
 ## Example
 
-Here are the first few lines:
+Here are the first lines:
 
 ```console
 $ raku fizbuzz-loop.raku

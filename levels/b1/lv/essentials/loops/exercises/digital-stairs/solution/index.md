@@ -8,7 +8,7 @@ Programma izmanto divus ciklus un divus diapazonus.
 
 ## Kods
 
-Šeit ir viens no iespējamiem risinājumiem:
+Šeit ir viens iespējams risinājums:
 
 ```raku
 my $size = prompt 'Ievadiet izmēru: ';
@@ -23,7 +23,7 @@ for 1..$size -> $n {
 
 ## Izvade
 
-Palaidiet programmu un ievadiet struktūras izmēru:
+Palaidiet programmu un ievadiet figūras izmēru:
 
 ```console
 $ raku exercises/loops/digital-stairs.raku
@@ -39,12 +39,12 @@ Ievadiet izmēru: 7
 
 ## Komentārs
 
-Pievērsiet uzmanību tam, kā tiek izdrukāts pašreizējais cipars:
+Ievērojiet, kā programma izdrukā pašreizējo ciparu:
 
 ```raku
 .print for 1..$n;
 ```
 
-Tāpat kā `say`, arī `print` rutīnu var izsaukt kā metodi. Šeit tā tiek izsaukta uz [tēmas mainīgā](/lv/essentials/loops/topic) `$_`.
+Tāpat kā `say`, arī `print` var izsaukt kā metodi. Šeit to izsauc uz [tēmas mainīgā](/lv/essentials/loops/topic) `$_`.
 
 {% include nav.html %}

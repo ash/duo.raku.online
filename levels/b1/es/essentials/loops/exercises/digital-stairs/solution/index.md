@@ -8,7 +8,7 @@ El programa utiliza dos bucles y dos rangos.
 
 ## Código
 
-Aquí tienes una de las posibles soluciones:
+Aquí tienes una solución posible:
 
 ```raku
 my $size = prompt 'Enter the size: ';
@@ -23,7 +23,7 @@ for 1..$size -> $n {
 
 ## Salida
 
-Ejecuta el programa e ingresa el tamaño de la estructura:
+Ejecuta el programa e ingresa el tamaño de la figura:
 
 ```console
 $ raku exercises/loops/digital-stairs.raku
@@ -39,12 +39,12 @@ Enter the size: 7
 
 ## Comentario
 
-Observa cómo se imprime el dígito actual:
+Observa cómo el programa imprime el dígito actual:
 
 ```raku
 .print for 1..$n;
 ```
 
-Igual que `say`, la rutina `print` se puede llamar como un método. Aquí, se llama en la [variable de tema](/es/essentials/loops/topic) `$_`.
+Igual que `say`, `print` también se puede llamar como un método. Aquí, se llama en la [variable de tema](/es/essentials/loops/topic) `$_`.
 
 {% include nav.html %}

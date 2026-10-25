@@ -6,11 +6,11 @@ title: Quadrati e cubi in un ciclo
 
 ## Problema
 
-Scrivi un programma che stampi i quadrati e i cubi dei numeri da −5 a 5, estremi inclusi. Ogni riga dovrebbe avere tre valori: il numero stesso, il suo quadrato e il suo cubo. Usa un ciclo.
+Scrivi un programma che stampa i quadrati e i cubi dei numeri da −5 a 5. Includi anche −5 e 5. Ogni riga dovrebbe mostrare tre valori: il numero, il suo quadrato e il suo cubo. Usa un ciclo.
 
 ## Esempio
 
-Il programma dovrebbe stampare questo (se il ciclo va da −3 a 3):
+Ecco cosa dovrebbe stampare il programma se il ciclo va da −3 a 3:
 
 ```console
 $ raku squares-and-cubes.raku

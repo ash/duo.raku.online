@@ -4,9 +4,9 @@ title: Themenvariable
 
 {% include menu.html %}
 
-`$_` ist eine spezielle Variable, die _Themenvariable_ genannt wird.
+`$_` ist eine spezielle Variable. Sie wird _Themenvariable_ genannt.
 
-Sehen Sie sich diese Schleife über einen Bereich an:
+Hier ist eine Schleife über einen Bereich:
 
 ```raku
 for 1..5 -> $n {
@@ -14,7 +14,7 @@ for 1..5 -> $n {
 }
 ```
 
-Sie können die Variable `$n` weglassen, und dann verwendet Raku stattdessen eine automatische Variable, `$_`. Das Programm ist gleichbedeutend mit diesem:
+Sie können die Variable `$n` weglassen. Dann verwendet Raku automatisch stattdessen die Variable `$_`. Das Programm ist also dasselbe wie dieses:
 
 ```raku
 for 1..5 {
@@ -22,7 +22,7 @@ for 1..5 {
 }
 ```
 
-Wie Sie sich [erinnern](/de/essentials/hello-world/), können Sie `say` auch als Methode verwenden:
+Wie Sie sich [erinnern](/de/essentials/hello-world/), können Sie `say` auch als Methode aufrufen:
 
 ```raku
 for 1..5 {
@@ -30,7 +30,7 @@ for 1..5 {
 }
 ```
 
-Wenn Sie eine Methode auf `$_` aufrufen, müssen Sie die Variable selbst nicht schreiben. Unsere Schleife lässt sich also noch weiter vereinfachen:
+Um eine Methode auf `$_` aufzurufen, müssen Sie die Variable selbst nicht schreiben. Also können wir unsere Schleife noch einfacher machen:
 
 ```raku
 for 1..5 {

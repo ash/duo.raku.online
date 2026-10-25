@@ -6,7 +6,7 @@ title: Division durch Subtraktion
 
 ## Problem
 
-Schreiben Sie ein Programm, das ganze Zahlen mit Subtraktion teilt. Die Zahlen stehen fest im Programm:
+Schreiben Sie ein Programm, das eine ganze Zahl durch eine andere teilt. Es muss Subtraktion verwenden. Die Zahlen stehen schon im Code:
 
 ```raku
 my $a = 175;

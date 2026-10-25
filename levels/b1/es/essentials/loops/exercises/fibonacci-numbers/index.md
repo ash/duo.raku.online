@@ -6,7 +6,7 @@ title: Números de Fibonacci
 
 ## Problema
 
-Crea un programa que imprima los primeros 20 números de Fibonacci.
+Escribe un programa que imprima los primeros 20 números de Fibonacci.
 
 ## Ejemplo
 

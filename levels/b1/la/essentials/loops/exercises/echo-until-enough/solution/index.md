@@ -8,7 +8,7 @@ Hoc programma ansam requirit quae desinit cum usor verbum certum inserit.
 
 ## Codex
 
-Sunt plures modi similes ad problema solvendum cum `while`, `until`, vel `repeat`. Unus ex illis infra monstratur.
+Problema pluribus modis similibus solvere potes, cum `while`, `until` vel `repeat`. Hic est unus ex illis.
 
 ```raku
 my $verbum;
@@ -43,6 +43,6 @@ OK, confectum.
 
 ## Commentarium
 
-Nota quod variabilem `$verbum` _ante_ ansam declaras, quia probatio `while` extra ambitum corporis ansae est. Si variabilem intra ansam definis, probatio eam non videbit.
+Nota quod variabilem `$verbum` _ante_ ansam declaras. Causa est quod probatio `while` extra corpus ansae est. Si variabilem intra ansam declaras, probatio eam videre non potest.
 
 {% include nav.html %}

@@ -4,7 +4,7 @@ title: 'Trideklaro `loop`'
 
 {% include menu.html %}
 
-La `loop` deklaro en Raku havas multon komunan kun la tradiciaj bukloj de la programlingvo C kaj ĝiaj parencoj. Ĝi prenas tri deklarojn: la inicialigilon, la teston kaj la deklaron, kiu ŝanĝas la buklan variablon. La korpo de la buklo ruliĝas denove kaj denove, dum la testo restas `True`.
+La `loop` deklaro en Raku tre similas al la tradiciaj bukloj en C kaj similaj lingvoj. Ĝi prenas tri deklarojn. La unua donas komencan valoron, kaj la dua estas la testo. La tria ŝanĝas la buklan variablon. La korpo de la buklo ruliĝas denove kaj denove, dum la testo estas `True`.
 
 ```raku
 loop (my $c = 0; $c < 5; $c++) {
@@ -12,7 +12,7 @@ loop (my $c = 0; $c < 5; $c++) {
 }
 ```
 
-Ĉi tie, `++` estas postfiksa operatoro, kiu pliigas sian argumenton je 1. Ni rigardos pli da operatoroj en la dua parto de la kurso.
+Ĉi tie, `++` estas postfiksa operatoro, kio signifas, ke ĝi venas post sia argumento. Ĝi aldonas 1 al la argumento. Estas pli da operatoroj en la dua parto de la kurso.
 
 La programo rulas la korpon de la buklo kvin fojojn.
 
@@ -25,7 +25,7 @@ La nuna valoro de la kalkulilo estas 3.
 La nuna valoro de la kalkulilo estas 4.
 ```
 
-Iuj, aŭ eĉ ĉiuj, el la deklaroj en la kapo de `loop` povas esti preterlasitaj. Ekzemple, jen la sama programo:
+Kelkaj el la deklaroj en la kapo de `loop`, aŭ eĉ ĉiuj, estas nedevigaj. Ekzemple, jen la sama programo:
 
 ```raku
 my $c = 0;
@@ -37,6 +37,6 @@ loop (; $c < 5;) {
 
 ## * * *
 
-La `loop` bukloj estas probable la malplej uzataj bukloj en Raku. Vi povas trovi ilin, ekzemple, en kodo, kiun ilo aŭtomate tradukis de C al Raku. Sed Raku havas pli oportunajn buklojn, kiel `for`, kiun ni rigardos tre baldaŭ.
+Raku-programistoj verŝajne uzas `loop` malpli ofte ol ĉiujn aliajn buklojn. Vi povas trovi ĝin, ekzemple, en kodo, kiun ilo tradukis de C al Raku. Sed Raku havas pli oportunajn buklojn, kiel `for`. Ni rigardos ĝin tre baldaŭ.
 
 {% include nav.html %}

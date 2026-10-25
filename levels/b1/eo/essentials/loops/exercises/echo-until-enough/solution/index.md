@@ -8,7 +8,7 @@ title: 'Solvo: Eĥo ĝis sufiĉas'
 
 ## Kodo
 
-Estas pluraj similaj manieroj solvi la taskon per `while`, `until` aŭ `repeat`. Unu el ili estas montrita sube.
+Vi povas solvi la taskon en pluraj similaj manieroj, per `while`, `until` aŭ `repeat`. Jen unu el ili.
 
 ```raku
 my $vorto;
@@ -43,6 +43,6 @@ OK, finita.
 
 ## Komento
 
-Notu, ke vi deklaras la variablon `$vorto` _antaŭ_ la buklo, ĉar la `while` testo estas ekster la amplekso de la korpo de la buklo. Se vi difinas la variablon ene de la buklo, la testo ne vidos ĝin.
+Notu, ke vi deklaras la variablon `$vorto` _antaŭ_ la buklo. Tio estas, ĉar la `while` testo estas ekster la korpo de la buklo. Se vi deklaras la variablon ene de la buklo, la testo ne povas vidi ĝin.
 
 {% include nav.html %}

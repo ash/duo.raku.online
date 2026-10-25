@@ -6,7 +6,7 @@ title: 'Quiz — `repeat` ansa'
 
 ## 1
 
-Elige `until` aut `while` pro hoc programmate. Programma non debet in ansa infinita haerere.
+Elige `until` aut `while` pro hoc programmate, ne ansa sine fine currat.
 
 {:.quiz-code}
 . | meum $n = 0;

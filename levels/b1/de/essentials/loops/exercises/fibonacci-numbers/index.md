@@ -6,7 +6,7 @@ title: Fibonacci-Zahlen
 
 ## Problem
 
-Erstellen Sie ein Programm, das die ersten 20 Fibonacci-Zahlen ausgibt.
+Schreiben Sie ein Programm, das die ersten 20 Fibonacci-Zahlen ausgibt.
 
 ## Beispiel
 

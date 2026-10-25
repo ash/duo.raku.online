@@ -6,11 +6,11 @@ title: Eĥo ĝis sufiĉas
 
 ## Problemo
 
-Skribu programon, kiu daŭre petas vin enigi vorton kaj presas ĝin en la terminalo. Se la vorto estas `sufiĉe`, la programo presas finan mesaĝon kaj haltas.
+Skribu programon, kiu daŭre petas vorton. Ĝi presas ĉiun vorton en la terminalo. Se la vorto estas `sufiĉe`, la programo presas finan mesaĝon kaj haltas.
 
 ## Ekzemplo
 
-La programo povas funkcii senfine, sed ĉi tie ni montras nur kelkajn iteraciojn.
+La programo povas funkcii senfine, sed ĉi tie ni montras nur kelkajn rondojn.
 ```console
 $ raku echo-until-enough.raku
 Via vorto: lingvo

@@ -4,11 +4,11 @@ title: 'Risinājums: Echo līdz pietiek'
 
 {% include menu.html %}
 
-Šai programmai vajag ciklu, kas apstājas, kad lietotājs ievada īpašu vārdu.
+Šai programmai vajag ciklu. Cikls apstājas, kad lietotājs ievada īpašu vārdu.
 
 ## Kods
 
-Tu vari atrisināt uzdevumu vairākos līdzīgos veidos, ar `while`, `until` vai `repeat`. Šeit ir viens no tiem.
+Tu vari atrisināt uzdevumu ar `while`, `until` vai `repeat`. Šie veidi ir ļoti līdzīgi. Šeit ir viens no tiem.
 
 ```raku
 my $word;
@@ -24,7 +24,7 @@ say 'Labi, pabeigts.';
 
 ## Izvade
 
-Palaid programmu un ievadi dažus dažādus vārdus. Tad pārtrauc ciklu.
+Palaid programmu. Ievadi dažus dažādus vārdus. Tad pārtrauc ciklu.
 
 ```console
 $ raku exercises/loops/echo-until-enough.raku
@@ -43,6 +43,6 @@ Labi, pabeigts.
 
 ## Komentārs
 
-Ņem vērā, ka tu deklarē mainīgo `$word` _pirms_ cikla. `while` tests ir ārpus cikla ķermeņa. Ja tu definē mainīgo cikla iekšpusē, tests to neredz.
+Ņem vērā, ka tu izveido mainīgo `$word` _pirms_ cikla. `while` tests nav cikla ķermenī. Tāpēc tests neredz mainīgo no cikla iekšpuses.
 
 {% include nav.html %}

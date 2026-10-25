@@ -4,7 +4,7 @@ title: Oneindige lussen
 
 {% include menu.html %}
 
-Je kunt `loop` ook gebruiken met alleen een body:
+Je kunt `loop` ook schrijven met alleen een body:
 
 ```raku
 loop {
@@ -12,6 +12,6 @@ loop {
 }
 ```
 
-Deze lus draait eindeloos. Hij stopt pas als je het programma stopt, bijvoorbeeld met `Ctrl+C`. In het tweede deel van de cursus leer je betere manieren om lussen te besturen.
+Deze lus stopt nooit vanzelf. Je moet het programma stoppen, bijvoorbeeld met `Ctrl+C`. Het tweede deel van de cursus laat betere manieren zien om lussen te besturen.
 
 {% include nav.html %}

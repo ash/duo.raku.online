@@ -4,8 +4,8 @@ title: Lussen
 
 {% include menu.html %}
 
-Met lussen kun je dezelfde actie een aantal keren herhalen. In deze sectie bekijken we enkele constructies van Raku die je helpen om lussen te bouwen. Er komt meer in het tweede deel van de cursus.
+Een lus herhaalt dezelfde actie een aantal keren. Deze sectie geeft een kort overzicht van een paar manieren om lussen te maken in Raku. Er zijn er meer in het tweede deel van de cursus, dus lees verder.
 
-Laten we voor nu de volgende onderwerpen bekijken.
+Voor nu bekijken we deze onderwerpen.
 
 {% include nav.html %}

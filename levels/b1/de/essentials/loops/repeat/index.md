@@ -4,9 +4,9 @@ title: Verwendung von `repeat`
 
 {% include menu.html %}
 
-Die `while`- und `until`-Blöcke laufen möglicherweise nie, wenn die Bedingung am Anfang `False` ist. Der `repeat`-Block dagegen läuft immer mindestens einmal. Die Bedingung wird nach dem Codeblock geprüft. Für die Prüfung verwenden Sie die gleichen Wörter `while` oder `until`.
+Ein `while`- oder `until`-Block läuft vielleicht nie, wenn die Bedingung von Anfang an `False` ist. Ein `repeat`-Block dagegen läuft immer mindestens einmal. Seine Bedingung wird nach dem Block geprüft. Für die Prüfung verwenden Sie die gleichen Wörter, `while` oder `until`.
 
-Sehen Sie sich dieses Programm an.
+Schauen Sie sich dieses Programm an.
 
 ```raku
 my $x = 100;
@@ -17,7 +17,7 @@ repeat {
 say "$x is bigger than 10.";
 ```
 
-Die Variable `$x` beginnt mit dem Wert `100`, und die `while`-Bedingung prüft, ob `$x` kleiner oder gleich `10` ist. Mit diesem Wert ist die Bedingung bereits `False`, aber der Codeblock läuft trotzdem zuerst einmal.
+Die Variable `$x` beginnt bei `100`. Die `while`-Bedingung prüft, ob `$x` kleiner oder gleich `10` ist. Mit diesem Wert ist die Bedingung schon `False`, aber der Block läuft trotzdem zuerst einmal.
 
 ```console
 $ raku t.raku
@@ -28,7 +28,7 @@ You entered 20.
 20 is bigger than 10.
 ```
 
-Ändern wir das Programm so, dass es stattdessen `until` verwendet.
+Jetzt ändern wir das Programm so, dass es `until` verwendet.
 
 ```raku
 my $x = 0;
@@ -39,7 +39,7 @@ repeat {
 say "$x is bigger than 10.";
 ```
 
-Führen Sie es aus, um zu prüfen, ob es wie erwartet funktioniert:
+Führen Sie es aus, um zu prüfen, ob es so funktioniert, wie Sie es erwarten:
 
 ```console
 $ raku t.raku

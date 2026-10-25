@@ -6,7 +6,7 @@ title: FizzBuzz ciklā
 
 ## Problēma
 
-Mainiet programmu no iepriekšējā [uzdevuma ‘FizzBuzz’](/lv/essentials/conditional-checks/exercises/fizz-buzz) tā, lai tā izdrukātu rezultātu visiem veselajiem skaitļiem no 1 līdz 50. Katrs skaitlis ir atsevišķā rindā, un aiz tā seko `Fizz` un/vai `Buzz`.
+Mainiet programmu no iepriekšējā [uzdevuma ‘FizzBuzz’](/lv/essentials/conditional-checks/exercises/fizz-buzz). Tagad tai jāizdrukā rezultāts visiem veselajiem skaitļiem no 1 līdz 50. Katrs skaitlis ir savā rindā, un aiz tā ir `Fizz` un/vai `Buzz`.
 
 ## Piemērs
 

@@ -4,14 +4,14 @@ title: 'Solutio: Fibonacci numeri'
 
 {% include menu.html %}
 
-Hic algorithmus numeros Fibonacci dat.
+Sic numeros Fibonacci invenis.
 
 1. _F<sub>0</sub>_ = 0, _F<sub>1</sub>_ = 1
 2. _F<sub>n</sub>_ = _F<sub>n-1</sub>_ + _F<sub>n-2</sub>_
 
 ## Codex
 
-Codex algorithmum accurate sequitur. Duas variabiles pro duobus numeris Fibonacci praesentibus adhibet. Eas in circulo mutat. Ambae variabiles novos valores [in una assignatione](/la/essentials/scalar-variables/assigning-a-value/#multiple-assignment) accipiunt.
+Codex accurate facit quod algorithmus dicit. Duas variabiles habet pro duobus numeris Fibonacci praesentibus. Circulus eas singulis vicibus mutat. Ambae variabiles novos valores [in una assignatione](/la/essentials/scalar-variables/assigning-a-value/#multiple-assignment) accipiunt.
 
 ```raku
 my $a = 0;
@@ -28,7 +28,7 @@ for ^19 {
 
 ## Exitus
 
-Hic est exitus. Programma primos 20 numeros imprimit.
+Hic est exitus. Primos 20 numeros ostendit.
 
 ```console
 $ raku exercises/loops/fibonacci-numbers.raku
@@ -56,6 +56,6 @@ $ raku exercises/loops/fibonacci-numbers.raku
 
 ## Plura de hoc
 
-Memento huius problematis. Postea in cursu ad id redimus. Tum id novo modo cum _sequentiis_ Raku solvimus.
+Memento huius problematis. Postea ad id redimus. Tum _sequentias_ Raku adhibemus. Hic modus solvendi novus et mirabilis est.
 
 {% include nav.html %}

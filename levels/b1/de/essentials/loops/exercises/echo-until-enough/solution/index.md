@@ -8,7 +8,7 @@ Dieses Programm braucht eine Schleife, die anhält, wenn der Benutzer ein bestim
 
 ## Code
 
-Es gibt mehrere ähnliche Möglichkeiten, die Aufgabe mit `while`, `until` oder `repeat` zu lösen. Eine davon ist unten gezeigt.
+Du kannst die Aufgabe auf mehrere ähnliche Arten lösen, mit `while`, `until` oder `repeat`. Hier ist eine davon.
 
 ```raku
 my $word;
@@ -43,6 +43,6 @@ OK, fertig.
 
 ## Kommentar
 
-Beachte, dass du die Variable `$word` _vor_ der Schleife deklarierst, weil der `while`-Test außerhalb des Gültigkeitsbereichs des Schleifenkörpers liegt. Wenn du die Variable innerhalb der Schleife definierst, sieht der Test sie nicht.
+Beachte, dass du die Variable `$word` _vor_ der Schleife deklarierst. Das liegt daran, dass der `while`-Test außerhalb des Schleifenkörpers steht. Wenn du die Variable in der Schleife deklarierst, kann der Test sie nicht sehen.
 
 {% include nav.html %}

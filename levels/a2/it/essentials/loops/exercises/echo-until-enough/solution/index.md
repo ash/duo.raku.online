@@ -4,11 +4,11 @@ title: 'Solution: Echo fino a sufficienza'
 
 {% include menu.html %}
 
-Questo programma ha bisogno di un ciclo che si ferma quando l'utente inserisce una parola speciale.
+Questo programma ha bisogno di un ciclo. Il ciclo si ferma quando l'utente inserisce una parola speciale.
 
 ## Codice
 
-Puoi risolvere il compito in diversi modi simili, con `while`, `until` o `repeat`. Ecco uno di questi.
+Puoi risolvere il compito con `while`, `until` o `repeat`. Questi modi sono molto simili. Ecco uno di questi.
 
 ```raku
 my $word;
@@ -24,7 +24,7 @@ say 'OK, fatto.';
 
 ## Output
 
-Esegui il programma e inserisci alcune parole diverse. Poi ferma il ciclo.
+Esegui il programma. Inserisci alcune parole diverse. Poi ferma il ciclo.
 
 ```console
 $ raku exercises/loops/echo-until-enough.raku
@@ -43,6 +43,6 @@ OK, fatto.
 
 ## Commento
 
-Nota che dichiari la variabile `$word` _prima_ del ciclo. Il test `while` è fuori dal corpo del ciclo. Se definisci la variabile dentro il ciclo, il test non la vede.
+Nota che crei la variabile `$word` _prima_ del ciclo. Il test `while` non è dentro il corpo del ciclo. Quindi il test non vede una variabile che sta dentro il ciclo.
 
 {% include nav.html %}

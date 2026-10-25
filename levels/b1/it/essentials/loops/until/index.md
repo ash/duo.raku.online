@@ -4,9 +4,9 @@ title: Uso di `until`
 
 {% include menu.html %}
 
-Il costrutto `until` è l'opposto di `while`. Esegue il blocco di codice finché la condizione non diventa `True` (in altre parole, mentre la condizione è `False`).
+Il ciclo `until` fa l'opposto di `while`. Esegue il blocco di codice finché la condizione non diventa `True`. In altre parole, lo esegue finché la condizione è `False`.
 
-Ecco il [programma della pagina precedente](../while), modificato per usare `until` e una nuova condizione:
+Questo è il [programma della pagina precedente](../while), ma ora con `until` e una nuova condizione:
 
 ```raku
 my $x = 0;
@@ -17,7 +17,7 @@ until $x > 10 {
 say "$x è maggiore di 10.";
 ```
 
-Esegui il programma e controlla l'output:
+Esegui il programma e guarda l'output:
 
 ```console
 $ raku t.raku 
@@ -34,7 +34,7 @@ Hai inserito 20.
 
 ## `until` vs. `while`
 
-Confronta due programmi che fanno la stessa cosa con `while` e `until`:
+Confronta due programmi che fanno la stessa cosa, uno con `while` e uno con `until`:
 
 ```raku
 while $x <= 10 { . . . }
@@ -42,6 +42,6 @@ while $x <= 10 { . . . }
 until $x > 10 { . . . }
 ```
 
-Come vedi, ogni condizione è l'opposto dell'altra. In questo senso, `while` e `until` hanno la stessa relazione di `if` e `unless`.
+Come vedi, ogni condizione è l'opposto dell'altra. Quindi `while` e `until` formano una coppia, proprio come `if` e `unless`.
 
 {% include nav.html %}

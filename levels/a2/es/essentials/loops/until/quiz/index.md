@@ -21,7 +21,7 @@ say $n;
 
 ## 2
 
-¿Cómo puedes hacer que este bucle se ejecute exactamente cinco veces?
+¿Qué necesitas cambiar? El bucle debe ejecutarse exactamente cinco veces.
 
 {:.quiz-code .fill}
 . | my $n = 1;

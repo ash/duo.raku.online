@@ -21,7 +21,7 @@ say $n;
 
 ## 2
 
-How can you make this program run the loop exactly five times?
+How can you make the loop in this program run exactly five times?
 
 {:.quiz-code .fill}
 . | my $n = 1;

@@ -4,7 +4,7 @@ title: 'Solution: FizzBuzz in un ciclo'
 
 {% include menu.html %}
 
-Questa volta il controllo di divisibilità avviene in un ciclo. Invece di stampare direttamente le parole, il programma prima le raccoglie in una variabile separata e poi la interpola in una stringa.
+Questa volta il programma controlla la divisibilità dentro un ciclo. Non stampa subito le parole. Invece, prima le raccoglie in una variabile separata. Poi inserisce questa variabile in una stringa.
 
 ## Codice
 
@@ -29,6 +29,6 @@ $ raku exercises/loops/fizbuzz-loop.raku
 
 ## Commento
 
-Un risolutore di problemi molto pignolo potrebbe trovare questa soluzione non perfetta, perché stampa uno spazio dopo i due punti anche per i numeri che non hanno ricevuto né Fizz né Buzz. Modifica il programma per evitare questo problema.
+A un programmatore molto attento questa soluzione potrebbe non piacere. Stampa sempre uno spazio dopo i due punti, anche quando non c'è né Fizz né Buzz. Modifica il programma per correggere questo problema.
 
 {% include nav.html %}

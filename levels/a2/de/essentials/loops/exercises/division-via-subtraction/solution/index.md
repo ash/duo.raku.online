@@ -4,7 +4,7 @@ title: 'Solution: Division durch Subtraktion'
 
 {% include menu.html %}
 
-Division ist Subtraktion, immer wieder. Das Programm hat eine `while`-Schleife. Die Schleife zieht `$b` von `$a` ab. Sie wiederholt das, solange `$a` nicht kleiner als `$b` ist. Die Variable `$n` zählt die Runden der Schleife. Diese Zahl ist auch das Ergebnis, das wir brauchen.
+Division ist Subtraktion, immer wieder. Das Programm hat eine `while`-Schleife. Jedes Mal zieht die Schleife `$b` von `$a` ab. Das macht sie, solange `$a` nicht kleiner als `$b` ist. Die Variable `$n` zählt die Runden. Diese Zahl ist die Antwort.
 
 ## Code
 
@@ -27,14 +27,14 @@ say $n;
 
 ## Ausgabe
 
-Führen Sie das Programm ein paar Mal aus. Verwenden Sie zuerst die gegebenen Werte. Mit ihnen geht die Division genau auf:
+Führen Sie das Programm ein paar Mal aus. Beginnen Sie mit den Zahlen im Code. Bei ihnen bleibt kein Rest übrig:
 
 ```console
 $ raku exercises/loops/division-via-subtraction.raku
 7
 ```
 
-Probieren Sie dann andere Werte aus. Ändern Sie zum Beispiel `$b` auf `20` und prüfen Sie, ob das Ergebnis richtig ist:
+Probieren Sie dann andere Zahlen aus. Ändern Sie zum Beispiel `$b` auf `20`. Prüfen Sie, ob das Ergebnis richtig ist:
 
 ```console
 $ raku exercises/loops/division-via-subtraction.raku

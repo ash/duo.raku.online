@@ -4,9 +4,9 @@ title: Thema variabele
 
 {% include menu.html %}
 
-`$_` is een speciale variabele die de _topic variabele_ wordt genoemd.
+`$_` is een speciale variabele. Hij heet de _topic variabele_.
 
-Bekijk deze lus over een bereik:
+Hier is een lus over een bereik:
 
 ```raku
 for 1..5 -> $n {
@@ -14,7 +14,7 @@ for 1..5 -> $n {
 }
 ```
 
-Je kunt de variabele `$n` weglaten, en dan gebruikt Raku in plaats daarvan een automatische variabele, `$_`. Het programma is hetzelfde als dit:
+Je kunt de variabele `$n` weglaten. Dan gebruikt Raku automatisch de variabele `$_` in plaats daarvan. Het programma is dus hetzelfde als dit:
 
 ```raku
 for 1..5 {
@@ -22,7 +22,7 @@ for 1..5 {
 }
 ```
 
-Zoals je je [herinnert](/nl/essentials/hello-world/), kun je `say` ook als een methode gebruiken:
+Zoals je je [herinnert](/nl/essentials/hello-world/), kun je `say` ook als een methode aanroepen:
 
 ```raku
 for 1..5 {
@@ -30,7 +30,7 @@ for 1..5 {
 }
 ```
 
-Als je een methode op `$_` aanroept, hoef je de variabele zelf niet te schrijven. Onze lus kan dus nog eenvoudiger worden gemaakt:
+Om een methode op `$_` aan te roepen, hoef je de variabele zelf niet te schrijven. Dus kunnen we onze lus nog eenvoudiger maken:
 
 ```raku
 for 1..5 {

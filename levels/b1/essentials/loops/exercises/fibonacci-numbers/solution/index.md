@@ -4,14 +4,14 @@ title: Solution of ’Fibonacci numbers’
 
 {% include menu.html %}
 
-The following algorithm defines Fibonacci numbers.
+This algorithm gives the Fibonacci numbers.
 
 1. _F<sub>0</sub>_ = 0, _F<sub>1</sub>_ = 1
 2. _F<sub>n</sub>_ = _F<sub>n-1</sub>_ + _F<sub>n-2</sub>_
 
 ## Code
 
-The code follows the algorithm step by step. It uses two variables to keep the current two Fibonacci numbers and updates them in a loop. Note that both variables get their new values [in a single assignment](/essentials/scalar-variables/assigning-a-value/#multiple-assignment).
+The code follows the algorithm exactly. It keeps the two current Fibonacci numbers in two variables. The loop updates them. Note that both variables get new values [in a single assignment](/essentials/scalar-variables/assigning-a-value/#multiple-assignment).
 
 ```raku
 my $a = 0;
@@ -28,7 +28,7 @@ for ^19 {
 
 ## Output
 
-Here is the output of the program, which prints the first 20 numbers.
+Here is the output of the program with the first 20 numbers.
 
 ```console
 $ raku exercises/loops/fibonacci-numbers.raku
@@ -56,6 +56,6 @@ $ raku exercises/loops/fibonacci-numbers.raku
 
 ## More on this subject
 
-Remember this task, because we will come back to it later and find another exciting solution with Raku _sequences_.
+Remember this task, because we will come back to it later. Then we will find another exciting solution with Raku _sequences_.
 
 {% include nav.html %}

@@ -4,7 +4,7 @@ title: Quiz — Postfix-`for`*
 
 {% include menu.html %}
 
-Schreiben Sie das Programm fertig. Es muss `for` nach dem Block verwenden, und es muss diesen Text ausgeben:
+Schreiben Sie das Programm fertig. Setzen Sie `for` hinter den Block. Das Programm muss diesen Text ausgeben:
 
     A
     A
@@ -22,7 +22,7 @@ Hier ist der Anfang des Codes:
 . | &nbsp;&nbsp;&nbsp;&nbsp;.say;
 } | ␣ for &apos;A&apos;..&apos;C&apos;;
 
-<div class="extended-explanation">Dieser Code verwendet einen Codeblock mit <code>for</code> dahinter. Beachten Sie, dass <code>for</code> in derselben Zeile wie die schließende geschweifte Klammer stehen muss. Wenn Sie es in eine neue Zeile setzen, gehört der Block nicht mehr zur Schleife. Dann bekommen Sie einen Fehler: <code>Missing block</code>. Es ist besser, Codeblöcke nicht so mit Postfix-Formen zu verwenden.</div>
+<div class="extended-explanation">Hier steht <code>for</code> hinter einem Codeblock. Das Wort <code>for</code> muss in derselben Zeile wie die <code>}</code> stehen. Wenn <code>for</code> in einer neuen Zeile steht, hat die Schleife keinen Block. Dann zeigt Raku einen Fehler, bevor das Programm läuft: <code>Missing block</code>. Versuchen Sie, Blöcke nicht so zu verwenden.</div>
 
 {% include quiz.html %}
 

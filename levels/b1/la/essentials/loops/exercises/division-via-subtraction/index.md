@@ -6,7 +6,7 @@ title: Divisio per subtractionem
 
 ## Problema
 
-Crea programma quod divisionem integram per subtractionem facit. Numeri directe in programmate scripti sunt:
+Scribe programma quod divisionem integram per subtractionem facit. Numeri directe in codice scripti sunt:
 
 ```raku
 my $a = 175;

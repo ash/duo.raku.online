@@ -4,7 +4,7 @@ title: 'Solutio: Divisio per subtractionem'
 
 {% include menu.html %}
 
-Divisio est subtractio iterum atque iterum facta. Programma circulum `while` habet. Circulus `$b` ab `$a` aufert. Hoc repetit dum `$a` non minor est quam `$b`. Variabilis `$n` gyros circuli numerat. Hic numerus etiam est resultatum quod nobis opus est.
+Divisio est subtractio, iterum atque iterum. Programma circulum `while` habet. Singulis vicibus circulus `$b` ab `$a` aufert. Hoc facit dum `$a` non minor est quam `$b`. Variabilis `$n` gyros numerat. Hic numerus est responsum.
 
 ## Codex
 
@@ -27,14 +27,14 @@ say $n;
 
 ## Exitus
 
-Curre programma aliquoties. Primum, utere valoribus datis. Divisionem exactam dant:
+Curre programma aliquoties. Incipe a numeris in codice. Post divisionem nihil restat:
 
 ```console
 $ raku exercises/loops/division-via-subtraction.raku
 7
 ```
 
-Deinde alios valores tenta. Exempli gratia, muta `$b` in `20` et inspice an resultatum rectum sit:
+Deinde alios numeros tenta. Exempli gratia, muta `$b` in `20`. Vide an resultatum rectum sit:
 
 ```console
 $ raku exercises/loops/division-via-subtraction.raku

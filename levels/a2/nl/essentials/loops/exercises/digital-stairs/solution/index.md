@@ -8,7 +8,7 @@ Het programma gebruikt twee lussen en twee reeksen.
 
 ## Code
 
-Hier is een mogelijke oplossing:
+Hier is één manier om het op te lossen:
 
 ```raku
 my $size = prompt 'Voer de grootte in: ';
@@ -39,12 +39,12 @@ Voer de grootte in: 7
 
 ## Opmerking
 
-Kijk hoe het programma het huidige cijfer afdrukt:
+Kijk hoe het programma elk cijfer afdrukt:
 
 ```raku
 .print for 1..$n;
 ```
 
-Net als `say` kun je `print` als een methode aanroepen. Hier roep je het aan op de [topic variabele](/nl/essentials/loops/topic) `$_`.
+Je kunt `print` als een methode aanroepen, net als `say`. Hier roept het programma het aan op de [topic variabele](/nl/essentials/loops/topic) `$_`.
 
 {% include nav.html %}

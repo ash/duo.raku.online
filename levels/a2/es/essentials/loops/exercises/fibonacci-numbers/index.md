@@ -6,11 +6,11 @@ title: Números de Fibonacci
 
 ## Problema
 
-Escribe un programa que imprima los primeros 20 números de Fibonacci.
+Escribe un programa. Imprime los primeros 20 números de Fibonacci.
 
 ## Ejemplo
 
-Cuando ejecutas el programa, imprime los primeros números de Fibonacci:
+El programa imprime los primeros números de Fibonacci:
 
 ```console
 $ raku fibonacci-numbers.raku

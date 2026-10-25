@@ -4,9 +4,9 @@ title: Gebruik van `until`
 
 {% include menu.html %}
 
-De `until`-constructie is het tegenovergestelde van `while`. Ze voert het codeblok uit totdat de voorwaarde `True` wordt (met andere woorden, zolang de voorwaarde `False` is).
+De `until`-lus doet het omgekeerde van `while`. Hij voert het codeblok uit totdat de voorwaarde `True` wordt. Met andere woorden: hij draait zolang de voorwaarde `False` is.
 
-Hier is het [programma van de vorige pagina](../while), aangepast zodat het `until` en een nieuwe voorwaarde gebruikt:
+Dit is het [programma van de vorige pagina](../while), maar nu met `until` en een nieuwe voorwaarde:
 
 ```raku
 my $x = 0;
@@ -17,7 +17,7 @@ until $x > 10 {
 say "$x is groter dan 10.";
 ```
 
-Voer het programma uit en controleer de uitvoer:
+Voer het programma uit en bekijk de uitvoer:
 
 ```console
 $ raku t.raku 
@@ -34,7 +34,7 @@ Je hebt 20 ingevoerd.
 
 ## `until` vs. `while`
 
-Vergelijk twee programma's die hetzelfde doen met `while` en `until`:
+Vergelijk twee programma's die hetzelfde doen, het ene met `while` en het andere met `until`:
 
 ```raku
 while $x <= 10 { . . . }
@@ -42,6 +42,6 @@ while $x <= 10 { . . . }
 until $x > 10 { . . . }
 ```
 
-Zoals je ziet, is elke voorwaarde het tegenovergestelde van de andere. Zo hangen `while` en `until` op dezelfde manier samen als `if` en `unless`.
+Zoals je ziet, is elke voorwaarde het omgekeerde van de andere. Zo vormen `while` en `until` een paar, op dezelfde manier als `if` en `unless`.
 
 {% include nav.html %}

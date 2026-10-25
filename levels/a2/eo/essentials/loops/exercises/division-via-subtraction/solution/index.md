@@ -4,7 +4,7 @@ title: 'Solvo: Divido per subtraho'
 
 {% include menu.html %}
 
-Divido estas subtraho denove kaj denove. La programo havas `while` buklon. La buklo deprenas `$b` de `$a`. Ĝi ripetas tion, dum `$a` ne estas malpli ol `$b`. La variablo `$n` kalkulas la rondojn de la buklo. Ĉi tiu nombro estas ankaŭ la rezulto, kiun ni bezonas.
+Divido estas subtraho, denove kaj denove. La programo havas `while` buklon. Ĉiun fojon, la buklo deprenas `$b` de `$a`. Ĝi faras tion, dum `$a` ne estas malpli ol `$b`. La variablo `$n` kalkulas la rondojn. Ĉi tiu nombro estas la respondo.
 
 ## Kodo
 
@@ -27,14 +27,14 @@ say $n;
 
 ## Eligo
 
-Rulu la programon kelkajn fojojn. Unue, uzu la donitajn valorojn. Ili dividiĝas ekzakte:
+Rulu la programon kelkajn fojojn. Komencu per la nombroj en la kodo. Ili dividiĝas sen resto:
 
 ```console
 $ raku exercises/loops/division-via-subtraction.raku
 7
 ```
 
-Poste provu aliajn valorojn. Ekzemple, ŝanĝu `$b` al `20` kaj kontrolu, ke la rezulto estas ĝusta:
+Poste provu aliajn nombrojn. Ekzemple, ŝanĝu `$b` al `20`. Kontrolu, ke la rezulto estas ĝusta:
 
 ```console
 $ raku exercises/loops/division-via-subtraction.raku

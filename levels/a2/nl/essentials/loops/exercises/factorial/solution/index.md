@@ -4,7 +4,7 @@ title: 'Solution: Faculteit'
 
 {% include menu.html %}
 
-De faculteit van `N` is: alle hele getallen van 1 tot `N` met elkaar vermenigvuldigd. De faculteit van 4 is bijvoorbeeld 1 * 2 * 3 * 4 = 24.
+Voor de faculteit van `N` vermenigvuldig je alle getallen van 1 tot en met `N`. De faculteit van 4 is bijvoorbeeld 1 * 2 * 3 * 4 = 24.
 
 ## Code
 
@@ -21,7 +21,7 @@ say $f;
 
 ## Uitvoer
 
-Voer het programma een paar keer uit met verschillende waarden van `$n`.
+Voer het programma een paar keer uit. Probeer verschillende waarden van `$n`.
 
 ```console
 $ raku exercises/loops/factorial.raku
@@ -30,9 +30,9 @@ $ raku exercises/loops/factorial.raku
 
 ## Opmerkingen
 
-Dit programma gebruikt de operator `*=`. Het is een korte manier om te vermenigvuldigen en toe te wijzen: `$x *= $y` betekent hetzelfde als `$x = $x * $y`.
+Het programma gebruikt de operator `*=`. Hij vermenigvuldigt en bewaart het resultaat in de variabele. `$x *= $y` is dus hetzelfde als `$x = $x * $y`.
 
-Je kunt ook een ‘volledige’ lus gebruiken in plaats van de postfix-vorm:
+Je kunt ook een ‘volledige’ lus schrijven, met `for` voor het blok:
 
 ```raku
 my $n = 8;
@@ -47,8 +47,8 @@ say $f;
 
 ## Meer hierover
 
-We komen in de cursus meerdere keren terug op deze taak. In dit deel van de cursus lossen we de taak ook op met recursie.
+Deze taak komt een paar keer terug in de cursus. In dit deel lossen we de taak ook anders op. We gebruiken een functie die zichzelf aanroept.
 
-In het tweede deel van de cursus leer je de reductie-operators kennen. Daarmee is de oplossing heel makkelijk. Je leert ook om je eigen operator `!` te maken. Dan kun je `$n!` schrijven voor een faculteit. Later zien we nog een interessante oplossing met de `where`-clausule.
+In het tweede deel leer je de reductie-operators kennen. Daarmee is de oplossing heel makkelijk. Je leert ook je eigen operator `!` maken. Dan kun je `$n!` schrijven voor een faculteit. Later zie je nog een mooie oplossing met `where`.
 
 {% include nav.html %}

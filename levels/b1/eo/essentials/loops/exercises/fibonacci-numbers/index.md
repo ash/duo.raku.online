@@ -6,7 +6,7 @@ title: Fibonacci-nombroj
 
 ## Problemo
 
-Kreu programon kiu presas la unuajn 20 Fibonaciajn numerojn.
+Skribu programon, kiu presas la unuajn 20 Fibonacci-nombrojn.
 
 ## Ekzemplo
 

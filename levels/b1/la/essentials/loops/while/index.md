@@ -4,7 +4,7 @@ title: 'Utendo `while`'
 
 {% include menu.html %}
 
-Constructum `while` condicionem Booleanam et clausulam codicis habet. Raku clausulam codicis iterum atque iterum exsequitur _dum_ condicio est `True`.
+Anulus `while` condicionem Booleanam (`True` aut `False`) et clausulam codicis habet. Raku clausulam repetit _dum_ condicio est `True`.
 
 ```raku
 my $x = 0;
@@ -15,7 +15,7 @@ while $x <= 10 {
 say "$x maior est quam 10.";
 ```
 
-Programma te rogat ut numerum intres. Si numerus non maior est quam 10, corpus anuli iterum currit. Simul ac numerus condicionem `$x <= 10` frangit, anulus finitur, et programma cum linea sequenti pergit.
+Programma te rogat ut numerum intres. Si numerus non maior est quam 10, corpus anuli iterum currit. Cum numerus condicionem `$x <= 10` non servat, anulus desinit. Tum programma ad lineam sequentem pergit.
 
 ```console
 $ raku t.raku

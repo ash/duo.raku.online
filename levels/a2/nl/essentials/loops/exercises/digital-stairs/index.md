@@ -6,18 +6,18 @@ title: Digitale trappen
 
 ## Probleem
 
-Schrijf een programma dat deze vorm afdrukt:
+Schrijf een programma dat dit afdrukt:
 
     1
     12
     123
     1234
 
-De gebruiker voert de grootte van de trap in. De grootte is niet groter dan 9.
+De gebruiker voert de grootte van de trap in. De grootte is 9 of minder.
 
 ## Voorbeeld
 
-Hier is een voorbeeld met de invoerwaarde `3`:
+Hier is een voorbeeld. De gebruiker voert `3` in:
 
 ```console
 $ raku digital-stairs.raku

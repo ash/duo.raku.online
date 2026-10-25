@@ -21,7 +21,7 @@ say $n;
 
 ## 2
 
-How can you stop this program from running forever? Change the code.
+This program runs forever. Change the code so that it stops.
 
 {:.quiz-code .fill}
 . | my $n = 5;

@@ -21,7 +21,7 @@ say $n;
 
 ## 2
 
-Wie können Sie diese Schleife genau fünfmal laufen lassen?
+Was müssen Sie ändern? Die Schleife muss genau fünfmal laufen.
 
 {:.quiz-code .fill}
 . | my $n = 1;

@@ -4,17 +4,17 @@ title: Forma postfissa di `for`
 
 {% include menu.html %}
 
-Abbiamo già visto altri modificatori di istruzione: [`if` e `else`](/it/essentials/conditional-checks/modifiers) e [`while` e `until`](/it/essentials/loops/modifiers). È un motivo per festeggiare un po', perché il design di Raku è molto coerente.
+Hai già visto altri modificatori di istruzione: [`if` e `else`](/it/essentials/conditional-checks/modifiers) e [`while` e `until`](/it/essentials/loops/modifiers). È un piccolo motivo per festeggiare: il design di Raku è molto coerente.
 
-Quando il corpo del ciclo è breve, puoi scrivere il ciclo `for` in forma postfissa:
+Con un corpo del ciclo breve, puoi usare la forma postfissa di `for`:
 
 ```raku
 .say for 1..7;
 ```
 
-Come vedi, gli intervalli sembrano molto naturali con la forma postfissa di `for`.
+Come vedi, gli intervalli vanno molto bene con il `for` postfisso.
 
-Questo programma è uguale a una variante più tradizionale:
+Questo programma fa la stessa cosa di una versione più comune:
 
 ```raku
 for 1..7 -> $n {
@@ -22,7 +22,7 @@ for 1..7 -> $n {
 }
 ```
 
-Oppure, se usi la variabile di ciclo predefinita, è uguale a:
+Oppure, se usi la variabile di ciclo predefinita, è uguale a questo:
 
 ```raku
 for 1..7 {
@@ -30,6 +30,6 @@ for 1..7 {
 }
 ```
 
-Qui, `.say` è la forma abbreviata di `$_.say`.
+Qui `.say` è la forma breve di `$_.say`.
 
 {% include nav.html %}

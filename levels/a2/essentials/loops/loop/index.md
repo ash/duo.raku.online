@@ -4,7 +4,7 @@ title: loop
 
 {% include menu.html %}
 
-The `loop` statement in Raku is like the classic loops in the C language and similar languages. It takes three statements. The first one sets the start value. The second one is the test. The third one changes the loop variable. The body of the loop runs again and again while the test is `True`.
+Raku has a `loop` statement. It works like the loops in C and similar languages. It has three statements. The first one gives the loop variable its start value. The second one is a test. The third one changes the loop variable. The loop runs while the test is `True`.
 
 ```raku
 loop (my $c = 0; $c < 5; $c++) {
@@ -12,9 +12,9 @@ loop (my $c = 0; $c < 5; $c++) {
 }
 ```
 
-Here, `++` is an operator after a variable. It adds 1 to the variable. You will learn more operators in the second part of the course.
+Here, `++` is an operator. You write it after a variable. It adds 1 to the variable. The second part of the course has more operators.
 
-The program runs the body of the loop five times.
+The body of the loop runs five times.
 
 ```console
 $ raku t.raku
@@ -25,7 +25,7 @@ The current value of the counter is 3.
 The current value of the counter is 4.
 ```
 
-You can leave out some or even all of the statements in the header of `loop`. For example, here is the same program:
+You can leave out some of the three statements in `loop`. You can even leave out all of them. For example, here is the same program:
 
 ```raku
 my $c = 0;
@@ -37,6 +37,6 @@ loop (; $c < 5;) {
 
 ## * * *
 
-People do not use `loop` very often in Raku. You can see it, for example, in programs that a tool translated from C to Raku. Raku has easier loops, such as `for`. We look at `for` very soon.
+In Raku, people do not use `loop` very often. Sometimes a tool changes C code into Raku code. You can see `loop` in such code. Raku has easier loops, like `for`. We look at `for` very soon.
 
 {% include nav.html %}

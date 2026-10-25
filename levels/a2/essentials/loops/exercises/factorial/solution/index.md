@@ -4,7 +4,7 @@ title: Solution of ‘Factorial’
 
 {% include menu.html %}
 
-The factorial of `N` is all whole numbers from 1 to `N` multiplied together. For example, the factorial of 4 is 1 * 2 * 3 * 4 = 24.
+To get the factorial of `N`, multiply all the numbers from 1 to `N`. For example, the factorial of 4 is 1 * 2 * 3 * 4 = 24.
 
 ## Code
 
@@ -21,7 +21,7 @@ say $f;
 
 ## Output
 
-Run the program a few times with different values of `$n`.
+Run the program a few times. Try different values of `$n`.
 
 ```console
 $ raku exercises/loops/factorial.raku
@@ -30,9 +30,9 @@ $ raku exercises/loops/factorial.raku
 
 ## Comments
 
-This program uses the `*=` operator. It is a short way to multiply and assign: `$x *= $y` means the same as `$x = $x * $y`.
+The program uses the operator `*=`. It multiplies and saves the result in the variable. So `$x *= $y` is the same as `$x = $x * $y`.
 
-You can also use a ‘full’ loop instead of the postfix form:
+You can also write a ‘full’ loop, with `for` before the block:
 
 ```raku
 my $n = 8;
@@ -47,8 +47,8 @@ say $f;
 
 ## More about this
 
-We come back to this task several times in the course. In this part of the course, we also solve it with recursion.
+This task comes back several times in the course. In this part, we also solve it in another way. We use a function that calls itself.
 
-In the second part of the course, you will learn about reduction operators. With them, the solution is very easy. You will also learn to make your own operator `!`. Then you can write `$n!` to get a factorial. Later, we will see one more interesting solution with the `where` clause.
+In the second part, you will learn about reduction operators. With them, the solution is very easy. You will also learn to make your own operator, `!`. Then you can write `$n!` for a factorial. Later, you will see one more nice solution with `where`.
 
 {% include nav.html %}

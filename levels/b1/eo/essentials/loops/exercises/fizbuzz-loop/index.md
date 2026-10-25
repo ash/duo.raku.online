@@ -6,7 +6,7 @@ title: FizzBuzz en buklo
 
 ## Problemo
 
-Ŝanĝu la programon el la antaŭa [ekzerco ‘FizzBuzz’](/eo/essentials/conditional-checks/exercises/fizz-buzz) tiel, ke ĝi presu la rezulton por ĉiuj entjeroj de 1 ĝis 50. Ĉiu nombro estas en aparta linio, sekvata de `Fizz` kaj/aŭ `Buzz`.
+Ŝanĝu la programon el la antaŭa [ekzerco ‘FizzBuzz’](/eo/essentials/conditional-checks/exercises/fizz-buzz). Nun ĝi devas presi la rezulton por ĉiuj tutaj nombroj de 1 ĝis 50. Ĉiu nombro estas en sia propra linio, kaj post ĝi venas `Fizz` kaj/aŭ `Buzz`.
 
 ## Ekzemplo
 

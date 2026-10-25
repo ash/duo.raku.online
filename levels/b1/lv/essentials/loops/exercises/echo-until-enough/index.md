@@ -6,11 +6,11 @@ title: Echo līdz pietiek
 
 ## Problēma
 
-Uzrakstiet programmu, kas atkārtoti lūdz jūs ievadīt vārdu un izdrukā to terminālī. Ja vārds ir `pietiek`, programma izdrukā noslēguma ziņojumu un beidz darbu.
+Uzrakstiet programmu, kas atkal un atkal prasa vārdu. Tā izdrukā katru vārdu terminālī. Ja vārds ir `pietiek`, programma izdrukā noslēguma ziņojumu un beidz darbu.
 
 ## Piemērs
 
-Programma var darboties bezgalīgi, bet šeit mēs parādām tikai dažas iterācijas.
+Programma var darboties bezgalīgi, bet šeit mēs parādām tikai dažus atkārtojumus.
 ```console
 $ raku echo-until-enough.raku
 Jūsu vārds: valoda

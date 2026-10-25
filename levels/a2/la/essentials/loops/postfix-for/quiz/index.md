@@ -4,7 +4,7 @@ title: 'Quiz — Postfixa `for`'
 
 {% include menu.html %}
 
-Comple programma. Debet `for` post clausulam adhibere, et hunc textum imprimere:
+Comple programma. Pone `for` post clausulam. Programma hunc textum imprimere debet:
 
     A
     A
@@ -22,7 +22,7 @@ Hic est initium codicis:
 . | &nbsp;&nbsp;&nbsp;&nbsp;.say;
 } | ␣ for 'A'..'C';
 
-<div class="extended-explanation">Hic codex clausulam codicis cum <code>for</code> post eam adhibet. Nota quod <code>for</code> in eadem linea esse debet atque uncus curvus claudens. Si id in nova linea ponis, clausula non iam pars anuli est. Tum errorem accipis: <code>Missing block</code>. Melius est non adhibere clausulas codicis cum formis postfixis hoc modo.</div>
+<div class="extended-explanation">Hic clausula codicis <code>for</code> post se habet. Verbum <code>for</code> in eadem linea esse debet atque <code>}</code>. Si <code>for</code> in nova linea est, anulus clausulam non habet. Tum Raku errorem ostendit antequam programma currit: <code>Missing block</code>. Tenta clausulas hoc modo vitare.</div>
 
 {% include quiz.html %}
 

@@ -4,7 +4,7 @@ title: Quiz — Postfisso `for`*
 
 {% include menu.html %}
 
-Completa il programma. Deve usare `for` dopo il blocco e deve stampare questo testo:
+Completa il programma. Metti `for` dopo il blocco. Il programma deve stampare questo testo:
 
     A
     A
@@ -22,7 +22,7 @@ Ecco l'inizio del codice:
 . | &nbsp;&nbsp;&nbsp;&nbsp;$_.say;
 } | ␣ for 'A'..'C';
 
-<div class="extended-explanation">Questo codice usa un blocco di codice con <code>for</code> dopo di esso. Nota che <code>for</code> deve essere sulla stessa riga della parentesi graffa di chiusura. Se lo metti su una nuova riga, il blocco non fa più parte del ciclo. Allora ricevi un errore: <code>Missing block</code>. È meglio non usare blocchi di codice con forme postfisse in questo modo.</div>
+<div class="extended-explanation">Qui c'è un blocco di codice con <code>for</code> dopo. La parola <code>for</code> deve essere sulla stessa riga di <code>}</code>. Se <code>for</code> è su una nuova riga, il ciclo non ha un blocco. Allora Raku mostra un errore prima di eseguire il programma: <code>Missing block</code>. Cerca di non usare i blocchi in questo modo.</div>
 
 {% include quiz.html %}
 

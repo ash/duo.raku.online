@@ -6,11 +6,11 @@ title: 'Exercise: Echo until enough'
 
 ## Problem
 
-Write a program that asks for a word again and again. It prints each word in the terminal. If the word is `enough`, the program prints a last message and stops.
+Write a program. It asks for a word again and again. It prints each word in the terminal. If the word is `enough`, the program stops. Before it stops, it prints a last message.
 
 ## Example
 
-The program can run forever, but here we show only a few rounds.
+The program can run forever. Here, you see only a few rounds.
 ```console
 $ raku echo-until-enough.raku
 Your word: language

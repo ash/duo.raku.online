@@ -6,7 +6,7 @@ title: 'Solutio: Quadrata et cubica in ansa'
 
 ## Codex
 
-Hic est codex solutionis. Circulus `for` intervallo a `-5` ad `5` utitur.
+Hic est codex. Circulus `for` intervallo a `-5` ad `5` utitur.
 
 ```raku
 for -5 .. 5 -> $n {

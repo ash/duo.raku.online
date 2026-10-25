@@ -6,11 +6,11 @@ title: Factorial
 
 ## Problema
 
-Crea programma quod factorialem numeri 8 circulo computat et deinde imprimit.
+Scribe programma quod factorialem numeri 8 circulo computat. Deinde resultatum imprimit.
 
 ## Exemplum
 
-Hoc exemplum ostendit quomodo programma operetur:
+Hoc breve exemplum ostendit quomodo programma operetur:
 
 ```console
 $ raku factorial.raku

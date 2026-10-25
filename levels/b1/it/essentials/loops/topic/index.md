@@ -4,9 +4,9 @@ title: Variabile di argomento
 
 {% include menu.html %}
 
-`$_` è una variabile speciale chiamata _variabile topic_.
+`$_` è una variabile speciale. Si chiama _variabile topic_.
 
-Guarda questo ciclo su un intervallo:
+Ecco un ciclo su un intervallo:
 
 ```raku
 for 1..5 -> $n {
@@ -14,7 +14,7 @@ for 1..5 -> $n {
 }
 ```
 
-Puoi omettere la variabile `$n`, e allora Raku usa al suo posto una variabile automatica, `$_`. Il programma è uguale a questo:
+Puoi togliere la variabile `$n`. Allora Raku usa automaticamente al suo posto la variabile `$_`. Quindi il programma è uguale a questo:
 
 ```raku
 for 1..5 {
@@ -22,7 +22,7 @@ for 1..5 {
 }
 ```
 
-Come [ricordi](/it/essentials/hello-world/), puoi anche usare `say` come metodo:
+Come [ricordi](/it/essentials/hello-world/), puoi anche chiamare `say` come metodo:
 
 ```raku
 for 1..5 {
@@ -30,7 +30,7 @@ for 1..5 {
 }
 ```
 
-Quando chiami un metodo su `$_`, non devi scrivere la variabile stessa. Quindi il nostro ciclo può diventare ancora più semplice:
+Per chiamare un metodo su `$_`, non devi scrivere la variabile stessa. Quindi possiamo rendere il nostro ciclo ancora più semplice:
 
 ```raku
 for 1..5 {

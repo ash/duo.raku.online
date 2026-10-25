@@ -8,7 +8,7 @@ Het programma gebruikt twee lussen en twee reeksen.
 
 ## Code
 
-Hier is een van de mogelijke oplossingen:
+Hier is een mogelijke oplossing:
 
 ```raku
 my $size = prompt 'Voer de grootte in: ';
@@ -23,7 +23,7 @@ for 1..$size -> $n {
 
 ## Uitvoer
 
-Voer het programma uit en voer de grootte van de structuur in:
+Voer het programma uit en voer de grootte van de vorm in:
 
 ```console
 $ raku exercises/loops/digital-stairs.raku
@@ -39,12 +39,12 @@ Voer de grootte in: 7
 
 ## Opmerking
 
-Let op hoe het huidige cijfer wordt afgedrukt:
+Let op hoe het programma het huidige cijfer afdrukt:
 
 ```raku
 .print for 1..$n;
 ```
 
-Net als `say` kan de routine `print` als een methode worden aangeroepen. Hier wordt de routine aangeroepen op de [topic variabele](/nl/essentials/loops/topic) `$_`.
+Net als `say` kan ook `print` als een methode worden aangeroepen. Hier wordt het aangeroepen op de [topic variabele](/nl/essentials/loops/topic) `$_`.
 
 {% include nav.html %}

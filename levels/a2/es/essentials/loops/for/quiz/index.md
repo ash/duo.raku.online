@@ -4,7 +4,7 @@ title: Comprender el bucle `for`
 
 {% include menu.html %}
 
-Mira los tres programas de abajo. ¿Cuántas líneas imprime cada programa?
+Aquí hay tres programas. ¿Cuántas líneas imprime cada programa?
 
 ## 1
 

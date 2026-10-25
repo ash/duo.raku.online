@@ -4,7 +4,7 @@ title: Quiz — Postfix for
 
 {% include menu.html %}
 
-Finish the program. It must use `for` after the block, and it must print this text:
+Finish the program. Put `for` after the block. The program must print this text:
 
     A
     A
@@ -22,7 +22,7 @@ Here is the start of the code:
 . | &nbsp;&nbsp;&nbsp;&nbsp;.say;
 } | ␣ for &apos;A&apos;..&apos;C&apos;;
 
-<div class="extended-explanation">This code uses a code block with <code>for</code> after it. Note that <code>for</code> must be on the same line as the closing curly brace. If you put it on a new line, the block is not part of the loop any more. Then you get an error: <code>Missing block</code>. It is better not to use code blocks with postfix forms like this.</div>
+<div class="extended-explanation">Here, a block of code has <code>for</code> after it. The word <code>for</code> must be on the same line as the <code>}</code>. If <code>for</code> is on a new line, the loop has no block. Then Raku shows an error before the program runs: <code>Missing block</code>. Try not to use blocks in this way.</div>
 
 {% include quiz.html %}
 

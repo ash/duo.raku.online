@@ -4,7 +4,7 @@ title: 'Solution: Divisione tramite sottrazione'
 
 {% include menu.html %}
 
-La divisione è una sottrazione ripetuta. Il programma ha un ciclo `while` che sottrae `$b` da `$a` e lo ripete finché il valore corrente di `$a` non è minore di `$b`. La variabile `$n` conta le iterazioni, ed è anche il risultato che ci serve.
+La divisione è solo una sottrazione fatta molte volte. Il programma ha un ciclo `while` che sottrae `$b` da `$a`. Lo ripete finché `$a` non diventa minore di `$b`. La variabile `$n` conta i giri del ciclo. Questo numero è anche il risultato.
 
 ## Codice
 
@@ -34,7 +34,7 @@ $ raku exercises/loops/division-via-subtraction.raku
 7
 ```
 
-Poi prova, per esempio, a cambiare `$b` in `20` e verifica che il risultato sia corretto:
+Poi prova altri valori. Per esempio, imposta `$b` a `20` e controlla che il risultato sia corretto:
 
 ```console
 $ raku exercises/loops/division-via-subtraction.raku

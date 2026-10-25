@@ -4,7 +4,7 @@ title: Cicli `for`
 
 {% include menu.html %}
 
-Il ciclo `for` è uno strumento potente per scorrere più elementi, uno alla volta. Per esempio, prendiamo un intervallo:
+Il ciclo `for` è uno strumento potente. Scorre molti elementi, uno dopo l'altro. Per esempio, prendiamo un intervallo:
 
 ```raku
 for 1..5 -> $n {
@@ -12,7 +12,7 @@ for 1..5 -> $n {
 }
 ```
 
-In questo programma, la variabile `$n` prende il valore successivo dell'intervallo a ogni iterazione. Nota che non è necessario dichiarare la variabile con `my`. Il blocco di codice si ripete tante volte quanti sono gli elementi nella fonte di dati. Quindi, il programma stampa i numeri riga per riga:
+Ogni volta che il ciclo gira, la variabile `$n` prende il valore successivo dell'intervallo. Nota che non devi dichiarare la variabile con `my`. Il blocco di codice viene eseguito una volta per ogni elemento della fonte di dati. Quindi il programma stampa i numeri uno per riga:
 
 ```console
 $ raku t.raku 
@@ -23,11 +23,11 @@ $ raku t.raku
 5
 ```
 
-Il programma scorre tutti i valori che l'[intervallo](/it/essentials/ranges) `1..5` produce. Questi sono `1`, `2`, `3`, `4` e `5`.
+Il programma scorre tutti i valori che dà l'[intervallo](/it/essentials/ranges) `1..5`. Questi sono `1`, `2`, `3`, `4` e `5`.
 
 ## Prendere più di un valore
 
-Una caratteristica interessante di Raku è che puoi prendere più di un elemento in una singola iterazione. Il seguente programma stampa due numeri ogni volta che il ciclo viene eseguito:
+Ecco una caratteristica interessante di Raku. Un ciclo può prendere più di un elemento alla volta. Il prossimo programma stampa due numeri ogni volta che il ciclo gira:
 
 ```raku
 for 1..6 -> $n, $m {

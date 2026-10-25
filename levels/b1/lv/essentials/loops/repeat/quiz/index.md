@@ -6,7 +6,7 @@ title: 'Viktorīna — `repeat` cikls'
 
 ## 1
 
-Izvēlieties `until` vai `while` šai programmai. Programmai nevajadzētu iestrēgt bezgalīgā ciklā.
+Izvēlieties `until` vai `while` šai programmai, lai cikls nedarbotos bezgalīgi.
 
 {:.quiz-code}
 . | my $n = 0;

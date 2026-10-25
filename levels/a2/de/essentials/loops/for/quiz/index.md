@@ -4,7 +4,7 @@ title: Die `for`-Schleife verstehen
 
 {% include menu.html %}
 
-Sehen Sie sich die drei Programme unten an. Wie viele Zeilen gibt jedes Programm aus?
+Hier sind drei Programme. Wie viele Zeilen gibt jedes Programm aus?
 
 ## 1
 

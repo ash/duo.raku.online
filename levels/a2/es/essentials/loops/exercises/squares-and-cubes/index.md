@@ -6,11 +6,11 @@ title: Cuadrados y cubos en un bucle
 
 ## Problema
 
-Escribe un programa que imprima los cuadrados y los cubos de los números del −5 al 5. Cada línea debe tener tres valores: el número, su cuadrado y su cubo. Usa un bucle.
+Escribe un programa. Toma los números del −5 al 5, también el −5 y el 5. Para cada número, imprime una línea. La línea tiene tres valores: el número, su cuadrado y su cubo. Usa un bucle.
 
 ## Ejemplo
 
-Esto es lo que debe imprimir el programa si el bucle va de −3 a 3:
+Aquí está la salida para un bucle de −3 a 3:
 
 ```console
 $ raku squares-and-cubes.raku

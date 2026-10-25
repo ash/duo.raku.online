@@ -4,7 +4,7 @@ title: Bucle de tres sentencias `loop`
 
 {% include menu.html %}
 
-La declaración `loop` en Raku tiene mucho en común con los bucles tradicionales del lenguaje de programación C y sus parientes. Toma tres declaraciones: el inicializador, la prueba y la declaración que cambia la variable del bucle. El cuerpo del bucle se ejecuta una y otra vez mientras la prueba siga siendo `True`.
+La declaración `loop` en Raku es muy parecida a los bucles tradicionales de C y de lenguajes similares. Toma tres declaraciones. La primera da un valor inicial, y la segunda es la prueba. La tercera cambia la variable del bucle. El cuerpo del bucle se ejecuta una y otra vez mientras la prueba sea `True`.
 
 ```raku
 loop (my $c = 0; $c < 5; $c++) {
@@ -12,7 +12,7 @@ loop (my $c = 0; $c < 5; $c++) {
 }
 ```
 
-Aquí, `++` es un operador postfijo que aumenta su argumento en 1. Veremos más operadores en la segunda parte del curso.
+Aquí, `++` es un operador postfijo, lo que significa que va después de su argumento. Suma 1 al argumento. Hay más operadores en la segunda parte del curso.
 
 El programa ejecuta el cuerpo del bucle cinco veces.
 
@@ -25,7 +25,7 @@ El valor actual del contador es 3.
 El valor actual del contador es 4.
 ```
 
-Algunas, o incluso todas, las declaraciones del encabezado de `loop` se pueden omitir. Por ejemplo, aquí está el mismo programa:
+Algunas de las declaraciones del encabezado de `loop`, o incluso todas, son opcionales. Por ejemplo, aquí está el mismo programa:
 
 ```raku
 my $c = 0;
@@ -37,6 +37,6 @@ loop (; $c < 5;) {
 
 ## * * *
 
-Los bucles `loop` son probablemente los bucles menos usados en Raku. Puedes encontrarlos, por ejemplo, en código que una herramienta tradujo automáticamente de C a Raku. Pero Raku tiene bucles más cómodos, como `for`, que veremos muy pronto.
+Los programadores de Raku probablemente usan `loop` menos que cualquier otro bucle. Puedes encontrarlo, por ejemplo, en código que una herramienta convirtió de C a Raku. Pero Raku tiene bucles más cómodos, como `for`. Lo veremos muy pronto.
 
 {% include nav.html %}

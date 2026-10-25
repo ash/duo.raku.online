@@ -6,11 +6,11 @@ title: Faktoriāls
 
 ## Problēma
 
-Uzrakstiet programmu, kas ar ciklu atrod skaitļa 8 faktoriālu. Pēc tam tā izdrukā rezultātu.
+Uzrakstiet programmu ar ciklu. Tā atrod skaitļa 8 faktoriālu un izdrukā to.
 
 ## Piemērs
 
-Šis piemērs parāda, ko programma dara:
+Programma darbojas šādi:
 
 ```console
 $ raku factorial.raku

@@ -4,7 +4,7 @@ title: Quiz — Postfix for
 
 {% include menu.html %}
 
-Try to finish the program so that it uses the postfix form of `for` and prints the following text:
+Try to finish the program. It must use the postfix form of `for` and print the following text:
 
     A
     A
@@ -22,7 +22,7 @@ Here is a draft of the code:
 . | &nbsp;&nbsp;&nbsp;&nbsp;.say;
 } | ␣ for &apos;A&apos;..&apos;C&apos;;
 
-<div class="extended-explanation">This code is an example of a code block with the postfix <code>for</code>. Note that <code>for</code> must be on the same line as the closing curly brace. If you put it on a new line, the block becomes separate from the loop, and you get a compilation error: <code>Missing block</code>. It is probably better not to use code blocks with postfix constructs like this.</div>
+<div class="extended-explanation">This code shows a code block with the postfix <code>for</code>. Note that <code>for</code> must be on the same line as the closing curly brace. On a new line, the block is no longer part of the loop. Then you get a compile error: <code>Missing block</code>. It is probably better not to use code blocks with postfix forms like this.</div>
 
 {% include quiz.html %}
 

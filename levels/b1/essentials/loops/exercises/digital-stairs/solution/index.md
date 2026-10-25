@@ -8,7 +8,7 @@ The program uses two loops and two ranges.
 
 ## Code
 
-Here is one of the possible solutions:
+Here is one possible solution:
 
 ```raku
 my $size = prompt 'Enter the size: ';
@@ -23,7 +23,7 @@ for 1..$size -> $n {
 
 ## Output
 
-Run the program and enter the size of the structure:
+Run the program and enter the size of the shape:
 
 ```console
 $ raku exercises/loops/digital-stairs.raku
@@ -39,12 +39,12 @@ Enter the size: 7
 
 ## Comment
 
-Note how the current digit is printed:
+Note how the program prints the current digit:
 
 ```raku
 .print for 1..$n;
 ```
 
-Like `say`, the `print` routine can be called as a method. Here, it is called on the [topic variable](/essentials/loops/topic) `$_`.
+Like `say`, `print` can also be called as a method. Here, it is called on the [topic variable](/essentials/loops/topic) `$_`.
 
 {% include nav.html %}

@@ -4,9 +4,9 @@ title: '`while` und `until` als Anweisungsmodifikatoren'
 
 {% include menu.html %}
 
-Sowohl `while` als auch `until` können als Anweisungsmodifikatoren verwendet werden, [genauso](/de/essentials/conditional-checks/modifiers) wie `if` und `unless`.
+Sie können `while` und `until` auch als Anweisungsmodifikatoren verwenden, also hinter einer Anweisung. Das funktioniert [genauso](/de/essentials/conditional-checks/modifiers) wie bei `if` und `unless`.
 
-Sehen Sie sich ein Beispiel an, das die Modulo-Division nachahmt, also das Berechnen des Rests:
+Hier ist ein Beispiel, das wie die Modulo-Division funktioniert, also den Rest berechnet:
 
 ```raku
 my $x = 10;
@@ -14,13 +14,13 @@ $x -= 3 while $x > 2;
 say $x; # 1
 ```
 
-Hier ist `-=` ein Operator, der Subtraktion und Zuweisung zusammen ausführt. In diesem Fall ist `$x -= 3` dasselbe wie `$x = $x - 3`.
+Hier ist `-=` ein Operator, der in einem Schritt subtrahiert und zuweist. Also bedeutet `$x -= 3` dasselbe wie `$x = $x - 3`.
 
-Der `while`-Modifikator wiederholt die Anweisung `$x -= 3`, solange die Bedingung `$x > 2` `True` bleibt. Sobald die Bedingung `False` wird, stoppt die Schleife.
+Der `while`-Modifikator wiederholt `$x -= 3`, solange die Bedingung `$x > 2` `True` ist. Wenn sie `False` wird, stoppt die Schleife.
 
-Beachten Sie, dass die Anweisung gar nicht läuft, wenn die Bedingung von Anfang an `False` ist.
+Beachten Sie: Wenn die Bedingung von Anfang an `False` ist, läuft die Anweisung nie.
 
-Dasselbe Programm kann mit `until` geschrieben werden. Dazu müssen Sie die Bedingung umkehren:
+Dasselbe Programm kann auch `until` verwenden, aber dann muss die Bedingung umgekehrt werden:
 
 ```raku
 my $x = 10;

@@ -4,8 +4,8 @@ title: Cikli
 
 {% include menu.html %}
 
-Cikli ļauj atkārtot to pašu darbību vairākas reizes. Šajā sadaļā mēs apskatīsim dažas Raku konstrukcijas, kas palīdz veidot ciklus. Vairāk par to būs kursa otrajā daļā.
+Cikls atkārto to pašu darbību vairākas reizes. Šī sadaļa īsi apskata dažus veidus, kā Raku valodā veidot ciklus. Vairāk ciklu ir kursa otrajā daļā, tāpēc lasiet tālāk.
 
-Pagaidām apskatīsim šādas tēmas.
+Pagaidām mēs apskatīsim šīs tēmas.
 
 {% include nav.html %}

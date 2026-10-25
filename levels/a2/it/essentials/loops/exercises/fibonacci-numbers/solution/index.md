@@ -4,14 +4,14 @@ title: 'Solution: Numeri di Fibonacci'
 
 {% include menu.html %}
 
-Questo algoritmo dà i numeri di Fibonacci.
+Ecco come trovare i numeri di Fibonacci.
 
 1. _F<sub>0</sub>_ = 0, _F<sub>1</sub>_ = 1
 2. _F<sub>n</sub>_ = _F<sub>n-1</sub>_ + _F<sub>n-2</sub>_
 
 ## Codice
 
-Il codice segue esattamente l'algoritmo. Usa due variabili per i due numeri di Fibonacci correnti. Le cambia in un ciclo. Entrambe le variabili ricevono nuovi valori [in una sola assegnazione](/it/essentials/scalar-variables/assigning-a-value/#multiple-assignment).
+Il codice fa esattamente quello che dice l'algoritmo. Ha due variabili per i due numeri di Fibonacci attuali. Il ciclo le cambia ogni volta. Le due variabili ricevono nuovi valori [in una sola assegnazione](/it/essentials/scalar-variables/assigning-a-value/#multiple-assignment).
 
 ```raku
 my $a = 0;
@@ -28,7 +28,7 @@ for ^19 {
 
 ## Output
 
-Ecco l'output. Il programma stampa i primi 20 numeri.
+Ecco l'output. Mostra i primi 20 numeri.
 
 ```console
 $ raku exercises/loops/fibonacci-numbers.raku
@@ -56,6 +56,6 @@ $ raku exercises/loops/fibonacci-numbers.raku
 
 ## Per saperne di più
 
-Ricorda questo compito. Più avanti nel corso ci torniamo. Allora lo risolviamo in un modo nuovo con le _sequenze_ di Raku.
+Ricorda questo compito. Più avanti ci torniamo. Allora usiamo le _sequenze_ di Raku. È un modo nuovo e interessante per risolverlo.
 
 {% include nav.html %}

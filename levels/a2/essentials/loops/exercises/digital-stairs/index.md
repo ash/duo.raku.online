@@ -6,18 +6,18 @@ title: 'Exercise: Digital stairs'
 
 ## Problem
 
-Write a program that prints this shape:
+Write a program that prints this:
 
     1
     12
     123
     1234
 
-The user enters the size of the stairs. The size is not bigger than 9.
+The user enters the size of the stairs. The size is 9 or less.
 
 ## Example
 
-Here is an example with the input value `3`:
+Here is an example. The user enters `3`:
 
 ```console
 $ raku digital-stairs.raku

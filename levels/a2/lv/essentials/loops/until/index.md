@@ -4,9 +4,9 @@ title: 'Izmantojot `until`'
 
 {% include menu.html %}
 
-`until` cikls ir `while` pretstats. Tas izpilda koda bloku, līdz nosacījums kļūst `True`. Citiem vārdiem sakot, tas darbojas, kamēr nosacījums ir `False`.
+`until` cikls ir `while` cikla pretstats. Tas izpilda koda bloku, līdz nosacījums ir `True`. Tātad tas darbojas, kamēr nosacījums ir `False`.
 
-Šeit atkal ir [programma no iepriekšējās lapas](../while). Tagad tā izmanto `until` un jaunu nosacījumu:
+Šeit atkal ir [programma no iepriekšējās lapas](../while). Tagad tajā ir `until` un jauns nosacījums:
 
 ```raku
 my $x = 0;
@@ -17,7 +17,7 @@ until $x > 10 {
 say "$x ir lielāks par 10.";
 ```
 
-Palaidiet programmu un apskatiet izvadi:
+Palaidiet programmu un paskatieties, ko tā izdrukā:
 
 ```console
 $ raku t.raku 
@@ -34,7 +34,7 @@ Jūs ievadījāt 20.
 
 ## `until` pret `while`
 
-Salīdziniet šīs divas rindas. Tās dara to pašu ar `while` un `until`:
+Šīs divas programmas dara to pašu. Vienā ir `while`, otrā ir `until`:
 
 ```raku
 while $x <= 10 { . . . }
@@ -42,6 +42,6 @@ while $x <= 10 { . . . }
 until $x > 10 { . . . }
 ```
 
-Abi nosacījumi ir pretēji viens otram. Tāpēc `while` un `until` darbojas kā pāris, tieši tāpat kā `if` un `unless`.
+Apskatiet abus nosacījumus. Viens ir otra pretstats. `while` un `until` ir pāris, tāpat kā `if` un `unless`.
 
 {% include nav.html %}

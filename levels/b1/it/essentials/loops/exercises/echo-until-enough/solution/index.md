@@ -8,7 +8,7 @@ Questo programma ha bisogno di un ciclo che si interrompe quando l'utente inseri
 
 ## Codice
 
-Ci sono diversi modi simili per risolvere il compito con `while`, `until` o `repeat`. Uno di questi è mostrato qui sotto.
+Puoi risolvere il compito in diversi modi simili, con `while`, `until` o `repeat`. Ecco uno di questi.
 
 ```raku
 my $word;
@@ -43,6 +43,6 @@ OK, fatto.
 
 ## Commento
 
-Nota che dichiari la variabile `$word` _prima_ del ciclo, perché il test `while` si trova fuori dall'ambito del corpo del ciclo. Se definisci la variabile all'interno del ciclo, il test non la vedrà.
+Nota che dichiari la variabile `$word` _prima_ del ciclo. Questo perché il test `while` è fuori dal corpo del ciclo. Se dichiari la variabile dentro il ciclo, il test non la può vedere.
 
 {% include nav.html %}

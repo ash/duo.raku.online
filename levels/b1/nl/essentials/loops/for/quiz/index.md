@@ -4,7 +4,7 @@ title: De `for` lus begrijpen
 
 {% include menu.html %}
 
-Zeg voor elk van de drie programma's hieronder hoeveel regels het afdrukt.
+Hoeveel regels drukt elk van de drie programma's hieronder af?
 
 ## 1
 

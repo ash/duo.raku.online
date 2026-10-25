@@ -21,7 +21,7 @@ say $n;
 
 ## 2
 
-Quomodo potes hoc programma prohibere ne sine fine currat? Muta codicem.
+Hoc programma sine fine currit. Muta codicem ut desinat.
 
 {:.quiz-code .fill}
 . | my $n = 5;

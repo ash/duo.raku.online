@@ -6,11 +6,11 @@ title: Quadrate und Würfel in einer Schleife
 
 ## Problem
 
-Schreiben Sie ein Programm, das die Quadrate und Kuben der Zahlen von −5 bis 5 ausgibt. Jede Zeile muss drei Werte haben: die Zahl, ihr Quadrat und ihren Kubus. Verwenden Sie eine Schleife.
+Schreiben Sie ein Programm. Es nimmt die Zahlen von −5 bis 5, auch −5 und 5 selbst. Für jede Zahl gibt es eine Zeile aus. Die Zeile hat drei Werte: die Zahl, ihr Quadrat und ihren Kubus. Verwenden Sie eine Schleife.
 
 ## Beispiel
 
-Das Programm soll Folgendes ausgeben, wenn die Schleife von −3 bis 3 läuft:
+Hier ist die Ausgabe für eine Schleife von −3 bis 3:
 
 ```console
 $ raku squares-and-cubes.raku

@@ -4,7 +4,7 @@ title: 'Risinājums: Dalīšana, izmantojot atņemšanu'
 
 {% include menu.html %}
 
-Dalīšana ir atņemšana atkal un atkal. Programmā ir `while` cikls. Cikls atņem `$b` no `$a`. Tas to atkārto, kamēr `$a` nav mazāks par `$b`. Mainīgais `$n` skaita, cik reizes cikls izpildās. Šis skaitlis ir arī rezultāts, kas mums vajadzīgs.
+Dalīšana ir atņemšana, atkal un atkal. Programmā ir `while` cikls. Katru reizi cikls atņem `$b` no `$a`. Tas to dara, kamēr `$a` nav mazāks par `$b`. Mainīgais `$n` skaita šīs reizes. Šis skaitlis ir atbilde.
 
 ## Kods
 
@@ -27,14 +27,14 @@ say $n;
 
 ## Izvade
 
-Palaidiet programmu dažas reizes. Vispirms izmantojiet dotās vērtības. Tās dalās bez atlikuma:
+Palaidiet programmu dažas reizes. Sāciet ar skaitļiem, kas ir kodā. Tie dalās bez atlikuma:
 
 ```console
 $ raku exercises/loops/division-via-subtraction.raku
 7
 ```
 
-Tad mēģiniet citas vērtības. Piemēram, nomainiet `$b` uz `20` un pārbaudiet, vai rezultāts ir pareizs:
+Tad mēģiniet citus skaitļus. Piemēram, nomainiet `$b` uz `20`. Pārbaudiet, vai rezultāts ir pareizs:
 
 ```console
 $ raku exercises/loops/division-via-subtraction.raku

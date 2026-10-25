@@ -4,14 +4,14 @@ title: 'Solution: Fibonacci getallen'
 
 {% include menu.html %}
 
-Het volgende algoritme definieert Fibonacci-getallen.
+Dit algoritme geeft de Fibonacci-getallen.
 
 1. _F<sub>0</sub>_ = 0, _F<sub>1</sub>_ = 1
 2. _F<sub>n</sub>_ = _F<sub>n-1</sub>_ + _F<sub>n-2</sub>_
 
 ## Code
 
-De code volgt het algoritme stap voor stap. Het gebruikt twee variabelen om de huidige twee Fibonacci-getallen bij te houden en werkt ze bij in een lus. Merk op dat beide variabelen hun nieuwe waarden krijgen [in een enkele toewijzing](/nl/essentials/scalar-variables/assigning-a-value/#multiple-assignment).
+De code volgt het algoritme precies. De code bewaart de twee huidige Fibonacci-getallen in twee variabelen. De lus werkt ze bij. Merk op dat beide variabelen hun nieuwe waarden krijgen [in een enkele toewijzing](/nl/essentials/scalar-variables/assigning-a-value/#multiple-assignment).
 
 ```raku
 my $a = 0;
@@ -28,7 +28,7 @@ for ^19 {
 
 ## Uitvoer
 
-Hier is de uitvoer van het programma, dat de eerste 20 getallen afdrukt.
+Hier is de uitvoer van het programma met de eerste 20 getallen.
 
 ```console
 $ raku exercises/loops/fibonacci-numbers.raku
@@ -56,6 +56,6 @@ $ raku exercises/loops/fibonacci-numbers.raku
 
 ## Meer over dit onderwerp
 
-Onthoud deze taak, want we komen er later op terug en vinden dan een andere spannende oplossing met Raku _sequences_.
+Onthoud deze taak, want we komen er later op terug. Dan vinden we nog een spannende oplossing met Raku _sequences_.
 
 {% include nav.html %}

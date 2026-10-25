@@ -4,7 +4,7 @@ title: Lussen
 
 {% include menu.html %}
 
-Een lus herhaalt dezelfde actie vele keren. In deze sectie bekijken we een paar manieren om lussen te maken in Raku. Je leert meer over lussen in het tweede deel van de cursus.
+Een lus doet steeds opnieuw hetzelfde. Raku heeft verschillende soorten lussen. Deze sectie laat er een paar zien. Het tweede deel van de cursus heeft meer lussen.
 
 Dit zijn de onderwerpen van deze sectie.
 

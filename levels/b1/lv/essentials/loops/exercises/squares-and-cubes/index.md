@@ -6,11 +6,11 @@ title: Kvadrāti un kubi ciklā
 
 ## Problēma
 
-Uzrakstiet programmu, kas izdrukā skaitļu kvadrātus un kubus no −5 līdz 5, ieskaitot abus galus. Katrā rindā būtu jābūt trim vērtībām: pašam skaitlim, tā kvadrātam un tā kubam. Izmantojiet ciklu.
+Uzrakstiet programmu, kas izdrukā skaitļu kvadrātus un kubus no −5 līdz 5. Iekļaujiet arī −5 un 5. Katrai rindai jārāda trīs vērtības: skaitlis, tā kvadrāts un tā kubs. Izmantojiet ciklu.
 
 ## Piemērs
 
-Programmai vajadzētu izdrukāt šo (ja cikls iet no −3 līdz 3):
+Šeit ir tas, ko programmai vajadzētu izdrukāt, ja cikls iet no −3 līdz 3:
 
 ```console
 $ raku squares-and-cubes.raku

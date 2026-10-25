@@ -4,7 +4,7 @@ title: 'Tribus partibus `loop`'
 
 {% include menu.html %}
 
-Enuntiatum `loop` in Raku simile est ansis classicis in lingua C et in linguis similibus. Tria enuntiata accipit. Primum valorem initialem ponit. Secundum est probatio. Tertium variabilem ansae mutat. Corpus ansae iterum atque iterum currit dum probatio `True` est.
+Raku enuntiatum `loop` habet. Operatur sicut ansae in lingua C et in linguis similibus. Tria enuntiata habet. Primum variabili ansae valorem initialem dat. Secundum est probatio. Tertium variabilem ansae mutat. Ansa currit dum probatio `True` est.
 
 ```raku
 loop (my $c = 0; $c < 5; $c++) {
@@ -12,9 +12,9 @@ loop (my $c = 0; $c < 5; $c++) {
 }
 ```
 
-Hic, `++` est operator post variabilem. Ad variabilem 1 addit. Plures operatores in secunda parte cursus disces.
+Hic, `++` est operator. Eum post variabilem scribis. Ad variabilem 1 addit. Secunda pars cursus plures operatores habet.
 
-Programma corpus ansae quinquies exsequitur.
+Corpus ansae quinquies currit.
 
 ```console
 $ raku t.raku
@@ -25,7 +25,7 @@ The current value of the counter is 3.
 The current value of the counter is 4.
 ```
 
-Aliqua vel etiam omnia enuntiata in capite `loop` omittere potes. Exempli gratia, hic est idem programma:
+Aliqua ex tribus enuntiatis in `loop` omittere potes. Etiam omnia omittere potes. Exempli gratia, hic est idem programma:
 
 ```raku
 my $c = 0;
@@ -37,6 +37,6 @@ loop (; $c < 5;) {
 
 ## * * *
 
-Homines `loop` in Raku non valde saepe adhibent. Id videre potes, exempli gratia, in programmatibus quae instrumentum a C ad Raku convertit. Raku faciliores ansas habet, sicut `for`. Brevi `for` spectamus.
+In Raku, homines `loop` non saepe adhibent. Interdum instrumentum codicem C in codicem Raku convertit. In tali codice `loop` videre potes. Raku faciliores ansas habet, sicut `for`. Mox `for` spectamus.
 
 {% include nav.html %}

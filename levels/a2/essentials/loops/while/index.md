@@ -4,7 +4,7 @@ title: while
 
 {% include menu.html %}
 
-The `while` loop has a condition and a block of code. Raku runs the block again and again _while_ the condition is `True`.
+A `while` loop has a condition and a block of code. The condition is `True` or `False`. Raku runs the block again and again _while_ the condition is `True`.
 
 ```raku
 my $x = 0;
@@ -15,7 +15,7 @@ while $x <= 10 {
 say "$x is bigger than 10.";
 ```
 
-The program asks you for a number. If the number is not bigger than 10, the loop runs again. When the number is bigger than 10, the condition `$x <= 10` is no longer true. Then the loop stops, and the program goes to the next line.
+The program asks you for a number. If the number is 10 or less, the loop runs again. If the number is bigger than 10, the condition `$x <= 10` is `False`. Then the loop stops. The program goes to the next line.
 
 ```console
 $ raku t.raku

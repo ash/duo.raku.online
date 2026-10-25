@@ -6,18 +6,18 @@ title: Scale digitali
 
 ## Problema
 
-Scrivi un programma che stampa questa figura:
+Scrivi un programma che stampa questo:
 
     1
     12
     123
     1234
 
-L'utente inserisce la dimensione delle scale. La dimensione non è più grande di 9.
+L'utente inserisce la dimensione delle scale. La dimensione è 9 o meno.
 
 ## Esempio
 
-Ecco un esempio con il valore di input `3`:
+Ecco un esempio. L'utente inserisce `3`:
 
 ```console
 $ raku digital-stairs.raku

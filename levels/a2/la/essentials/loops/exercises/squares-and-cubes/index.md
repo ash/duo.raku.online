@@ -6,11 +6,11 @@ title: Quadrata et cubica in ansa
 
 ## Problema
 
-Scribe programma quod quadrata et cubos numerorum a −5 ad 5 imprimit. Quaeque linea tres valores habere debet: numerum, eius quadratum, et eius cubum. Utere circulo.
+Scribe programma. Numeros a −5 ad 5 sumit, etiam −5 et 5. Pro quoque numero, unam lineam imprimit. Linea tres valores habet: numerum, eius quadratum, et eius cubum. Utere circulo.
 
 ## Exemplum
 
-Hoc est quod programma imprimere debet, si circulus a −3 ad 3 it:
+Hic est exitus pro circulo a −3 ad 3:
 
 ```console
 $ raku squares-and-cubes.raku

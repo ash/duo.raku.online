@@ -21,7 +21,7 @@ say $n;
 
 ## 2
 
-Kiel vi povas fari, ke ĉi tiu programo ne ruliĝu senfine? Ŝanĝu la kodon.
+Ĉi tiu programo ruliĝas senfine. Ŝanĝu la kodon, por ke ĝi haltu.
 
 {:.quiz-code .fill}
 . | my $n = 5;

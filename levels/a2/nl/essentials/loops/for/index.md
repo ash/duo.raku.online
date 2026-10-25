@@ -4,7 +4,7 @@ title: '`for` lussen'
 
 {% include menu.html %}
 
-De `for`-lus is een sterk hulpmiddel. Hij gaat door veel elementen, één voor één. Laten we bijvoorbeeld een reeks nemen:
+De `for`-lus is heel handig. Hij gaat door veel items, één voor één. Neem bijvoorbeeld een reeks:
 
 ```raku
 for 1..5 -> $n {
@@ -12,7 +12,7 @@ for 1..5 -> $n {
 }
 ```
 
-In dit programma krijgt de variabele `$n` elke keer de volgende waarde uit de reeks. Je hoeft de variabele niet met `my` te declareren. Het codeblok draait één keer voor elk element van de reeks. Dus drukt het programma de getallen af, één op elke regel:
+`$n` krijgt elke keer de volgende waarde uit de reeks. Je hoeft geen `my` voor `$n` te schrijven. Het blok draait één keer voor elke waarde in de reeks. Dus drukt het programma de getallen af, één op elke regel:
 
 ```console
 $ raku t.raku 
@@ -23,11 +23,11 @@ $ raku t.raku
 5
 ```
 
-Het programma gaat door alle waarden van het [bereik](/nl/essentials/ranges) `1..5`. Dit zijn `1`, `2`, `3`, `4` en `5`.
+Het programma gaat door alle waarden van het [bereik](/nl/essentials/ranges) `1..5`. Deze waarden zijn `1`, `2`, `3`, `4` en `5`.
 
 ## Meer dan één waarde tegelijk
 
-In Raku kan een lus meer dan één item tegelijk nemen. Dit programma drukt elke keer twee getallen af:
+In Raku kan een lus elke keer twee of meer items nemen. Dit programma drukt twee getallen tegelijk af:
 
 ```raku
 for 1..6 -> $n, $m {
@@ -35,7 +35,7 @@ for 1..6 -> $n, $m {
 }
 ```
 
-Hier is de uitvoer van het programma:
+Dit drukt het programma af:
 
 ```console
 $ raku t.raku

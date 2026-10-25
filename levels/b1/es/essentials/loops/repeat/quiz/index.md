@@ -6,7 +6,7 @@ title: Quiz — el bucle `repeat`
 
 ## 1
 
-Elige `until` o `while` para este programa. El programa no debe quedarse atascado en un bucle infinito.
+Elige `until` o `while` para este programa, de modo que el bucle no se ejecute para siempre.
 
 {:.quiz-code}
 . | my $n = 0;

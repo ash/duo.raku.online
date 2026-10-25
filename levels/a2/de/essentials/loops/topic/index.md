@@ -14,7 +14,7 @@ for 1..5 -> $n {
 }
 ```
 
-Sie können die Variable `$n` weglassen. Dann verwendet Raku stattdessen die Variable `$_`. Das Programm macht dasselbe wie dieses:
+Sie müssen `$n` nicht schreiben. Ohne `$n` verwendet Raku die Variable `$_`. Raku erstellt diese Variable für Sie. Also macht dieses Programm dasselbe:
 
 ```raku
 for 1..5 {
@@ -22,7 +22,7 @@ for 1..5 {
 }
 ```
 
-Sie [wissen schon](/de/essentials/hello-world/), dass Sie `say` als Methode verwenden können:
+Sie [wissen schon](/de/essentials/hello-world/), dass `say` auch eine Methode sein kann:
 
 ```raku
 for 1..5 {
@@ -30,7 +30,7 @@ for 1..5 {
 }
 ```
 
-Wenn Sie eine Methode auf `$_` aufrufen, müssen Sie die Variable nicht schreiben. Deshalb kann die Schleife noch kürzer werden:
+Ein Methodenaufruf auf `$_` braucht den Namen `$_` nicht. Also kann die Schleife noch kürzer sein:
 
 ```raku
 for 1..5 {

@@ -4,11 +4,11 @@ title: 'Solvo: Divido per subtraho'
 
 {% include menu.html %}
 
-Divido estas ripetata subtraho. La programo havas `while` buklon, kiu subtrahas `$b` de `$a` kaj ripetas tion, dum la nuna valoro de `$a` ne estas malpli ol `$b`. La variablo `$n` kalkulas la iteraciojn, kaj ĝi estas ankaŭ la rezulto, kiun ni bezonas.
+Divido estas nur subtraho, farata multajn fojojn. La programo havas `while` buklon, kiu subtrahas `$b` de `$a`. Ĝi ripetas tion, dum `$a` ankoraŭ ne estas malpli ol `$b`. La variablo `$n` kalkulas la rondojn de la buklo. Ĉi tiu nombro estas ankaŭ la rezulto.
 
 ## Kodo
 
-Jen la plena programo:
+Jen la kompleta programo:
 
 ```raku
 my $a = 175;
@@ -34,7 +34,7 @@ $ raku exercises/loops/division-via-subtraction.raku
 7
 ```
 
-Poste provu, ekzemple, ŝanĝi `$b` al `20`, kaj kontrolu, ke la rezulto estas ĝusta:
+Poste provu aliajn valorojn. Ekzemple, donu al `$b` la valoron `20` kaj kontrolu, ke la rezulto estas ĝusta:
 
 ```console
 $ raku exercises/loops/division-via-subtraction.raku

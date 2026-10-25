@@ -4,7 +4,7 @@ title: Gebruik van `while`
 
 {% include menu.html %}
 
-De `while`-constructie heeft een Booleaanse voorwaarde en een codeblok. Raku voert het codeblok steeds opnieuw uit _zolang_ de voorwaarde `True` is.
+De `while`-lus heeft een Booleaanse voorwaarde (`True` of `False`) en een codeblok. Raku herhaalt het blok _zolang_ de voorwaarde `True` is.
 
 ```raku
 my $x = 0;
@@ -15,7 +15,7 @@ while $x <= 10 {
 say "$x is groter dan 10.";
 ```
 
-Het programma vraagt je om een getal in te voeren. Als het getal niet groter is dan 10, draait het lichaam van de lus opnieuw. Zodra het getal niet meer aan de voorwaarde `$x <= 10` voldoet, eindigt de lus en gaat het programma verder met de volgende regel.
+Het programma vraagt je om een getal in te voeren. Als het getal niet groter is dan 10, draait het lichaam van de lus opnieuw. Als een getal niet aan de voorwaarde `$x <= 10` voldoet, eindigt de lus. Dan gaat het programma verder met de volgende regel.
 
 ```console
 $ raku t.raku

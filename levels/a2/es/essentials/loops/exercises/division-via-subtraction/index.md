@@ -6,7 +6,7 @@ title: División por resta
 
 ## Problema
 
-Escribe un programa que divida números enteros con restas. Los números están fijos en el programa:
+Escribe un programa que divida un número entero entre otro. Debe usar la resta. Los números ya están en el código:
 
 ```raku
 my $a = 175;

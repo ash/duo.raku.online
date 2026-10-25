@@ -4,9 +4,9 @@ title: Verwendung von `until`
 
 {% include menu.html %}
 
-Die `until`-Schleife ist das Gegenteil von `while`. Sie führt den Codeblock aus, bis die Bedingung `True` wird. Mit anderen Worten: Sie läuft, solange die Bedingung `False` ist.
+Eine `until`-Schleife ist das Gegenteil einer `while`-Schleife. Sie führt den Codeblock aus, bis die Bedingung `True` ist. Also läuft sie, solange die Bedingung `False` ist.
 
-Hier ist noch einmal das [Programm von der vorherigen Seite](../while). Jetzt verwendet es `until` und eine neue Bedingung:
+Hier ist noch einmal das [Programm von der letzten Seite](../while). Jetzt hat es `until` und eine neue Bedingung:
 
 ```raku
 my $x = 0;
@@ -17,7 +17,7 @@ until $x > 10 {
 say "$x ist größer als 10.";
 ```
 
-Führen Sie das Programm aus und sehen Sie sich die Ausgabe an:
+Führen Sie das Programm aus und sehen Sie, was es ausgibt:
 
 ```console
 $ raku t.raku 
@@ -34,7 +34,7 @@ Sie haben 20 eingegeben.
 
 ## `until` vs. `while`
 
-Vergleichen Sie diese zwei Zeilen. Beide tun dasselbe mit `while` und `until`:
+Diese zwei Programme machen dasselbe. Das eine hat `while`, das andere hat `until`:
 
 ```raku
 while $x <= 10 { . . . }
@@ -42,6 +42,6 @@ while $x <= 10 { . . . }
 until $x > 10 { . . . }
 ```
 
-Die zwei Bedingungen sind genau das Gegenteil voneinander. Also arbeiten `while` und `until` als Paar, genau wie `if` und `unless`.
+Sehen Sie sich die zwei Bedingungen an. Die eine ist das Gegenteil der anderen. `while` und `until` sind ein Paar, wie `if` und `unless`.
 
 {% include nav.html %}

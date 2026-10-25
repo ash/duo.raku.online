@@ -8,7 +8,7 @@ Das Programm verwendet zwei Schleifen und zwei Bereiche.
 
 ## Code
 
-Hier ist eine mögliche Lösung:
+So können Sie die Aufgabe lösen:
 
 ```raku
 my $size = prompt 'Geben Sie die Größe ein: ';
@@ -39,12 +39,12 @@ Geben Sie die Größe ein: 7
 
 ## Kommentar
 
-Sehen Sie sich an, wie das Programm die aktuelle Ziffer ausgibt:
+Sehen Sie sich an, wie das Programm jede Ziffer ausgibt:
 
 ```raku
 .print for 1..$n;
 ```
 
-Wie `say` können Sie auch `print` als Methode aufrufen. Hier ruft der Code die Methode auf der [Themenvariablen](/de/essentials/loops/topic) `$_` auf.
+Sie können `print` als Methode aufrufen, wie `say`. Hier ruft das Programm die Methode auf der [Themenvariablen](/de/essentials/loops/topic) `$_` auf.
 
 {% include nav.html %}

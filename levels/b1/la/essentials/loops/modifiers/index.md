@@ -4,9 +4,9 @@ title: '`while` et `until` ut statement modificatores'
 
 {% include menu.html %}
 
-Et `while` et `until` ut modificatores sententiae adhiberi possunt, [eodem modo](/la/essentials/conditional-checks/modifiers) ac `if` et `unless`.
+Potes etiam `while` et `until` ut modificatores sententiae adhibere, id est, post sententiam. Hoc [eodem modo](/la/essentials/conditional-checks/modifiers) operatur ac cum `if` et `unless`.
 
-Specta exemplum quod divisionem modulo imitatur, id est, residuum divisionis invenit:
+Hic est exemplum quod sicut divisio modulo operatur, id est, residuum invenit:
 
 ```raku
 my $x = 10;
@@ -14,13 +14,13 @@ $x -= 3 while $x > 2;
 say $x; # 1
 ```
 
-Hic, `-=` est operator qui subtractionem et assignationem simul facit. In hoc casu, `$x -= 3` idem est ac `$x = $x - 3`.
+Hic, `-=` est operator qui uno gradu subtrahit et assignat. Itaque `$x -= 3` idem significat ac `$x = $x - 3`.
 
-Modificator `while` sententiam `$x -= 3` repetit dum condicio `$x > 2` manet `True`. Simul ac condicio fit `False`, ansa desinit.
+Modificator `while` sententiam `$x -= 3` repetit dum condicio `$x > 2` est `True`. Cum fit `False`, ansa desinit.
 
-Nota quod, si condicio ab initio `False` est, sententia omnino non currit.
+Nota quod, si condicio ab initio `False` est, sententia numquam currit.
 
-Idem programma cum `until` scribi potest. Ad hoc faciendum, condicionem invertere debes:
+Idem programma `until` adhibere potest, sed tum condicio inverti debet:
 
 ```raku
 my $x = 10;

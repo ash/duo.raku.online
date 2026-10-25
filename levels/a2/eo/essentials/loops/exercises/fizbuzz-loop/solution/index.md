@@ -4,7 +4,7 @@ title: 'Solvo: FizzBuzz en buklo'
 
 {% include menu.html %}
 
-Ĉi-foje, la programo kontrolas divideblecon en buklo. Ĝi ne presas la vortojn tuj. Unue, ĝi kolektas ilin en aparta variablo. Poste, ĝi metas ĉi tiun variablon en ŝnuron.
+Ĉi-foje, la programo kontrolas ĉiun nombron en buklo. Ĝi ne presas la vortojn tuj. Unue, ĝi kolektas ilin en aparta variablo. Poste ĝi metas ĉi tiun variablon en ŝnuron.
 
 ## Kodo
 
@@ -29,6 +29,6 @@ $ raku exercises/loops/fizbuzz-loop.raku
 
 ## Komento
 
-Tre zorgema programisto eble ne ŝatas ĉi tiun solvon. Ĝi presas spacon post la dupunkto, eĉ por nombroj sen Fizz aŭ Buzz. Ŝanĝu la programon por ripari ĉi tiun problemon.
+Ĉi tiu solvo havas unu malgrandan problemon. Ĝi ĉiam presas spacon post la dupunkto. Ĝi faras tion eĉ sen Fizz aŭ Buzz. Tre zorgema programisto ne ŝatas tion. Ŝanĝu la programon kaj riparu ĝin.
 
 {% include nav.html %}

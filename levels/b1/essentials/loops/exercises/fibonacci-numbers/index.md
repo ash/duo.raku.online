@@ -6,7 +6,7 @@ title: 'Exercise: Fibonacci numbers'
 
 ## Problem
 
-Create a program that prints the first 20 Fibonacci numbers.
+Write a program that prints the first 20 Fibonacci numbers.
 
 ## Example
 

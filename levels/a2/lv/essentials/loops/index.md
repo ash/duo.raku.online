@@ -4,7 +4,7 @@ title: Cikli
 
 {% include menu.html %}
 
-Cikls atkārto to pašu darbību daudzas reizes. Šajā sadaļā mēs apskatām dažus veidus, kā veidot ciklus Raku valodā. Vairāk par cikliem jūs uzzināsiet kursa otrajā daļā.
+Cikls dara to pašu atkal un atkal. Raku valodā ir vairāki ciklu veidi. Šī sadaļa parāda dažus no tiem. Kursa otrajā daļā ir vēl citi cikli.
 
 Šeit ir šīs sadaļas tēmas.
 

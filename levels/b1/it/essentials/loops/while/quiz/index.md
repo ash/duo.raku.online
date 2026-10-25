@@ -21,7 +21,7 @@ say $n;
 
 ## 2
 
-Come puoi evitare che questo programma giri all'infinito? Apporta le modifiche necessarie al codice.
+Come puoi evitare che questo programma giri all'infinito? Cambia il codice come serve.
 
 {:.quiz-code .fill}
 . | my $n = 5;

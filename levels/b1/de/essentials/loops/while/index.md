@@ -4,7 +4,7 @@ title: Verwendung von `while`
 
 {% include menu.html %}
 
-Die `while`-Konstruktion hat eine boolesche Bedingung und einen Codeblock. Raku führt den Codeblock immer wieder aus, _während_ die Bedingung `True` ist.
+Die `while`-Schleife hat eine boolesche Bedingung (`True` oder `False`) und einen Codeblock. Raku wiederholt den Block, _während_ die Bedingung `True` ist.
 
 ```raku
 my $x = 0;
@@ -15,7 +15,7 @@ while $x <= 10 {
 say "$x ist größer als 10.";
 ```
 
-Das Programm fordert Sie auf, eine Zahl einzugeben. Wenn die Zahl nicht größer als 10 ist, läuft der Schleifenkörper noch einmal. Sobald die Zahl die Bedingung `$x <= 10` verletzt, endet die Schleife, und das Programm macht mit der nächsten Zeile weiter.
+Das Programm bittet Sie, eine Zahl einzugeben. Wenn die Zahl nicht größer als 10 ist, läuft der Schleifenkörper noch einmal. Wenn eine Zahl die Bedingung `$x <= 10` nicht erfüllt, endet die Schleife. Dann macht das Programm mit der nächsten Zeile weiter.
 
 ```console
 $ raku t.raku

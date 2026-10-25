@@ -14,7 +14,7 @@ for 1..5 -> $n {
 }
 ```
 
-Je kunt de variabele `$n` weglaten. Dan gebruikt Raku in plaats daarvan de variabele `$_`. Het programma doet hetzelfde als dit programma:
+Je hoeft `$n` niet te schrijven. Zonder `$n` gebruikt Raku de variabele `$_`. Raku maakt deze variabele voor je. Dit programma doet dus hetzelfde:
 
 ```raku
 for 1..5 {
@@ -22,7 +22,7 @@ for 1..5 {
 }
 ```
 
-Je [weet al](/nl/essentials/hello-world/) dat je `say` als een methode kunt gebruiken:
+Je [weet al](/nl/essentials/hello-world/) dat `say` ook een methode kan zijn:
 
 ```raku
 for 1..5 {
@@ -30,7 +30,7 @@ for 1..5 {
 }
 ```
 
-Als je een methode op `$_` aanroept, hoef je de variabele niet te schrijven. De lus kan dus nog korter:
+Voor een methode op `$_` heb je de naam `$_` niet nodig. De lus kan dus nog korter:
 
 ```raku
 for 1..5 {

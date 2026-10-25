@@ -6,18 +6,18 @@ title: Digitale Treppen
 
 ## Problem
 
-Erstellen Sie ein Programm, das die folgende Struktur ausgibt:
+Schreiben Sie ein Programm, das die folgende Form ausgibt:
 
     1
     12
     123
     1234
 
-Der Benutzer muss die Größe der Treppe eingeben (höchstens 9).
+Der Benutzer gibt die Größe der Treppe ein, die nicht größer als 9 ist.
 
 ## Beispiel
 
-Hier ist ein Beispiel, wie man das Programm mit dem Eingabewert `3` verwendet:
+Hier ist ein Beispiel für das Programm mit dem Eingabewert `3`:
 
 ```console
 $ raku digital-stairs.raku

@@ -6,7 +6,7 @@ title: Quiz — de `repeat` lus
 
 ## 1
 
-Kies `until` of `while` voor dit programma. Het programma mag niet vastlopen in een oneindige lus.
+Kies `until` of `while` voor dit programma, zodat de lus niet eindeloos draait.
 
 {:.quiz-code}
 . | my $n = 0;

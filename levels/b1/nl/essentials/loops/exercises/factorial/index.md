@@ -6,11 +6,11 @@ title: Faculteit
 
 ## Probleem
 
-Maak een programma dat met een lus de faculteit van 8 berekent en die daarna afdrukt.
+Schrijf een programma dat met een lus de faculteit van 8 berekent. Daarna drukt het programma het resultaat af.
 
 ## Voorbeeld
 
-Dit voorbeeld laat zien hoe het programma werkt:
+Dit korte voorbeeld laat zien hoe het programma werkt:
 
 ```console
 $ raku factorial.raku

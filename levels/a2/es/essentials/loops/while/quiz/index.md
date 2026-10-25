@@ -21,7 +21,7 @@ say $n;
 
 ## 2
 
-¿Cómo puedes evitar que este programa se ejecute para siempre? Cambia el código.
+Este programa se ejecuta para siempre. Cambia el código para que se detenga.
 
 {:.quiz-code .fill}
 . | my $n = 5;

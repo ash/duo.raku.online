@@ -4,7 +4,7 @@ title: 'Solution: FizzBuzz in einer Schleife'
 
 {% include menu.html %}
 
-Diesmal erfolgt die Teilbarkeitsprüfung in einer Schleife. Anstatt die Wörter direkt auszugeben, sammelt das Programm sie zuerst in einer separaten Variablen und interpoliert diese später in eine Zeichenkette.
+Diesmal prüft das Programm die Teilbarkeit in einer Schleife. Es gibt die Wörter nicht gleich aus. Stattdessen sammelt es sie zuerst in einer eigenen Variablen. Später fügt es diese Variable in eine Zeichenkette ein.
 
 ## Code
 
@@ -29,6 +29,6 @@ $ raku exercises/loops/fizbuzz-loop.raku
 
 ## Kommentar
 
-Ein sehr strenger Problemlöser findet diese Lösung vielleicht nicht perfekt, weil sie auch bei Zahlen, die kein Fizz oder Buzz bekommen haben, ein Leerzeichen nach dem Doppelpunkt ausgibt. Ändere das Programm, um dieses Problem zu vermeiden.
+Einem sehr genauen Programmierer gefällt diese Lösung vielleicht nicht. Sie gibt nach dem Doppelpunkt immer ein Leerzeichen aus, auch wenn es kein Fizz oder Buzz gibt. Ändere das Programm, um das zu beheben.
 
 {% include nav.html %}

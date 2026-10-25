@@ -4,9 +4,9 @@ title: '`while` e `until` come modificatori di istruzioni'
 
 {% include menu.html %}
 
-Puoi scrivere `while` e `until` anche dopo un'istruzione. Questa forma si chiama modificatore di istruzione. Funziona [come](/it/essentials/conditional-checks/modifiers) `if` e `unless` dopo un'istruzione.
+Puoi anche mettere `while` o `until` dopo un'istruzione. Lo chiamiamo modificatore di istruzione. Lo conosci già [da `if` e `unless`](/it/essentials/conditional-checks/modifiers).
 
-Ecco un esempio. Trova il resto di una divisione:
+Ecco un esempio. Trova il resto, cioè quello che rimane dopo la divisione:
 
 ```raku
 my $x = 10;
@@ -14,13 +14,13 @@ $x -= 3 while $x > 2;
 say $x; # 1
 ```
 
-Qui `-=` è un operatore. Sottrae e assegna allo stesso tempo. Quindi `$x -= 3` significa la stessa cosa di `$x = $x - 3`.
+Qui `-=` è un operatore. Fa due cose. Toglie un numero. Salva anche il risultato nella variabile. Quindi `$x -= 3` è uguale a `$x = $x - 3`.
 
-Il modificatore `while` ripete l'istruzione `$x -= 3`. La ripete finché la condizione `$x > 2` è `True`. Quando la condizione diventa `False`, il ciclo si ferma.
+Il modificatore `while` ripete l'istruzione `$x -= 3`. La ripete finché `$x > 2` è `True`. Quando `$x > 2` è `False`, il ciclo si ferma.
 
-Se la condizione è `False` all'inizio, il programma non esegue affatto l'istruzione.
+Se la condizione è `False` all'inizio, l'istruzione non parte mai.
 
-Puoi scrivere lo stesso programma con `until`. Per questo, devi usare la condizione opposta:
+Puoi scrivere lo stesso programma con `until`. Allora ti serve la condizione opposta:
 
 ```raku
 my $x = 10;

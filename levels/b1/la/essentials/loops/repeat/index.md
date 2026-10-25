@@ -4,9 +4,9 @@ title: 'Utendo `repeat`'
 
 {% include menu.html %}
 
-Clausulae `while` et `until` fortasse numquam currunt si condicio initio `False` est. Clausula `repeat` contra semper saltem semel currit. Condicio post clausulam codicis inspicitur. Ad probationem eadem verba `while` vel `until` adhibes.
+Clausula `while` vel `until` fortasse numquam currit, si condicio ab initio `False` est. Clausula `repeat` contra semper saltem semel currit. Eius condicio post clausulam inspicitur. Ad probationem eadem verba adhibes, `while` vel `until`.
 
-Specta hoc programma.
+Aspice hoc programma.
 
 ```raku
 my $x = 100;
@@ -17,7 +17,7 @@ repeat {
 say "$x maior est quam 10.";
 ```
 
-Variabilis `$x` a valore `100` incipit, et condicio `while` inspicit utrum `$x` minor quam `10` an ei aequalis sit. Cum hoc valore, condicio iam `False` est, sed clausula codicis tamen primum semel currit.
+Variabilis `$x` a `100` incipit. Condicio `while` inspicit an `$x` minor quam `10` vel aequalis sit. Cum hoc valore, condicio iam `False` est, sed clausula tamen primum semel currit.
 
 ```console
 $ raku t.raku
@@ -28,7 +28,7 @@ Intrasti 20.
 20 maior est quam 10.
 ```
 
-Mutemus programma ut potius `until` adhibeat.
+Nunc programma mutemus ut `until` adhibeat.
 
 ```raku
 my $x = 0;

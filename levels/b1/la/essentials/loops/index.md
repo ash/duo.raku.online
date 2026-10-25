@@ -4,8 +4,8 @@ title: Ansae
 
 {% include menu.html %}
 
-Circuli tibi permittunt ut eandem actionem pluries repetas. In hac sectione, aliquas structuras Raku spectabimus quae te adiuvant ad circulos construendos. Plura erunt in secunda parte cursus.
+Circulus eandem actionem pluries repetit. Haec sectio breviter aliquos modos ostendit quibus circulos in Raku facimus. Plura sunt in secunda parte cursus, itaque perge legere.
 
-Nunc, spectemus argumenta sequentia.
+Nunc haec argumenta spectabimus.
 
 {% include nav.html %}

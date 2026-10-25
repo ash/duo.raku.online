@@ -4,11 +4,11 @@ title: 'Solution: Echo until enough'
 
 {% include menu.html %}
 
-This program needs a loop that stops when the user enters a special word.
+This program needs a loop. The loop stops when the user enters a special word.
 
 ## Code
 
-You can solve the task in several similar ways, with `while`, `until`, or `repeat`. Here is one of them.
+You can solve the task with `while`, `until`, or `repeat`. These ways are very similar. Here is one of them.
 
 ```raku
 my $word;
@@ -24,7 +24,7 @@ say 'OK, done.';
 
 ## Output
 
-Run the program and enter a few different words. Then stop the loop.
+Run the program. Enter a few different words. Then stop the loop.
 
 ```console
 $ raku exercises/loops/echo-until-enough.raku
@@ -43,6 +43,6 @@ OK, done.
 
 ## Comment
 
-Note that you declare the variable `$word` _before_ the loop. The `while` test is outside the body of the loop. If you define the variable inside the loop, the test cannot see it.
+Note that you create the variable `$word` _before_ the loop. The `while` test is not inside the body of the loop. So the test cannot see a variable from inside the loop.
 
 {% include nav.html %}

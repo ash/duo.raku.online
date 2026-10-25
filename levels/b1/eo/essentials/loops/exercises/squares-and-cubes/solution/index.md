@@ -6,7 +6,7 @@ title: 'Solvo: Kvadratoj kaj kuboj en buklo'
 
 ## Kodo
 
-Jen la kodo de la solvo. La `for` buklo uzas intervalon, kiu iras de `-5` ĝis `5`.
+Jen la solvo. La `for` buklo uzas intervalon, kiu iras de `-5` ĝis `5`.
 
 ```raku
 for -5 .. 5 -> $n {

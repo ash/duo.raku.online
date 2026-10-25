@@ -8,7 +8,7 @@ Il programma utilizza due cicli e due intervalli.
 
 ## Codice
 
-Ecco una delle possibili soluzioni:
+Ecco una possibile soluzione:
 
 ```raku
 my $size = prompt 'Inserisci la dimensione: ';
@@ -23,7 +23,7 @@ for 1..$size -> $n {
 
 ## Output
 
-Esegui il programma e inserisci la dimensione della struttura:
+Esegui il programma e inserisci la dimensione della figura:
 
 ```console
 $ raku exercises/loops/digital-stairs.raku
@@ -39,12 +39,12 @@ Inserisci la dimensione: 7
 
 ## Commento
 
-Nota come viene stampata la cifra corrente:
+Nota come il programma stampa la cifra corrente:
 
 ```raku
 .print for 1..$n;
 ```
 
-Come `say`, anche la routine `print` può essere chiamata come metodo. Qui viene chiamata sulla [variabile di contesto](/it/essentials/loops/topic) `$_`.
+Come `say`, anche `print` si può chiamare come metodo. Qui viene chiamato sulla [variabile di contesto](/it/essentials/loops/topic) `$_`.
 
 {% include nav.html %}

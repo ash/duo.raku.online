@@ -8,7 +8,7 @@ Este programa necesita un bucle que se detenga cuando el usuario ingrese una pal
 
 ## Código
 
-Hay varias formas similares de resolver la tarea con `while`, `until` o `repeat`. Una de ellas se muestra a continuación.
+Puedes resolver la tarea de varias formas parecidas, con `while`, `until` o `repeat`. Aquí tienes una de ellas.
 
 ```raku
 my $word;
@@ -43,6 +43,6 @@ OK, terminado.
 
 ## Comentario
 
-Nota que declaras la variable `$word` _antes_ del bucle, porque la prueba `while` está fuera del alcance del cuerpo del bucle. Si defines la variable dentro del bucle, la prueba no la verá.
+Nota que declaras la variable `$word` _antes_ del bucle. Esto es porque la prueba `while` está fuera del cuerpo del bucle. Si declaras la variable dentro del bucle, la prueba no puede verla.
 
 {% include nav.html %}

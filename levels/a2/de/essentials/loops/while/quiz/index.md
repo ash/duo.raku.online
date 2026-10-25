@@ -21,7 +21,7 @@ say $n;
 
 ## 2
 
-Was können Sie tun, damit dieses Programm nicht endlos läuft? Ändern Sie den Code.
+Dieses Programm läuft endlos. Ändern Sie den Code, damit es stoppt.
 
 {:.quiz-code .fill}
 . | my $n = 5;

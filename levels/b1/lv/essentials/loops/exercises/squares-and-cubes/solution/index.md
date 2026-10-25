@@ -6,7 +6,7 @@ title: 'Risinājums: Kvadrāti un kubi ciklā'
 
 ## Kods
 
-Šeit ir risinājuma kods. `for` cikls izmanto diapazonu, kas iet no `-5` līdz `5`.
+Šeit ir risinājums. `for` cikls izmanto diapazonu, kas iet no `-5` līdz `5`.
 
 ```raku
 for -5 .. 5 -> $n {

@@ -14,7 +14,7 @@ for 1..5 -> $n {
 }
 ```
 
-Vi povas forlasi la variablon `$n`. Tiam Raku uzas anstataŭe la variablon `$_`. La programo faras la samon kiel ĉi tiu:
+Vi ne devas skribi `$n`. Sen ĝi, Raku uzas la variablon `$_`. Raku kreas ĉi tiun variablon por vi. Do ĉi tiu programo faras la samon:
 
 ```raku
 for 1..5 {
@@ -22,7 +22,7 @@ for 1..5 {
 }
 ```
 
-Vi [jam scias](/eo/essentials/hello-world/), ke vi povas uzi `say` kiel metodon:
+Vi [jam scias](/eo/essentials/hello-world/), ke `say` povas esti ankaŭ metodo:
 
 ```raku
 for 1..5 {
@@ -30,7 +30,7 @@ for 1..5 {
 }
 ```
 
-Kiam vi vokas metodon sur `$_`, vi ne bezonas skribi la variablon. Do la buklo povas esti eĉ pli mallonga:
+Voko de metodo sur `$_` ne bezonas la nomon `$_`. Do la buklo povas esti eĉ pli mallonga:
 
 ```raku
 for 1..5 {

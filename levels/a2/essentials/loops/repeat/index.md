@@ -4,7 +4,7 @@ title: Using repeat
 
 {% include menu.html %}
 
-Sometimes a `while` or `until` block does not run at all. This happens when the condition is `False` at the start. A `repeat` block is different: it always runs at least once. Raku checks the condition after the block. You use the same words, `while` or `until`, for the check.
+A `while` or `until` loop may not run at all. This happens when the condition is `False` at the start. A `repeat` block is different. It always runs at least once. Raku checks the condition after the block. You use the same words for the check: `while` or `until`.
 
 Look at this program.
 
@@ -17,7 +17,7 @@ repeat {
 say "$x is bigger than 10.";
 ```
 
-At the start, the variable `$x` is `100`. The `while` condition checks if `$x` is less than or equal to `10`. With this value, the condition is already `False`. But the code block still runs first.
+At the start, the variable `$x` is `100`. The `while` condition checks if `$x` is `10` or less. So the condition is already `False`. But the block of code still runs once.
 
 ```console
 $ raku t.raku
@@ -28,7 +28,7 @@ You entered 20.
 20 is bigger than 10.
 ```
 
-Now let's change the program and use `until`.
+Now let's write the program with `until`.
 
 ```raku
 my $x = 0;
@@ -39,7 +39,7 @@ repeat {
 say "$x is bigger than 10.";
 ```
 
-Run it and check that it works:
+Run it and check the result:
 
 ```console
 $ raku t.raku

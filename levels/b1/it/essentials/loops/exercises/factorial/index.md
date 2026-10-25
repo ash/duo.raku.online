@@ -6,11 +6,11 @@ title: Fattoriale
 
 ## Problema
 
-Crea un programma che calcoli il fattoriale di 8 con un ciclo e poi lo stampi.
+Scrivi un programma che calcola il fattoriale di 8 con un ciclo. Poi stampa il risultato.
 
 ## Esempio
 
-Questo esempio mostra come funziona il programma:
+Questo breve esempio mostra come funziona il programma:
 
 ```console
 $ raku factorial.raku

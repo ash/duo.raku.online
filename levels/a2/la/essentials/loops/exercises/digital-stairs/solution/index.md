@@ -8,7 +8,7 @@ Programma duos gyros et duas amplitudines utitur.
 
 ## Codex
 
-Hic est una solutio possibilis:
+Hic est unus modus solvendi:
 
 ```raku
 my $size = prompt 'Magnitudinem inserere: ';
@@ -39,12 +39,12 @@ Magnitudinem inserere: 7
 
 ## Commentarium
 
-Vide quomodo programma digitum praesentem imprimat:
+Vide quomodo programma quemque digitum imprimit:
 
 ```raku
 .print for 1..$n;
 ```
 
-Sicut `say`, `print` quoque ut methodum vocare potes. Hic, in [variabili thematis](/la/essentials/loops/topic) `$_` vocatur.
+Potes `print` ut methodum vocare, sicut `say`. Hic programma id in [variabili thematis](/la/essentials/loops/topic) `$_` vocat.
 
 {% include nav.html %}

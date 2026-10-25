@@ -6,7 +6,7 @@ title: Divisione tramite sottrazione
 
 ## Problema
 
-Crea un programma che esegue la divisione intera usando la sottrazione. I numeri sono scritti direttamente nel programma:
+Scrivi un programma che fa la divisione intera con la sottrazione. I numeri sono scritti direttamente nel codice:
 
 ```raku
 my $a = 175;

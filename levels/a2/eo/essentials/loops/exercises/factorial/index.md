@@ -6,11 +6,11 @@ title: Faktorialo
 
 ## Problemo
 
-Skribu programon, kiu trovas la faktorialon de 8 per buklo. Poste ĝi presas la rezulton.
+Skribu programon kun buklo. Ĝi trovas la faktorialon de 8 kaj presas ĝin.
 
 ## Ekzemplo
 
-Ĉi tiu ekzemplo montras, kion la programo faras:
+Jen kiel la programo funkcias:
 
 ```console
 $ raku factorial.raku

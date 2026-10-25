@@ -6,14 +6,14 @@ title: División por resta
 
 ## Problema
 
-Crea un programa que haga la división entera usando restas. Los números están escritos directamente en el programa:
+Escribe un programa que haga la división entera con restas. Los números están escritos directamente en el código:
 
 ```raku
 my $a = 175;
 my $b = 25;
 ```
 
-Completa el programa para que imprima la parte entera de `$a / $b`. Usa solo un bucle y la resta.
+Termina el programa para que imprima la parte entera de `$a / $b`. Usa solo un bucle y la resta.
 
 ## Ejemplo
 

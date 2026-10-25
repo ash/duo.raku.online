@@ -6,11 +6,11 @@ title: Echo usque satis
 
 ## Problema
 
-Scribe programma quod iterum atque iterum verbum petit. Quodque verbum in terminali imprimit. Si verbum est `satis`, programma nuntium ultimum imprimit et desinit.
+Scribe programma. Iterum atque iterum verbum petit. Quodque verbum in terminali imprimit. Si verbum est `satis`, programma desinit. Antequam desinit, nuntium ultimum imprimit.
 
 ## Exemplum
 
-Programma sine fine currere potest, sed hic paucos gyros tantum ostendimus.
+Programma sine fine currere potest. Hic paucos tantum gyros vides.
 ```console
 $ raku echo-usque-satis.raku
 Verbum tuum: lingua

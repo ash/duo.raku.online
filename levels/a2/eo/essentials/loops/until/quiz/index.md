@@ -21,7 +21,7 @@ say $n;
 
 ## 2
 
-Kiel vi povas igi ĉi tiun buklon ruliĝi ĝuste kvin fojojn?
+Kion vi devas ŝanĝi? La buklo devas ruliĝi ĝuste kvin fojojn.
 
 {:.quiz-code .fill}
 . | my $n = 1;

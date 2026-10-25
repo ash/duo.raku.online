@@ -6,11 +6,11 @@ title: FizzBuzz in einer Schleife
 
 ## Problem
 
-Nehmen Sie das Programm aus der [Übung ‘FizzBuzz’](/de/essentials/conditional-checks/exercises/fizz-buzz) und passen Sie es an. Es muss das Ergebnis für alle ganzen Zahlen von 1 bis 50 ausgeben. Jede Zahl steht in einer eigenen Zeile, danach kommen `Fizz` und/oder `Buzz`.
+Nehmen Sie das Programm aus der [Übung ‘FizzBuzz’](/de/essentials/conditional-checks/exercises/fizz-buzz) und passen Sie es an. Jetzt muss es für alle ganzen Zahlen von 1 bis 50 funktionieren. Jede Zahl steht in einer eigenen Zeile. Nach der Zahl gibt es `Fizz` und/oder `Buzz` aus.
 
 ## Beispiel
 
-Hier sind die ersten paar Zeilen:
+Hier sind die ersten Zeilen:
 
 ```console
 $ raku fizbuzz-loop.raku

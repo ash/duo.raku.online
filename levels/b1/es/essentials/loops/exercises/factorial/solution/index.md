@@ -4,7 +4,7 @@ title: 'Solution: Factorial'
 
 {% include menu.html %}
 
-El factorial de `N` es el producto de todos los números enteros desde 1 hasta `N`, ambos incluidos. Por ejemplo, el factorial de 4 es 1 * 2 * 3 * 4 = 24.
+El factorial de `N` es el producto de todos los números enteros de 1 a `N`. Por ejemplo, el factorial de 4 es 1 * 2 * 3 * 4 = 24.
 
 ## Código
 
@@ -21,7 +21,7 @@ say $f;
 
 ## Salida
 
-Ejecuta el programa varias veces y prueba diferentes valores de `$n`.
+Ejecuta el programa varias veces con diferentes valores de `$n`.
 
 ```console
 $ raku exercises/loops/factorial.raku
@@ -30,9 +30,9 @@ $ raku exercises/loops/factorial.raku
 
 ## Comentarios
 
-Este programa usa el operador `*=`, una forma abreviada de la multiplicación con asignación: `$x *= $y` es lo mismo que `$x = $x * $y`.
+Este programa usa el operador `*=`, que multiplica y asigna en un solo paso: `$x *= $y` significa lo mismo que `$x = $x * $y`.
 
-También puedes usar un bucle ‘completo’ en lugar de la forma postfija:
+En lugar de la forma postfija, también puedes usar un bucle ‘completo’:
 
 ```raku
 my $n = 8;
@@ -47,8 +47,8 @@ say $f;
 
 ## Más sobre este tema
 
-Volveremos a esta tarea varias veces. En esta parte del curso, también la resolveremos de manera recursiva.
+Volveremos a esta tarea varias veces. Más adelante en esta parte del curso, también la resolveremos con recursión.
 
-En la segunda parte del curso, aprenderemos sobre los llamados operadores de reducción, que hacen que la solución sea muy sencilla. También veremos cómo definir tu propio operador `!`, para que puedas escribir `$n!` y calcular un factorial. Por último, veremos otra solución interesante cuando hablemos sobre la cláusula `where`.
+En la segunda parte del curso, aprenderemos sobre los operadores de reducción. Estos operadores hacen que la solución sea muy sencilla. También crearemos nuestro propio operador `!`, para que `$n!` calcule un factorial. Por último, habrá otra solución interesante cuando hablemos de la cláusula `where`.
 
 {% include nav.html %}

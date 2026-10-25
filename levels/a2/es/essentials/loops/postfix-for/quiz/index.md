@@ -4,7 +4,7 @@ title: Quiz — Posfijo `for`*
 
 {% include menu.html %}
 
-Termina el programa. Debe usar `for` después del bloque y debe imprimir este texto:
+Termina el programa. Pon `for` después del bloque. El programa debe imprimir este texto:
 
     A
     A
@@ -22,7 +22,7 @@ Aquí está el comienzo del código:
 . | &nbsp;&nbsp;&nbsp;&nbsp;.say;
 } | ␣ for &apos;A&apos;..&apos;C&apos;;
 
-<div class="extended-explanation">Este código usa un bloque de código con <code>for</code> después. Nota que <code>for</code> debe estar en la misma línea que la llave de cierre. Si lo pones en una línea nueva, el bloque ya no es parte del bucle. Entonces obtienes un error: <code>Missing block</code>. Es mejor no usar bloques de código con formas posfijas de esta manera.</div>
+<div class="extended-explanation">Aquí, un bloque de código tiene <code>for</code> después. La palabra <code>for</code> debe estar en la misma línea que la <code>}</code>. Si <code>for</code> está en una línea nueva, el bucle no tiene bloque. Entonces Raku muestra un error antes de ejecutar el programa: <code>Missing block</code>. Intenta no usar bloques de esta forma.</div>
 
 {% include quiz.html %}
 

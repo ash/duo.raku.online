@@ -6,11 +6,11 @@ title: FizzBuzz ciklā
 
 ## Problēma
 
-Paņemiet programmu no [uzdevuma ‘FizzBuzz’](/lv/essentials/conditional-checks/exercises/fizz-buzz) un mainiet to. Tai jāizdrukā rezultāts visiem veselajiem skaitļiem no 1 līdz 50. Katrs skaitlis ir savā rindā, un aiz tā ir `Fizz` un/vai `Buzz`.
+Paņemiet programmu no [uzdevuma ‘FizzBuzz’](/lv/essentials/conditional-checks/exercises/fizz-buzz) un mainiet to. Tagad tai jādarbojas ar visiem veselajiem skaitļiem no 1 līdz 50. Katrs skaitlis ir savā rindā. Aiz skaitļa tā izdrukā `Fizz` un/vai `Buzz`.
 
 ## Piemērs
 
-Šeit ir dažas pirmās rindas:
+Šeit ir pirmās rindas:
 
 ```console
 $ raku fizbuzz-loop.raku

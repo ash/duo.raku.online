@@ -8,7 +8,7 @@ Programma duos gyros et duas amplitudines utitur.
 
 ## Codex
 
-Hic est una ex solutionibus possibilibus:
+Hic est una solutio possibilis:
 
 ```raku
 my $size = prompt 'Magnitudinem inserere: ';
@@ -23,7 +23,7 @@ for 1..$size -> $n {
 
 ## Exitus
 
-Curre programmatum et magnitudinem structurae inserere:
+Curre programma et magnitudinem figurae insere:
 
 ```console
 $ raku exercises/loops/digital-stairs.raku
@@ -39,12 +39,12 @@ Magnitudinem inserere: 7
 
 ## Commentarium
 
-Nota quomodo digitus currentis imprimatur:
+Nota quomodo programma digitum praesentem imprimat:
 
 ```raku
 .print for 1..$n;
 ```
 
-Sicut `say`, routina `print` ut methodus vocari potest. Hic, in [variabili thematis](/la/essentials/loops/topic) `$_` vocatur.
+Sicut `say`, etiam `print` ut methodus vocari potest. Hic in [variabili thematis](/la/essentials/loops/topic) `$_` vocatur.
 
 {% include nav.html %}

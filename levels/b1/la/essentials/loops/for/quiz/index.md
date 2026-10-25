@@ -4,7 +4,7 @@ title: 'Intelligendo `for` ansa'
 
 {% include menu.html %}
 
-Pro quoque ex tribus programmatibus infra, dic quot lineas imprimat.
+Quot lineas quodque ex tribus programmatibus infra imprimit?
 
 ## 1
 

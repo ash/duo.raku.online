@@ -4,7 +4,7 @@ title: '`for` ansae'
 
 {% include menu.html %}
 
-Ansa `for` instrumentum potens est ad plura elementa singillatim percurrenda. Exempli gratia, intervallum sumamus:
+Ansa `for` instrumentum potens est. Multa elementa percurrit, unum post alterum. Exempli gratia, intervallum sumamus:
 
 ```raku
 for 1..5 -> $n {
@@ -12,7 +12,7 @@ for 1..5 -> $n {
 }
 ```
 
-In hoc programmate, variabilis `$n` in quaque iteratione proximum valorem ex intervallo accipit. Animadverte te variabilem cum `my` declarare non debere. Clausula codicis toties repetitur quot sunt elementa in fonte datorum. Itaque programma numeros lineam post lineam imprimit:
+Quotiens ansa currit, variabilis `$n` proximum valorem ex intervallo accipit. Nota: non necesse est variabilem cum `my` declarare. Clausula codicis semel pro quoque elemento fontis datorum currit. Itaque programma numeros imprimit, unum in quaque linea:
 
 ```console
 $ raku t.raku 
@@ -23,11 +23,11 @@ $ raku t.raku
 5
 ```
 
-Programma omnes valores percurrit quos [intervallum](/la/essentials/ranges) `1..5` producit. Hi sunt `1`, `2`, `3`, `4`, et `5`.
+Programma omnes valores percurrit quos [intervallum](/la/essentials/ranges) `1..5` dat. Hi sunt `1`, `2`, `3`, `4`, et `5`.
 
 ## Plus quam unum valorem sumere
 
-Proprietas iucunda Raku est quod plus quam unum elementum in una iteratione sumere potes. Programma sequens duos numeros imprimit quotiens ansa currit:
+Haec est proprietas iucunda Raku. Ansa plus quam unum elementum simul sumere potest. Programma sequens duos numeros imprimit quotiens ansa currit:
 
 ```raku
 for 1..6 -> $n, $m {

@@ -14,7 +14,7 @@ for 1..5 -> $n {
 }
 ```
 
-Puedes quitar la variable `$n`. Entonces Raku usa la variable `$_` en su lugar. El programa hace lo mismo que este:
+No tienes que escribir `$n`. Sin ella, Raku usa la variable `$_`. Raku crea esta variable por ti. Así, este programa hace lo mismo:
 
 ```raku
 for 1..5 {
@@ -22,7 +22,7 @@ for 1..5 {
 }
 ```
 
-[Ya sabes](/es/essentials/hello-world/) que puedes usar `say` como un método:
+[Ya sabes](/es/essentials/hello-world/) que `say` también puede ser un método:
 
 ```raku
 for 1..5 {
@@ -30,7 +30,7 @@ for 1..5 {
 }
 ```
 
-Cuando llamas a un método en `$_`, no necesitas escribir la variable. Así, el bucle puede ser aún más corto:
+Una llamada a un método en `$_` no necesita el nombre `$_`. Así, el bucle puede ser aún más corto:
 
 ```raku
 for 1..5 {

@@ -6,18 +6,18 @@ title: Digitalaj ŝtupoj
 
 ## Problemo
 
-Skribu programon, kiu presas ĉi tiun formon:
+Skribu programon, kiu presas ĉi tion:
 
     1
     12
     123
     1234
 
-La uzanto enigas la grandecon de la ŝtupoj. La grandeco ne estas pli granda ol 9.
+La uzanto enigas la grandecon de la ŝtupoj. La grandeco estas 9 aŭ malpli.
 
 ## Ekzemplo
 
-Jen ekzemplo kun la eniga valoro `3`:
+Jen ekzemplo. La uzanto enigas `3`:
 
 ```console
 $ raku digital-stairs.raku

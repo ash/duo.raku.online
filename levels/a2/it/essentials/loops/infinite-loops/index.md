@@ -4,7 +4,7 @@ title: Cicli infiniti
 
 {% include menu.html %}
 
-Puoi usare `loop` anche solo con un corpo:
+Puoi anche scrivere `loop` solo con un corpo:
 
 ```raku
 loop {
@@ -12,6 +12,6 @@ loop {
 }
 ```
 
-Questo ciclo va avanti all'infinito. Si ferma solo quando fermi il programma, per esempio con `Ctrl+C`. Nella seconda parte del corso imparerai modi migliori per controllare i cicli.
+Questo ciclo non si ferma mai da solo. Devi fermare tu il programma, per esempio con `Ctrl+C`. La seconda parte del corso mostra modi migliori per controllare i cicli.
 
 {% include nav.html %}

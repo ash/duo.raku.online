@@ -6,14 +6,14 @@ title: Deling door aftrekking
 
 ## Probleem
 
-Maak een programma dat een gehele deling doet met behulp van aftrekken. De getallen staan direct in het programma:
+Schrijf een programma dat een gehele deling doet met aftrekken. De getallen staan direct in de code:
 
 ```raku
 my $a = 175;
 my $b = 25;
 ```
 
-Voltooi het programma zodat het het gehele deel van `$a / $b` afdrukt. Gebruik alleen een lus en aftrekking.
+Maak het programma af, zodat het programma het gehele deel van `$a / $b` afdrukt. Gebruik alleen een lus en aftrekken.
 
 ## Voorbeeld
 

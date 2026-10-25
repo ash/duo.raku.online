@@ -6,7 +6,7 @@ title: Divisio per subtractionem
 
 ## Problema
 
-Scribe programma quod numeros integros per subtractionem dividit. Numeri in programmate fixi sunt:
+Scribe programma quod numerum integrum per alium dividit. Subtractione uti debet. Numeri iam in codice sunt:
 
 ```raku
 my $a = 175;

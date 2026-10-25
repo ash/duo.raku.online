@@ -6,18 +6,18 @@ title: Digital gradus
 
 ## Problema
 
-Scribe programma quod hanc figuram imprimit:
+Scribe programma quod hoc imprimit:
 
     1
     12
     123
     1234
 
-Usor magnitudinem scalarum intrat. Magnitudo non maior est quam 9.
+Usor magnitudinem scalarum intrat. Magnitudo est 9 vel minus.
 
 ## Exemplum
 
-Hic est exemplum cum valore inserto `3`:
+Hic est exemplum. Usor `3` intrat:
 
 ```console
 $ raku digital-stairs.raku

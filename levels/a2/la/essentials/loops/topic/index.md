@@ -14,7 +14,7 @@ for 1..5 -> $n {
 }
 ```
 
-Variabilem `$n` omittere potes. Tum Raku variabilem `$_` pro ea adhibet. Programma idem facit atque hoc:
+Non necesse est `$n` scribere. Sine eo, Raku variabilem `$_` adhibet. Raku hanc variabilem tibi facit. Itaque hoc programma idem facit:
 
 ```raku
 for 1..5 {
@@ -22,7 +22,7 @@ for 1..5 {
 }
 ```
 
-[Iam scis](/la/essentials/hello-world/) te posse `say` ut methodum adhibere:
+Ut [iam scis](/la/essentials/hello-world/), `say` etiam methodus esse potest:
 
 ```raku
 for 1..5 {
@@ -30,7 +30,7 @@ for 1..5 {
 }
 ```
 
-Cum methodum in `$_` vocas, variabilem scribere non debes. Itaque iteratio etiam brevior esse potest:
+Si methodum in `$_` vocas, nomen `$_` non scribis. Itaque iteratio etiam brevior esse potest:
 
 ```raku
 for 1..5 {

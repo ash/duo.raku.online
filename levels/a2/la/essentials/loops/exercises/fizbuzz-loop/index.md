@@ -6,11 +6,11 @@ title: FizzBuzz in ansa
 
 ## Problema
 
-Sume programma ex [exercitatione ‘FizzBuzz’](/la/essentials/conditional-checks/exercises/fizz-buzz) et id muta. Resultatum pro omnibus numeris integris ab 1 ad 50 imprimere debet. Quisque numerus in sua linea est, et post eum `Fizz` et/vel `Buzz` venit.
+Sume programma ex [exercitatione ‘FizzBuzz’](/la/essentials/conditional-checks/exercises/fizz-buzz) et id muta. Nunc pro omnibus numeris integris ab 1 ad 50 operari debet. Quisque numerus in sua linea est. Post numerum, `Fizz` et/vel `Buzz` imprimit.
 
 ## Exemplum
 
-Hic sunt primae paucae lineae:
+Hic sunt primae lineae:
 
 ```console
 $ raku fizbuzz-loop.raku

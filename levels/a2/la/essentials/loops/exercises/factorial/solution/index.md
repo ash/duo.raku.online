@@ -4,7 +4,7 @@ title: 'Solutio: Factorial'
 
 {% include menu.html %}
 
-Factorialis `N` est multiplicatio omnium numerorum integrorum ab 1 ad `N`. Exempli gratia, factorialis 4 est 1 * 2 * 3 * 4 = 24.
+Factorialem `N` sic invenis: omnes numeros ab 1 ad `N` multiplica. Exempli gratia, factorialis 4 est 1 * 2 * 3 * 4 = 24.
 
 ## Codex
 
@@ -21,7 +21,7 @@ say $f;
 
 ## Exitus
 
-Curre programma aliquoties cum valoribus diversis `$n`.
+Curre programma aliquoties. Tenta valores diversos `$n`.
 
 ```console
 $ raku exercises/loops/factorial.raku
@@ -30,9 +30,9 @@ $ raku exercises/loops/factorial.raku
 
 ## Commentarii
 
-Hoc programma utitur operatore `*=`. Est modus brevis multiplicandi et assignandi: `$x *= $y` idem significat ac `$x = $x * $y`.
+Programma operatorem `*=` adhibet. Multiplicat et resultatum in variabili servat. Itaque `$x *= $y` idem est ac `$x = $x * $y`.
 
-Potes etiam ‘plenum’ circulum adhibere pro forma postfixa:
+Potes etiam ‘plenum’ circulum scribere, cum `for` ante clausulam:
 
 ```raku
 my $n = 8;
@@ -47,8 +47,8 @@ say $f;
 
 ## Plura de hoc
 
-Ad hoc problema aliquoties in cursu redimus. In hac parte cursus, id etiam recursione solvimus.
+Hoc problema aliquoties in cursu redit. In hac parte, id etiam alio modo solvimus. Functionem adhibemus quae se ipsam vocat.
 
-In secunda parte cursus, de operatoribus reductionis disces. Cum eis, solutio facillima est. Etiam disces tuum operatorem `!` facere. Deinde `$n!` scribere potes ut factorialem invenias. Postea, aliam solutionem iucundam cum clausula `where` videbimus.
+In secunda parte, de operatoribus reductionis disces. Cum eis, solutio facillima est. Etiam disces operatorem tuum `!` facere. Tum `$n!` pro factoriali scribere potes. Postea aliam solutionem pulchram cum `where` videbis.
 
 {% include nav.html %}

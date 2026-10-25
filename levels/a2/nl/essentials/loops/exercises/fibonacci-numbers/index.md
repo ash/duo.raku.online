@@ -6,11 +6,11 @@ title: Fibonacci getallen
 
 ## Probleem
 
-Schrijf een programma dat de eerste 20 Fibonacci-getallen afdrukt.
+Schrijf een programma. Het drukt de eerste 20 Fibonacci-getallen af.
 
 ## Voorbeeld
 
-Als je het programma uitvoert, drukt het de eerste Fibonacci-getallen af:
+Het programma drukt de eerste Fibonacci-getallen af:
 
 ```console
 $ raku fibonacci-numbers.raku

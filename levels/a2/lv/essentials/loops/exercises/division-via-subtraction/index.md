@@ -6,7 +6,7 @@ title: Dalīšana, izmantojot atņemšanu
 
 ## Uzdevums
 
-Uzrakstiet programmu, kas dala veselus skaitļus ar atņemšanas palīdzību. Skaitļi programmā ir fiksēti:
+Uzrakstiet programmu, kas dala vienu veselu skaitli ar otru. Tai jāizmanto atņemšana. Skaitļi jau ir kodā:
 
 ```raku
 my $a = 175;

@@ -8,7 +8,7 @@ Il programma utilizza due cicli e due intervalli.
 
 ## Codice
 
-Ecco una possibile soluzione:
+Ecco un modo per risolverlo:
 
 ```raku
 my $size = prompt 'Inserisci la dimensione: ';
@@ -39,12 +39,12 @@ Inserisci la dimensione: 7
 
 ## Commento
 
-Guarda come il programma stampa la cifra corrente:
+Guarda come il programma stampa ogni cifra:
 
 ```raku
 .print for 1..$n;
 ```
 
-Come per `say`, puoi chiamare `print` come metodo. Qui il programma chiama `print` sulla [variabile di contesto](/it/essentials/loops/topic) `$_`.
+Puoi chiamare `print` come metodo, così come `say`. Qui il programma lo chiama sulla [variabile di contesto](/it/essentials/loops/topic) `$_`.
 
 {% include nav.html %}

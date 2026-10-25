@@ -4,7 +4,7 @@ title: 'Solution: FizzBuzz in een lus'
 
 {% include menu.html %}
 
-Deze keer controleert het programma de deelbaarheid in een lus. Het drukt de woorden niet meteen af. Eerst verzamelt het ze in een aparte variabele. Later zet het deze variabele in een string.
+Deze keer controleert het programma elk getal in een lus. Het drukt de woorden niet meteen af. Eerst verzamelt het ze in een aparte variabele. Dan zet het deze variabele in een string.
 
 ## Code
 
@@ -29,6 +29,6 @@ $ raku exercises/loops/fizbuzz-loop.raku
 
 ## Opmerking
 
-Een heel precieze programmeur vindt deze oplossing misschien niet mooi. De oplossing drukt een spatie af na de dubbele punt, ook bij getallen zonder Fizz of Buzz. Verander het programma om dit probleem op te lossen.
+Deze oplossing heeft één klein probleem. Ze drukt altijd een spatie af na de dubbele punt. Dat doet ze ook zonder Fizz of Buzz. Een heel precieze programmeur vindt dat niet mooi. Verander het programma en los het op.
 
 {% include nav.html %}

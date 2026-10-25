@@ -6,18 +6,18 @@ title: Digitālās kāpnes
 
 ## Uzdevums
 
-Uzrakstiet programmu, kas izdrukā šo figūru:
+Uzrakstiet programmu, kas izdrukā šo:
 
     1
     12
     123
     1234
 
-Lietotājs ievada kāpņu izmēru. Izmērs nav lielāks par 9.
+Lietotājs ievada kāpņu izmēru. Izmērs ir 9 vai mazāks.
 
 ## Piemērs
 
-Šeit ir piemērs ar ievades vērtību `3`:
+Šeit ir piemērs. Lietotājs ievada `3`:
 
 ```console
 $ raku digital-stairs.raku

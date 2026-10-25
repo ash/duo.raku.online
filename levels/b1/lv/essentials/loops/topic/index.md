@@ -4,9 +4,9 @@ title: Tēmas mainīgais
 
 {% include menu.html %}
 
-`$_` ir īpašs mainīgais, ko sauc par _topic mainīgo_.
+`$_` ir īpašs mainīgais. To sauc par _topic mainīgo_.
 
-Apskatiet šo ciklu pār diapazonu:
+Šeit ir cikls pār diapazonu:
 
 ```raku
 for 1..5 -> $n {
@@ -14,7 +14,7 @@ for 1..5 -> $n {
 }
 ```
 
-Jūs varat izlaist mainīgo `$n`, un tad Raku tā vietā izmanto automātisku mainīgo `$_`. Programma ir tāda pati kā šī:
+Jūs varat izlaist mainīgo `$n`. Tad Raku tā vietā automātiski izmanto mainīgo `$_`. Tātad programma ir tāda pati kā šī:
 
 ```raku
 for 1..5 {
@@ -22,7 +22,7 @@ for 1..5 {
 }
 ```
 
-Kā jūs [atceraties](/lv/essentials/hello-world/), `say` var izmantot arī kā metodi:
+Kā jūs [atceraties](/lv/essentials/hello-world/), `say` var izsaukt arī kā metodi:
 
 ```raku
 for 1..5 {
@@ -30,7 +30,7 @@ for 1..5 {
 }
 ```
 
-Kad jūs izsaucat metodi uz `$_`, pašu mainīgo nav jāraksta. Tātad mūsu ciklu var padarīt vēl vienkāršāku:
+Lai izsauktu metodi uz `$_`, pašu mainīgo nav jāraksta. Tātad mēs varam padarīt savu ciklu vēl vienkāršāku:
 
 ```raku
 for 1..5 {

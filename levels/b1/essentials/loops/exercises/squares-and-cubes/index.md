@@ -6,11 +6,11 @@ title: 'Exercise: Squares and cubes in a loop'
 
 ## Problem
 
-Write a program that prints the squares and cubes of the numbers from −5 to 5, including both ends. Each line should have three values: the number itself, its square, and its cube. Use a loop.
+Write a program that prints the squares and cubes of the numbers from −5 to 5. Include −5 and 5 as well. Each line should show three values: the number, its square and its cube. Use a loop.
 
 ## Example
 
-The program should print this (if the loop goes from −3 to 3):
+Here is what the program should print if the loop goes from −3 to 3:
 
 ```console
 $ raku squares-and-cubes.raku

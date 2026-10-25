@@ -4,7 +4,7 @@ title: Uso di `repeat`
 
 {% include menu.html %}
 
-A volte Raku non esegue affatto un blocco `while` o `until`. Succede quando la condizione è `False` all'inizio. Un blocco `repeat` è diverso: Raku lo esegue sempre almeno una volta. Raku controlla la condizione dopo il blocco. Per il controllo usi le stesse parole, `while` o `until`.
+Un ciclo `while` o `until` può non girare affatto. Succede quando la condizione è `False` all'inizio. Un blocco `repeat` è diverso. Gira sempre almeno una volta. Raku controlla la condizione dopo il blocco. Per il controllo usi le stesse parole: `while` o `until`.
 
 Guarda questo programma.
 
@@ -17,7 +17,7 @@ repeat {
 say "$x is bigger than 10.";
 ```
 
-All'inizio la variabile `$x` vale `100`. La condizione `while` controlla se `$x` è minore o uguale a `10`. Con questo valore, la condizione è già `False`. Ma Raku esegue comunque prima il blocco di codice.
+All'inizio la variabile `$x` vale `100`. La condizione `while` controlla se `$x` è `10` o meno. Quindi la condizione è già `False`. Ma il blocco di codice gira comunque una volta.
 
 ```console
 $ raku t.raku
@@ -28,7 +28,7 @@ You entered 20.
 20 is bigger than 10.
 ```
 
-Ora cambiamo il programma e usiamo `until`.
+Ora scriviamo il programma con `until`.
 
 ```raku
 my $x = 0;
@@ -39,7 +39,7 @@ repeat {
 say "$x is bigger than 10.";
 ```
 
-Eseguilo e controlla se funziona:
+Eseguilo e controlla il risultato:
 
 ```console
 $ raku t.raku

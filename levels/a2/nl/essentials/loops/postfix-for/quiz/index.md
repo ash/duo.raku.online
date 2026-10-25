@@ -4,7 +4,7 @@ title: Quiz — Postfix `for`*
 
 {% include menu.html %}
 
-Maak het programma af. Het moet `for` na het blok gebruiken, en het moet deze tekst afdrukken:
+Maak het programma af. Zet `for` na het blok. Het programma moet deze tekst afdrukken:
 
     A
     A
@@ -22,7 +22,7 @@ Hier is het begin van de code:
 . | &nbsp;&nbsp;&nbsp;&nbsp;.say;
 } | ␣ for &apos;A&apos;..&apos;C&apos;;
 
-<div class="extended-explanation">Deze code gebruikt een codeblok met <code>for</code> erachter. Let op: <code>for</code> moet op dezelfde regel staan als de sluitende accolade. Als je het op een nieuwe regel zet, hoort het blok niet meer bij de lus. Dan krijg je een fout: <code>Missing block</code>. Het is beter om zo geen codeblokken met postfix-vormen te gebruiken.</div>
+<div class="extended-explanation">Hier staat <code>for</code> achter een codeblok. Het woord <code>for</code> moet op dezelfde regel staan als de <code>}</code>. Als <code>for</code> op een nieuwe regel staat, heeft de lus geen blok. Dan toont Raku een fout voordat het programma draait: <code>Missing block</code>. Probeer blokken niet op deze manier te gebruiken.</div>
 
 {% include quiz.html %}
 

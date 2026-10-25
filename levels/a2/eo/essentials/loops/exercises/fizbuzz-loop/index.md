@@ -6,11 +6,11 @@ title: FizzBuzz en buklo
 
 ## Problemo
 
-Prenu la programon el la [ekzerco ‘FizzBuzz’](/eo/essentials/conditional-checks/exercises/fizz-buzz) kaj ŝanĝu ĝin. Ĝi devas presi la rezulton por ĉiuj tutaj nombroj de 1 ĝis 50. Ĉiu nombro estas en sia propra linio, kaj post ĝi venas `Fizz` kaj/aŭ `Buzz`.
+Prenu la programon el la [ekzerco ‘FizzBuzz’](/eo/essentials/conditional-checks/exercises/fizz-buzz) kaj ŝanĝu ĝin. Nun ĝi devas funkcii por ĉiuj tutaj nombroj de 1 ĝis 50. Ĉiu nombro estas en sia propra linio. Post la nombro, ĝi presas `Fizz` kaj/aŭ `Buzz`.
 
 ## Ekzemplo
 
-Jen la unuaj kelkaj linioj:
+Jen la unuaj linioj:
 
 ```console
 $ raku fizbuzz-loop.raku

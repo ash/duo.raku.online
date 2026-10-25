@@ -4,7 +4,7 @@ title: 'Solution: Fakultät'
 
 {% include menu.html %}
 
-Für die Fakultät von `N` multipliziert man alle ganzen Zahlen von 1 bis `N` miteinander. Die Fakultät von 4 ist zum Beispiel 1 * 2 * 3 * 4 = 24.
+Für die Fakultät von `N` multiplizierst du alle Zahlen von 1 bis `N`. Die Fakultät von 4 ist zum Beispiel 1 * 2 * 3 * 4 = 24.
 
 ## Code
 
@@ -21,7 +21,7 @@ say $f;
 
 ## Ausgabe
 
-Führe das Programm ein paar Mal mit verschiedenen Werten für `$n` aus.
+Führe das Programm ein paar Mal aus. Probiere verschiedene Werte für `$n` aus.
 
 ```console
 $ raku exercises/loops/factorial.raku
@@ -30,9 +30,9 @@ $ raku exercises/loops/factorial.raku
 
 ## Kommentare
 
-Dieses Programm verwendet den Operator `*=`. Er ist eine kurze Schreibweise für Multiplizieren und Zuweisen: `$x *= $y` bedeutet dasselbe wie `$x = $x * $y`.
+Das Programm verwendet den Operator `*=`. Er multipliziert und speichert das Ergebnis in der Variablen. Also ist `$x *= $y` dasselbe wie `$x = $x * $y`.
 
-Du kannst auch eine ‚vollständige‘ Schleife statt der Postfix-Form verwenden:
+Du kannst auch eine ‚vollständige‘ Schleife schreiben, mit `for` vor dem Block:
 
 ```raku
 my $n = 8;
@@ -47,8 +47,8 @@ say $f;
 
 ## Mehr dazu
 
-Wir kommen im Kurs noch mehrmals zu dieser Aufgabe zurück. In diesem Teil des Kurses lösen wir sie auch mit Rekursion.
+Diese Aufgabe kommt im Kurs noch ein paar Mal vor. In diesem Teil lösen wir sie auch auf eine andere Art. Wir verwenden eine Funktion, die sich selbst aufruft.
 
-Im zweiten Teil des Kurses lernst du Reduktionsoperatoren kennen. Mit ihnen ist die Lösung sehr einfach. Du lernst auch, einen eigenen Operator `!` zu erstellen. Dann kannst du `$n!` schreiben und bekommst so eine Fakultät. Später sehen wir noch eine interessante Lösung mit der `where`-Klausel.
+Im zweiten Teil lernst du Reduktionsoperatoren kennen. Mit ihnen ist die Lösung sehr einfach. Du lernst auch, einen eigenen Operator zu machen, `!`. Dann kannst du `$n!` für eine Fakultät schreiben. Später siehst du noch eine schöne Lösung mit `where`.
 
 {% include nav.html %}

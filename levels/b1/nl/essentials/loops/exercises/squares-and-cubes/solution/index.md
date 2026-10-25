@@ -6,7 +6,7 @@ title: 'Solution: Kwadraten en kubussen in een lus'
 
 ## Code
 
-Hier is de code van de oplossing. De `for`-lus gebruikt een bereik dat loopt van `-5` tot `5`.
+Hier is de oplossing. De `for`-lus gebruikt een bereik dat loopt van `-5` tot `5`.
 
 ```raku
 for -5 .. 5 -> $n {

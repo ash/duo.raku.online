@@ -4,7 +4,7 @@ title: 'Solution: Deling door aftrekking'
 
 {% include menu.html %}
 
-Delen is herhaald aftrekken. Het programma heeft een `while`-lus die `$b` van `$a` aftrekt en dit herhaalt zolang de huidige waarde van `$a` niet kleiner is dan `$b`. De variabele `$n` telt de iteraties, en dat is ook het resultaat dat we nodig hebben.
+Delen is gewoon vaak achter elkaar aftrekken. Het programma heeft een `while`-lus die `$b` van `$a` aftrekt. Dat herhaalt hij zolang `$a` nog niet kleiner is dan `$b`. De variabele `$n` telt de rondes van de lus. Dit aantal is ook het resultaat.
 
 ## Code
 
@@ -34,7 +34,7 @@ $ raku exercises/loops/division-via-subtraction.raku
 7
 ```
 
-Probeer dan bijvoorbeeld `$b` te veranderen in `20`, en controleer of het resultaat correct is:
+Probeer dan andere waarden. Zet bijvoorbeeld `$b` op `20` en controleer of het resultaat klopt:
 
 ```console
 $ raku exercises/loops/division-via-subtraction.raku

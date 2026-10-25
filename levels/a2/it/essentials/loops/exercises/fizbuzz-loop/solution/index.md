@@ -4,7 +4,7 @@ title: 'Solution: FizzBuzz in un ciclo'
 
 {% include menu.html %}
 
-Questa volta il programma controlla la divisibilità in un ciclo. Non stampa subito le parole. Prima le raccoglie in una variabile separata. Poi mette questa variabile in una stringa.
+Questa volta il programma controlla ogni numero in un ciclo. Non stampa subito le parole. Prima le raccoglie in una variabile a parte. Poi mette questa variabile in una stringa.
 
 ## Codice
 
@@ -29,6 +29,6 @@ $ raku exercises/loops/fizbuzz-loop.raku
 
 ## Commento
 
-A un programmatore molto attento questa soluzione può non piacere. Stampa uno spazio dopo i due punti, anche per i numeri senza Fizz o Buzz. Cambia il programma per risolvere questo problema.
+Questa soluzione ha un piccolo problema. Stampa sempre uno spazio dopo i due punti. Lo fa anche senza Fizz o Buzz. A un programmatore molto attento questo non piace. Cambia il programma e correggilo.
 
 {% include nav.html %}

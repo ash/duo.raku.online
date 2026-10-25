@@ -4,7 +4,7 @@ title: 'Solutio: FizzBuzz in ansa'
 
 {% include menu.html %}
 
-Hoc tempore, probatio divisibilitatis in circulo fit. Pro verbis directe imprimendis, programma ea primum in variabili separata colligit et postea eam in chordam interpolat.
+Hoc tempore, programma divisibilitatem intra circulum probat. Verba non statim imprimit. Potius, ea primum in variabili separata colligit. Postea hanc variabilem in chordam inserit.
 
 ## Codex
 
@@ -29,6 +29,6 @@ $ raku exercises/loops/fizbuzz-loop.raku
 
 ## Commentarium
 
-Solutor problematum valde severus hanc solutionem fortasse non perfectam putabit, quia spatium post colon imprimit etiam pro numeris qui nullum Fizz aut Buzz acceperunt. Muta programma ut hoc problema vites.
+Programmatori valde diligenti haec solutio fortasse non placet. Semper spatium post colon imprimit, etiam sine Fizz aut Buzz. Muta programma ut hoc corrigas.
 
 {% include nav.html %}

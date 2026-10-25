@@ -4,7 +4,7 @@ title: 'Solution: División por resta'
 
 {% include menu.html %}
 
-La división es una resta repetida. El programa tiene un bucle `while` que resta `$b` de `$a` y lo repite mientras el valor actual de `$a` no sea menor que `$b`. La variable `$n` cuenta las iteraciones, y también es el resultado que necesitamos.
+La división es solo una resta hecha muchas veces. El programa tiene un bucle `while` que resta `$b` de `$a`. Repite esto mientras `$a` todavía no sea menor que `$b`. La variable `$n` cuenta las vueltas del bucle. Esta cuenta también es el resultado.
 
 ## Código
 
@@ -34,7 +34,7 @@ $ raku exercises/loops/division-via-subtraction.raku
 7
 ```
 
-Luego intenta, por ejemplo, cambiar `$b` a `20`, y comprueba que el resultado es correcto:
+Luego prueba otros valores. Por ejemplo, da a `$b` el valor `20` y comprueba que el resultado es correcto:
 
 ```console
 $ raku exercises/loops/division-via-subtraction.raku

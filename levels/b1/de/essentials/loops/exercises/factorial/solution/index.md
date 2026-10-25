@@ -4,7 +4,7 @@ title: 'Solution: Fakultät'
 
 {% include menu.html %}
 
-Die Fakultät von `N` ist das Produkt aller ganzen Zahlen von 1 bis einschließlich `N`. Zum Beispiel ist die Fakultät von 4 gleich 1 * 2 * 3 * 4 = 24.
+Die Fakultät von `N` ist das Produkt aller ganzen Zahlen von 1 bis `N`. Zum Beispiel ist die Fakultät von 4 gleich 1 * 2 * 3 * 4 = 24.
 
 ## Code
 
@@ -21,7 +21,7 @@ say $f;
 
 ## Ausgabe
 
-Führe das Programm ein paar Mal aus und probiere verschiedene Werte für `$n`.
+Führe das Programm ein paar Mal mit verschiedenen Werten für `$n` aus.
 
 ```console
 $ raku exercises/loops/factorial.raku
@@ -30,9 +30,9 @@ $ raku exercises/loops/factorial.raku
 
 ## Kommentare
 
-Dieses Programm verwendet den Operator `*=`, eine Kurzform für Multiplikation mit Zuweisung: `$x *= $y` ist dasselbe wie `$x = $x * $y`.
+Dieses Programm verwendet den Operator `*=`, der in einem Schritt multipliziert und zuweist: `$x *= $y` bedeutet dasselbe wie `$x = $x * $y`.
 
-Du kannst auch eine ‚vollständige‘ Schleife anstelle der Postfix-Form verwenden:
+Statt der Postfix-Form kannst du auch eine ‚vollständige‘ Schleife verwenden:
 
 ```raku
 my $n = 8;
@@ -47,8 +47,8 @@ say $f;
 
 ## Mehr zu diesem Thema
 
-Wir werden noch mehrmals zu dieser Aufgabe zurückkommen. In diesem Teil des Kurses werden wir sie auch rekursiv lösen.
+Wir kommen noch mehrmals zu dieser Aufgabe zurück. Später in diesem Teil des Kurses lösen wir sie auch mit Rekursion.
 
-Im zweiten Teil des Kurses lernen wir die sogenannten Reduktionsoperatoren kennen, mit denen die Lösung sehr einfach wird. Wir sehen auch, wie du einen eigenen Operator `!` definierst, sodass du `$n!` schreiben kannst, um eine Fakultät zu berechnen. Schließlich sehen wir eine weitere interessante Lösung, wenn wir über die `where`-Klausel sprechen.
+Im zweiten Teil des Kurses lernen wir Reduktionsoperatoren kennen. Sie machen die Lösung sehr einfach. Wir erstellen auch einen eigenen Operator `!`, sodass `$n!` eine Fakultät ergibt. Schließlich gibt es noch eine interessante Lösung, wenn wir über die `where`-Klausel sprechen.
 
 {% include nav.html %}

@@ -4,14 +4,14 @@ title: 'Solution: Fibonacci-Zahlen'
 
 {% include menu.html %}
 
-Dieser Algorithmus liefert die Fibonacci-Zahlen.
+So bekommen Sie die Fibonacci-Zahlen.
 
 1. _F<sub>0</sub>_ = 0, _F<sub>1</sub>_ = 1
 2. _F<sub>n</sub>_ = _F<sub>n-1</sub>_ + _F<sub>n-2</sub>_
 
 ## Code
 
-Der Code folgt genau dem Algorithmus. Er verwendet zwei Variablen für die aktuellen zwei Fibonacci-Zahlen. Er ändert sie in einer Schleife. Beide Variablen bekommen ihre neuen Werte [in einer Zuweisung](/de/essentials/scalar-variables/assigning-a-value/#multiple-assignment).
+Der Code macht genau das, was der Algorithmus sagt. Er hat zwei Variablen für die zwei aktuellen Fibonacci-Zahlen. Die Schleife ändert sie jedes Mal. Beide Variablen bekommen neue Werte [in einer Zuweisung](/de/essentials/scalar-variables/assigning-a-value/#multiple-assignment).
 
 ```raku
 my $a = 0;
@@ -28,7 +28,7 @@ for ^19 {
 
 ## Ausgabe
 
-Hier ist die Ausgabe. Das Programm gibt die ersten 20 Zahlen aus.
+Hier ist die Ausgabe. Sie zeigt die ersten 20 Zahlen.
 
 ```console
 $ raku exercises/loops/fibonacci-numbers.raku
@@ -56,6 +56,6 @@ $ raku exercises/loops/fibonacci-numbers.raku
 
 ## Mehr dazu
 
-Merken Sie sich diese Aufgabe. Später im Kurs kommen wir zu ihr zurück. Dann lösen wir sie auf eine neue Art mit _Sequenzen_ in Raku.
+Merken Sie sich diese Aufgabe. Später kommen wir zu ihr zurück. Dann verwenden wir _Sequenzen_ in Raku. Das ist eine neue und spannende Art, sie zu lösen.
 
 {% include nav.html %}

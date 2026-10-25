@@ -4,9 +4,9 @@ title: '`while` kaj `until` kiel modifiloj de deklaroj'
 
 {% include menu.html %}
 
-Vi ankaŭ povas skribi `while` kaj `until` post deklaro. Ĉi tiu formo nomiĝas modifilo de deklaro. Ĝi funkcias [kiel](/eo/essentials/conditional-checks/modifiers) `if` kaj `unless` post deklaro.
+Vi ankaŭ povas meti `while` aŭ `until` post deklaro. Ni nomas tion deklara modifilo. Vi jam konas ĝin [el `if` kaj `unless`](/eo/essentials/conditional-checks/modifiers).
 
-Jen ekzemplo. Ĝi trovas la reston de divido:
+Jen ekzemplo. Ĝi trovas la reston, aŭ tion, kio restas post divido:
 
 ```raku
 my $x = 10;
@@ -14,13 +14,13 @@ $x -= 3 while $x > 2;
 say $x; # 1
 ```
 
-Ĉi tie, `-=` estas operatoro. Ĝi subtrahas kaj asignas samtempe. Do `$x -= 3` signifas la samon kiel `$x = $x - 3`.
+Ĉi tie, `-=` estas operatoro. Ĝi faras du aferojn. Ĝi deprenas nombron. Ĝi ankaŭ konservas la rezulton en la variablo. Do `$x -= 3` estas la sama kiel `$x = $x - 3`.
 
-La `while` modifilo ripetas la deklaron `$x -= 3`. Ĝi ripetas ĝin, dum la kondiĉo `$x > 2` estas `True`. Kiam la kondiĉo fariĝas `False`, la buklo haltas.
+La `while` modifilo ripetas la deklaron `$x -= 3`. Ĝi ripetas ĝin, dum `$x > 2` estas `True`. Kiam `$x > 2` estas `False`, la buklo haltas.
 
-Se la kondiĉo estas `False` komence, la deklaro tute ne ruliĝas.
+Se la kondiĉo estas `False` komence, la deklaro neniam ruliĝas.
 
-Vi povas skribi la saman programon per `until`. Por tio, vi devas uzi la malan kondiĉon:
+Vi povas skribi la saman programon per `until`. Tiam vi bezonas la malan kondiĉon:
 
 ```raku
 my $x = 10;

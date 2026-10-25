@@ -4,14 +4,14 @@ title: 'Risinājums: Fibonači skaitļi'
 
 {% include menu.html %}
 
-Šis algoritms definē Fibonači skaitļus.
+Šis algoritms dod Fibonači skaitļus.
 
 1. _F<sub>0</sub>_ = 0, _F<sub>1</sub>_ = 1
 2. _F<sub>n</sub>_ = _F<sub>n-1</sub>_ + _F<sub>n-2</sub>_
 
 ## Kods
 
-Kods seko algoritmam soli pa solim. Tas izmanto divus mainīgos, lai glabātu pašreizējos divus Fibonači skaitļus, un atjaunina tos ciklā. Ņemiet vērā, ka abi mainīgie saņem savas jaunās vērtības [vienā piešķiršanā](/lv/essentials/scalar-variables/assigning-a-value/#multiple-assignment).
+Kods precīzi seko algoritmam. Tas glabā divus pašreizējos Fibonači skaitļus divos mainīgajos. Cikls tos atjaunina. Ņemiet vērā, ka abi mainīgie saņem jaunas vērtības [vienā piešķiršanā](/lv/essentials/scalar-variables/assigning-a-value/#multiple-assignment).
 
 ```raku
 my $a = 0;
@@ -28,7 +28,7 @@ for ^19 {
 
 ## Izvade
 
-Šeit ir izvade tai programmai, kas izdrukā pirmos 20 skaitļus.
+Šeit ir programmas izvade ar pirmajiem 20 skaitļiem.
 
 ```console
 $ raku exercises/loops/fibonacci-numbers.raku
@@ -56,6 +56,6 @@ $ raku exercises/loops/fibonacci-numbers.raku
 
 ## Vairāk par šo tēmu
 
-Atcerieties šo uzdevumu, jo vēlāk mēs pie tā atgriezīsimies un atradīsim vēl vienu aizraujošu risinājumu ar Raku _sekvencēm_.
+Atcerieties šo uzdevumu, jo vēlāk mēs pie tā atgriezīsimies. Tad mēs atradīsim vēl vienu aizraujošu risinājumu ar Raku _sekvencēm_.
 
 {% include nav.html %}

@@ -4,7 +4,7 @@ title: 'Risinājums: Faktoriāls'
 
 {% include menu.html %}
 
-`N` faktoriāls ir visu veselo skaitļu reizinājums no 1 līdz `N` ieskaitot. Piemēram, 4 faktoriāls ir 1 * 2 * 3 * 4 = 24.
+`N` faktoriāls ir visu veselo skaitļu reizinājums no 1 līdz `N`. Piemēram, 4 faktoriāls ir 1 * 2 * 3 * 4 = 24.
 
 ## Kods
 
@@ -21,7 +21,7 @@ say $f;
 
 ## Izvade
 
-Palaid programmu vairākas reizes un izmēģini dažādas `$n` vērtības.
+Palaid programmu dažas reizes ar dažādām `$n` vērtībām.
 
 ```console
 $ raku exercises/loops/factorial.raku
@@ -30,9 +30,9 @@ $ raku exercises/loops/factorial.raku
 
 ## Komentāri
 
-Šī programma izmanto `*=` operatoru — saīsinātu formu reizināšanai ar piešķiršanu: `$x *= $y` ir tas pats, kas `$x = $x * $y`.
+Šī programma izmanto `*=` operatoru, kas reizina un piešķir vienā solī: `$x *= $y` nozīmē to pašu, ko `$x = $x * $y`.
 
-Tu vari izmantot arī ‘pilnu’ ciklu postfix formas vietā:
+Postfix formas vietā tu vari izmantot arī ‘pilnu’ ciklu:
 
 ```raku
 my $n = 8;
@@ -47,8 +47,8 @@ say $f;
 
 ## Vairāk par šo tēmu
 
-Mēs vairākas reizes atgriezīsimies pie šī uzdevuma. Šajā kursa daļā mēs to arī atrisināsim rekursīvi.
+Mēs vairākas reizes atgriezīsimies pie šī uzdevuma. Vēlāk šajā kursa daļā mēs to atrisināsim arī ar rekursiju.
 
-Kursa otrajā daļā mēs uzzināsim par tā sauktajiem reducēšanas operatoriem, kas padara risinājumu ļoti vienkāršu. Mēs arī redzēsim, kā definēt savu operatoru `!`, lai tu varētu rakstīt `$n!` un aprēķināt faktoriālu. Visbeidzot, mēs redzēsim vēl vienu interesantu risinājumu, kad runāsim par `where` klauzulu.
+Kursa otrajā daļā mēs uzzināsim par reducēšanas operatoriem. Tie padara risinājumu ļoti vienkāršu. Mēs arī izveidosim savu operatoru `!`, lai `$n!` dotu faktoriālu. Visbeidzot, būs vēl viens interesants risinājums, kad runāsim par `where` klauzulu.
 
 {% include nav.html %}

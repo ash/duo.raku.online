@@ -8,7 +8,7 @@ El programa utiliza dos bucles y dos rangos.
 
 ## Código
 
-Aquí tienes una solución posible:
+Aquí tienes una forma de resolverlo:
 
 ```raku
 my $size = prompt 'Enter the size: ';
@@ -39,12 +39,12 @@ Enter the size: 7
 
 ## Comentario
 
-Mira cómo el programa imprime el dígito actual:
+Mira cómo el programa imprime cada dígito:
 
 ```raku
 .print for 1..$n;
 ```
 
-Igual que con `say`, puedes llamar a `print` como un método. Aquí, el programa lo llama en la [variable de tema](/es/essentials/loops/topic) `$_`.
+Puedes llamar a `print` como un método, igual que `say`. Aquí, el programa lo llama en la [variable de tema](/es/essentials/loops/topic) `$_`.
 
 {% include nav.html %}

@@ -6,11 +6,11 @@ title: Fibonacci-Zahlen
 
 ## Problem
 
-Schreiben Sie ein Programm, das die ersten 20 Fibonacci-Zahlen ausgibt.
+Schreiben Sie ein Programm. Es gibt die ersten 20 Fibonacci-Zahlen aus.
 
 ## Beispiel
 
-Wenn Sie das Programm ausführen, gibt es die ersten Fibonacci-Zahlen aus:
+Das Programm gibt die ersten Fibonacci-Zahlen aus:
 
 ```console
 $ raku fibonacci-numbers.raku

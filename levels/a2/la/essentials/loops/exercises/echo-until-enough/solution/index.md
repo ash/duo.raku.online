@@ -4,11 +4,11 @@ title: 'Solutio: Echo usque satis'
 
 {% include menu.html %}
 
-Hoc programma ansam requirit quae desinit cum usor verbum speciale inserit.
+Hoc programma ansam requirit. Ansa desinit cum usor verbum speciale inserit.
 
 ## Codex
 
-Potes problema pluribus modis similibus solvere, cum `while`, `until`, vel `repeat`. Hic est unus ex illis.
+Problema cum `while`, `until`, vel `repeat` solvere potes. Hi modi valde similes sunt. Hic est unus ex eis.
 
 ```raku
 my $verbum;
@@ -24,7 +24,7 @@ say 'OK, confectum.';
 
 ## Exitus
 
-Curre programma et pauca verba diversa insere. Deinde ansam siste.
+Curre programma. Insere pauca verba diversa. Deinde ansam siste.
 
 ```console
 $ raku exercises/loops/echo-usque-satis.raku
@@ -43,6 +43,6 @@ OK, confectum.
 
 ## Commentarium
 
-Nota quod variabilem `$verbum` _ante_ ansam declaras. Probatio `while` extra corpus ansae est. Si variabilem intra ansam definis, probatio eam videre non potest.
+Nota: variabilem `$verbum` _ante_ ansam creas. Probatio `while` non est intra corpus ansae. Itaque probatio variabilem intra ansam videre non potest.
 
 {% include nav.html %}

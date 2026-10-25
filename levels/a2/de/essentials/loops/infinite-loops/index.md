@@ -4,7 +4,7 @@ title: Endlosschleifen
 
 {% include menu.html %}
 
-Sie können `loop` auch nur mit einem Körper verwenden:
+Sie können `loop` auch nur mit einem Körper schreiben:
 
 ```raku
 loop {
@@ -12,6 +12,6 @@ loop {
 }
 ```
 
-Diese Schleife läuft endlos. Die Schleife hört erst auf, wenn Sie das Programm stoppen, zum Beispiel mit `Strg+C`. Im zweiten Teil des Kurses lernen Sie bessere Wege kennen, Schleifen zu steuern.
+Diese Schleife hört nie von selbst auf. Sie müssen das Programm stoppen, zum Beispiel mit `Strg+C`. Der zweite Teil des Kurses zeigt bessere Wege, Schleifen zu steuern.
 
 {% include nav.html %}

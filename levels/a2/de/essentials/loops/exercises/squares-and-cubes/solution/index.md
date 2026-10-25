@@ -6,7 +6,7 @@ title: 'Solution: Quadrate und Würfel in einer Schleife'
 
 ## Code
 
-Hier ist der Code der Lösung. Die `for`-Schleife verwendet einen Bereich von `-5` bis `5`.
+Hier ist der Code. Die `for`-Schleife verwendet einen Bereich von `-5` bis `5`.
 
 ```raku
 for -5 .. 5 -> $n {

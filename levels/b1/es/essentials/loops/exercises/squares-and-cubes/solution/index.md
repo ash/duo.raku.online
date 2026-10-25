@@ -6,7 +6,7 @@ title: 'Solution: Cuadrados y cubos en un bucle'
 
 ## Código
 
-Aquí está el código de la solución. El bucle `for` usa un rango que va desde `-5` hasta `5`.
+Aquí está la solución. El bucle `for` usa un rango que va desde `-5` hasta `5`.
 
 ```raku
 for -5 .. 5 -> $n {

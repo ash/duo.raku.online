@@ -4,7 +4,7 @@ title: Trīs izteiksmju cikls
 
 {% include menu.html %}
 
-`loop` paziņojums Raku valodā ir līdzīgs klasiskajiem cikliem C valodā un līdzīgās valodās. Tas pieņem trīs paziņojumus. Pirmais iestata sākuma vērtību. Otrais ir pārbaude. Trešais maina cikla mainīgo. Cikla ķermenis izpildās atkal un atkal, kamēr pārbaude ir `True`.
+Raku valodā ir `loop` paziņojums. Tas darbojas kā cikli C valodā un līdzīgās valodās. Tam ir trīs paziņojumi. Pirmais dod cikla mainīgajam sākuma vērtību. Otrais ir pārbaude. Trešais maina cikla mainīgo. Cikls izpildās, kamēr pārbaude ir `True`.
 
 ```raku
 loop (my $c = 0; $c < 5; $c++) {
@@ -12,9 +12,9 @@ loop (my $c = 0; $c < 5; $c++) {
 }
 ```
 
-Šeit `++` ir operators aiz mainīgā. Tas pieskaita mainīgajam 1. Vairāk operatoru jūs uzzināsiet kursa otrajā daļā.
+Šeit `++` ir operators. Jūs to rakstāt aiz mainīgā. Tas pieskaita mainīgajam 1. Kursa otrajā daļā ir vairāk operatoru.
 
-Programma izpilda cikla ķermeni piecas reizes.
+Cikla ķermenis izpildās piecas reizes.
 
 ```console
 $ raku t.raku
@@ -25,7 +25,7 @@ The current value of the counter is 3.
 The current value of the counter is 4.
 ```
 
-Jūs varat izlaist dažus vai pat visus paziņojumus `loop` galvenē. Piemēram, šeit ir tā pati programma:
+Jūs varat izlaist dažus no trim `loop` paziņojumiem. Jūs varat izlaist pat visus. Piemēram, šeit ir tā pati programma:
 
 ```raku
 my $c = 0;
@@ -37,6 +37,6 @@ loop (; $c < 5;) {
 
 ## * * *
 
-Raku valodā `loop` neizmanto ļoti bieži. Jūs to varat redzēt, piemēram, programmās, ko kāds rīks pārtulkoja no C uz Raku. Raku valodā ir vieglāki cikli, piemēram, `for`. Pavisam drīz mēs apskatīsim `for`.
+Raku valodā `loop` neizmanto ļoti bieži. Dažreiz kāds rīks pārvērš C kodu Raku kodā. Šādā kodā jūs varat redzēt `loop`. Raku valodā ir vieglāki cikli, piemēram, `for`. Mēs apskatīsim `for` pavisam drīz.
 
 {% include nav.html %}

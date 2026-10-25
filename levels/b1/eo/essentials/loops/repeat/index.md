@@ -4,9 +4,9 @@ title: 'Uzante `repeat`'
 
 {% include menu.html %}
 
-La `while` kaj `until` blokoj eble neniam ruliĝos, se la kondiĉo estas `False` komence. La `repeat` bloko, male, ĉiam ruliĝas almenaŭ unu fojon. La kondiĉo estas kontrolata post la koda bloko. Por la kontrolo, vi uzas la samajn vortojn `while` aŭ `until`.
+Bloko `while` aŭ `until` eble neniam ruliĝos, se la kondiĉo estas `False` de la komenco. Bloko `repeat`, male, ĉiam ruliĝas almenaŭ unu fojon. Ĝia kondiĉo estas kontrolata post la bloko. Por la kontrolo, vi uzas la samajn vortojn, `while` aŭ `until`.
 
-Rigardu ĉi tiun programon.
+Ekrigardu ĉi tiun programon.
 
 ```raku
 my $x = 100;
@@ -17,7 +17,7 @@ repeat {
 say "$x is bigger than 10.";
 ```
 
-La variablo `$x` komence havas la valoron `100`, kaj la `while` kondiĉo kontrolas, ĉu `$x` estas malpli ol aŭ egala al `10`. Kun ĉi tiu valoro, la kondiĉo jam estas `False`, sed la koda bloko tamen unue ruliĝas unu fojon.
+La variablo `$x` komence havas la valoron `100`. La `while` kondiĉo kontrolas, ĉu `$x` estas malpli ol aŭ egala al `10`. Kun ĉi tiu valoro, la kondiĉo jam estas `False`, sed la bloko tamen unue ruliĝas unu fojon.
 
 ```console
 $ raku t.raku
@@ -28,7 +28,7 @@ You entered 20.
 20 is bigger than 10.
 ```
 
-Ni ŝanĝu la programon, por ke ĝi uzu `until` anstataŭe.
+Nun ni ŝanĝu la programon, por ke ĝi uzu `until`.
 
 ```raku
 my $x = 0;
@@ -39,7 +39,7 @@ repeat {
 say "$x is bigger than 10.";
 ```
 
-Rulu ĝin por kontroli, ke ĝi funkcias kiel atendite:
+Rulu ĝin por kontroli, ke ĝi funkcias tiel, kiel vi atendas:
 
 ```console
 $ raku t.raku

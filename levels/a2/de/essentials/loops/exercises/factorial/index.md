@@ -6,11 +6,11 @@ title: Fakultät
 
 ## Problem
 
-Schreiben Sie ein Programm, das die Fakultät von 8 mit einer Schleife berechnet. Dann gibt es das Ergebnis aus.
+Schreiben Sie ein Programm mit einer Schleife. Es berechnet die Fakultät von 8 und gibt sie aus.
 
 ## Beispiel
 
-Dieses Beispiel zeigt, was das Programm macht:
+So funktioniert das Programm:
 
 ```console
 $ raku factorial.raku

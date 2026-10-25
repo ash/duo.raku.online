@@ -21,7 +21,7 @@ say $n;
 
 ## 2
 
-Kā novērst, lai šī programma nedarbotos bezgalīgi? Veiciet kodā nepieciešamās izmaiņas.
+Kā jūs varat panākt, lai šī programma nedarbotos bezgalīgi? Mainiet kodu, kā vajadzīgs.
 
 {:.quiz-code .fill}
 . | my $n = 5;

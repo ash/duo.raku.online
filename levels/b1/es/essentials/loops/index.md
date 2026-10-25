@@ -4,8 +4,8 @@ title: Bucles
 
 {% include menu.html %}
 
-Los bucles te permiten repetir la misma acción varias veces. En esta sección, veremos algunas de las construcciones de Raku que te ayudan a crear bucles. Habrá más en la segunda parte del curso.
+Un bucle repite la misma acción varias veces. Esta sección presenta brevemente algunas formas de crear bucles en Raku. Hay más en la segunda parte del curso, así que sigue leyendo.
 
-Por ahora, veamos los siguientes temas.
+Por ahora, veremos estos temas.
 
 {% include nav.html %}

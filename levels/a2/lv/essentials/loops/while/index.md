@@ -4,7 +4,7 @@ title: 'Izmantojot `while`'
 
 {% include menu.html %}
 
-`while` ciklam ir nosacījums un koda bloks. Raku izpilda bloku atkal un atkal, _kamēr_ nosacījums ir `True`.
+`while` ciklam ir nosacījums un koda bloks. Nosacījums ir `True` vai `False`. Raku izpilda bloku atkal un atkal, _kamēr_ nosacījums ir `True`.
 
 ```raku
 my $x = 0;
@@ -15,7 +15,7 @@ while $x <= 10 {
 say "$x ir lielāks par 10.";
 ```
 
-Programma prasa jums skaitli. Ja skaitlis nav lielāks par 10, cilpa darbojas vēlreiz. Kad skaitlis ir lielāks par 10, nosacījums `$x <= 10` vairs nav patiess. Tad cilpa apstājas, un programma pāriet uz nākamo rindu.
+Programma prasa jums skaitli. Ja skaitlis ir 10 vai mazāks, cilpa darbojas vēlreiz. Ja skaitlis ir lielāks par 10, nosacījums `$x <= 10` ir `False`. Tad cilpa apstājas. Programma pāriet uz nākamo rindu.
 
 ```console
 $ raku t.raku

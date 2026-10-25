@@ -4,7 +4,7 @@ title: 'Quiz — Postfixa `for`'
 
 {% include menu.html %}
 
-Conare programma complere ut formam postfixam `for` adhibeat et textum sequentem imprimat:
+Tenta programma complere. Formam postfixam `for` adhibere debet et textum sequentem imprimere:
 
     A
     A
@@ -22,7 +22,7 @@ Hic est adumbratio codicis:
 . | &nbsp;&nbsp;&nbsp;&nbsp;.say;
 } | ␣ for 'A'..'C';
 
-<div class="extended-explanation">Hic codex exemplum est clausulae codicis cum <code>for</code> postfixo. Nota quod <code>for</code> in eadem linea esse debet atque uncus curvus claudens. Si id in nova linea ponis, clausula ab anulo separatur, et errorem compilationis accipis: <code>Missing block</code>. Fortasse melius est non adhibere clausulas codicis cum structuris postfixis hoc modo.</div>
+<div class="extended-explanation">Hic codex clausulam codicis cum <code>for</code> postfixo ostendit. Nota quod <code>for</code> in eadem linea esse debet atque uncus curvus claudens. In nova linea, clausula non iam pars anuli est. Tum errorem compilationis accipis: <code>Missing block</code>. Fortasse melius est clausulas codicis cum formis postfixis hoc modo non adhibere.</div>
 
 {% include quiz.html %}
 

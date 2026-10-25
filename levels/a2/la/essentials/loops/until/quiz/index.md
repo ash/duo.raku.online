@@ -21,7 +21,7 @@ say $n;
 
 ## 2
 
-Quomodo potes efficere ut haec ansa exacte quinquies currat?
+Quid mutare debes? Ansa exacte quinquies currere debet.
 
 {:.quiz-code .fill}
 . | my $n = 1;

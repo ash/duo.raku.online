@@ -6,11 +6,11 @@ title: Eco hasta suficiente
 
 ## Problema
 
-Escribe un programa que te pida continuamente ingresar una palabra y la imprima en la terminal. Si la palabra es `suficiente`, el programa imprime un mensaje final y se detiene.
+Escribe un programa que siga pidiendo una palabra. Imprime cada palabra en la terminal. Si la palabra es `suficiente`, el programa imprime un mensaje final y se detiene.
 
 ## Ejemplo
 
-El programa puede ejecutarse para siempre, pero aquí solo mostramos un par de iteraciones.
+El programa puede ejecutarse para siempre, pero aquí solo mostramos unas pocas vueltas.
 ```console
 $ raku echo-until-enough.raku
 Tu palabra: lenguaje

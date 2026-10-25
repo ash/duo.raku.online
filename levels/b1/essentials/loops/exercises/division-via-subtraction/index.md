@@ -6,14 +6,14 @@ title: 'Exercise: Division via subtraction'
 
 ## Problem
 
-Create a program that does integer division using subtraction. The numbers are written directly in the program:
+Write a program that does integer division with subtraction. The numbers are written directly in the code:
 
 ```raku
 my $a = 175;
 my $b = 25;
 ```
 
-Complete the program so that it prints the integer part of `$a / $b`. Use only a loop and subtraction.
+Finish the program so that it prints the whole-number part of `$a / $b`. Use only a loop and subtraction.
 
 ## Example
 

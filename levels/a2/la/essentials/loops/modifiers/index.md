@@ -4,9 +4,9 @@ title: '`while` et `until` ut statement modificatores'
 
 {% include menu.html %}
 
-Potes etiam `while` et `until` post sententiam scribere. Haec forma modificator sententiae vocatur. Operatur [sicut](/la/essentials/conditional-checks/modifiers) `if` et `unless` post sententiam.
+Potes etiam `while` vel `until` post sententiam ponere. Hoc modificatorem sententiae vocamus. Iam id [ex `if` et `unless`](/la/essentials/conditional-checks/modifiers) cognoscis.
 
-Hic est exemplum. Residuum divisionis invenit:
+Hic est exemplum. Residuum invenit, id est, quod post divisionem restat:
 
 ```raku
 my $x = 10;
@@ -14,13 +14,13 @@ $x -= 3 while $x > 2;
 say $x; # 1
 ```
 
-Hic, `-=` est operator. Simul subtrahit et assignat. Itaque `$x -= 3` idem significat ac `$x = $x - 3`.
+Hic, `-=` est operator. Duas res facit. Numerum aufert. Etiam resultatum in variabili servat. Itaque `$x -= 3` idem est ac `$x = $x - 3`.
 
-Modificator `while` sententiam `$x -= 3` repetit. Eam repetit dum condicio `$x > 2` est `True`. Cum condicio fit `False`, ansa desinit.
+Modificator `while` sententiam `$x -= 3` repetit. Eam repetit dum `$x > 2` est `True`. Cum `$x > 2` est `False`, ansa desinit.
 
-Si condicio initio `False` est, sententia omnino non currit.
+Si condicio initio `False` est, sententia numquam currit.
 
-Idem programma cum `until` scribere potes. Ad hoc, condicionem contrariam adhibere debes:
+Idem programma cum `until` scribere potes. Tum condicionem contrariam habere debes:
 
 ```raku
 my $x = 10;

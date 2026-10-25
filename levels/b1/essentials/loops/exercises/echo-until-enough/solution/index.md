@@ -8,7 +8,7 @@ This program needs a loop that stops when the user enters a certain word.
 
 ## Code
 
-There are several similar ways to solve the task with `while`, `until`, or `repeat`. One of them is shown below.
+You can solve the task in several similar ways, with `while`, `until` or `repeat`. Here is one of them.
 
 ```raku
 my $word;
@@ -43,6 +43,6 @@ OK, done.
 
 ## Comment
 
-Note that you declare the `$word` variable _before_ the loop, because the `while` test is outside the scope of the loop body. If you define the variable inside the loop, the test will not see it.
+Note that you declare the variable `$word` _before_ the loop. This is because the `while` test is outside the loop body. If you declare the variable inside the loop, the test cannot see it.
 
 {% include nav.html %}

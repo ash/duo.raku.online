@@ -4,9 +4,9 @@ title: 'Utendo `until`'
 
 {% include menu.html %}
 
-Constructum `until` contrarium est `while`. Clausulam codicis exsequitur donec condicio fit `True` (aliis verbis, dum condicio est `False`).
+Ansa `until` contrarium facit atque `while`. Clausulam codicis exsequitur donec condicio fit `True`. Aliis verbis, currit dum condicio est `False`.
 
-Hic est [programma ex pagina priore](../while), mutatum ut `until` et novam condicionem adhibeat:
+Hoc est [programma ex pagina priore](../while), sed nunc cum `until` et nova condicione:
 
 ```raku
 my $x = 0;
@@ -17,7 +17,7 @@ until $x > 10 {
 say "$x est maior quam 10.";
 ```
 
-Curre programmam et inspice exitum:
+Curre programma et exitum specta:
 
 ```console
 $ raku t.raku 
@@ -34,7 +34,7 @@ Intrasti 20.
 
 ## `until` vs. `while`
 
-Compara duo programmata quae idem faciunt cum `while` et `until`:
+Compara duo programmata quae idem faciunt, unum cum `while`, alterum cum `until`:
 
 ```raku
 while $x <= 10 { . . . }
@@ -42,6 +42,6 @@ while $x <= 10 { . . . }
 until $x > 10 { . . . }
 ```
 
-Ut vides, utraque condicio contraria est alteri. Ita `while` et `until` eodem modo inter se coniunguntur atque `if` et `unless`.
+Ut vides, utraque condicio contraria est alteri. Itaque `while` et `until` par sunt eodem modo atque `if` et `unless`.
 
 {% include nav.html %}

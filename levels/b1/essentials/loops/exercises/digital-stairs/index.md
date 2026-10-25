@@ -6,18 +6,18 @@ title: 'Exercise: Digital stairs'
 
 ## Problem
 
-Create a program that prints the following structure:
+Write a program that prints the following shape:
 
     1
     12
     123
     1234
 
-The user must enter the size of the stairs (no more than 9).
+The user enters the size of the stairs, which is not bigger than 9.
 
 ## Example
 
-Here is an example of using the program with the input value `3`:
+Here is an example of the program with the input value `3`:
 
 ```console
 $ raku digital-stairs.raku

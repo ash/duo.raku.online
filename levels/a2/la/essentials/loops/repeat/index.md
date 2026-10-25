@@ -4,7 +4,7 @@ title: 'Utendo `repeat`'
 
 {% include menu.html %}
 
-Interdum clausula `while` vel `until` omnino non currit. Hoc fit cum condicio initio `False` est. Clausula `repeat` diversa est: semper saltem semel currit. Raku condicionem post clausulam inspicit. Eadem verba, `while` vel `until`, ad probationem adhibes.
+Ansa `while` vel `until` fortasse omnino non currit. Hoc fit cum condicio initio `False` est. Clausula `repeat` diversa est. Semper saltem semel currit. Raku condicionem post clausulam inspicit. Ad probationem eadem verba adhibes: `while` vel `until`.
 
 Specta hoc programma.
 
@@ -17,7 +17,7 @@ repeat {
 say "$x maior est quam 10.";
 ```
 
-Initio, variabilis `$x` est `100`. Condicio `while` inspicit an `$x` minor quam `10` vel aequalis `10` sit. Cum hoc valore, condicio iam `False` est. Sed clausula codicis tamen primum currit.
+Initio, variabilis `$x` est `100`. Condicio `while` inspicit an `$x` sit `10` vel minus. Itaque condicio iam `False` est. Sed clausula codicis tamen semel currit.
 
 ```console
 $ raku t.raku
@@ -28,7 +28,7 @@ Intrasti 20.
 20 maior est quam 10.
 ```
 
-Nunc programma mutemus et `until` adhibeamus.
+Nunc programma cum `until` scribamus.
 
 ```raku
 my $x = 0;
@@ -39,7 +39,7 @@ repeat {
 say "$x maior est quam 10.";
 ```
 
-Curre id et inspice an operetur:
+Curre id et resultatum inspice:
 
 ```console
 $ raku t.raku

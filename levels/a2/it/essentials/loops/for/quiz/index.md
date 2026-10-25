@@ -4,7 +4,7 @@ title: Comprendere il ciclo `for`
 
 {% include menu.html %}
 
-Guarda i tre programmi qui sotto. Quante righe stampa ogni programma?
+Ecco tre programmi. Quante righe stampa ogni programma?
 
 ## 1
 

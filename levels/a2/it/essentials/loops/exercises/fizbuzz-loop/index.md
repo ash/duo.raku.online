@@ -6,7 +6,7 @@ title: FizzBuzz in un ciclo
 
 ## Problema
 
-Prendi il programma dell'[esercizio ‘FizzBuzz’](/it/essentials/conditional-checks/exercises/fizz-buzz) e cambialo. Deve stampare il risultato per tutti i numeri interi da 1 a 50. Ogni numero è su una riga separata, seguito da `Fizz` e/o `Buzz`.
+Prendi il programma dell'[esercizio ‘FizzBuzz’](/it/essentials/conditional-checks/exercises/fizz-buzz) e cambialo. Ora deve funzionare per tutti i numeri interi da 1 a 50. Ogni numero è su una riga a parte. Dopo il numero, stampa `Fizz` e/o `Buzz`.
 
 ## Esempio
 

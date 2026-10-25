@@ -8,7 +8,7 @@ La programo uzas du buklojn kaj du intervalojn.
 
 ## Kodo
 
-Jen unu ebla solvo:
+Jen unu maniero solvi ĝin:
 
 ```raku
 my $size = prompt 'Enigu la grandecon: ';
@@ -39,12 +39,12 @@ Enigu la grandecon: 7
 
 ## Komento
 
-Rigardu, kiel la programo presas la nunan ciferon:
+Rigardu, kiel la programo presas ĉiun ciferon:
 
 ```raku
 .print for 1..$n;
 ```
 
-Same kiel `say`, vi povas voki `print` kiel metodon. Ĉi tie, ĝi estas vokata sur la [temvariablo](/eo/essentials/loops/topic) `$_`.
+Vi povas voki `print` kiel metodon, same kiel `say`. Ĉi tie, la programo vokas ĝin sur la [temvariablo](/eo/essentials/loops/topic) `$_`.
 
 {% include nav.html %}

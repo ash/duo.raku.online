@@ -6,11 +6,11 @@ title: 'Exercise: Fibonacci numbers'
 
 ## Problem
 
-Write a program that prints the first 20 Fibonacci numbers.
+Write a program. It prints the first 20 Fibonacci numbers.
 
 ## Example
 
-When you run the program, it prints the first Fibonacci numbers:
+The program prints the first Fibonacci numbers:
 
 ```console
 $ raku fibonacci-numbers.raku

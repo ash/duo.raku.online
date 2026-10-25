@@ -4,7 +4,7 @@ title: '`for` bukloj'
 
 {% include menu.html %}
 
-La `for` buklo estas potenca ilo por trairi plurajn elementojn unu post la alia. Ekzemple, ni prenu intervalon:
+La `for` buklo estas potenca ilo. Ĝi trairas multajn elementojn, unu post la alia. Ekzemple, ni prenu intervalon:
 
 ```raku
 for 1..5 -> $n {
@@ -12,7 +12,7 @@ for 1..5 -> $n {
 }
 ```
 
-En ĉi tiu programo, la variablo `$n` prenas la sekvan valoron el la intervalo en ĉiu iteracio. Rimarku, ke vi ne bezonas deklari la variablon per `my`. La bloko de kodo ripetiĝas tiom da fojoj, kiom da elementoj estas en la datumfonto. Do, la programo presas la nombrojn linio post linio:
+Ĉiufoje, kiam la buklo ruliĝas, la variablo `$n` prenas la sekvan valoron el la intervalo. Notu, ke vi ne devas deklari la variablon per `my`. La bloko de kodo ruliĝas unu fojon por ĉiu elemento de la datumfonto. Do la programo presas la nombrojn, po unu en ĉiu linio:
 
 ```console
 $ raku t.raku 
@@ -23,11 +23,11 @@ $ raku t.raku
 5
 ```
 
-La programo trairas ĉiujn valorojn, kiujn la [intervalo](/eo/essentials/ranges) `1..5` produktas. Ĉi tiuj estas `1`, `2`, `3`, `4` kaj `5`.
+La programo trairas ĉiujn valorojn, kiujn la [intervalo](/eo/essentials/ranges) `1..5` donas. Ĉi tiuj estas `1`, `2`, `3`, `4` kaj `5`.
 
 ## Preni pli ol unu valoron
 
-Interesa trajto de Raku estas, ke vi povas preni pli ol unu elementon en unu sola iteracio. La sekva programo presas du nombrojn ĉiufoje, kiam la buklo ruliĝas:
+Jen interesa trajto de Raku. Buklo povas preni pli ol unu elementon samtempe. La sekva programo presas du nombrojn ĉiufoje, kiam la buklo ruliĝas:
 
 ```raku
 for 1..6 -> $n, $m {

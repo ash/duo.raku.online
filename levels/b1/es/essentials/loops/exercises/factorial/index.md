@@ -6,11 +6,11 @@ title: Factorial
 
 ## Problema
 
-Crea un programa que calcule el factorial de 8 con un bucle y luego lo imprima.
+Escribe un programa que calcule el factorial de 8 con un bucle. Después, el programa imprime el resultado.
 
 ## Ejemplo
 
-Este ejemplo muestra cómo funciona el programa:
+Este ejemplo corto muestra cómo funciona el programa:
 
 ```console
 $ raku factorial.raku

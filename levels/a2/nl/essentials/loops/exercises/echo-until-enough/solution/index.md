@@ -4,11 +4,11 @@ title: 'Solution: Echo tot genoeg'
 
 {% include menu.html %}
 
-Dit programma heeft een lus nodig die stopt als de gebruiker een speciaal woord invoert.
+Dit programma heeft een lus nodig. De lus stopt als de gebruiker een speciaal woord invoert.
 
 ## Code
 
-Je kunt de taak op verschillende vergelijkbare manieren oplossen, met `while`, `until` of `repeat`. Hier is er een van.
+Je kunt de taak oplossen met `while`, `until` of `repeat`. Deze manieren lijken erg op elkaar. Hier is er een van.
 
 ```raku
 my $word;
@@ -24,7 +24,7 @@ say 'OK, klaar.';
 
 ## Uitvoer
 
-Voer het programma uit en voer een paar verschillende woorden in. Stop daarna de lus.
+Voer het programma uit. Voer een paar verschillende woorden in. Stop daarna de lus.
 
 ```console
 $ raku exercises/loops/echo-until-enough.raku
@@ -43,6 +43,6 @@ OK, klaar.
 
 ## Opmerking
 
-Let op: je declareert de variabele `$word` _voor_ de lus. De `while`-test staat buiten het lichaam van de lus. Als je de variabele in de lus definieert, kan de test hem niet zien.
+Let op: je maakt de variabele `$word` _voor_ de lus. De `while`-test staat niet in het lichaam van de lus. Dus kan de test geen variabele uit de lus zien.
 
 {% include nav.html %}

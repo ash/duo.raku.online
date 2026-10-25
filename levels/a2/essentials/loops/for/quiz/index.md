@@ -4,7 +4,7 @@ title: 'Understanding the `for` loop'
 
 {% include menu.html %}
 
-Look at the three programs below. How many lines does each program print?
+Here are three programs. How many lines does each program print?
 
 ## 1
 

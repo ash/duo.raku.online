@@ -4,7 +4,7 @@ title: 'Izpratne par `for` ciklu'
 
 {% include menu.html %}
 
-Katrai no trim programmām zemāk pasakiet, cik rindu tā izdrukā.
+Cik rindu izdrukā katra no trim zemāk redzamajām programmām?
 
 ## 1
 

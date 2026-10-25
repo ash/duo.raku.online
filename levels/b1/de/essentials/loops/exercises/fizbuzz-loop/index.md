@@ -6,7 +6,7 @@ title: FizzBuzz in einer Schleife
 
 ## Problem
 
-Ändern Sie das Programm aus der früheren [Übung ‘FizzBuzz’](/de/essentials/conditional-checks/exercises/fizz-buzz) so, dass es das Ergebnis für alle ganzen Zahlen von 1 bis 50 ausgibt. Jede Zahl steht in einer eigenen Zeile, gefolgt von `Fizz` und/oder `Buzz`.
+Ändern Sie das Programm aus der früheren [Übung ‘FizzBuzz’](/de/essentials/conditional-checks/exercises/fizz-buzz). Es soll jetzt das Ergebnis für alle ganzen Zahlen von 1 bis 50 ausgeben. Jede Zahl steht in einer eigenen Zeile, gefolgt von `Fizz` und/oder `Buzz`.
 
 ## Beispiel
 

@@ -4,9 +4,9 @@ title: Topic variabile
 
 {% include menu.html %}
 
-`$_` est variabilis specialis quae _variabilis argumenti_ appellatur.
+`$_` est variabilis specialis. Appellatur _variabilis argumenti_.
 
-Specta hanc iterationem per intervallum:
+Hic est iteratio per intervallum:
 
 ```raku
 for 1..5 -> $n {
@@ -14,7 +14,7 @@ for 1..5 -> $n {
 }
 ```
 
-Variabilem `$n` omittere potes, et tum Raku variabilem automaticam, `$_`, pro ea adhibet. Programma idem est atque hoc:
+Variabilem `$n` omittere potes. Tum Raku automatice variabilem `$_` pro ea adhibet. Itaque programma idem est atque hoc:
 
 ```raku
 for 1..5 {
@@ -22,7 +22,7 @@ for 1..5 {
 }
 ```
 
-Ut [meministi](/la/essentials/hello-world/), `say` etiam ut methodum adhibere potes:
+Ut [meministi](/la/essentials/hello-world/), `say` etiam ut methodum vocare potes:
 
 ```raku
 for 1..5 {
@@ -30,7 +30,7 @@ for 1..5 {
 }
 ```
 
-Cum methodum in `$_` vocas, ipsam variabilem scribere non debes. Itaque iteratio nostra etiam simplicior fieri potest:
+Cum methodum in `$_` vocas, non necesse est ipsam variabilem scribere. Itaque iterationem nostram etiam simpliciorem facere possumus:
 
 ```raku
 for 1..5 {

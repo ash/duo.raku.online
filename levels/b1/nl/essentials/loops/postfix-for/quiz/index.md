@@ -4,7 +4,7 @@ title: Quiz — Postfix `for`*
 
 {% include menu.html %}
 
-Probeer het programma af te maken zodat het de postfix-vorm van `for` gebruikt en de volgende tekst afdrukt:
+Probeer het programma af te maken. Het moet de postfix-vorm van `for` gebruiken en de volgende tekst afdrukken:
 
     A
     A
@@ -22,7 +22,7 @@ Hier is een concept van de code:
 . | &nbsp;&nbsp;&nbsp;&nbsp;.say;
 } | ␣ for &apos;A&apos;..&apos;C&apos;;
 
-<div class="extended-explanation">Deze code is een voorbeeld van een codeblok met de postfix <code>for</code>. Merk op dat <code>for</code> op dezelfde regel moet staan als de sluitende accolade. Als je het op een nieuwe regel zet, raakt het blok los van de lus en krijg je een compilatiefout: <code>Missing block</code>. Het is waarschijnlijk beter om op deze manier geen codeblokken met postfix-constructies te gebruiken.</div>
+<div class="extended-explanation">Deze code toont een codeblok met de postfix <code>for</code>. Merk op dat <code>for</code> op dezelfde regel moet staan als de sluitende accolade. Op een nieuwe regel hoort het blok niet meer bij de lus. Dan krijg je een compilatiefout: <code>Missing block</code>. Het is waarschijnlijk beter om codeblokken niet zo met postfix-vormen te gebruiken.</div>
 
 {% include quiz.html %}
 

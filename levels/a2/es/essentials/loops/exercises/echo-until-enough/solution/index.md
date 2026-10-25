@@ -4,11 +4,11 @@ title: 'Solution: Eco hasta suficiente'
 
 {% include menu.html %}
 
-Este programa necesita un bucle que se detiene cuando el usuario ingresa una palabra especial.
+Este programa necesita un bucle. El bucle se detiene cuando el usuario ingresa una palabra especial.
 
 ## Código
 
-Puedes resolver la tarea de varias formas parecidas, con `while`, `until` o `repeat`. Aquí tienes una de ellas.
+Puedes resolver la tarea con `while`, `until` o `repeat`. Estas formas son muy parecidas. Aquí tienes una de ellas.
 
 ```raku
 my $word;
@@ -24,7 +24,7 @@ say 'OK, terminado.';
 
 ## Salida
 
-Ejecuta el programa e ingresa algunas palabras diferentes. Luego, detén el bucle.
+Ejecuta el programa. Ingresa algunas palabras diferentes. Luego, detén el bucle.
 
 ```console
 $ raku exercises/loops/echo-until-enough.raku
@@ -43,6 +43,6 @@ OK, terminado.
 
 ## Comentario
 
-Nota que declaras la variable `$word` _antes_ del bucle. La prueba `while` está fuera del cuerpo del bucle. Si defines la variable dentro del bucle, la prueba no puede verla.
+Nota que creas la variable `$word` _antes_ del bucle. La prueba `while` no está dentro del cuerpo del bucle. Así que la prueba no puede ver una variable de dentro del bucle.
 
 {% include nav.html %}

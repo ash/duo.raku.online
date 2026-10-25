@@ -6,7 +6,7 @@ title: 'Kvizo — la `repeat` buklo'
 
 ## 1
 
-Elektu `until` aŭ `while` por ĉi tiu programo. La programo ne devus blokiĝi en senfina buklo.
+Elektu `until` aŭ `while` por ĉi tiu programo, por ke la buklo ne ruliĝu senfine.
 
 {:.quiz-code}
 . | my $n = 0;

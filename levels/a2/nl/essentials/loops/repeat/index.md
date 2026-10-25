@@ -4,7 +4,7 @@ title: Gebruik van `repeat`
 
 {% include menu.html %}
 
-Soms draait een `while`- of `until`-blok helemaal niet. Dat gebeurt als de conditie aan het begin `False` is. Een `repeat`-blok is anders: het draait altijd minstens één keer. Raku controleert de conditie na het blok. Je gebruikt dezelfde woorden, `while` of `until`, voor de controle.
+Een `while`- of `until`-lus draait misschien helemaal niet. Dat gebeurt als de conditie aan het begin `False` is. Een `repeat`-blok is anders. Het draait altijd minstens één keer. Raku controleert de conditie na het blok. Je gebruikt dezelfde woorden voor de controle: `while` of `until`.
 
 Bekijk dit programma.
 
@@ -17,7 +17,7 @@ repeat {
 say "$x is groter dan 10.";
 ```
 
-Aan het begin heeft de variabele `$x` de waarde `100`. De `while`-conditie controleert of `$x` kleiner dan of gelijk aan `10` is. Met deze waarde is de conditie al `False`. Maar het codeblok draait toch eerst.
+Aan het begin is de variabele `$x` gelijk aan `100`. De `while`-conditie controleert of `$x` `10` of minder is. Dus is de conditie al `False`. Maar het codeblok draait toch één keer.
 
 ```console
 $ raku t.raku
@@ -28,7 +28,7 @@ Je hebt 20 ingevoerd.
 20 is groter dan 10.
 ```
 
-Laten we nu het programma veranderen en `until` gebruiken.
+Nu schrijven we het programma met `until`.
 
 ```raku
 my $x = 0;
@@ -39,7 +39,7 @@ repeat {
 say "$x is groter dan 10.";
 ```
 
-Voer het uit en controleer of het werkt:
+Voer het uit en controleer het resultaat:
 
 ```console
 $ raku t.raku

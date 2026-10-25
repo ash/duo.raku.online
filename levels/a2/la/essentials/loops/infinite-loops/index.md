@@ -4,7 +4,7 @@ title: Infinitas ansae
 
 {% include menu.html %}
 
-Potes etiam `loop` cum solo corpore adhibere:
+Potes etiam `loop` cum solo corpore scribere:
 
 ```raku
 loop {
@@ -12,6 +12,6 @@ loop {
 }
 ```
 
-Hic circulus sine fine currit. Tantum desinit cum programma sistis, exempli gratia, per `Ctrl+C`. In secunda parte cursus, meliores modos disces ad circulos regendos.
+Hic circulus numquam per se desinit. Tu programma sistere debes, exempli gratia, per `Ctrl+C`. Secunda pars cursus meliores modos ostendit ad circulos regendos.
 
 {% include nav.html %}

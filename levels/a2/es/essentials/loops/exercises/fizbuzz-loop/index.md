@@ -6,7 +6,7 @@ title: FizzBuzz en un bucle
 
 ## Problema
 
-Toma el programa del [ejercicio ‘FizzBuzz’](/es/essentials/conditional-checks/exercises/fizz-buzz) y cámbialo. Debe imprimir el resultado para todos los números enteros del 1 al 50. Cada número está en su propia línea, seguido de `Fizz` y/o `Buzz`.
+Toma el programa del [ejercicio ‘FizzBuzz’](/es/essentials/conditional-checks/exercises/fizz-buzz) y cámbialo. Ahora debe funcionar para todos los números enteros del 1 al 50. Cada número está en su propia línea. Después del número, imprime `Fizz` y/o `Buzz`.
 
 ## Ejemplo
 

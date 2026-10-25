@@ -21,7 +21,7 @@ say $n;
 
 ## 2
 
-Kā jūs varat panākt, ka šis cikls izpildās tieši piecas reizes?
+Kas jums jāmaina? Ciklam jāizpildās tieši piecas reizes.
 
 {:.quiz-code .fill}
 . | my $n = 1;

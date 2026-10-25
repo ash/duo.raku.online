@@ -14,7 +14,7 @@ for 1..5 -> $n {
 }
 ```
 
-Jūs varat izlaist mainīgo `$n`. Tad Raku tā vietā izmanto mainīgo `$_`. Programma dara to pašu, ko šī:
+Jums nav jāraksta `$n`. Bez tā Raku izmanto mainīgo `$_`. Raku pats izveido šo mainīgo jūsu vietā. Tāpēc šī programma dara to pašu:
 
 ```raku
 for 1..5 {
@@ -22,7 +22,7 @@ for 1..5 {
 }
 ```
 
-Jūs [jau zināt](/lv/essentials/hello-world/), ka `say` var izmantot kā metodi:
+Jūs [jau zināt](/lv/essentials/hello-world/), ka `say` var būt arī metode:
 
 ```raku
 for 1..5 {
@@ -30,7 +30,7 @@ for 1..5 {
 }
 ```
 
-Kad jūs izsaucat metodi uz `$_`, mainīgais nav jāraksta. Tāpēc cikls var būt vēl īsāks:
+Metodes izsaukumā uz `$_` nav jāraksta `$_`. Tāpēc cikls var būt vēl īsāks:
 
 ```raku
 for 1..5 {

@@ -4,7 +4,7 @@ title: 'Uzante `while`'
 
 {% include menu.html %}
 
-La `while` buklo havas kondiĉon kaj blokon de kodo. Raku rulas la blokon denove kaj denove, _dum_ la kondiĉo estas `True`.
+La `while` buklo havas kondiĉon kaj blokon de kodo. La kondiĉo estas `True` aŭ `False`. Raku rulas la blokon denove kaj denove, _dum_ la kondiĉo estas `True`.
 
 ```raku
 my $x = 0;
@@ -15,7 +15,7 @@ while $x <= 10 {
 say "$x estas pli granda ol 10.";
 ```
 
-La programo petas de vi nombron. Se la nombro ne estas pli granda ol 10, la buklo ruliĝas denove. Kiam la nombro estas pli granda ol 10, la kondiĉo `$x <= 10` ne plu estas vera. Tiam la buklo haltas, kaj la programo iras al la sekva linio.
+La programo petas nombron de vi. Se la nombro estas 10 aŭ malpli, la buklo ruliĝas denove. Se la nombro estas pli granda ol 10, la kondiĉo `$x <= 10` estas `False`. Tiam la buklo haltas. La programo iras al la sekva linio.
 
 ```console
 $ raku t.raku

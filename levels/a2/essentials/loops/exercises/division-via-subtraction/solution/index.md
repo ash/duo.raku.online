@@ -4,7 +4,7 @@ title: 'Solution: Division via subtraction'
 
 {% include menu.html %}
 
-Division is subtraction again and again. The program has a `while` loop. The loop takes `$b` away from `$a`. It repeats this while `$a` is not less than `$b`. The variable `$n` counts the rounds of the loop. This number is also the result that we need.
+Division is subtraction, again and again. The program has a `while` loop. Each time, the loop takes `$b` away from `$a`. It does this while `$a` is not less than `$b`. The variable `$n` counts the rounds. This number is the answer.
 
 ## Code
 
@@ -27,14 +27,14 @@ say $n;
 
 ## Output
 
-Run the program a few times. First, use the given values. They divide exactly:
+Run the program a few times. Start with the numbers in the code. They divide with nothing left over:
 
 ```console
 $ raku exercises/loops/division-via-subtraction.raku
 7
 ```
 
-Then try other values. For example, change `$b` to `20` and check that the result is correct:
+Then try other numbers. For example, change `$b` to `20`. Check that the result is correct:
 
 ```console
 $ raku exercises/loops/division-via-subtraction.raku

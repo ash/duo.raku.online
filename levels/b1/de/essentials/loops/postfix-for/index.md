@@ -4,17 +4,17 @@ title: Postfix-Form von `for`
 
 {% include menu.html %}
 
-Wir haben bereits andere Anweisungsmodifikatoren gesehen: [`if` und `else`](/de/essentials/conditional-checks/modifiers) und [`while` und `until`](/de/essentials/loops/modifiers). Das ist ein Grund, ein wenig zu feiern, denn das Design von Raku ist sehr konsistent.
+Sie haben schon andere Anweisungsmodifikatoren gesehen: [`if` und `else`](/de/essentials/conditional-checks/modifiers) und [`while` und `until`](/de/essentials/loops/modifiers). Das ist ein kleiner Grund zum Feiern: Das Design von Raku ist sehr einheitlich.
 
-Wenn der Schleifenkörper kurz ist, können Sie die `for`-Schleife in einer Postfix-Form schreiben:
+Bei einem kurzen Schleifenkörper können Sie die Postfix-Form von `for` verwenden:
 
 ```raku
 .say for 1..7;
 ```
 
-Wie Sie sehen, wirken Bereiche mit der Postfix-Form von `for` sehr natürlich.
+Wie Sie sehen, passen Bereiche sehr gut zum Postfix-`for`.
 
-Dieses Programm ist dasselbe wie eine traditionellere Variante:
+Dieses Programm macht dasselbe wie eine üblichere Variante:
 
 ```raku
 for 1..7 -> $n {
@@ -22,7 +22,7 @@ for 1..7 -> $n {
 }
 ```
 
-Oder, wenn Sie die Standard-Schleifenvariable verwenden, ist es dasselbe wie:
+Oder, wenn Sie die Standard-Schleifenvariable verwenden, dasselbe wie das hier:
 
 ```raku
 for 1..7 {
@@ -30,6 +30,6 @@ for 1..7 {
 }
 ```
 
-Hier ist `.say` die Kurzform von `$_.say`.
+Hier ist `.say` kurz für `$_.say`.
 
 {% include nav.html %}

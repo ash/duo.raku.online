@@ -4,9 +4,9 @@ title: 'Uzante `until`'
 
 {% include menu.html %}
 
-La `until` buklo estas la malo de `while`. Ĝi rulas la blokon de kodo, ĝis la kondiĉo fariĝas `True`. Per aliaj vortoj, la buklo ruliĝas, dum la kondiĉo estas `False`.
+La `until` buklo estas la malo de la `while` buklo. Ĝi rulas la blokon de kodo, ĝis la kondiĉo estas `True`. Do ĝi ruliĝas, dum la kondiĉo estas `False`.
 
-Jen denove la [programo de la antaŭa paĝo](../while). Nun ĝi uzas `until` kaj novan kondiĉon:
+Jen denove la [programo de la antaŭa paĝo](../while). Nun ĝi havas `until` kaj novan kondiĉon:
 
 ```raku
 my $x = 0;
@@ -17,7 +17,7 @@ until $x > 10 {
 say "$x estas pli granda ol 10.";
 ```
 
-Rulu la programon kaj rigardu la eligon:
+Rulu la programon kaj vidu, kion ĝi presas:
 
 ```console
 $ raku t.raku 
@@ -34,7 +34,7 @@ Vi enigis 20.
 
 ## `until` vs. `while`
 
-Komparu ĉi tiujn du liniojn. Ili faras la samon per `while` kaj `until`:
+Ĉi tiuj du programoj faras la samon. Unu havas `while`, kaj la alia havas `until`:
 
 ```raku
 while $x <= 10 { . . . }
@@ -42,6 +42,6 @@ while $x <= 10 { . . . }
 until $x > 10 { . . . }
 ```
 
-La du kondiĉoj estas la malo unu de la alia. Do `while` kaj `until` funkcias kiel paro, same kiel `if` kaj `unless`.
+Rigardu la du kondiĉojn. Unu estas la malo de la alia. `while` kaj `until` estas paro, kiel `if` kaj `unless`.
 
 {% include nav.html %}

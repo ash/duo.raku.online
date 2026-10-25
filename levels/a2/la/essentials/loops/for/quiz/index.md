@@ -4,7 +4,7 @@ title: 'Intelligendo `for` ansa'
 
 {% include menu.html %}
 
-Specta tria programmata infra. Quot lineas quodque programma imprimit?
+Hic sunt tria programmata. Quot lineas quodque programma imprimit?
 
 ## 1
 

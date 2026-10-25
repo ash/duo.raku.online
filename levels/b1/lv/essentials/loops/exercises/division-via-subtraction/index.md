@@ -6,14 +6,14 @@ title: Dalīšana, izmantojot atņemšanu
 
 ## Uzdevums
 
-Izveidojiet programmu, kas veic veselu skaitļu dalīšanu, izmantojot atņemšanu. Skaitļi ir ierakstīti tieši programmā:
+Uzrakstiet programmu, kas veic veselu skaitļu dalīšanu ar atņemšanu. Skaitļi ir ierakstīti tieši kodā:
 
 ```raku
 my $a = 175;
 my $b = 25;
 ```
 
-Pabeidziet programmu tā, lai tā izdrukātu veselo daļu no `$a / $b`. Izmantojiet tikai ciklu un atņemšanu.
+Pabeidziet programmu tā, lai tā izdrukātu `$a / $b` veselo daļu. Izmantojiet tikai ciklu un atņemšanu.
 
 ## Piemērs
 

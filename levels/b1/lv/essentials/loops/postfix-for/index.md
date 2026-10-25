@@ -4,17 +4,17 @@ title: 'Pēcpārbaudes forma `for`'
 
 {% include menu.html %}
 
-Mēs jau esam redzējuši citus paziņojumu modifikatorus: [`if` un `else`](/lv/essentials/conditional-checks/modifiers) un [`while` un `until`](/lv/essentials/loops/modifiers). Tas ir iemesls mazliet nosvinēt, jo Raku dizains ir ļoti konsekvents.
+Jūs jau esat redzējuši citus paziņojumu modifikatorus: [`if` un `else`](/lv/essentials/conditional-checks/modifiers) un [`while` un `until`](/lv/essentials/loops/modifiers). Tas ir mazs iemesls svinēt: Raku dizains ir ļoti konsekvents.
 
-Kad cikla ķermenis ir īss, jūs varat uzrakstīt `for` ciklu postfix formā:
+Ar īsu cikla ķermeni jūs varat izmantot `for` postfix formu:
 
 ```raku
 .say for 1..7;
 ```
 
-Kā redzat, ar `for` postfix formu diapazoni izskatās ļoti dabiski.
+Kā redzat, diapazoni ļoti labi der kopā ar postfix `for`.
 
-Šī programma ir tas pats, kas tradicionālāks variants:
+Šī programma dara to pašu, ko parastāks variants:
 
 ```raku
 for 1..7 -> $n {
@@ -22,7 +22,7 @@ for 1..7 -> $n {
 }
 ```
 
-Vai arī, ja izmantojat noklusējuma cikla mainīgo, tā ir tas pats, kas:
+Vai arī, ja izmantojat noklusējuma cikla mainīgo, to pašu, ko šis:
 
 ```raku
 for 1..7 {
@@ -30,6 +30,6 @@ for 1..7 {
 }
 ```
 
-Šeit `.say` ir `$_.say` īsā forma.
+Šeit `.say` ir `$_.say` saīsinājums.
 
 {% include nav.html %}

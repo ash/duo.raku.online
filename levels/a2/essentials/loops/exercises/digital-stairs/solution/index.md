@@ -8,7 +8,7 @@ The program uses two loops and two ranges.
 
 ## Code
 
-Here is one possible solution:
+Here is one way to solve it:
 
 ```raku
 my $size = prompt 'Enter the size: ';
@@ -39,12 +39,12 @@ Enter the size: 7
 
 ## Comment
 
-Look at how the program prints the current digit:
+Look at how the program prints each digit:
 
 ```raku
 .print for 1..$n;
 ```
 
-Like `say`, you can call `print` as a method. Here, it is called on the [topic variable](/essentials/loops/topic) `$_`.
+You can call `print` as a method, like `say`. Here, the program calls it on the [topic variable](/essentials/loops/topic) `$_`.
 
 {% include nav.html %}

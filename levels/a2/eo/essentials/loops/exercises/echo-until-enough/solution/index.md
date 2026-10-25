@@ -4,11 +4,11 @@ title: 'Solvo: Eĥo ĝis sufiĉas'
 
 {% include menu.html %}
 
-Ĉi tiu programo bezonas buklon, kiu haltas, kiam la uzanto enigas specialan vorton.
+Ĉi tiu programo bezonas buklon. La buklo haltas, kiam la uzanto enigas specialan vorton.
 
 ## Kodo
 
-Vi povas solvi la taskon en pluraj similaj manieroj, per `while`, `until` aŭ `repeat`. Jen unu el ili.
+Vi povas solvi la taskon per `while`, `until` aŭ `repeat`. Ĉi tiuj manieroj estas tre similaj. Jen unu el ili.
 
 ```raku
 my $vorto;
@@ -24,7 +24,7 @@ say 'OK, finita.';
 
 ## Eligo
 
-Rulu la programon kaj enigu kelkajn malsamajn vortojn. Poste haltigu la buklon.
+Rulu la programon. Enigu kelkajn malsamajn vortojn. Poste haltigu la buklon.
 
 ```console
 $ raku exercises/loops/echo-until-enough.raku
@@ -43,6 +43,6 @@ OK, finita.
 
 ## Komento
 
-Notu, ke vi deklaras la variablon `$vorto` _antaŭ_ la buklo. La `while` testo estas ekster la korpo de la buklo. Se vi difinas la variablon en la buklo, la testo ne povas vidi ĝin.
+Notu, ke vi kreas la variablon `$vorto` _antaŭ_ la buklo. La `while` testo ne estas en la korpo de la buklo. Do la testo ne povas vidi variablon el la korpo de la buklo.
 
 {% include nav.html %}

@@ -4,7 +4,7 @@ title: 'Kvizo — Postfixa `for`'
 
 {% include menu.html %}
 
-Finu la programon. Ĝi devas uzi `for` post la bloko, kaj ĝi devas presi ĉi tiun tekston:
+Finu la programon. Metu `for` post la bloko. La programo devas presi ĉi tiun tekston:
 
     A
     A
@@ -22,7 +22,7 @@ Jen la komenco de la kodo:
 . | &nbsp;&nbsp;&nbsp;&nbsp;$_ .say;
 } | ␣ for 'A'..'C';
 
-<div class="extended-explanation">Ĉi tiu kodo uzas kodoblokon kun <code>for</code> post ĝi. Notu, ke <code>for</code> devas esti en la sama linio kiel la ferma kurba krampo. Se vi metas ĝin en novan linion, la bloko ne plu estas parto de la buklo. Tiam vi ricevas eraron: <code>Missing block</code>. Estas pli bone ne uzi kodoblokojn kun postfiksaj formoj tiel.</div>
+<div class="extended-explanation">Ĉi tie, bloko de kodo havas <code>for</code> post si. La vorto <code>for</code> devas esti en la sama linio kiel la <code>}</code>. Se <code>for</code> estas en nova linio, la buklo ne havas blokon. Tiam Raku montras eraron, antaŭ ol la programo ruliĝas: <code>Missing block</code>. Provu ne uzi blokojn tiel.</div>
 
 {% include quiz.html %}
 

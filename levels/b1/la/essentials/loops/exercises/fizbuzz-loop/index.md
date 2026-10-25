@@ -6,7 +6,7 @@ title: FizzBuzz in ansa
 
 ## Problema
 
-Muta programma ex priore [exercitatione ‘FizzBuzz’](/la/essentials/conditional-checks/exercises/fizz-buzz) ut resultatum pro omnibus numeris integris ab 1 ad 50 imprimat. Quisque numerus in linea separata est, et eum sequitur `Fizz` et/vel `Buzz`.
+Muta programma ex priore [exercitatione ‘FizzBuzz’](/la/essentials/conditional-checks/exercises/fizz-buzz). Nunc resultatum pro omnibus numeris integris ab 1 ad 50 imprimere debet. Quisque numerus in sua linea est, et post eum venit `Fizz` et/vel `Buzz`.
 
 ## Exemplum
 

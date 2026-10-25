@@ -8,7 +8,7 @@ title: 'Risinājums: Echo līdz pietiek'
 
 ## Kods
 
-Ir vairāki līdzīgi veidi, kā atrisināt uzdevumu ar `while`, `until` vai `repeat`. Viens no tiem ir parādīts zemāk.
+Tu vari atrisināt uzdevumu vairākos līdzīgos veidos, ar `while`, `until` vai `repeat`. Šeit ir viens no tiem.
 
 ```raku
 my $word;
@@ -43,6 +43,6 @@ Labi, pabeigts.
 
 ## Komentārs
 
-Ņem vērā, ka tu deklarē mainīgo `$word` _pirms_ cikla, jo `while` tests atrodas ārpus cikla ķermeņa redzamības apgabala. Ja tu definēsi mainīgo cikla iekšpusē, tests to neredzēs.
+Ņem vērā, ka tu deklarē mainīgo `$word` _pirms_ cikla. Tas ir tāpēc, ka `while` tests atrodas ārpus cikla ķermeņa. Ja tu deklarē mainīgo cikla iekšpusē, tests to neredz.
 
 {% include nav.html %}

@@ -6,7 +6,7 @@ title: Deling door aftrekking
 
 ## Probleem
 
-Schrijf een programma dat hele getallen deelt met aftrekken. De getallen staan vast in het programma:
+Schrijf een programma dat een heel getal door een ander deelt. Het moet aftrekken gebruiken. De getallen staan al in de code:
 
 ```raku
 my $a = 175;

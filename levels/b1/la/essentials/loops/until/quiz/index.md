@@ -21,7 +21,7 @@ say $n;
 
 ## 2
 
-Quomodo efficere potes ut hoc programma ansam exacte quinquies exsequatur?
+Quomodo efficere potes ut ansa in hoc programmate exacte quinquies currat?
 
 {:.quiz-code .fill}
 . | my $n = 1;

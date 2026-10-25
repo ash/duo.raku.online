@@ -8,7 +8,7 @@ Programma izmanto divus ciklus un divus diapazonus.
 
 ## Kods
 
-Šeit ir viens iespējams risinājums:
+Šeit ir viens veids, kā to atrisināt:
 
 ```raku
 my $size = prompt 'Ievadiet izmēru: ';
@@ -39,12 +39,12 @@ Ievadiet izmēru: 7
 
 ## Komentārs
 
-Paskatieties, kā programma izdrukā pašreizējo ciparu:
+Paskatieties, kā programma izdrukā katru ciparu:
 
 ```raku
 .print for 1..$n;
 ```
 
-Tāpat kā `say`, jūs varat izsaukt `print` kā metodi. Šeit to izsauc uz [tēmas mainīgā](/lv/essentials/loops/topic) `$_`.
+Jūs varat izsaukt `print` kā metodi, tāpat kā `say`. Šeit programma to izsauc uz [tēmas mainīgā](/lv/essentials/loops/topic) `$_`.
 
 {% include nav.html %}

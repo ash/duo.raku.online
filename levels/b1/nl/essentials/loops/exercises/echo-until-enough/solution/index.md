@@ -8,7 +8,7 @@ Dit programma heeft een lus nodig die stopt wanneer de gebruiker een bepaald woo
 
 ## Code
 
-Er zijn verschillende vergelijkbare manieren om de taak op te lossen met `while`, `until` of `repeat`. Een daarvan wordt hieronder getoond.
+Je kunt de taak op verschillende manieren oplossen die op elkaar lijken, met `while`, `until` of `repeat`. Hier is er een van.
 
 ```raku
 my $word;
@@ -43,6 +43,6 @@ OK, klaar.
 
 ## Opmerking
 
-Merk op dat je de variabele `$word` _voor_ de lus declareert, omdat de `while`-test buiten de scope van het lichaam van de lus staat. Als je de variabele binnen de lus definieert, ziet de test hem niet.
+Merk op dat je de variabele `$word` _voor_ de lus declareert. Dat komt doordat de `while`-test buiten het lichaam van de lus staat. Als je de variabele binnen de lus declareert, kan de test hem niet zien.
 
 {% include nav.html %}

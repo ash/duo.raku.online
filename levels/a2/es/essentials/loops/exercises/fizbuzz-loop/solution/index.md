@@ -4,7 +4,7 @@ title: 'Solution: FizzBuzz en un bucle'
 
 {% include menu.html %}
 
-Esta vez, el programa comprueba la divisibilidad en un bucle. No imprime las palabras de inmediato. Primero, las reúne en una variable aparte. Después, pone esta variable dentro de una cadena.
+Esta vez, el programa comprueba cada número en un bucle. No imprime las palabras de inmediato. Primero, las reúne en una variable aparte. Luego pone esta variable dentro de una cadena.
 
 ## Código
 
@@ -29,6 +29,6 @@ $ raku exercises/loops/fizbuzz-loop.raku
 
 ## Comentario
 
-A un programador muy cuidadoso puede no gustarle esta solución. Imprime un espacio después de los dos puntos, incluso para los números sin Fizz ni Buzz. Cambia el programa para arreglar este problema.
+Esta solución tiene un pequeño problema. Siempre imprime un espacio después de los dos puntos. Lo hace incluso sin Fizz ni Buzz. A un programador muy cuidadoso no le gusta esto. Cambia el programa y arréglalo.
 
 {% include nav.html %}

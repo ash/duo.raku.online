@@ -6,7 +6,7 @@ title: 'Solution: Quadrati e cubi in un ciclo'
 
 ## Codice
 
-Ecco il codice della soluzione. Il ciclo `for` usa un intervallo che va da `-5` a `5`.
+Ecco la soluzione. Il ciclo `for` usa un intervallo che va da `-5` a `5`.
 
 ```raku
 for -5 .. 5 -> $n {

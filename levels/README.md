@@ -51,8 +51,16 @@ Beispiel*, *например*), and no sentence that opens with a bracket.
 
 | | English (and every translation) |
 |---|---|
-| **A2** | Short sentences, one idea each, mostly under 12 words. Present tense where it will do. Everyday words, plus the course's own terms (*loop*, *variable*, *condition*, *block*, *range*). A term the reader may not know gets a few plain words of explanation. No idioms, no passives, few subordinate clauses. |
-| **B1** | Sentences up to about 20 words; *which*, *because*, *if*, *when* clauses are fine. Common vocabulary and the course's terms. Keeps the original's tone and every aside, in plainer words. |
+| **A2** | About 7 words a sentence, rarely more than 12, one idea each. Present tense, active voice, almost no subordinate clauses. Only the most common words, plus the course's own terms (*loop*, *variable*, *condition*, *block*, *range*, *operator*, *statement*). A term the reader may not know is said in plain words: not *a Boolean condition* but *a condition … The condition is `True` or `False`*. No idioms. |
+| **B1** | About 10 words a sentence, hardly any over 15; *which*, *because*, *if*, *when* clauses are fine. Common words only: rare and bookish ones go (*mechanism*, *emulate*, *equivalent*, *initially*, *terminate*, *interpolate*, *pedantic*). Keeps the original's tone and every aside, in plainer words. It must read clearly simpler than the original, not like the original with a word swapped. |
+
+As a yardstick, the English of the Loops section measures:
+
+| | Words a sentence | Sentences over 15 words | Flesch–Kincaid grade |
+|---|---|---|---|
+| Original | 12.1 | 25% | 6.2 |
+| B1 | 10.0 | 3% | 3.9 |
+| A2 | 7.4 | 0% | 2.3 |
 
 ## Checks
 

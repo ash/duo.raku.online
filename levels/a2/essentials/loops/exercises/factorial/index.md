@@ -6,11 +6,11 @@ title: 'Exercise: Factorial'
 
 ## Problem
 
-Write a program that finds the factorial of 8 with a loop. Then it prints the result.
+Write a program with a loop. It finds the factorial of 8 and prints it.
 
 ## Example
 
-This example shows what the program does:
+This is how the program works:
 
 ```console
 $ raku factorial.raku

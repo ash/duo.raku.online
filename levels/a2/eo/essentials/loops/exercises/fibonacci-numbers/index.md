@@ -6,11 +6,11 @@ title: Fibonacci-nombroj
 
 ## Problemo
 
-Skribu programon, kiu presas la unuajn 20 Fibonacci-nombrojn.
+Skribu programon. Ĝi presas la unuajn 20 Fibonacci-nombrojn.
 
 ## Ekzemplo
 
-Kiam vi rulas la programon, ĝi presas la unuajn Fibonacci-nombrojn:
+La programo presas la unuajn Fibonacci-nombrojn:
 
 ```console
 $ raku fibonacci-numbers.raku

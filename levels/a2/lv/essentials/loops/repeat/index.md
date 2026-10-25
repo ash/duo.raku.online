@@ -4,7 +4,7 @@ title: 'Izmantojot `repeat`'
 
 {% include menu.html %}
 
-Dažreiz `while` vai `until` bloks neizpildās nemaz. Tā notiek, kad nosacījums sākumā ir `False`. `repeat` bloks ir citāds: tas vienmēr izpildās vismaz vienu reizi. Raku pārbauda nosacījumu pēc bloka. Pārbaudei jūs izmantojat tos pašus vārdus, `while` vai `until`.
+`while` vai `until` cikls var neizpildīties nemaz. Tā notiek, ja nosacījums sākumā ir `False`. `repeat` bloks ir citāds. Tas vienmēr izpildās vismaz vienu reizi. Raku pārbauda nosacījumu pēc bloka. Pārbaudei jūs izmantojat tos pašus vārdus: `while` vai `until`.
 
 Apskatiet šo programmu.
 
@@ -17,7 +17,7 @@ repeat {
 say "$x ir lielāks par 10.";
 ```
 
-Sākumā mainīgais `$x` ir `100`. `while` nosacījums pārbauda, vai `$x` ir mazāks par `10` vai vienāds ar to. Ar šo vērtību nosacījums jau ir `False`. Bet koda bloks tomēr izpildās vispirms.
+Sākumā mainīgais `$x` ir `100`. `while` nosacījums pārbauda, vai `$x` ir `10` vai mazāks. Tātad nosacījums jau ir `False`. Bet koda bloks tomēr izpildās vienu reizi.
 
 ```console
 $ raku t.raku
@@ -28,7 +28,7 @@ Jūs ievadījāt 20.
 20 ir lielāks par 10.
 ```
 
-Tagad mainīsim programmu un izmantosim `until`.
+Tagad uzrakstīsim programmu ar `until`.
 
 ```raku
 my $x = 0;
@@ -39,7 +39,7 @@ repeat {
 say "$x ir lielāks par 10.";
 ```
 
-Palaidiet to un pārbaudiet, vai tā darbojas:
+Palaidiet to un pārbaudiet rezultātu:
 
 ```console
 $ raku t.raku

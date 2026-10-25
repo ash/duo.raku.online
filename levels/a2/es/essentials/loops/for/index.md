@@ -4,7 +4,7 @@ title: Bucles `for`
 
 {% include menu.html %}
 
-El bucle `for` es una herramienta potente. Pasa por muchos elementos, uno a uno. Por ejemplo, tomemos un rango:
+El bucle `for` es muy útil. Pasa por muchos elementos, uno a uno. Por ejemplo, toma un rango:
 
 ```raku
 for 1..5 -> $n {
@@ -12,7 +12,7 @@ for 1..5 -> $n {
 }
 ```
 
-En este programa, la variable `$n` recibe el siguiente valor del rango cada vez. No necesitas declarar la variable con `my`. El bloque de código se ejecuta una vez para cada elemento del rango. Así, el programa imprime los números, uno en cada línea:
+`$n` recibe el siguiente valor del rango cada vez. No necesitas escribir `my` antes de `$n`. El bloque se ejecuta una vez para cada valor del rango. Así, el programa imprime los números, uno en cada línea:
 
 ```console
 $ raku t.raku 
@@ -23,11 +23,11 @@ $ raku t.raku
 5
 ```
 
-El programa pasa por todos los valores del [rango](/es/essentials/ranges) `1..5`. Estos son `1`, `2`, `3`, `4` y `5`.
+El programa pasa por todos los valores del [rango](/es/essentials/ranges) `1..5`. Estos valores son `1`, `2`, `3`, `4` y `5`.
 
 ## Más de un valor a la vez
 
-En Raku, un bucle puede tomar más de un elemento a la vez. Este programa imprime dos números cada vez:
+En Raku, un bucle puede tomar dos o más elementos cada vez. Este programa imprime dos números a la vez:
 
 ```raku
 for 1..6 -> $n, $m {
@@ -35,7 +35,7 @@ for 1..6 -> $n, $m {
 }
 ```
 
-Aquí está la salida del programa:
+Esto es lo que imprime el programa:
 
 ```console
 $ raku t.raku

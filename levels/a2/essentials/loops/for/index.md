@@ -4,7 +4,7 @@ title: '"for" loop'
 
 {% include menu.html %}
 
-The `for` loop is a strong tool. It goes through many elements, one by one. For example, let's take a range:
+The `for` loop is very useful. It goes through many items, one at a time. For example, take a range:
 
 ```raku
 for 1..5 -> $n {
@@ -12,7 +12,7 @@ for 1..5 -> $n {
 }
 ```
 
-In this program, the variable `$n` gets the next value from the range each time. You do not need to declare the variable with `my`. The block of code runs once for each element of the range. So the program prints the numbers, one on each line:
+`$n` gets the next value from the range each time. You do not need to write `my` before `$n`. The block runs one time for each value in the range. So the program prints the numbers, one on each line:
 
 ```console
 $ raku t.raku 
@@ -23,11 +23,11 @@ $ raku t.raku
 5
 ```
 
-The program goes through all the values of the [range](/essentials/ranges) `1..5`. These are `1`, `2`, `3`, `4`, and `5`.
+The program goes through all the values of the [range](/essentials/ranges) `1..5`. These values are `1`, `2`, `3`, `4`, and `5`.
 
 ## More than one value at a time
 
-In Raku, a loop can take more than one item at a time. This program prints two numbers each time:
+In Raku, a loop can take two or more items each time. This program prints two numbers at a time:
 
 ```raku
 for 1..6 -> $n, $m {
@@ -35,7 +35,7 @@ for 1..6 -> $n, $m {
 }
 ```
 
-Here is the output of the program:
+Here is what the program prints:
 
 ```console
 $ raku t.raku

@@ -6,7 +6,7 @@ title: Quiz — die `repeat`-Schleife
 
 ## 1
 
-Wählen Sie `until` oder `while` für dieses Programm. Das Programm soll nicht in einer Endlosschleife hängen bleiben.
+Wählen Sie `until` oder `while` für dieses Programm, damit die Schleife nicht endlos läuft.
 
 {:.quiz-code}
 . | my $n = 0;

@@ -4,9 +4,9 @@ title: '`while` y `until` como modificadores de sentencia'
 
 {% include menu.html %}
 
-También puedes escribir `while` y `until` después de una declaración. Esta forma se llama modificador de declaración. Funciona [igual que](/es/essentials/conditional-checks/modifiers) `if` y `unless` después de una declaración.
+También puedes poner `while` o `until` después de una declaración. Lo llamamos modificador de declaración. Ya lo conoces [de `if` y `unless`](/es/essentials/conditional-checks/modifiers).
 
-Aquí tienes un ejemplo. Calcula el resto de una división:
+Aquí tienes un ejemplo. Calcula el resto, o lo que queda después de dividir:
 
 ```raku
 my $x = 10;
@@ -14,13 +14,13 @@ $x -= 3 while $x > 2;
 say $x; # 1
 ```
 
-Aquí, `-=` es un operador. Resta y asigna al mismo tiempo. Así, `$x -= 3` significa lo mismo que `$x = $x - 3`.
+Aquí, `-=` es un operador. Hace dos cosas. Resta un número. También guarda el resultado en la variable. Así, `$x -= 3` es lo mismo que `$x = $x - 3`.
 
-El modificador `while` repite la declaración `$x -= 3`. La repite mientras la condición `$x > 2` es `True`. Cuando la condición se vuelve `False`, el bucle se detiene.
+El modificador `while` repite la declaración `$x -= 3`. La repite mientras `$x > 2` es `True`. Cuando `$x > 2` es `False`, el bucle se detiene.
 
-Si la condición es `False` al principio, la declaración no se ejecuta ni una vez.
+Si la condición es `False` al principio, la declaración nunca se ejecuta.
 
-Puedes escribir el mismo programa con `until`. Para esto, debes usar la condición contraria:
+Puedes escribir el mismo programa con `until`. Entonces necesitas la condición contraria:
 
 ```raku
 my $x = 10;

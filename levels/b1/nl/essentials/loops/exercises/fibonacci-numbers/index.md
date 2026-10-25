@@ -6,7 +6,7 @@ title: Fibonacci getallen
 
 ## Probleem
 
-Maak een programma dat de eerste 20 Fibonacci-getallen afdrukt.
+Schrijf een programma dat de eerste 20 Fibonacci-getallen afdrukt.
 
 ## Voorbeeld
 

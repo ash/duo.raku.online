@@ -6,14 +6,14 @@ title: Division durch Subtraktion
 
 ## Problem
 
-Erstellen Sie ein Programm, das eine Ganzzahldivision mithilfe der Subtraktion durchführt. Die Zahlen stehen direkt im Programm:
+Schreiben Sie ein Programm, das eine Ganzzahldivision mit Subtraktion durchführt. Die Zahlen stehen direkt im Code:
 
 ```raku
 my $a = 175;
 my $b = 25;
 ```
 
-Vervollständigen Sie das Programm so, dass es den ganzzahligen Teil von `$a / $b` ausgibt. Verwenden Sie nur eine Schleife und Subtraktion.
+Schreiben Sie das Programm so fertig, dass es den ganzzahligen Teil von `$a / $b` ausgibt. Verwenden Sie nur eine Schleife und Subtraktion.
 
 ## Beispiel
 

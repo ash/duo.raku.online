@@ -4,7 +4,7 @@ title: Bezgala cikli
 
 {% include menu.html %}
 
-Jūs varat izmantot `loop` arī tikai ar ķermeni:
+Jūs varat rakstīt `loop` arī tikai ar ķermeni:
 
 ```raku
 loop {
@@ -12,6 +12,6 @@ loop {
 }
 ```
 
-Šī cilpa darbojas bezgalīgi. Tā apstājas tikai tad, kad jūs apturat programmu, piemēram, ar `Ctrl+C`. Kursa otrajā daļā jūs uzzināsiet labākus veidus, kā kontrolēt cilpas.
+Šī cilpa pati nekad neapstājas. Jums jāaptur programma, piemēram, ar `Ctrl+C`. Kursa otrā daļa rāda labākus veidus, kā kontrolēt cilpas.
 
 {% include nav.html %}

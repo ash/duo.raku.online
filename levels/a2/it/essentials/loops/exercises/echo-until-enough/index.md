@@ -6,11 +6,11 @@ title: Echo fino a sufficienza
 
 ## Problema
 
-Scrivi un programma che chiede una parola più e più volte. Stampa ogni parola nel terminale. Se la parola è `abbastanza`, il programma stampa un ultimo messaggio e si ferma.
+Scrivi un programma. Chiede una parola più e più volte. Stampa ogni parola nel terminale. Se la parola è `abbastanza`, il programma si ferma. Prima di fermarsi, stampa un ultimo messaggio.
 
 ## Esempio
 
-Il programma può andare avanti all'infinito, ma qui mostriamo solo pochi giri.
+Il programma può andare avanti per sempre. Qui vedi solo pochi giri.
 ```console
 $ raku echo-until-enough.raku
 La tua parola: linguaggio

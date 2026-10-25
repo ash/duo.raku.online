@@ -4,7 +4,7 @@ title: Quiz — Posfijo `for`*
 
 {% include menu.html %}
 
-Intenta terminar el programa para que use la forma posfija de `for` e imprima el siguiente texto:
+Intenta terminar el programa. Debe usar la forma posfija de `for` e imprimir el siguiente texto:
 
     A
     A
@@ -22,7 +22,7 @@ Aquí tienes un borrador del código:
 . | &nbsp;&nbsp;&nbsp;&nbsp;.say;
 } | ␣ for &apos;A&apos;..&apos;C&apos;;
 
-<div class="extended-explanation">Este código es un ejemplo de un bloque de código con el <code>for</code> posfijo. Nota que <code>for</code> debe estar en la misma línea que la llave de cierre. Si lo pones en una línea nueva, el bloque queda separado del bucle y obtienes un error de compilación: <code>Missing block</code>. Probablemente es mejor no usar bloques de código con constructos posfijos de esta manera.</div>
+<div class="extended-explanation">Este código muestra un bloque de código con el <code>for</code> posfijo. Nota que <code>for</code> debe estar en la misma línea que la llave de cierre. En una línea nueva, el bloque ya no es parte del bucle. Entonces obtienes un error de compilación: <code>Missing block</code>. Probablemente es mejor no usar bloques de código con formas posfijas de esta manera.</div>
 
 {% include quiz.html %}
 

@@ -4,7 +4,7 @@ title: Uso di `while`
 
 {% include menu.html %}
 
-Il costrutto `while` ha una condizione booleana e un blocco di codice. Raku esegue il blocco di codice ripetutamente _mentre_ la condizione è `True`.
+Il ciclo `while` ha una condizione booleana (`True` o `False`) e un blocco di codice. Raku ripete il blocco _mentre_ la condizione è `True`.
 
 ```raku
 my $x = 0;
@@ -15,7 +15,7 @@ while $x <= 10 {
 say "$x è maggiore di 10.";
 ```
 
-Il programma ti chiede di inserire un numero. Se il numero non è maggiore di 10, il corpo del ciclo si ripete. Non appena il numero infrange la condizione `$x <= 10`, il ciclo termina e il programma continua con la riga successiva.
+Il programma ti chiede di inserire un numero. Se il numero non è più grande di 10, il corpo del ciclo si ripete. Quando un numero non rispetta la condizione `$x <= 10`, il ciclo finisce. Poi il programma continua con la riga successiva.
 
 ```console
 $ raku t.raku

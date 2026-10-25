@@ -6,7 +6,7 @@ title: Fibonači skaitļi
 
 ## Uzdevums
 
-Izveidojiet programmu, kas izdrukā pirmos 20 Fibonači skaitļus.
+Uzrakstiet programmu, kas izdrukā pirmos 20 Fibonači skaitļus.
 
 ## Piemērs
 

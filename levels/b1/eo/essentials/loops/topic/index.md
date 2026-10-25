@@ -4,9 +4,9 @@ title: Temvariablo
 
 {% include menu.html %}
 
-`$_` estas speciala variablo nomata _variablo de temo_.
+`$_` estas speciala variablo. Ĝi nomiĝas _temvariablo_.
 
-Rigardu ĉi tiun buklon super intervalo:
+Jen buklo super intervalo:
 
 ```raku
 for 1..5 -> $n {
@@ -14,7 +14,7 @@ for 1..5 -> $n {
 }
 ```
 
-Vi povas preterlasi la variablon `$n`, kaj tiam Raku anstataŭe uzas aŭtomatan variablon, `$_`. La programo estas la sama kiel ĉi tiu:
+Vi povas forlasi la variablon `$n`. Tiam Raku aŭtomate uzas anstataŭe la variablon `$_`. Do la programo estas la sama kiel ĉi tiu:
 
 ```raku
 for 1..5 {
@@ -22,7 +22,7 @@ for 1..5 {
 }
 ```
 
-Kiel vi [memoras](/eo/essentials/hello-world/), vi ankaŭ povas uzi `say` kiel metodon:
+Kiel vi [memoras](/eo/essentials/hello-world/), vi ankaŭ povas voki `say` kiel metodon:
 
 ```raku
 for 1..5 {
@@ -30,7 +30,7 @@ for 1..5 {
 }
 ```
 
-Kiam vi vokas metodon sur `$_`, vi ne devas skribi la variablon mem. Do nia buklo povas fariĝi eĉ pli simpla:
+Por voki metodon sur `$_`, vi ne bezonas skribi la variablon mem. Do ni povas fari nian buklon eĉ pli simpla:
 
 ```raku
 for 1..5 {

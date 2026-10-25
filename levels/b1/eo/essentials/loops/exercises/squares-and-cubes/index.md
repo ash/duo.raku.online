@@ -6,11 +6,11 @@ title: Kvadratoj kaj kuboj en buklo
 
 ## Problemo
 
-Skribu programon, kiu presas la kvadratojn kaj kubojn de la nombroj de −5 ĝis 5, inkluzive de ambaŭ finoj. Ĉiu linio devus havi tri valorojn: la nombron mem, ĝian kvadraton kaj ĝian kubon. Uzu buklon.
+Skribu programon, kiu presas la kvadratojn kaj kubojn de la nombroj de −5 ĝis 5. Inkluzivu ankaŭ −5 kaj 5. Ĉiu linio devus montri tri valorojn: la nombron, ĝian kvadraton kaj ĝian kubon. Uzu buklon.
 
 ## Ekzemplo
 
-La programo devus presi ĉi tion (se la buklo iras de −3 ĝis 3):
+Jen, kion la programo devus presi, se la buklo iras de −3 ĝis 3:
 
 ```console
 $ raku squares-and-cubes.raku

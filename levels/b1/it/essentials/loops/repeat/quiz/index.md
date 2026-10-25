@@ -6,7 +6,7 @@ title: Quiz — il ciclo `repeat`
 
 ## 1
 
-Scegli `until` o `while` per questo programma. Il programma non dovrebbe restare bloccato in un ciclo infinito.
+Scegli `until` o `while` per questo programma, in modo che il ciclo non giri all'infinito.
 
 {:.quiz-code}
 . | my $n = 0;

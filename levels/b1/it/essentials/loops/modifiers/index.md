@@ -4,9 +4,9 @@ title: '`while` e `until` come modificatori di istruzioni'
 
 {% include menu.html %}
 
-Sia `while` che `until` possono essere usati come modificatori di istruzione, [allo stesso modo](/it/essentials/conditional-checks/modifiers) di `if` e `unless`.
+Puoi usare `while` e `until` anche come modificatori di istruzione, cioè dopo un'istruzione. Funziona [allo stesso modo](/it/essentials/conditional-checks/modifiers) che con `if` e `unless`.
 
-Guarda un esempio che imita la divisione modulo, cioè il calcolo del resto:
+Ecco un esempio che funziona come la divisione modulo, cioè trova il resto:
 
 ```raku
 my $x = 10;
@@ -14,13 +14,13 @@ $x -= 3 while $x > 2;
 say $x; # 1
 ```
 
-Qui, `-=` è un operatore che fa insieme la sottrazione e l'assegnazione. In questo caso, `$x -= 3` è uguale a `$x = $x - 3`.
+Qui `-=` è un operatore che sottrae e assegna in un solo passo. Quindi `$x -= 3` significa la stessa cosa di `$x = $x - 3`.
 
-Il modificatore `while` ripete l'istruzione `$x -= 3` finché la condizione `$x > 2` rimane `True`. Non appena la condizione diventa `False`, il ciclo si interrompe.
+Il modificatore `while` ripete `$x -= 3` finché la condizione `$x > 2` è `True`. Quando diventa `False`, il ciclo si ferma.
 
-Nota che se la condizione è `False` fin dall'inizio, l'istruzione non viene eseguita affatto.
+Nota che se la condizione è `False` fin dall'inizio, l'istruzione non viene mai eseguita.
 
-Lo stesso programma può essere scritto con `until`. Per farlo, devi invertire la condizione:
+Lo stesso programma può usare `until`, ma allora la condizione deve essere invertita:
 
 ```raku
 my $x = 10;

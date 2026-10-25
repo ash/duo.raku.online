@@ -6,11 +6,11 @@ title: Fibonači skaitļi
 
 ## Uzdevums
 
-Uzrakstiet programmu, kas izdrukā pirmos 20 Fibonači skaitļus.
+Uzrakstiet programmu. Tā izdrukā pirmos 20 Fibonači skaitļus.
 
 ## Piemērs
 
-Kad jūs palaižat programmu, tā izdrukā pirmos Fibonači skaitļus:
+Programma izdrukā pirmos Fibonači skaitļus:
 
 ```console
 $ raku fibonacci-numbers.raku

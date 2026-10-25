@@ -4,7 +4,7 @@ title: 'Solution: División por resta'
 
 {% include menu.html %}
 
-La división es restar una y otra vez. El programa tiene un bucle `while`. El bucle resta `$b` de `$a`. Repite esto mientras `$a` no es menor que `$b`. La variable `$n` cuenta las vueltas del bucle. Este número también es el resultado que necesitamos.
+La división es restar una y otra vez. El programa tiene un bucle `while`. Cada vez, el bucle resta `$b` de `$a`. Hace esto mientras `$a` no es menor que `$b`. La variable `$n` cuenta las vueltas. Este número es la respuesta.
 
 ## Código
 
@@ -27,14 +27,14 @@ say $n;
 
 ## Salida
 
-Ejecuta el programa unas cuantas veces. Primero, usa los valores dados. Con ellos, la división es exacta:
+Ejecuta el programa unas cuantas veces. Empieza con los números del código. Su división no deja resto:
 
 ```console
 $ raku exercises/loops/division-via-subtraction.raku
 7
 ```
 
-Después, prueba otros valores. Por ejemplo, cambia `$b` a `20` y comprueba que el resultado es correcto:
+Después, prueba otros números. Por ejemplo, cambia `$b` a `20`. Comprueba que el resultado es correcto:
 
 ```console
 $ raku exercises/loops/division-via-subtraction.raku

@@ -4,7 +4,7 @@ title: Bucles
 
 {% include menu.html %}
 
-Un bucle repite la misma acción muchas veces. En esta sección, vemos algunas formas de hacer bucles en Raku. Vas a aprender más sobre los bucles en la segunda parte del curso.
+Un bucle hace lo mismo una y otra vez. Raku tiene varios tipos de bucles. Esta sección muestra algunos de ellos. La segunda parte del curso tiene más bucles.
 
 Estos son los temas de esta sección.
 

@@ -21,7 +21,7 @@ say $n;
 
 ## 2
 
-Hoe kun je voorkomen dat dit programma eindeloos draait? Verander de code.
+Dit programma draait eindeloos. Verander de code, zodat het stopt.
 
 {:.quiz-code .fill}
 . | my $n = 5;

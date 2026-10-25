@@ -4,7 +4,7 @@ title: 'Kompreni la `for` buklon'
 
 {% include menu.html %}
 
-Rigardu la tri programojn sube. Kiom da linioj presas ĉiu programo?
+Jen tri programoj. Kiom da linioj presas ĉiu programo?
 
 ## 1
 
