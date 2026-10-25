@@ -1,0 +1,49 @@
+---
+title: 'Solution: FizzBuzz'
+---
+
+{% include menu.html %}
+
+Dit is een klassieke opdracht voor sollicitatiegesprekken. De opdracht laat zien of je denkt aan het geval waarin beide voorwaarden `True` zijn. Als een getal deelbaar is door zowel 3 als 5, moet het programma `FizzBuzz` afdrukken.
+
+## Code
+
+Hier is de oplossing:
+
+```raku
+my $n = prompt 'Voer een getal in: ';
+
+print 'Fizz' if $n %% 3;
+print 'Buzz' if $n %% 5;
+print "\n";
+```
+
+🦋 Vind het programma in het bestand [fizz-buzz.raku](https://github.com/ash/raku-course/blob/master/exercises/essentials/conditional-checks/fizz-buzz.raku).
+
+## Voorbeeld
+
+Test het programma met een paar verschillende soorten invoer:
+
+* Getallen die deelbaar zijn door 3, bijvoorbeeld: 3, 6, 9, 12.
+* Getallen die deelbaar zijn door 5, bijvoorbeeld: 5, 10, 15, 20.
+* Getallen die deelbaar zijn door zowel 3 als 5, bijvoorbeeld: 15, 30, 45.
+* Andere getallen, die niet deelbaar zijn door 3 en ook niet door 5, bijvoorbeeld: 4, 7, 11.
+
+```console
+$ raku exercises/conditional-checks/fizz-buzz.raku 
+Voer een getal in: 3
+Fizz
+
+$ raku exercises/conditional-checks/fizz-buzz.raku
+Voer een getal in: 10
+Buzz
+
+$ raku exercises/conditional-checks/fizz-buzz.raku
+Voer een getal in: 7
+
+$ raku exercises/conditional-checks/fizz-buzz.raku
+Voer een getal in: 30
+FizzBuzz
+```
+
+{% include nav.html %}

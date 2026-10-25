@@ -1,0 +1,27 @@
+---
+title: Quiz — Ternaire operator
+---
+
+{% include menu.html %}
+
+Vul de ontbrekende delen in het programma in:
+
+{:.quiz-code}
+. | my $color = prompt 'Welke kleur is het? ';
+?? | say $color eq 'blauw' ␣␣
+!! | &nbsp;&nbsp;&nbsp;&nbsp;'Dit is een lucht!' ␣␣ 
+. | &nbsp;&nbsp;&nbsp;&nbsp;'Ik heb meer informatie nodig.';
+
+{% include quiz.html %}
+
+## Opmerking
+
+Eén fout met de ternaire operator in Raku komt het meest voor. De Rakudo-compiler heeft er een speciale foutmelding voor.
+
+    ===SORRY!=== Fout tijdens het compileren van /Users/ash/raku-course/t.raku
+    Niet-ondersteund gebruik van ?  en : voor de ternaire voorwaardelijke operator. In
+    Raku gebruik alstublieft: ??  en !!.
+    bij /Users/ash/raku-course/t.raku:2
+    ------> say $color eq 'blauw' ?⏏ 'Dit is een lucht!' : 'Ik heb meer informa
+
+{% include nav.html %}

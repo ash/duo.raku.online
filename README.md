@@ -23,7 +23,7 @@ block, so a stale translation degrades instead of misleading.
 | | |
 |---|---|
 | **Two panes** | Any two of the eleven languages, swappable, remembered. Each block is one grid row, so the columns cannot drift apart however long a translation runs. |
-| **Reading levels** | Pages rewritten at CEFR **A2** and **B1** beside the original, so a language you barely know is still readable. One switch sets both panes, and switching keeps your paragraph. So far: Essentials from [the beginning](https://duo.raku.online/a2/essentials/what-is-raku/) through numbers, booleans and ranges, and [Loops](https://duo.raku.online/a2/essentials/loops/), in every language. See [`levels/`](levels/README.md). |
+| **Reading levels** | Pages rewritten at CEFR **A2** and **B1** beside the original, so a language you barely know is still readable. One switch sets both panes, and switching keeps your paragraph. So far: Essentials from [the beginning](https://duo.raku.online/a2/essentials/what-is-raku/) through control flow, [loops](https://duo.raku.online/a2/essentials/loops/) included, in every language. See [`levels/`](levels/README.md). |
 | **Direct links** | The address names the level and the pair — [`/a2/essentials/loops/for/?en-de`](https://duo.raku.online/a2/essentials/loops/for/?en-de) is the A2 page, English opposite German — and follows along as you switch. |
 | **Sentence pairing** | Hover a sentence and its twin lights up opposite. 98% of paragraphs keep their sentence count in translation; the rest fall back to paragraph pairing and say so with a small `≠`. |
 | **Practice modes** | Read the target language alone with the translation collapsed to a strip you click to reveal — or the reverse, to translate and then check. |

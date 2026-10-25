@@ -13,3 +13,4 @@ essentials/strings/exercises/hello-interpolation *
 essentials/strings/exercises/hello-interpolation/solution *
 essentials/strings/exercises/name-length *
 essentials/strings/exercises/name-length/solution *
+essentials/more-on-functions/return-type/quiz *

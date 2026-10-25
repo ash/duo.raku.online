@@ -1,0 +1,26 @@
+---
+title: Viktorīna — trīsvērtīgais operators
+---
+
+{% include menu.html %}
+
+Aizpildiet programmas tukšās vietas:
+
+{:.quiz-code}
+. | my $color = prompt &apos;Kāda krāsa tā ir? &apos;;
+?? | say $color eq &apos;zila&apos; ␣␣
+!! | &nbsp;&nbsp;&nbsp;&nbsp;&apos;Tā ir debesis!&apos; ␣␣ 
+. | &nbsp;&nbsp;&nbsp;&nbsp;&apos;Man vajag vairāk informācijas.&apos;;
+
+{% include quiz.html %}
+
+## Komentārs
+
+Raku valodā cilvēki bieži pieļauj vienu kļūdu ar ternāro operatoru. Tā ir visbiežākā kļūda. Rakudo kompilatoram ir īpaša kļūdas ziņa par to.
+
+    ===SORRY!=== Kļūda kompilējot /Users/ash/raku-course/t.raku
+    Neatbalstīta ? un : izmantošana ternārajam nosacījuma operatoram. Raku valodā, lūdzu, izmantojiet: ?? un !!.
+    pie /Users/ash/raku-course/t.raku:2
+    ------> say $color eq 'blue' ?⏏ 'Tā ir debesis!' : 'Man vajag vairāk informa
+
+{% include nav.html %}

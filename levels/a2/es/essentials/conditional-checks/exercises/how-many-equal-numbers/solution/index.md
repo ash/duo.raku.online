@@ -1,0 +1,62 @@
+---
+title: 'Solution: ¿Cuántos números son iguales?'
+---
+
+{% include menu.html %}
+
+El programa hace algunas comparaciones. El usuario introduce tres números. Así que hay tres casos posibles:
+
+1. Los tres números son iguales,
+1. Solo dos números son iguales, y
+1. Todos los números son diferentes.
+
+## Código
+
+Aquí tienes la solución. Escribe cada comparación completa.
+
+```raku
+my $n1 = prompt 'Ingrese el número 1: ';
+my $n2 = prompt 'Ingrese el número 2: ';
+my $n3 = prompt 'Ingrese el número 3: ';
+
+if $n1 == $n2 == $n3 {
+    say 3;
+}
+elsif $n1 == $n2 || $n2 == $n3 || $n1 == $n3 {
+    say 2;
+}
+else {
+    say 0;
+}
+```
+
+🦋 Encuentra el programa en el archivo [how-many-equal-numbers.raku](https://github.com/ash/raku-course/blob/master/exercises/essentials/conditional-checks/how-many-equal-numbers.raku).
+
+## Salida
+
+```console
+$ raku exercises/conditional-checks/how-many-equal-numbers.raku 0 0 0
+Ingrese el número 1: 14
+Ingrese el número 2: 8
+Ingrese el número 3: 8
+2
+
+$ raku exercises/conditional-checks/how-many-equal-numbers.raku 
+Ingrese el número 1: 15
+Ingrese el número 2: 15
+Ingrese el número 3: 15
+3
+
+$ raku exercises/conditional-checks/how-many-equal-numbers.raku 
+Ingrese el número 1: 4
+Ingrese el número 2: 6
+Ingrese el número 3: 8
+0
+```
+
+## Comentarios
+
+1. Puedes comparar tres números en una sola expresión: `$n1 == $n2 == $n3`.
+1. Más tarde, aprendes sobre el operador de reducción. Entonces vuelve a esta tarea y resuélvela otra vez.
+
+{% include nav.html %}

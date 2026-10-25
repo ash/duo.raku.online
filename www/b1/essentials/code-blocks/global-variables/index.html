@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global variables · B1</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=f73576e1">
+<script src="/theme/langs.js?v=f73576e1"></script>
+<script src="/theme/boot.js?v=f73576e1"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <nav class="level" id="level" hidden></nav>
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"essentials/code-blocks/global-variables","n":122,"k":"topic","pv":"essentials/code-blocks/lexical-scope/quiz","nx":"essentials/code-blocks/global-variables/quiz","tr":["essentials","essentials/code-blocks"],"lv":"b1","lvs":["a2","b1"],"pvl":["a2","b1"],"nxl":["a2","b1"],"L":{"en":{"t":"Global variables","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Let us create a variable before the code block:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $x = 1;\n\n{\n    $x = 42;\n    say $x;\n}\n\nsay $x;<\/code><\/pre>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Here, <code>$x<\/code> is a global variable.<\/span> <span class=\"sg\" data-s=\"1\">It is in the global scope, and the program prints <code>42<\/code> twice.<\/span><\/p>"]]},"de":{"t":"Globale Variablen","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Lassen Sie uns eine Variable vor dem Codeblock erstellen:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $x = 1;\n\n{\n    $x = 42;\n    say $x;\n}\n\nsay $x;<\/code><\/pre>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Hier ist <code>$x<\/code> eine globale Variable.<\/span> <span class=\"sg\" data-s=\"1\">Sie liegt im globalen Geltungsbereich, und das Programm gibt zweimal <code>42<\/code> aus.<\/span><\/p>"]]},"nl":{"t":"Globale variabelen","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Laten we een variabele maken vóór het codeblok:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $x = 1;\n\n{\n    $x = 42;\n    say $x;\n}\n\nsay $x;<\/code><\/pre>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Hier is <code>$x<\/code> een globale variabele.<\/span> <span class=\"sg\" data-s=\"1\">Hij staat in de globale scope, en het programma print twee keer <code>42<\/code>.<\/span><\/p>"]]},"es":{"t":"Variables globales","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Vamos a crear una variable antes del bloque de código:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $x = 1;\n\n{\n    $x = 42;\n    say $x;\n}\n\nsay $x;<\/code><\/pre>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Aquí, <code>$x<\/code> es una variable global.<\/span> <span class=\"sg\" data-s=\"1\">Está en el ámbito global, y el programa imprime <code>42<\/code> dos veces.<\/span><\/p>"]]},"it":{"t":"Variabili globali","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Creiamo una variabile prima del blocco di codice:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $x = 1;\n\n{\n    $x = 42;\n    say $x;\n}\n\nsay $x;<\/code><\/pre>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Qui <code>$x<\/code> è una variabile globale.<\/span> <span class=\"sg\" data-s=\"1\">Si trova nello scope globale, e il programma stampa <code>42<\/code> due volte.<\/span><\/p>"]]},"lv":{"t":"Globālie mainīgie","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Izveidosim mainīgo pirms koda bloka:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $x = 1;\n\n{\n    $x = 42;\n    say $x;\n}\n\nsay $x;<\/code><\/pre>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Šeit <code>$x<\/code> ir globāls mainīgais.<\/span> <span class=\"sg\" data-s=\"1\">Tas atrodas globālajā darbības jomā, un programma izdrukā <code>42<\/code> divas reizes.<\/span><\/p>"]]},"ru":{"t":"Глобальные переменные","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Давайте создадим переменную до начала блока кода:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $x = 1;\n\n{\n    $x = 42;\n    say $x;\n}\n\nsay $x;<\/code><\/pre>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Здесь <code>$x<\/code> — глобальная переменная.<\/span> <span class=\"sg\" data-s=\"1\">Она находится в глобальной области видимости, и программа выводит <code>42<\/code> дважды.<\/span><\/p>"]]},"uk":{"t":"Глобальні змінні","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Давайте створимо змінну перед блоком коду:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $x = 1;\n\n{\n    $x = 42;\n    say $x;\n}\n\nsay $x;<\/code><\/pre>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Тут <code>$x<\/code> — глобальна змінна.<\/span> <span class=\"sg\" data-s=\"1\">Вона знаходиться в глобальній області видимості, і програма виводить <code>42<\/code> двічі.<\/span><\/p>"]]},"bg":{"t":"Глобални променливи","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Нека създадем променлива преди блока с код:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $x = 1;\n\n{\n    $x = 42;\n    say $x;\n}\n\nsay $x;<\/code><\/pre>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Тук <code>$x<\/code> е глобална променлива.<\/span> <span class=\"sg\" data-s=\"1\">Тя се намира в глобалния обхват и програмата отпечатва <code>42<\/code> два пъти.<\/span><\/p>"]]},"eo":{"t":"Globalaj variabloj","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Ni kreu variablon antaŭ la koda bloko:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $x = 1;\n\n{\n    $x = 42;\n    say $x;\n}\n\nsay $x;<\/code><\/pre>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Ĉi tie, <code>$x<\/code> estas tutmonda variablo.<\/span> <span class=\"sg\" data-s=\"1\">Ĝi estas en la tutmonda amplekso, kaj la programo presas <code>42<\/code> dufoje.<\/span><\/p>"]]},"la":{"t":"Globales variabiles","b":[["p",1,"<p><span class=\"sg\" data-s=\"0\">Creemus variabilem ante clausulam codicis:<\/span><\/p>"],["code",0,"<pre class=\"lang-raku\"><code>my $x = 1;\n\n{\n    $x = 42;\n    say $x;\n}\n\nsay $x;<\/code><\/pre>"],["p",2,"<p><span class=\"sg\" data-s=\"0\">Hic <code>$x<\/code> est variabilis globalis.<\/span> <span class=\"sg\" data-s=\"1\">In ambitu globali est, et programma <code>42<\/code> bis imprimit.<\/span><\/p>"]]}}}</script>
+<script src="/theme/reader.js?v=f73576e1"></script>
+</body>
+</html>
