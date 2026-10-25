@@ -62,6 +62,29 @@ As a yardstick, the English of the Loops section measures:
 | B1 | 10.0 | 3% | 3.9 |
 | A2 | 7.4 | 0% | 2.3 |
 
+## Making a section
+
+The tools in [`tools/`](tools) are plain Python 3. `C` below is the course
+checkout `build.raku` reads, `S` any scratch directory, and the last argument
+one or more sections, comma-separated.
+
+1. **English.** `python3 levels/tools/ensheet.py C essentials/compilers > S/en.spec`
+   lists every block a level may rewrite, with the original on an `OR:` line.
+   Replace each `TODO` with the block at A2 and at B1, or with `=` to keep the
+   original. Then
+   `python3 levels/tools/levelize.py C levels S/en.spec` writes the pages, and
+   `python3 levels/tools/measure.py C levels essentials/compilers --long 11`
+   shows how they compare with the yardstick above and lists the long
+   sentences.
+2. **Each translation.** `python3 levels/tools/trsheet.py de C levels essentials/compilers > S/de.spec`
+   lists the blocks whose English changed, with the original English and
+   German beside each; replace every `TODO: <English>` with the German. Then
+   `python3 levels/tools/apply.py de C levels essentials/compilers S/de.spec`
+   writes the German pages. A page whose German original does not line up
+   with the English block for block is skipped and has no German at the
+   levels.
+3. **Check** as below until it is clean.
+
 ## Checks
 
 `./build.sh --check` (or `rakupp build.raku --check --only=essentials/loops`)
