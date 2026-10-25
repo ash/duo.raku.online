@@ -23,6 +23,8 @@ block, so a stale translation degrades instead of misleading.
 | | |
 |---|---|
 | **Two panes** | Any two of the eleven languages, swappable, remembered. Each block is one grid row, so the columns cannot drift apart however long a translation runs. |
+| **Reading levels** | Pages rewritten at CEFR **A2** and **B1** beside the original, so a language you barely know is still readable. One switch sets both panes, and switching keeps your paragraph. So far: the [Loops](https://duo.raku.online/a2/essentials/loops/) section, in every language. See [`levels/`](levels/README.md). |
+| **Direct links** | The address names the level and the pair — [`/a2/essentials/loops/for/?en-de`](https://duo.raku.online/a2/essentials/loops/for/?en-de) is the A2 page, English opposite German — and follows along as you switch. |
 | **Sentence pairing** | Hover a sentence and its twin lights up opposite. 98% of paragraphs keep their sentence count in translation; the rest fall back to paragraph pairing and say so with a small `≠`. |
 | **Practice modes** | Read the target language alone with the translation collapsed to a strip you click to reveal — or the reverse, to translate and then check. |
 | **Word lookup** | Click any word in the language you are learning: how often it occurs in the course, how common it ranks, the sentence you found it in with its translation, and up to four more sentences from elsewhere in the course, each with its own translation. Built at build time from the corpus itself — no dictionary API, no network beyond this site. |
@@ -37,7 +39,7 @@ Everything a reader accumulates — the pair, the mode, the theme, saved words,
 progress — lives in `localStorage`. There is no account and no server.
 
 Keyboard: `←` `→` pages, `j` `k` paragraphs, `m` mode, `w` swap languages,
-`r` reveal all, `s` read aloud, `n` words to notice, `c` contents, `v` your
+`l` reading level, `r` reveal all, `s` read aloud, `n` words to notice, `c` contents, `v` your
 words, `/` hide code, `?` the full list.
 
 ## Layout
@@ -45,7 +47,8 @@ words, `/` hide code, `?` the full list.
 ```
 build.raku        the generator — one file, Raku, run by rakupp
 build.sh          runs it, then checks what came out
-src/site.raku     languages, speech tags, abbreviations, the default pair
+src/site.raku     languages, speech tags, abbreviations, the default pair, levels
+levels/           the A2 and B1 rewrites, shaped like the course checkout
 theme/            app.css, boot.js, reader.js — copied into www/theme verbatim
 www/              the published site, committed
 ```
@@ -60,6 +63,12 @@ inlined** as JSON. That is the central decision: switching languages, swapping
 panes and revealing a translation are re-renders, never fetches, and a page
 weighs about 11 kB. Fetched lazily, and only when asked for: the contents tree,
 the per-language title list, and the word index.
+
+A level is a second tree of the same shape. A page rewritten at A2 is
+published again at `/a2/<url>/`, with the A2 text of every language inlined
+the same way; pages nobody has rewritten yet simply do not exist there, and
+links fall back to the original. The pair travels in the query string
+(`?en-de`), since a static host cannot serve a file per pair.
 
 ## Building
 

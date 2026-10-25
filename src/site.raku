@@ -40,6 +40,17 @@
     # What a first-time visitor gets before touching the pickers.
     default-pair => { base => 'en', target => 'de' },
 
+    # Graded rewrites of the course at CEFR levels, easier to read than the
+    # original. Each `root` is a tree shaped like the course itself — English at
+    # the top, the translations under their language directories — and need not
+    # be complete: a page is published at a level only where its English
+    # rewrite exists. Both panes always show the same level, because only an A2
+    # page lines up with another A2 page.
+    levels => [
+        { id => 'a2', name => 'A2', root => 'levels/a2' },
+        { id => 'b1', name => 'B1', root => 'levels/b1' },
+    ],
+
     # Sentence-splitting: strings after which a full stop does NOT end a
     # sentence. Latin-script abbreviations and the Cyrillic ones the Russian,
     # Ukrainian and Bulgarian translations actually use.

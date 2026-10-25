@@ -28,7 +28,8 @@ var S = {
   base:   html.getAttribute('data-base'),
   target: html.getAttribute('data-target'),
   mode:   html.getAttribute('data-mode'),
-  code:   html.getAttribute('data-code')
+  code:   html.getAttribute('data-code'),
+  level:  PAGE.lv || ''           // '' is the original; the URL says which
 };
 
 function lang(id) {
@@ -87,6 +88,46 @@ function getJSON(url) {
 
 function titles(id) { return getJSON('/data/titles/' + id + '.json'); }
 function tree() { return getJSON('/data/tree.json'); }
+
+// ---------------------------------------------------------------- levels
+//
+// A page rewritten at a CEFR level lives at /<level>/<url>/. Links follow the
+// level the reader is at wherever the target exists at it too, and fall back
+// to the original where it does not.
+
+function levelName(id) {
+  for (var i = 0; i < (D.levels || []).length; i++) if (D.levels[i].id === id) return D.levels[i].name;
+  return id ? id.toUpperCase() : 'Original';
+}
+
+function pageHref(url, level) {
+  return '/' + (level ? level + '/' : '') + (url ? url + '/' : '');
+}
+
+// `have` is the list of levels the target exists at.
+function linkTo(url, have) {
+  return pageHref(url, S.level && have && have.indexOf(S.level) >= 0 ? S.level : '');
+}
+
+// url -> [levels], from the contents tree, for the links a page's own data
+// does not cover: the breadcrumbs, the drawer, the links inside the prose.
+var levelMap = null;
+function levelsOf(t, url) {
+  if (!levelMap) {
+    levelMap = {};
+    Object.keys(t.lv || {}).forEach(function (id) {
+      t.lv[id].forEach(function (i) { (levelMap[t.seq[i]] = levelMap[t.seq[i]] || []).push(id); });
+    });
+  }
+  return levelMap[url] || [];
+}
+
+// The address bar always names the pair, so what it shows is a link to
+// exactly this page as it is being read.
+function syncUrl() {
+  if (!history.replaceState) return;
+  history.replaceState(null, '', location.pathname + '?' + S.base + '-' + S.target + location.hash);
+}
 
 // The word index is sharded by first letter; anything that is not a plain
 // ASCII letter lives in a file named after its code point.
@@ -153,9 +194,51 @@ function applyPair() {
   html.setAttribute('data-base', S.base);
   html.setAttribute('data-target', S.target);
   paintPair(document.getElementById('pair'), PAGEKIND !== 'reader');
-  if (PAGEKIND === 'reader') { render(); paintChrome(); }
+  if (PAGEKIND === 'reader') { render(); paintChrome(); paintLevel(); syncUrl(); }
   if (PAGEKIND === 'home') paintHomeToc();
   if (PAGEKIND === 'words') paintWords();
+}
+
+// ------------------------------------------------------------- the level
+
+// One switch for both panes: an A2 page only lines up with another A2 page.
+// Each choice is a plain link, so it can be opened in a new tab; following it
+// carries the paragraph you are on, which is the same paragraph at every
+// level.
+function paintLevel() {
+  var node = document.getElementById('level');
+  if (!node) return;
+  node.innerHTML = '';
+  var have = PAGE.lvs || [];
+  node.hidden = !have.length;
+  if (!have.length) return;
+
+  [''].concat(have).forEach(function (id) {
+    var label = id ? levelName(id) : 'Original';
+    if (id === S.level) {
+      var here = el('span', 'is-on', label);
+      here.setAttribute('aria-current', 'page');
+      node.appendChild(here);
+      return;
+    }
+    var a = el('a', '', label);
+    a.href = pageHref(PAGE.u, id) + '?' + S.base + '-' + S.target;
+    a.title = id ? 'The page rewritten at CEFR level ' + label : 'The course as written';
+    a.addEventListener('click', function () {
+      var b = currentBlock();
+      if (b > 0) a.href = a.href.replace(/#.*$/, '') + '#b' + b;
+    });
+    node.appendChild(a);
+  });
+  node.setAttribute('title', 'Reading level (l)');
+}
+
+function cycleLevel() {
+  var have = [''].concat(PAGE.lvs || []);
+  if (have.length < 2) { toast('This page has no other levels yet'); return; }
+  var next = have[(have.indexOf(S.level) + 1) % have.length];
+  var b = currentBlock();
+  location.href = pageHref(PAGE.u, next) + '?' + S.base + '-' + S.target + (b > 0 ? '#b' + b : '');
 }
 
 // -------------------------------------------------------------- the theme
@@ -279,7 +362,8 @@ function render() {
 
   var head = el('div', 'page-head');
   var kicker = el('span', 'kicker', (PAGE.k || 'page') + ' · ' +
-    lang(S.base).name + ' ↔ ' + lang(S.target).name);
+    lang(S.base).name + ' ↔ ' + lang(S.target).name +
+    (S.level ? ' · level ' + levelName(S.level) : ''));
   var h1 = el('h1');
   h1.appendChild(elh('span', 'h-base', titleOf(S.base) || titleOf('en')));
   if (bt) {
@@ -352,7 +436,7 @@ function renderChildren() {
 
   Promise.all([tree(), titles(S.base), titles(S.target).catch(function () { return {}; })])
     .then(function (r) {
-      var seq = r[0].seq, tb = r[1], tt = r[2], read = readPages();
+      var t = r[0], seq = t.seq, tb = r[1], tt = r[2], read = readPages();
       var prefix = PAGE.u + '/';
       var found = 0;
       seq.forEach(function (u) {
@@ -361,7 +445,7 @@ function renderChildren() {
         found++;
         var li = el('li');
         var a = el('a');
-        a.href = '/' + u + '/';
+        a.href = linkTo(u, levelsOf(t, u));
         a.appendChild(elh('span', '', tb[u] || u));
         if (tt[u] && tt[u] !== tb[u]) a.appendChild(elh('span', 'lang2', ' · ' + tt[u]));
         if (read[u]) a.classList.add('is-read');
@@ -471,18 +555,33 @@ function wordAt(e) {
 // ------------------------------------------------------------ chrome bits
 
 function paintChrome() {
-  Promise.all([titles(S.base), titles(S.target).catch(function () { return {}; })])
-    .then(function (t) { paintCrumbs(t[0], t[1]); paintPager(t[0], t[1]); })
+  Promise.all([titles(S.base), titles(S.target).catch(function () { return {}; }),
+               S.level ? tree() : null])
+    .then(function (t) {
+      paintCrumbs(t[0], t[1], t[2]);
+      paintPager(t[0], t[1]);
+      if (t[2]) levelLinks(t[2]);
+    })
     .catch(function () {});
 }
 
-function paintCrumbs(tb, tt) {
+// The course links to itself from inside the prose; at a level, those links
+// stay at the level where they can.
+function levelLinks(t) {
+  if (!reader) return;
+  reader.querySelectorAll('.cell a[href^="/"]').forEach(function (a) {
+    var m = /^\/([^?#]*?)\/?([?#].*)?$/.exec(a.getAttribute('href'));
+    if (m && levelsOf(t, m[1]).indexOf(S.level) >= 0) a.setAttribute('href', pageHref(m[1], S.level) + (m[2] || ''));
+  });
+}
+
+function paintCrumbs(tb, tt, t) {
   var box = document.getElementById('crumbs');
   if (!box) return;
   box.innerHTML = '';
   (PAGE.tr || []).forEach(function (u) {
     var a = elh('a', '', tb[u] || u);
-    a.href = '/' + u + '/';
+    a.href = t ? linkTo(u, levelsOf(t, u)) : pageHref(u, '');
     box.appendChild(a);
     box.appendChild(el('span', 'sep', '›'));
   });
@@ -493,22 +592,22 @@ function paintPager(tb, tt) {
   var box = document.getElementById('pager');
   if (!box) return;
   box.innerHTML = '';
-  function side(url, dir, cls) {
+  function side(url, have, dir, cls) {
     if (!url) { box.appendChild(el('span', '')); return; }
     var a = el('a', cls);
-    a.href = '/' + url + '/';
+    a.href = linkTo(url, have);
     a.appendChild(el('span', 'dir', dir));
     a.appendChild(elh('span', 't-base', (tb && tb[url]) || '…'));
     if (tt && tt[url]) a.appendChild(elh('span', 't-target', tt[url]));
     a.addEventListener('click', function () { markRead(PAGE.u); });
     box.appendChild(a);
   }
-  side(PAGE.pv, '← previous', 'to-prev');
-  side(PAGE.nx, 'next →', 'to-next');
+  side(PAGE.pv, PAGE.pvl, '← previous', 'to-prev');
+  side(PAGE.nx, PAGE.nxl, 'next →', 'to-next');
 }
 
 function rememberPlace() {
-  jsSet(LAST_KEY, { u: PAGE.u, t: textOf(titleOf(S.base)), at: Date.now() });
+  jsSet(LAST_KEY, { u: PAGE.u, lv: S.level, t: textOf(titleOf(S.base)), at: Date.now() });
 }
 
 // Reaching the end of a page is what counts as having read it.
@@ -788,7 +887,7 @@ function buildToc(host, showSecond, maxDepth) {
       t.tree.forEach(function (part) {
         var sec = el('div', 'toc-part');
         var a = elh('a', '', tb[part.u] || part.u);
-        a.href = '/' + part.u + '/';
+        a.href = linkTo(part.u, levelsOf(t, part.u));
         sec.appendChild(a);
         (part.c || []).forEach(function (group) {
           // Label and list travel together, so a column break cannot leave a
@@ -797,7 +896,7 @@ function buildToc(host, showSecond, maxDepth) {
           if (group.g) box.appendChild(el('div', 'toc-group', group.g));
           var ul = el('ul', 'toc-list');
           (group.c || []).forEach(function (node) {
-            tocNode(ul, node, 1, tb, tt, read, showSecond, limit);
+            tocNode(ul, node, 1, t, tb, tt, read, showSecond, limit);
           });
           box.appendChild(ul);
           sec.appendChild(box);
@@ -810,10 +909,11 @@ function buildToc(host, showSecond, maxDepth) {
     .catch(function () { host.textContent = 'Could not load the contents.'; });
 }
 
-function tocNode(ul, node, depth, tb, tt, read, showSecond, limit) {
+function tocNode(ul, node, depth, t, tb, tt, read, showSecond, limit) {
   var li = el('li');
   var a = el('a', depth > 1 ? 't' + depth : '');
-  a.href = '/' + node.u + '/';
+  var have = levelsOf(t, node.u);
+  a.href = linkTo(node.u, have);
   a.appendChild(elh('span', '', tb[node.u] || node.u));
 
   var kids = node.c || [];
@@ -828,9 +928,22 @@ function tocNode(ul, node, depth, tb, tt, read, showSecond, limit) {
   if (node.u === PAGE.u) a.classList.add('is-here');
   if (read[node.u]) a.classList.add('is-read');
   li.appendChild(a);
+  // Where a page has been rewritten at a level, say so with a link straight
+  // to it — the contents are how a reader finds out the levels exist.
+  if (have.length) {
+    var lv = el('span', 'lvls');
+    have.forEach(function (id) {
+      var b = el('a', id === S.level ? 'is-on' : '', levelName(id));
+      b.href = pageHref(node.u, id);
+      b.title = 'Read this at CEFR level ' + levelName(id);
+      lv.appendChild(b);
+    });
+    li.appendChild(lv);
+    li.className = 'has-lvls';
+  }
   ul.appendChild(li);
   if (depth >= limit) return;
-  kids.forEach(function (k) { tocNode(ul, k, depth + 1, tb, tt, read, showSecond, limit); });
+  kids.forEach(function (k) { tocNode(ul, k, depth + 1, t, tb, tt, read, showSecond, limit); });
 }
 
 function countLeaves(node) {
@@ -910,6 +1023,7 @@ var HELP = [
   ['j  k', 'Next / previous paragraph'],
   ['m', 'Cycle the reading mode'],
   ['w', 'Swap the two languages'],
+  ['l', 'Next reading level: original, A2, B1'],
   ['r', 'Reveal every hidden paragraph'],
   ['s', 'Read the page aloud (or stop)'],
   ['n', 'Words to notice on this page'],
@@ -943,16 +1057,23 @@ function showHelp() {
   document.body.appendChild(wrap);
 }
 
+// The paragraph at the top of the window. Rows are display: contents in the
+// parallel mode and have no box of their own, so it is measured on a cell.
+function currentBlock() {
+  var cells = document.querySelectorAll('.cell-base');
+  var y = window.scrollY + 90, idx = 0;
+  for (var i = 0; i < cells.length; i++) {
+    if (cells[i].getBoundingClientRect().top + window.scrollY <= y + 4) idx = i;
+  }
+  return idx;
+}
+
 function scrollBlocks(dir) {
   var rows = Array.prototype.slice.call(document.querySelectorAll('.pr'));
   if (!rows.length) return;
-  var y = window.scrollY + 90;
-  var idx = 0;
-  for (var i = 0; i < rows.length; i++) {
-    if (rows[i].getBoundingClientRect().top + window.scrollY <= y + 4) idx = i;
-  }
-  idx = Math.min(rows.length - 1, Math.max(0, idx + dir));
-  var top = rows[idx].getBoundingClientRect().top + window.scrollY - 80;
+  var idx = Math.min(rows.length - 1, Math.max(0, currentBlock() + dir));
+  var cell = rows[idx].querySelector('.cell-base') || rows[idx];
+  var top = cell.getBoundingClientRect().top + window.scrollY - 80;
   window.scrollTo({ top: top, behavior: 'smooth' });
   if (S.mode !== 'parallel') rows[idx].classList.add('shown');
 }
@@ -969,8 +1090,9 @@ document.addEventListener('keydown', function (e) {
       var h = document.getElementById('help'); if (h) h.hidden = true;
       stopSpeaking();
       break;
-    case 'ArrowLeft':  if (PAGE.pv) { markRead(PAGE.u); location.href = '/' + PAGE.pv + '/'; } break;
-    case 'ArrowRight': if (PAGE.nx) { markRead(PAGE.u); location.href = '/' + PAGE.nx + '/'; } break;
+    case 'ArrowLeft':  if (PAGE.pv) { markRead(PAGE.u); location.href = linkTo(PAGE.pv, PAGE.pvl); } break;
+    case 'ArrowRight': if (PAGE.nx) { markRead(PAGE.u); location.href = linkTo(PAGE.nx, PAGE.nxl); } break;
+    case 'l': if (PAGEKIND === 'reader') cycleLevel(); break;
     case 'j': scrollBlocks(1); break;
     case 'k': scrollBlocks(-1); break;
     case 'm': setMode(MODES[(MODES.indexOf(html.getAttribute('data-mode')) + 1) % MODES.length]); break;
@@ -993,10 +1115,21 @@ document.addEventListener('keydown', function (e) {
 
 // ================================================================== PAGES
 
+// Arriving from another level with #b12 puts you back on paragraph 12.
+function restoreBlock() {
+  var m = /^#b(\d+)$/.exec(location.hash);
+  if (!m) return;
+  var cell = document.querySelector('.cell-base[data-b="' + m[1] + '"]');
+  if (cell) window.scrollTo({ top: cell.getBoundingClientRect().top + window.scrollY - 80 });
+}
+
 if (PAGEKIND === 'reader') {
   paintPair(document.getElementById('pair'), false);
+  paintLevel();
   render();
   paintChrome();
+  syncUrl();
+  restoreBlock();
   var sb = document.getElementById('speak-btn');
   if (sb) sb.addEventListener('click', readAloud);
   var tb = document.getElementById('toc-btn');
@@ -1018,7 +1151,8 @@ function paintHomeToc() {
     res.innerHTML = '';
     res.appendChild(document.createTextNode('Continue where you left off: '));
     var a = el('a', '', last.t || last.u);
-    a.href = '/' + last.u + '/';
+    a.href = pageHref(last.u, last.lv || '');
+    if (last.lv) a.appendChild(el('span', 'wp-meta', ' · ' + levelName(last.lv)));
     res.appendChild(a);
     var n = Object.keys(readPages()).length;
     if (n) res.appendChild(el('span', 'wp-meta', '  ·  ' + n + ' of ' + D.pages + ' pages read'));

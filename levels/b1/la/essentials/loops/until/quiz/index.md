@@ -1,0 +1,35 @@
+---
+title: 'Quiz — `until` ansa'
+---
+
+{% include menu.html %}
+
+## 1
+
+What does this program print?
+
+```raku
+my $n = 0;
+until $n > 5 {
+    $n++;
+}
+say $n;
+```
+
+{:.quiz-select}
+6 | Responsum: (: 4, 5, 6 :)
+
+## 2
+
+Quomodo efficere potes ut hoc programma ansam exacte quinquies exsequatur?
+
+{:.quiz-code .fill}
+. | my $n = 1;
+6 5 | until $n == ␣ {
+. | &nbsp;&nbsp;&nbsp;&nbsp;say $n;
+. | &nbsp;&nbsp;&nbsp;&nbsp;$n++;
+. | }
+
+{% include quiz.html %}
+
+{% include nav.html %}

@@ -140,6 +140,26 @@ a:hover { text-decoration-style: solid; }
 .pair .swap:hover { color: var(--accent); }
 
 .pair-big { justify-content: center; gap: .5rem; margin: 1.6rem 0 .6rem; }
+
+/* ------------------------------------------------------------ the level */
+
+.level {
+  display: flex;
+  border: 1px solid var(--rule);
+  border-radius: 7px;
+  overflow: hidden;
+  font-size: .78rem;
+}
+.level[hidden] { display: none; }
+.level a, .level span {
+  padding: .3rem .5rem;
+  text-decoration: none;
+  color: var(--ink-soft);
+  line-height: 1;
+}
+.level > * + * { border-left: 1px solid var(--rule); }
+.level a:hover { background: var(--bg-sunk); color: var(--ink); }
+.level .is-on { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
 .pair-big select { font-size: 1.05rem; padding: .6rem 2rem .6rem .8rem; max-width: none; background-size: .7rem; }
 .pair-big .swap { font-size: 1.3rem; }
 
@@ -424,6 +444,18 @@ a:hover { text-decoration-style: solid; }
 .toc-list .t2 { padding-left: 1rem; }
 .toc-list .t3 { padding-left: 2rem; font-size: .84rem; }
 .toc-list .lang2 { color: var(--ink-faint); font-size: .92em; }
+.toc-list li.has-lvls { display: flex; align-items: baseline; gap: .25rem; }
+.toc-list li.has-lvls > a:first-child { flex: 1; min-width: 0; }
+.toc-list .lvls { display: flex; gap: .2rem; flex: none; }
+.toc-list .lvls a {
+  font-size: .68rem;
+  font-weight: 600;
+  padding: .08rem .3rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  color: var(--accent);
+}
+.toc-list .lvls a:hover, .toc-list .lvls a.is-on { background: var(--accent-soft); }
 
 /* ------------------------------------------------------- the word  panel */
 

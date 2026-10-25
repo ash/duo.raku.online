@@ -1,0 +1,32 @@
+---
+title: Números de Fibonacci
+---
+
+{% include menu.html %}
+
+## Problema
+
+Escribe un programa que imprima los primeros 20 números de Fibonacci.
+
+## Ejemplo
+
+Cuando ejecutas el programa, imprime los primeros números de Fibonacci:
+
+```console
+$ raku fibonacci-numbers.raku
+0
+1
+1
+2
+3
+5
+8
+13
+. . .
+```
+
+## Solución
+
+✅ [Ver la solución](solution)
+
+{% include nav.html %}

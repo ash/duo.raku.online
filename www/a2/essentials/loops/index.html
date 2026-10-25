@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loops · A2</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/theme/app.css?v=f73576e1">
+<script src="/theme/langs.js?v=f73576e1"></script>
+<script src="/theme/boot.js?v=f73576e1"></script>
+</head>
+<body data-page="reader">
+<header class="bar">
+  <a class="bar-home" href="/" title="Contents">◧</a>
+  <nav class="crumbs" id="crumbs"></nav>
+  <div class="bar-tools">
+    <nav class="level" id="level" hidden></nav>
+    <div class="pair" id="pair"></div>
+    <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
+    <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
+    <button class="tool" id="notes-btn" title="Words to notice on this page (n)">✦</button>
+    <a class="tool" href="/words/" title="Your saved words (v)">★</a>
+    <button class="tool" id="toc-btn" title="Contents (c)">☰</button>
+    <button class="tool" id="theme-btn" title="Theme">◑</button>
+  </div>
+</header>
+<main id="reader" class="reader"></main>
+<nav class="pager" id="pager"></nav>
+<aside class="drawer" id="drawer" hidden></aside>
+<aside class="panel" id="panel" hidden></aside>
+<div class="toasts" id="toasts"></div>
+
+<script type="application/json" id="page-data">{"u":"essentials/loops","n":150,"k":"section","pv":"essentials/conditional-checks/exercises/leap-year/solution","nx":"essentials/loops/while","tr":["essentials"],"lv":"a2","lvs":["a2","b1"],"nxl":["a2","b1"],"L":{"en":{"t":"Loops","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">A loop repeats the same action many times.<\/span> <span class=\"sg\" data-s=\"1\">In this section, we look at some ways to make loops in Raku.<\/span> <span class=\"sg\" data-s=\"2\">You will learn more about loops in the second part of the course.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Here are the topics of this section.<\/span><\/p>"]]},"de":{"t":"Schleifen","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Eine Schleife wiederholt dieselbe Aktion viele Male.<\/span> <span class=\"sg\" data-s=\"1\">In diesem Abschnitt sehen wir uns einige Wege an, in Raku Schleifen zu bauen.<\/span> <span class=\"sg\" data-s=\"2\">Im zweiten Teil des Kurses lernen Sie mehr über Schleifen.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Hier sind die Themen dieses Abschnitts.<\/span><\/p>"]]},"nl":{"t":"Lussen","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Een lus herhaalt dezelfde actie vele keren.<\/span> <span class=\"sg\" data-s=\"1\">In deze sectie bekijken we een paar manieren om lussen te maken in Raku.<\/span> <span class=\"sg\" data-s=\"2\">Je leert meer over lussen in het tweede deel van de cursus.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Dit zijn de onderwerpen van deze sectie.<\/span><\/p>"]]},"es":{"t":"Bucles","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Un bucle repite la misma acción muchas veces.<\/span> <span class=\"sg\" data-s=\"1\">En esta sección, vemos algunas formas de hacer bucles en Raku.<\/span> <span class=\"sg\" data-s=\"2\">Vas a aprender más sobre los bucles en la segunda parte del curso.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Estos son los temas de esta sección.<\/span><\/p>"]]},"it":{"t":"Cicli","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Un ciclo ripete la stessa azione molte volte.<\/span> <span class=\"sg\" data-s=\"1\">In questa sezione vediamo alcuni modi per creare cicli in Raku.<\/span> <span class=\"sg\" data-s=\"2\">Imparerai di più sui cicli nella seconda parte del corso.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Ecco gli argomenti di questa sezione.<\/span><\/p>"]]},"lv":{"t":"Cikli","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Cikls atkārto to pašu darbību daudzas reizes.<\/span> <span class=\"sg\" data-s=\"1\">Šajā sadaļā mēs apskatām dažus veidus, kā veidot ciklus Raku valodā.<\/span> <span class=\"sg\" data-s=\"2\">Vairāk par cikliem jūs uzzināsiet kursa otrajā daļā.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Šeit ir šīs sadaļas tēmas.<\/span><\/p>"]]},"ru":{"t":"Циклы","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Цикл повторяет одно и то же действие много раз.<\/span> <span class=\"sg\" data-s=\"1\">В этом разделе мы рассмотрим несколько способов делать циклы в Raku.<\/span> <span class=\"sg\" data-s=\"2\">Во второй части курса вы узнаете о циклах больше.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Вот темы этого раздела.<\/span><\/p>"]]},"uk":{"t":"Цикли","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Цикл повторює ту саму дію багато разів.<\/span> <span class=\"sg\" data-s=\"1\">У цьому розділі ми розглядаємо кілька способів робити цикли в Raku.<\/span> <span class=\"sg\" data-s=\"2\">Більше про цикли ви дізнаєтеся в другій частині курсу.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Ось теми цього розділу.<\/span><\/p>"]]},"bg":{"t":"Цикли","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Цикълът повтаря едно и също действие много пъти.<\/span> <span class=\"sg\" data-s=\"1\">В този раздел разглеждаме някои начини да пишем цикли в Raku.<\/span> <span class=\"sg\" data-s=\"2\">Ще научите повече за циклите във втората част на курса.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Ето темите на този раздел.<\/span><\/p>"]]},"eo":{"t":"Bukloj","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Buklo ripetas la saman agon multajn fojojn.<\/span> <span class=\"sg\" data-s=\"1\">En ĉi tiu sekcio, ni rigardas kelkajn manierojn fari buklojn en Raku.<\/span> <span class=\"sg\" data-s=\"2\">Vi lernos pli pri bukloj en la dua parto de la kurso.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Jen la temoj de ĉi tiu sekcio.<\/span><\/p>"]]},"la":{"t":"Ansae","b":[["p",3,"<p><span class=\"sg\" data-s=\"0\">Circulus eandem actionem multoties repetit.<\/span> <span class=\"sg\" data-s=\"1\">In hac sectione, aliquos modos videmus quibus circulos in Raku facimus.<\/span> <span class=\"sg\" data-s=\"2\">Plura de circulis in secunda parte cursus disces.<\/span><\/p>"],["p",1,"<p><span class=\"sg\" data-s=\"0\">Hic sunt argumenta huius sectionis.<\/span><\/p>"]]}}}</script>
+<script src="/theme/reader.js?v=f73576e1"></script>
+</body>
+</html>

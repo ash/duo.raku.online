@@ -12,8 +12,9 @@ window.DUO = {
     { id: "eo", name: "Esperanto", en: "Esperanto", speech: "eo", dir: "eo", pages: 1532, words: 8430 },
     { id: "la", name: "Latina", en: "Latin", speech: "la", dir: "la", pages: 1532, words: 10077 }
   ],
+  levels: [{ id: "a2", name: "A2" }, { id: "b1", name: "B1" }],
   defaultPair: { base: "en", target: "de" },
-  version: "40453341",
+  version: "f73576e1",
   pages: 1532,
   courseBase: "https://course.raku.org"
 };

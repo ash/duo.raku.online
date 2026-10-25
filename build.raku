@@ -675,8 +675,9 @@ sub parse-frontmatter(Str $text) {
 }
 
 # A page in one language: its title and its blocks, or Nil if untranslated.
-sub load-page(Str $url, Str $dir) {
-    my $path = $dir ?? "$COURSE/$dir" !! $COURSE;
+# `$root` is the course, or one of the level trees, which share its layout.
+sub load-page(Str $url, Str $dir, Str $root = $COURSE) {
+    my $path = $dir ?? "$root/$dir" !! $root;
     $path ~= "/$url" if $url;
     $path ~= '/index.md';
     return Nil unless $path.IO.e;
@@ -804,6 +805,7 @@ constant READER-BODY = q:to/BODY/;
   <a class="bar-home" href="/" title="Contents">◧</a>
   <nav class="crumbs" id="crumbs"></nav>
   <div class="bar-tools">
+    <nav class="level" id="level" hidden></nav>
     <div class="pair" id="pair"></div>
     <button class="tool" id="mode-btn" title="Reading mode (m)">◐</button>
     <button class="tool" id="speak-btn" title="Read the page aloud (s)">▶</button>
@@ -821,6 +823,19 @@ constant READER-BODY = q:to/BODY/;
 BODY
 
 my @LANG-IDS = @LANGS.map({ .<id>.Str });
+my @LEVELS   = @(%SITE<levels> // []);
+
+# Which pages each level has. A page exists at a level when its English
+# rewrite does — the translations follow the English, never the other way
+# round. Known before the pass, because a page's links have to say whether
+# their targets exist at the level too.
+my %AT-LEVEL;                # url -> [level ids]
+for @SEQ -> $page {
+    for @LEVELS -> %v {
+        my $md = %v<root>.Str ~ ($page.url ?? "/{$page.url}" !! '') ~ '/index.md';
+        (%AT-LEVEL{$page.url} //= []).push(%v<id>.Str) if $md.IO.e;
+    }
+}
 
 # --- pass over every page -------------------------------------------------
 
@@ -829,11 +844,51 @@ my $pages-written = 0;
 my $blocks-total  = 0;
 my $mismatched    = 0;
 my @mismatches;
+my %level-pages;             # level id -> pages written
+my @level-mismatches;
+my %level-sync;              # "a2 de" -> [blocks paired by sentence, blocks not]
+my @level-unsynced;
 
 sub blocks-json(@blocks --> Str) {
     '[' ~ @blocks.map({
         '[' ~ json-str(.kind) ~ ',' ~ .segs ~ ',' ~ json-str(.html) ~ ']'
     }).join(',') ~ ']'
+}
+
+sub lang-json(Str $id, $d --> Str) {
+    json-str($id) ~ ':{'
+        ~ '"t":' ~ json-str(fmt-basic($d<title>))
+        ~ ',"b":' ~ blocks-json(@($d<blocks>))
+        ~ '}'
+}
+
+# The levels a page exists at, or Nil where it has none, so the pages outside
+# the rewritten sections carry nothing extra.
+sub levels-json(Str $url) {
+    my @l = @(%AT-LEVEL{$url} // []);
+    @l ?? '[' ~ @l.map({ json-str($_) }).join(',') ~ ']' !! Nil
+}
+
+# One page's payload. `$level` is '' for the original. `u` stays the course
+# URL at every level: progress, saved words and the word index are about the
+# page, not about how hard it was to read.
+sub page-json($page, Str $level, @langs-json --> Str) {
+    my @extra;
+    @extra.push: ',"lv":' ~ json-str($level) if $level;
+    for <lvs pvl nxl> Z ($page.url, $page.prev, $page.next) -> ($key, $url) {
+        my $l = levels-json($url);
+        @extra.push: ",\"$key\":$l" if $l;
+    }
+    '{'
+        ~ '"u":'  ~ json-str($page.url)
+        ~ ',"n":' ~ $page.n
+        ~ ',"k":' ~ json-str($page.kind)
+        ~ ',"pv":' ~ json-str($page.prev)
+        ~ ',"nx":' ~ json-str($page.next)
+        ~ ',"tr":[' ~ $page.trail.grep({ !%DROPPED{$_} }).map({ json-str($_) }).join(',') ~ ']'
+        ~ @extra.join
+        ~ ',"L":{' ~ @langs-json.join(',') ~ '}'
+        ~ '}'
 }
 
 say "reading {@SEQ.elems} pages × {@LANGS.elems} languages";
@@ -863,31 +918,87 @@ for @SEQ -> $page {
             $mismatched++;
             @mismatches.push("{$page.url} [$id]: {@b.elems} blocks vs en's $ref");
         }
-        @langs-json.push: json-str($id) ~ ':{'
-            ~ '"t":' ~ json-str(fmt-basic($d<title>))
-            ~ ',"b":' ~ blocks-json(@b)
-            ~ '}';
+        @langs-json.push: lang-json($id, $d);
     }
 
-    my $data = '{'
-        ~ '"u":'  ~ json-str($page.url)
-        ~ ',"n":' ~ $page.n
-        ~ ',"k":' ~ json-str($page.kind)
-        ~ ',"pv":' ~ json-str($page.prev)
-        ~ ',"nx":' ~ json-str($page.next)
-        ~ ',"tr":[' ~ $page.trail.grep({ !%DROPPED{$_} }).map({ json-str($_) }).join(',') ~ ']'
-        ~ ',"L":{' ~ @langs-json.join(',') ~ '}'
-        ~ '}';
+    my $page-title = plain(%doc<en><title>) || %SITE<title>.Str;
+    unless %ARGS<check> {        # --check reports on alignment; it publishes nothing
+        write-file("$OUT/{$page.url}/index.html",
+                   page-shell('reader', $page-title, page-json($page, '', @langs-json), READER-BODY));
+        $pages-written++;
+        say "  {$pages-written} / {@SEQ.elems}" if $pages-written %% 250;
+    }
 
-    next if %ARGS<check>;        # --check reports on alignment; it publishes nothing
+    # The same page at each level it has been rewritten for, at /<level>/<url>/.
+    # A level's English has to keep the original's blocks, so that switching
+    # level keeps a reader on the same paragraph; each translation has to keep
+    # the level's English blocks, as everywhere else.
+    for @LEVELS -> %v {
+        my $lv = %v<id>.Str;
+        next unless @(%AT-LEVEL{$page.url} // []).grep($lv);
+        my %ldoc;
+        for @LANGS -> %l {
+            my $d = load-page($page.url, %l<dir>.Str, %v<root>.Str);
+            %ldoc{%l<id>.Str} = $d if $d;
+        }
+        my $lref = @(%ldoc<en><blocks>).elems;
+        @level-mismatches.push("{$page.url} [$lv en]: $lref blocks vs the original's $ref")
+            if $lref != $ref;
 
-    write-file("$OUT/{$page.url}/index.html",
-               page-shell('reader', plain(%doc<en><title>) || %SITE<title>.Str, $data, READER-BODY));
-    $pages-written++;
-    say "  {$pages-written} / {@SEQ.elems}" if $pages-written %% 250;
+        my @ljson;
+        for @LANG-IDS -> $id {
+            my $d = %ldoc{$id};
+            next unless $d;
+            my @b = @($d<blocks>);
+            @level-mismatches.push("{$page.url} [$lv $id]: {@b.elems} blocks vs $lv en's $lref")
+                if @b.elems != $lref;
+
+            # A level rewrites the prose and nothing else: code and quizzes must
+            # come through exactly as this language's original has them.
+            my @o = @(%doc{$id}<blocks> // []);
+            for @b.kv -> $i, $blk {
+                my $orig = @o[$i] // next;
+                next unless $orig.kind eq 'code' | 'quiz';
+                @level-mismatches.push("{$page.url} [$lv $id]: block $i ({$orig.kind}) differs from the original")
+                    if $blk.html ne $orig.html;
+            }
+
+            # Sentence pairing is what makes a level worth reading in two
+            # languages; a block that lost it still reads, so this is a count,
+            # not a failure.
+            if $id ne 'en' {
+                my @e = @(%ldoc<en><blocks>);
+                for @b.kv -> $i, $blk {
+                    next unless @e[$i] && $blk.segs > 0 && @e[$i].segs > 0;
+                    %level-sync{"$lv $id"}[$blk.segs == @e[$i].segs ?? 0 !! 1]++;
+                    @level-unsynced.push("{$page.url} [$lv $id] block $i: {$blk.segs} sentences vs en's {@e[$i].segs}")
+                        if $blk.segs != @e[$i].segs;
+                }
+            }
+            @ljson.push: lang-json($id, $d);
+        }
+        next if %ARGS<check>;
+        write-file("$OUT/$lv/{$page.url}/index.html",
+                   page-shell('reader', "$page-title · {%v<name>}", page-json($page, $lv, @ljson), READER-BODY));
+        %level-pages{$lv}++;
+    }
 }
 
 say "pages written: $pages-written, blocks: $blocks-total";
+say "level pages written: " ~ @LEVELS.map({ "{.<id>} {%level-pages{.<id>.Str} // 0}" }).join(', ') if @LEVELS;
+if @level-mismatches {
+    # Unlike the course's own drift, a level is written here and can be fixed
+    # here, so every one of these is listed.
+    say "level mismatches: {@level-mismatches.elems}";
+    say "  $_" for @level-mismatches;
+}
+if %level-sync {
+    say "level sentence pairing: " ~ %level-sync.keys.sort.map(-> $k {
+        my ($ok, $off) = (%level-sync{$k}[0] // 0, %level-sync{$k}[1] // 0);
+        "$k {(100 * $ok / (($ok + $off) || 1)).round}%"
+    }).join(', ');
+    say "  $_" for @level-unsynced;
+}
 if $mismatched {
     # A mismatch means the English page was edited after it was translated, so
     # the two no longer line up paragraph for paragraph. The reader copes —
@@ -902,7 +1013,7 @@ if $mismatched {
 }
 
 if %ARGS<check> {
-    exit $mismatched ?? 1 !! 0;
+    exit ($mismatched || @level-mismatches) ?? 1 !! 0;
 }
 
 # --- the shared data files -------------------------------------------------
@@ -950,7 +1061,14 @@ sub tree-json(--> Str) {
         }
         @parts.push: node($part-url, @groups);
     }
-    '{"seq":[' ~ @SEQ.map({ json-str(.url) }).join(',') ~ '],"tree":[' ~ @parts.join(',') ~ ']}'
+    # Which pages exist at each level, as positions in the sequence, so the
+    # drawer and the breadcrumbs can keep a reader at the level they chose.
+    my @lv = @LEVELS.map(-> %v {
+        json-str(%v<id>.Str) ~ ':['
+            ~ @SEQ.grep({ @(%AT-LEVEL{.url} // []).grep(%v<id>.Str) }).map(*.n).join(',') ~ ']'
+    });
+    '{"seq":[' ~ @SEQ.map({ json-str(.url) }).join(',') ~ '],"tree":[' ~ @parts.join(',') ~ ']'
+        ~ ',"lv":{' ~ @lv.join(',') ~ '}}'
 }
 
 write-file("$OUT/data/tree.json", tree-json());
@@ -1023,7 +1141,9 @@ constant HOME-BODY = q:to/BODY/;
     <h2>The course</h2>
     <p class="note">Five parts and their sections. Every topic, quiz, exercise
       and solution underneath is in the contents drawer — press <kbd>c</kbd> on
-      any page.</p>
+      any page. Where a section is marked <b>A2</b> or <b>B1</b>, it has also
+      been rewritten in simpler language at that CEFR level, in every
+      translation.</p>
     <div id="home-toc" class="home-toc">Loading…</div>
   </section>
 </main>
@@ -1099,6 +1219,7 @@ my $langs-js = 'window.DUO = {' ~ "\n"
         ~ ' }'
       }).join(",\n")
     ~ "\n" ~ '  ],' ~ "\n"
+    ~ '  levels: [' ~ @LEVELS.map({ '{ id: ' ~ json-str(.<id>.Str) ~ ', name: ' ~ json-str(.<name>.Str) ~ ' }' }).join(', ') ~ '],' ~ "\n"
     ~ '  defaultPair: { base: ' ~ json-str(%SITE<default-pair><base>.Str)
     ~ ', target: ' ~ json-str(%SITE<default-pair><target>.Str) ~ ' },' ~ "\n"
     ~ '  version: ' ~ json-str($VERSION) ~ ',' ~ "\n"

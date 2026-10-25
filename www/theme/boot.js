@@ -25,6 +25,16 @@
   var mode   = get(K.mode, 'parallel');
   var code   = get(K.code, 'show');
 
+  // A link can name the pair — /essentials/loops/for/?en-de, the language you
+  // know first — and then it wins over what this browser used last, and
+  // becomes what it uses next.
+  var named = /^\?([a-z]{2})-([a-z]{2})$/.exec(location.search);
+  if (named && named[1] !== named[2] && ids.indexOf(named[1]) >= 0 && ids.indexOf(named[2]) >= 0) {
+    base = named[1];
+    target = named[2];
+    try { localStorage.setItem(K.base, base); localStorage.setItem(K.target, target); } catch (e) {}
+  }
+
   // A language that vanished from site.raku must not leave the reader stuck on
   // a pane it can never fill.
   if (ids.length) {

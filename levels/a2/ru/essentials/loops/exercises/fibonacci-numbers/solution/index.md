@@ -1,0 +1,61 @@
+---
+title: 'Решение: Числа Фибоначчи'
+---
+
+{% include menu.html %}
+
+Этот алгоритм даёт числа Фибоначчи.
+
+1. _F<sub>0</sub>_ = 0, _F<sub>1</sub>_ = 1
+2. _F<sub>n</sub>_ = _F<sub>n-1</sub>_ + _F<sub>n-2</sub>_
+
+## Код
+
+Код точно следует алгоритму. Он использует две переменные для двух текущих чисел Фибоначчи. Он меняет их в цикле. Обе переменные получают новые значения [в одном присваивании](/ru/essentials/scalar-variables/assigning-a-value/#multiple-assignment).
+
+```raku
+my $a = 0;
+my $b = 1;
+
+say $a;
+for ^19 {
+    ($a, $b) = $b, $a + $b;
+    say $a;
+}
+```
+
+🦋 Найдите программу в файле [fibonacci-numbers.raku](https://github.com/ash/raku-course/blob/master/exercises/essentials/loops/fibonacci-numbers.raku).
+
+## Вывод
+
+Вот вывод. Программа печатает первые 20 чисел.
+
+```console
+$ raku exercises/loops/fibonacci-numbers.raku
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
+610
+987
+1597
+2584
+4181
+```
+
+## Ещё об этом
+
+Запомните эту задачу. Позже в курсе мы к ней вернёмся. Тогда мы решим её по-новому с помощью _последовательностей_ Raku.
+
+{% include nav.html %}
