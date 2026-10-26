@@ -8,7 +8,7 @@ So far the levels cover all of Essentials, from
 [the beginning](https://duo.raku.online/a2/essentials/what-is-raku/) to
 [the `MAIN` function](https://duo.raku.online/a2/essentials/the-main-function/),
 and Advanced from [debugging](https://duo.raku.online/a2/advanced/representations/)
-through introspection, in all eleven languages. A page is English-only at the levels where its
+through strings and quoting, in all eleven languages. A page is English-only at the levels where its
 translation does not line up with the English, or is listed in
 [`skip.txt`](skip.txt).
 
