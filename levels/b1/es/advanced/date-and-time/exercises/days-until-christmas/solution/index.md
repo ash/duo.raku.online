@@ -1,0 +1,30 @@
+---
+title: 'Solution: Semanas hasta Navidad'
+---
+
+{% include menu.html %}
+
+Aquí tienes una posible solución.
+
+## Código
+
+```raku
+my $days = Date.new(2026, 12, 25) - Date.new(2026, 6, 27);
+say "{$days div 7} weeks and {$days % 7} days";
+```
+
+🦋 Encuentra el programa en el archivo [days-until-christmas.raku](https://github.com/ash/raku-course/blob/master/exercises/advanced/date-and-time/days-until-christmas.raku).
+
+## Salida
+
+```
+25 weeks and 6 days
+```
+
+## Comentarios
+
+1. Cuando restas un `Date` de otro, obtienes el número de días entre ellos. Aquí es `181`. Así no tienes que contar tú mismo los días de cada mes. La fecha posterior se escribe primero, así que el resultado es positivo.
+
+1. La división entera con `div` da el número de semanas completas: `181 div 7` es `25`. El operador módulo `%` da los días que sobran: `181 % 7` es `6`.
+
+{% include nav.html %}

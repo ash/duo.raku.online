@@ -1,0 +1,32 @@
+---
+title: 'Solution: Booleano de un valor'
+translations_gpt:
+---
+
+{% include menu.html %}
+
+Aquí tienes una forma de resolver la tarea.
+
+## Código
+
+```raku
+say ?0;
+say ?5;
+```
+
+🦋 Puedes encontrar el código fuente en el archivo [boolean-of-a-value.raku](https://github.com/ash/raku-course/blob/master/exercises/advanced/operator-types/boolean-of-a-value.raku).
+
+## Salida
+
+```
+False
+True
+```
+
+## Comentarios
+
+1. `?` es un operador prefijo. Va antes de su operando. Devuelve el valor booleano del operando.
+
+1. `0` es falso, y `5` es verdadero. Por eso el programa imprime `False` y `True`.
+
+{% include nav.html %}
