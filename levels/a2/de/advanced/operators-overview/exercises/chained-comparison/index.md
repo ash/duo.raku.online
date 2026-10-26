@@ -1,0 +1,24 @@
+---
+title: Verketteter Vergleich
+translations_gpt:
+---
+
+{% include menu.html %}
+
+## Aufgabe
+
+Ein Testergebnis ist gültig, wenn es zwischen `0` und `100` liegt. Das Ergebnis darf auch genau `0` oder `100` sein. Ist das Ergebnis `73` gültig? Geben Sie die Antwort aus. Verwenden Sie einen verketteten Vergleich.
+
+## Beispiel
+
+Das Programm gibt aus:
+
+```
+True
+```
+
+## Lösung
+
+✅ [Siehe die Lösung](solution)
+
+{% include nav.html %}
