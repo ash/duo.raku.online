@@ -1,0 +1,26 @@
+---
+title: Numeru la liniojn
+translations_gpt:
+---
+
+{% include menu.html %}
+
+## Problemo
+
+Skribu tri vortojn en dosieron kun la nomo `words.txt`. La vortoj estas `apple`, `banana` kaj `cherry`. Ĉiu vorto estas en sia propra linio. Poste legu la dosieron linio post linio. Presu ĉiun linion kun ĝia numero antaŭ ĝi. La numeroj komenciĝas de `1`. Uzu ĉi tiun formon: `<number>: <line>`.
+
+## Ekzemplo
+
+La programo presas:
+
+```
+1: apple
+2: banana
+3: cherry
+```
+
+## Solvo
+
+✅ [Vidu la solvon](solution)
+
+{% include nav.html %}

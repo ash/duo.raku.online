@@ -1,0 +1,32 @@
+---
+title: 'Решение: Пребройте редовете'
+translations_gpt:
+---
+
+{% include menu.html %}
+
+Ето един начин да решите задачата.
+
+## Код
+
+```raku
+spurt 'data.txt', "a\nb\nc\nd\n";
+
+say 'data.txt'.IO.lines.elems;
+```
+
+🦋 Намерете програмата във файла [count-lines.raku](https://github.com/ash/raku-course/blob/master/exercises/oop/file-handles/count-lines.raku).
+
+## Изход
+
+```
+4
+```
+
+## Коментари
+
+1. `.IO.lines` връща редовете на файла като списък.
+
+1. `.elems` ги преброява. Резултатът е `4`.
+
+{% include nav.html %}
