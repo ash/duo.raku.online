@@ -9,7 +9,7 @@ So far the levels cover all of Essentials, from
 [the `MAIN` function](https://duo.raku.online/a2/essentials/the-main-function/),
 and all of Advanced, from [debugging](https://duo.raku.online/a2/advanced/representations/)
 to [Pod](https://duo.raku.online/a2/advanced/pod/), and Objects, I/O and exceptions from
-[classes](https://duo.raku.online/a2/oop/classes/) through file handles, in all eleven languages. A page is English-only at the levels where its
+[classes](https://duo.raku.online/a2/oop/classes/) through `try`, in all eleven languages. A page is English-only at the levels where its
 translation does not line up with the English, or is listed in
 [`skip.txt`](skip.txt).
 
