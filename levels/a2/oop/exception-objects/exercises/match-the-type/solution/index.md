@@ -1,0 +1,38 @@
+---
+title: The solution of ’Match the type‘
+---
+
+{% include menu.html %}
+
+Here is one way to solve the task.
+
+## Code
+
+```raku
+{
+    my $x = 1 / 0;
+    say $x;
+
+    CATCH {
+        when X::Numeric::DivideByZero {
+            say 'cannot divide by zero';
+        }
+    }
+}
+```
+
+🦋 You can find the source code in the file [match-the-type.raku](https://github.com/ash/raku-course/blob/master/exercises/oop/exception-objects/match-the-type.raku).
+
+## Output
+
+```
+cannot divide by zero
+```
+
+## Comments
+
+1. In Raku, `1 / 0` does not crash at once. It gives a lazy `Failure`. A `Failure` is a value with an error inside. It waits until you use it. Raku throws the exception only when we *use* the value. Here, we try to `say` it.
+
+1. The thrown exception has the built-in type `X::Numeric::DivideByZero`. The branch `when X::Numeric::DivideByZero` matches exactly this type. Here, you match one certain type. You do not catch everything with `default`. So you can handle each kind of error in its own way.
+
+{% include nav.html %}
