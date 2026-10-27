@@ -1,0 +1,45 @@
+---
+title: 'Решение: Фигура и квадрат'
+translations_gpt:
+---
+
+{% include menu.html %}
+
+Вот один способ решить задачу.
+
+## Код
+
+```raku
+class Shape {
+    method name {
+        'shape';
+    }
+    method describe {
+        'I am a ' ~ self.name;
+    }
+}
+
+class Square is Shape {
+    method name {
+        'square';
+    }
+}
+
+say Square.new.describe;
+```
+
+🦋 Исходный код можно найти в файле [shape-and-square.raku](https://github.com/ash/raku-course/blob/master/exercises/oop/inheritance/shape-and-square.raku).
+
+## Вывод
+
+```
+I am a square
+```
+
+## Комментарии
+
+1. `Square` наследует `describe` от `Shape`. Он переопределяет только `name`.
+
+1. `describe` вызывает `self.name`. Этот вызов находит новый `name` из `Square`. Поэтому в описании стоит `square`, а не `shape`.
+
+{% include nav.html %}
